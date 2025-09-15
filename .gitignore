@@ -1,0 +1,52 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.iml
+
+# Node / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Logs and coverage
+logs/
+*.log
+coverage/
+.nyc_output/
+
+# Build outputs / caches
+dist/
+build/
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Env/config (local)
+.env
+.env.*
+.env.local
+.envrc
+
+# OS / tooling
+.DS_Store?
+.Thumbs.db
+
+# Optional: generated data (uncomment if you don't want to track pages)
+# data/page-*.json
+# data/tmp/
+

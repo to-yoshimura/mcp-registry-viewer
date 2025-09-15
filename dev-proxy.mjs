@@ -21,6 +21,12 @@ function guessContentType(filePath) {
     case '.json': return 'application/json; charset=utf-8';
     case '.js': return 'text/javascript; charset=utf-8';
     case '.css': return 'text/css; charset=utf-8';
+    case '.jpg':
+    case '.jpeg': return 'image/jpeg';
+    case '.png': return 'image/png';
+    case '.svg': return 'image/svg+xml';
+    case '.webp': return 'image/webp';
+    case '.gif': return 'image/gif';
     default: return 'application/octet-stream';
   }
 }
@@ -57,7 +63,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // Serve static files: / -> index.html, /index.html, and /data/*
+    // Serve static files: / -> index.html, /index.html, and /data/*, /assets/*
     if (url.pathname === '/' || url.pathname === '/index.html') {
       const html = await readFile(path.join(__dirname, 'index.html'));
       res.statusCode = 200;
@@ -70,6 +76,24 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname.startsWith('/data/')) {
       const rel = url.pathname.replace(/^\/data\//, '');
       const filePath = path.join(__dirname, 'data', rel);
+      try {
+        await stat(filePath); // ensure exists
+        const body = await readFile(filePath);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', guessContentType(filePath));
+        sendCORS(res);
+        res.end(body);
+      } catch (e) {
+        res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+        res.end('Not Found');
+      }
+      return;
+    }
+
+    if (url.pathname.startsWith('/assets/')) {
+      const rel = url.pathname.replace(/^\/assets\//, '');
+      const filePath = path.join(__dirname, 'assets', rel);
       try {
         await stat(filePath); // ensure exists
         const body = await readFile(filePath);
