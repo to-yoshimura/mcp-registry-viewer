@@ -1,0 +1,9 @@
+{
+  "name": "mcp-registry-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/fetch-registry.mjs",
+    "dev": "node dev-proxy.mjs"
+  }
+}

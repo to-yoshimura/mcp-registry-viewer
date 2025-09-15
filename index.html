@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <title>MCP Registry Viewer</title>
+        <style>
+            :root {
+                --bg: #0b1020;
+                --card: #111831;
+                --muted: #9fb0d1;
+                --text: #eaf1ff;
+                --accent: #6ea8fe;
+                --ok: #38d39f;
+                --warn: #f9a23b;
+                --err: #f07178;
+                --border: #243154;
+                --chip-bg: #0c1533;
+                --chip-border: #1f2b52;
+                --chip-fg: #cfe0ff;
+                --code-bg: #0f1836;
+                --code-border: #1f2b52;
+                --overlay: rgba(6, 10, 24, 0.7);
+                --thead-bg: #0e142b;
+                --header-shadow: rgba(0, 0, 0, 0.28);
+                /* status colors (dark) */
+                --status-active-bg: rgba(56, 211, 159, 0.16);
+                --status-active-fg: #8ff0c2;
+                --status-active-border: #2a6b56;
+                --status-deprec-bg: rgba(249, 162, 59, 0.16);
+                --status-deprec-fg: #ffd29a;
+                --status-deprec-border: #6b4e2a;
+                --modal-header-bg: linear-gradient(180deg, rgba(11,16,32,0.95), rgba(11,16,32,0.6));
+                /* header gradient (dark) */
+                --header-grad-top: rgba(84, 108, 255, 0.18);
+                --header-grad-mid: rgba(84, 108, 255, 0.06);
+                --header-veil: rgba(11, 16, 32, 0.72);
+                /* liquid glass (dark) */
+                --glass-bg: rgba(17, 24, 49, 0.45);
+                --glass-border-hi: rgba(255, 255, 255, 0.14);
+                --glass-border-lo: rgba(0, 0, 0, 0.35);
+                --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+                --glass-highlight: rgba(110, 168, 254, 0.12);
+            }
+            [data-theme="light"] {
+                --bg: #f6f8fd;
+                --card: #ffffff;
+                --muted: #5c6b85;
+                --text: #0b1020;
+                --accent: #2b67f6;
+                --ok: #1a9f6e;
+                --warn: #b36a00;
+                --err: #d9363e;
+                --border: #d9e0ef;
+                --chip-bg: #eef3ff;
+                --chip-border: #d7e2fb;
+                --chip-fg: #3b4b6e;
+                --code-bg: #f7f9ff;
+                --code-border: #e6ecfb;
+                --overlay: rgba(255, 255, 255, 0.65);
+                --thead-bg: #eef3ff;
+                --header-shadow: rgba(10, 20, 40, 0.12);
+                /* status colors (light) */
+                --status-active-bg: rgba(26, 159, 110, 0.12);
+                --status-active-fg: #166a4e;
+                --status-active-border: #9bd8c1;
+                --status-deprec-bg: rgba(179, 106, 0, 0.12);
+                --status-deprec-fg: #7a4b00;
+                --status-deprec-border: #efd3a7;
+                --modal-header-bg: linear-gradient(180deg, rgba(246,248,253,0.95), rgba(246,248,253,0.85));
+                /* header gradient (light) */
+                --header-grad-top: rgba(43, 103, 246, 0.12);
+                --header-grad-mid: rgba(43, 103, 246, 0.04);
+                --header-veil: rgba(246, 248, 253, 0.78);
+                /* liquid glass (light) */
+                --glass-bg: rgba(255, 255, 255, 0.62);
+                --glass-border-hi: rgba(255, 255, 255, 0.85);
+                --glass-border-lo: rgba(161, 177, 204, 0.55);
+                --glass-shadow: 0 8px 24px rgba(34, 58, 94, 0.12);
+                --glass-highlight: rgba(43, 103, 246, 0.08);
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                background: var(--bg);
+                color: var(--text);
+                font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            }
+            header {
+                padding: 16px 20px;
+                /* 透過をやめ、下のカードが透けないように不透明背景に */
+                background:
+                    linear-gradient(180deg, var(--header-grad-top) 0%, var(--header-grad-mid) 42%, rgba(0,0,0,0) 100%),
+                    var(--bg);
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                /* デフォルトはシャドウ無し（スクロール時に付与） */
+                box-shadow: none;
+                transition: box-shadow 120ms ease;
+            }
+            header.scrolled {
+                box-shadow: 0 1px 16px var(--header-shadow);
+                /* Slight translucency + blur when overlapping content */
+                background:
+                    linear-gradient(180deg, var(--header-grad-top) 0%, var(--header-grad-mid) 42%, rgba(0,0,0,0) 100%),
+                    var(--header-veil);
+                backdrop-filter: saturate(110%) blur(8px);
+                -webkit-backdrop-filter: saturate(110%) blur(8px);
+            }
+            header h1 {
+                margin: 0 0 8px 0;
+                font-size: 18px;
+                letter-spacing: 0.2px;
+            }
+            .controls {
+                display: grid;
+                grid-template-columns: 1.2fr 0.9fr 0.9fr 0.8fr 0.8fr 0.6fr 0.6fr auto;
+                gap: 8px;
+                align-items: center;
+            }
+            .controls input[type="text"],
+            .controls select {
+                background: var(--card);
+                color: var(--text);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 8px 10px;
+                outline: none;
+            }
+            .controls .btn {
+                background: var(--accent);
+                color: #071022;
+                border: none;
+                padding: 10px 12px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            .controls .btn.secondary {
+                background: transparent;
+                color: var(--muted);
+                border: 1px solid var(--border);
+            }
+            .wrap {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+            .summary {
+                margin: 14px 0;
+                color: var(--muted);
+                font-size: 14px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 12px;
+            }
+            .card {
+                position: relative;
+                background:
+                    linear-gradient(180deg, var(--glass-highlight), transparent 60%),
+                    var(--glass-bg);
+                border-radius: 16px;
+                border: 1px solid transparent;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                min-width: 0; /* 長い文字列でのあふれ対策 */
+                box-shadow: var(--glass-shadow);
+                backdrop-filter: saturate(150%) blur(14px);
+                -webkit-backdrop-filter: saturate(150%) blur(14px);
+                overflow: hidden;
+            }
+            /* Remove hairline to avoid visible border on some displays */
+            .card::after { content: none; }
+            /* Subtle top-left sheen */
+            .card::before {
+                content: "";
+                position: absolute; inset: -20% -20% 40% 40%;
+                border-radius: 50%;
+                background: radial-gradient(80% 80% at 20% 0%, var(--glass-highlight), transparent 60%);
+                pointer-events: none;
+            }
+            .card.clickable { cursor: pointer; }
+            .card.clickable:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
+            .card.clickable:focus { outline: 2px solid #33509a; outline-offset: 2px; }
+            .card h3 {
+                margin: 0;
+                font-size: 17px;
+                line-height: 1.3;
+                word-break: break-word;
+                overflow-wrap: anywhere; /* スラッシュ/ドットを含む長い名前を折り返す */
+            }
+            .title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+            .status-pill { padding: 4px 10px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); text-transform: none; }
+            .status-active { background: var(--status-active-bg); color: var(--status-active-fg); border-color: var(--status-active-border); }
+            .status-deprecated { background: var(--status-deprec-bg); color: var(--status-deprec-fg); border-color: var(--status-deprec-border); }
+            .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; background: var(--code-bg); border: 1px solid var(--code-border); color: var(--muted); padding: 2px 6px; border-radius: 6px; font-size: 12px; }
+            .sub-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+            .divider { height: 1px; background: var(--border); margin: 8px 0; }
+            .kv { display: grid; grid-template-columns: 88px 1fr; gap: 6px 10px; }
+            .kv .key { color: var(--muted); font-size: 12px; }
+            .kv .val { color: var(--text); font-size: 13px; overflow-wrap: anywhere; }
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 12px;
+                color: var(--chip-fg);
+                border: 1px solid var(--chip-border);
+                background: var(--chip-bg);
+                padding: 3px 8px;
+                border-radius: 999px;
+                margin-right: 6px;
+                margin-bottom: 6px;
+                white-space: normal; /* 長いIDなどが折り返せるように */
+                overflow-wrap: anywhere;
+                max-width: 100%;
+            }
+            .badges {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .meta {
+                font-size: 12px;
+                color: var(--muted);
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+            .links a {
+                color: var(--accent);
+                text-decoration: none;
+                margin-right: 10px;
+                font-size: 13px;
+            }
+            .links a:hover { text-decoration: underline; }
+            .capabilities {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+            }
+            .cap {
+                background: var(--chip-bg);
+                color: var(--chip-fg);
+                border: 1px solid var(--chip-border);
+                padding: 4px 8px;
+                border-radius: 6px;
+                font-size: 12px;
+            }
+            .chip { background: var(--chip-bg); color: var(--chip-fg); border: 1px solid var(--chip-border); padding: 2px 8px; border-radius: 999px; font-size: 11px; }
+            .chip.muted { color: var(--muted); }
+            .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; }
+            .foot-left { color: var(--muted); font-size: 12px; }
+            .foot-links { display: inline-flex; gap: 10px; }
+            .icon-link { color: var(--accent); text-decoration: none; font-size: 13px; }
+            .icon-link:hover { text-decoration: underline; }
+
+            /* Detail Modal */
+            .modal {
+                position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center;
+                background: var(--overlay); backdrop-filter: blur(3px);
+                animation: fadeIn 160ms ease-out;
+            }
+            .modal[open] { display: flex; }
+            .modal-card {
+                width: min(920px, 94vw);
+                max-height: 86vh;
+                display: flex; flex-direction: column;
+                background:
+                    linear-gradient(180deg, var(--glass-highlight), transparent 60%),
+                    var(--glass-bg);
+                border: none; border-radius: 18px;
+                box-shadow: var(--glass-shadow);
+                overflow: hidden;
+                transform: translateY(4px); animation: popIn 140ms ease-out forwards;
+                backdrop-filter: saturate(150%) blur(16px);
+                -webkit-backdrop-filter: saturate(150%) blur(16px);
+                position: relative;
+            }
+            .modal-card::after { content: none; }
+            .modal-card::before {
+                content: ""; position: absolute; inset: -20% -20% 40% 40%; border-radius: 50%; pointer-events: none;
+                background: radial-gradient(80% 80% at 20% 0%, var(--glass-highlight), transparent 60%);
+            }
+            .modal-header {
+                position: sticky; top: 0; z-index: 1;
+                display: flex; justify-content: space-between; align-items: center; gap: 8px;
+                padding: 12px 14px; margin: 0;
+                background: var(--modal-header-bg);
+                backdrop-filter: saturate(140%) blur(8px);
+                -webkit-backdrop-filter: saturate(140%) blur(8px);
+            }
+            .modal-title { font-size: 18px; margin: 0; letter-spacing: .2px; }
+            .close-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+            .close-btn:hover { color: var(--text); border-color: #33509a; }
+            .modal-body { padding: 14px; overflow: auto; }
+            .modal-section { margin: 12px 0; }
+            .kv-table { width: 100%; border-collapse: collapse; }
+            .kv-table th, .kv-table td { text-align: left; padding: 8px 10px; font-size: 13px; vertical-align: top; border-bottom: 1px solid var(--border); }
+            .kv-table thead th { position: sticky; top: 0; background: var(--thead-bg); z-index: 1; }
+            .kv-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+            .kv-table th { color: var(--muted); width: 180px; font-weight: 600; }
+            .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+            details { border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; }
+            details > summary { cursor: pointer; color: var(--muted); }
+            pre.code { background: var(--code-bg); border: 1px solid var(--code-border); color: var(--text); padding: 10px; border-radius: 8px; overflow: auto; }
+            .section-title { margin: 6px 0; color: var(--muted); font-size: 13px; letter-spacing: .2px; }
+
+            @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+            @keyframes popIn { from { transform: translateY(8px) scale(.98); opacity: .96; } to { transform: translateY(0) scale(1); opacity: 1; } }
+            .footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 16px 0;
+                color: var(--muted);
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .pager {
+                display: inline-flex;
+                gap: 8px;
+                align-items: center;
+            }
+            .pager button {
+                background: transparent;
+                border: 1px solid var(--border);
+                color: var(--text);
+                padding: 8px 10px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .pager button:disabled { opacity: 0.5; cursor: not-allowed; }
+            .pager.top { margin: 8px 0 14px; gap: 6px; }
+            .pager.top button { padding: 4px 8px; border-radius: 6px; font-size: 12px; color: var(--muted); }
+            .pager.top #page-info { color: var(--muted); font-size: 12px; }
+            .pager.top .perpage { color: var(--muted); font-size: 12px; }
+            .status {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+            }
+            .dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 999px;
+                display: inline-block;
+            }
+            .dot.ok { background: var(--ok); }
+            .dot.warn { background: var(--warn); }
+            .dot.err { background: var(--err); }
+            .error {
+                background: rgba(240, 113, 120, 0.16);
+                border: 1px solid #733c41;
+                color: #ffdadd;
+                padding: 10px 12px;
+                border-radius: 8px;
+                display: none;
+                margin: 12px 0;
+                white-space: pre-wrap;
+            }
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                border: 0;
+            }
+
+            /* Polishing additions */
+            .desc { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #0c1533;
+                color: #cfe0ff;
+                border: 1px solid #1f2b52;
+                padding: 4px 8px;
+                border-radius: 999px;
+                font-size: 12px;
+            }
+            .skeleton {
+                background: linear-gradient(90deg, var(--code-bg) 25%, var(--chip-bg) 37%, var(--code-bg) 63%);
+                background-size: 400% 100%;
+                animation: shimmer 1.2s ease-in-out infinite;
+            }
+            @keyframes shimmer {
+                0% { background-position: 100% 0; }
+                100% { background-position: -100% 0; }
+            }
+            .skeleton-card { height: 140px; border-radius: 12px; border: 1px solid var(--border); }
+            .copy-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; font-size: 11px; cursor: pointer; }
+            .copy-btn:hover { color: var(--text); border-color: #33509a; }
+            .theme-switch { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; cursor: pointer; }
+            .theme-switch:hover { color: var(--text); border-color: #33509a; }
+            .intro { max-width: 72ch; line-height: 1.55; font-size: 14px; color: var(--muted); margin-top: 2px; margin-bottom: 2px; }
+            /* Toolbar: search on the left (max 640px), view switch on right */
+            .searchbar { display: grid; grid-template-columns: minmax(280px, 640px) auto; gap: 12px; align-items: center; margin-top: 12px; }
+            .searchbar .field { position: relative; min-width: 0; width: 100%; }
+            .searchbar .icon { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: var(--muted); transition: color 120ms ease; }
+            .searchbar input {
+                width: 100%; height: 36px;
+                background: transparent; color: var(--text);
+                border: none; border-bottom: 1.5px solid var(--border);
+                border-radius: 0;
+                padding: 0 28px 4px 30px; line-height: 1.3; font-size: 14px;
+                outline: none;
+                transition: border-color 120ms ease, color 120ms ease;
+            }
+            .searchbar input::placeholder { color: var(--muted); }
+            .searchbar .clear {
+                position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+                border: none; background: transparent; color: var(--muted);
+                cursor: pointer; display: none; padding: 0;
+                -webkit-appearance: none; appearance: none;
+                font-size: 16px; line-height: 1; /* テキストの×をそのまま表示 */
+            }
+            .searchbar .clear:hover { color: var(--text); }
+            .searchbar:focus-within input { border-bottom-color: var(--accent); }
+            .searchbar:focus-within .icon { color: var(--accent); }
+            .view-switch { display: inline-flex; gap: 8px; align-items: center; justify-content: flex-end; }
+            .segmented { display: inline-flex; background: var(--chip-bg); border: 1px solid var(--chip-border); border-radius: 999px; padding: 2px; }
+            .segmented .seg { background: transparent; border: 0; color: var(--muted); padding: 4px 10px; border-radius: 999px; cursor: pointer; font-size: 12px; }
+            .segmented .seg[aria-pressed="true"] { background: var(--card); color: var(--text); box-shadow: 0 0 0 1px var(--border) inset; }
+            @media (max-width: 880px){ .searchbar { grid-template-columns: 1fr; } .view-switch { width: 100%; justify-content: flex-end; } }
+
+            /* Full-screen loading overlay */
+            .overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(11, 16, 32, 0.86);
+                backdrop-filter: blur(2px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 12px;
+                z-index: 999;
+            }
+            .overlay[hidden] { display: none; }
+            .overlay-text { color: var(--muted); font-size: 14px; }
+
+            /* Spinners */
+            .spinner { width: 16px; height: 16px; border: 2px solid #2a3a66; border-top-color: var(--accent); border-radius: 50%; animation: spin 0.9s linear infinite; display: inline-block; }
+            .spinner.lg { width: 40px; height: 40px; border-width: 3px; }
+            .spinner.sm { width: 12px; height: 12px; border-width: 2px; vertical-align: -1px; }
+            @keyframes spin { to { transform: rotate(360deg); } }
+
+            /* List view */
+            .list-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; table-layout: fixed; }
+            .list-table th, .list-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+            .list-table thead th { background: var(--bg-alt); color: var(--muted); font-weight: 600; }
+            .list-table tbody tr { cursor: pointer; }
+            .list-table tbody tr:hover { background: rgba(51,80,154,0.06); }
+            .list-name { font-weight: 700; font-size: 16px; line-height: 1.35; }
+            .list-meta { color: var(--muted); font-size: 12px; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+            .list-desc { color: var(--text); font-size: 14px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .chip.sm { padding: 1px 6px; font-size: 11px; }
+            .status-pill.sm { padding: 2px 8px; font-size: 11px; }
+            .td-version { text-align: right; white-space: nowrap; }
+            @media (max-width: 880px) {
+                .col-version, .td-version { display: none; }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                    <div>
+                        <h1 style="margin-bottom:6px;">MCP Registry Viewer</h1>
+                        <div class="meta intro">MCPサーバーのレジストリを閲覧し、ローカルフィルターで目的のサーバーを素早く絞り込めます。カードをクリックすると詳細（パッケージ、リモート、環境変数など）を表示します。</div>
+                    </div>
+                    <button id="theme-toggle" class="theme-switch" type="button" aria-label="テーマ切り替え">🌙</button>
+                </div>
+                <div class="searchbar" role="search" aria-label="ローカル検索">
+                    <div class="field">
+                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11 4a7 7 0 1 1 0 14a7 7 0 0 1 0-14Zm0 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm8.3 12.9l2.4 2.4-1.4 1.4-2.4-2.4 1.4-1.4Z" fill="currentColor"/></svg>
+                        <input id="search-input" type="text" placeholder="Filter servers" aria-label="Filter" />
+                        <button id="search-clear" class="clear" type="button" aria-label="検索クリア" title="クリア">×</button>
+                    </div>
+                    <div class="view-switch">
+                        <div class="meta" aria-hidden="true">View</div>
+                        <div id="view-toggle" class="segmented" role="group" aria-label="表示切替">
+                            <button id="view-card" type="button" class="seg" aria-pressed="true">Cards</button>
+                            <button id="view-list" type="button" class="seg" aria-pressed="false">List</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- First-load overlay -->
+        <div id="loading-overlay" class="overlay" role="status" aria-live="polite" hidden>
+            <span class="spinner lg" aria-hidden="true"></span>
+        </div>
+
+        <main class="wrap">
+            <div id="error" class="error" role="alert" aria-live="assertive"></div>
+            <section class="grid" id="results" aria-live="polite"></section>
+            <div id="infinite-spinner" class="spinner lg" style="display:none; margin: 16px auto;"></div>
+            <div id="infinite-sentinel" class="sentinel" aria-hidden="true"></div>
+            <!-- Detail Modal -->
+            <div id="detail-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="detail-title">
+                <div class="modal-card">
+                    <div class="modal-header">
+                        <h2 id="detail-title" class="modal-title">詳細</h2>
+                        <button id="detail-close" class="close-btn" type="button" aria-label="閉じる">×</button>
+                    </div>
+                    <div id="detail-body" class="modal-body">
+                        <div class="spinner lg" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            // ===== テーマ切替 =====
+            (function setupTheme() {
+                const root = document.documentElement;
+                const toggleBtn = () => document.getElementById('theme-toggle');
+                const saved = localStorage.getItem('theme');
+                function systemPrefersDark(){ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
+                function apply(theme){ root.setAttribute('data-theme', theme); const b = toggleBtn(); if (b) b.textContent = theme === 'dark' ? '🌙' : '☀️'; }
+                const initial = saved === 'dark' || saved === 'light' ? saved : (systemPrefersDark() ? 'dark' : 'light');
+                apply(initial);
+                const btn = toggleBtn();
+                if (btn) btn.onclick = () => { const next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark'; apply(next); localStorage.setItem('theme', next); };
+                // システム設定が変わった時：ユーザーが手動変更していなければ追随
+                if (!saved && window.matchMedia) {
+                    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                    try { mq.addEventListener('change', e => { apply(e.matches ? 'dark' : 'light'); }); } catch { /* Safari */ mq.addListener && mq.addListener(e => { apply(e.matches ? 'dark' : 'light'); }); }
+                }
+            })();
+
+            // ===== ヘッダーシャドウ（スクロール時のみ表示） =====
+            (function headerShadowOnScroll(){
+                const header = document.querySelector('header');
+                if (!header) return;
+                function update(){
+                    const scrolled = window.scrollY > 4;
+                    header.classList.toggle('scrolled', scrolled);
+                }
+                window.addEventListener('scroll', update, { passive: true });
+                window.addEventListener('resize', update);
+                document.addEventListener('DOMContentLoaded', update);
+                update();
+            })();
+
+            // ===== 設定 =====
+            // 公開レジストリはCORSヘッダーを返さないため、ブラウザ直アクセスは失敗します。
+            // そのため以下の候補ベースURLを順に試して、ローカルプロキシ(dev-proxy.mjs)があればそちらを使います。
+            const DATA_BASE = './data';
+            // Warn when opened via file:// as browsers block fetch(file://...)
+            if (location.protocol === 'file:') {
+                const warn = document.getElementById('error');
+                if (warn) {
+                    warn.style.display = 'block';
+                    warn.textContent = 'file:// での直接実行ではデータを読み込めません。npm run dev で http://localhost:8787 から開いてください。';
+                }
+                console.warn('Open via a local server (npm run dev).');
+            }
+
+            // ===== 状態管理 =====
+            const state = {
+                limit: 12,
+                lastQuery: {},
+                cursor: undefined,
+                nextCursor: null,
+                loading: false,
+                end: false,
+                initialLoaded: false,
+                prefetching: false,
+                view: (localStorage.getItem('view') === 'list' ? 'list' : 'card')
+            };
+
+            // ===== DOM参照 =====
+            // シンプル版: 入力フォームはなし
+            const DEFAULT_LIMIT = 12;
+            const resultsEl = document.getElementById("results");
+            const errorEl = document.getElementById("error");
+            const sentinel = document.getElementById("infinite-sentinel");
+            const bottomSpinner = document.getElementById("infinite-spinner");
+            const searchInput = document.getElementById('search-input');
+            const searchClear = document.getElementById('search-clear');
+            const overlayEl = document.getElementById("loading-overlay");
+            const viewCardBtn = document.getElementById('view-card');
+            const viewListBtn = document.getElementById('view-list');
+            // totalSpinnerEl removed (no total pages estimation)
+
+            function setStatus(type, text) { /* no-op: インジケーター非表示 */ }
+
+            function showError(err) {
+                errorEl.style.display = "block";
+                errorEl.textContent = typeof err === "string" ? err : (err?.message || String(err));
+                setStatus("err", "エラー");
+            }
+
+            function clearError() {
+                errorEl.style.display = "none";
+                errorEl.textContent = "";
+            }
+
+            function showOverlay() { if (overlayEl) overlayEl.hidden = false; }
+            function hideOverlay() { if (overlayEl) overlayEl.hidden = true; }
+
+            function toQuery(params) {
+                const usp = new URLSearchParams();
+                Object.entries(params).forEach(([k, v]) => {
+                    if (v === undefined || v === null || v === "") return;
+                    usp.set(k, v);
+                });
+                return usp.toString();
+            }
+
+            async function fetchJSON(url, init = {}) {
+                const res = await fetch(url, {
+                    ...init,
+                    headers: {
+                        "Accept": "application/json",
+                        ...(init.headers || {})
+                    },
+                    cache: "no-store"
+                });
+                if (!res.ok) {
+                    // レート制限などの簡易表示
+                    const text = await res.text().catch(() => "");
+                    throw new Error(`HTTP ${res.status} ${res.statusText} - ${text}`);
+                }
+                return res.json();
+            }
+
+            async function loadManifest() { return fetchJSON(`${DATA_BASE}/manifest.json`); }
+
+            // Try to get server detail by ID without network access.
+            // 1) Return from in-memory items if present
+            // 2) Otherwise scan data/page-*.json until found (deduping into allItems)
+            async function tryFetchWithFallback(urlPath) {
+                if (typeof urlPath === 'string' && urlPath.startsWith('/servers/')) {
+                    const id = decodeURIComponent(urlPath.slice('/servers/'.length));
+                    const getId = (it) => it?._meta?.["io.modelcontextprotocol.registry/official"]?.id || null;
+                    let item = allItems.find(it => getId(it) === id);
+                    if (item) return item;
+                    // Ensure manifest is loaded to know total pages
+                    if (!manifest) {
+                        manifest = await loadManifest();
+                        state.limit = manifest.pageSize || DEFAULT_LIMIT;
+                    }
+                    // Build a dedup set for already loaded items
+                    const seen = new Set(allItems.map(it => getId(it)).filter(Boolean));
+                    const total = Number(manifest.pages || 0);
+                    for (let p = 1; p <= total; p++) {
+                        try {
+                            const data = await fetchJSON(`${DATA_BASE}/page-${p}.json`);
+                            const arr = Array.isArray(data.servers) ? data.servers : (data.items || []);
+                            for (const it of arr) {
+                                const k = getId(it);
+                                if (k && !seen.has(k)) { seen.add(k); allItems.push(it); }
+                                if (k === id) return it;
+                            }
+                        } catch (_) { /* ignore missing pages */ }
+                    }
+                    throw new Error('詳細データが見つかりませんでした。');
+                }
+                // Fallback: plain fetch for other paths
+                return fetchJSON(urlPath);
+            }
+
+            // summary text is no longer displayed; info is integrated into the pager
+
+            function fieldOrDash(v) {
+                if (v === null || v === undefined) return "—";
+                if (Array.isArray(v) && v.length === 0) return "—";
+                if (typeof v === "string" && v.trim() === "") return "—";
+                return v;
+            }
+
+            function renderItemCard(item) {
+                const {
+                    name,
+                    description,
+                    status,
+                    version,
+                    repository = {},
+                    website_url,
+                    updated_at,
+                    packages = [],
+                    remotes = [],
+                    _meta = {}
+                } = item;
+
+                const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
+
+                // Chips
+                const chips = [];
+                // Publisher domain from name
+                const publisher = (typeof name === 'string' && name.includes('/')) ? name.split('/')[0] : '';
+                if (publisher) chips.push(`<span class="chip muted">${escapeHtml(publisher)}</span>`);
+                // Ecosystem registry type
+                const eco = packages[0]?.registry_type;
+                if (eco) chips.push(`<span class="chip">${escapeHtml(eco)}</span>`);
+                // Runtime hint
+                const runtime = packages.find(p => p.runtime_hint)?.runtime_hint;
+                if (runtime) chips.push(`<span class="chip">${escapeHtml(runtime)}</span>`);
+                // Transport types (unique)
+                const transports = Array.from(new Set((remotes||[]).map(r => r.transport_type).filter(Boolean)));
+                if (transports.length) chips.push(`<span class="chip">${escapeHtml(transports.join('/'))}</span>`);
+                // Secrets presence
+                const hasSecrets = (packages||[]).some(p => Array.isArray(p.environment_variables) && p.environment_variables.length);
+                if (hasSecrets) chips.push(`<span class="chip">secrets</span>`);
+                // sha256 presence
+                const hasHash = (packages||[]).some(p => p.file_sha256);
+                if (hasHash) chips.push(`<span class="chip">sha256</span>`);
+                // latest flag
+                if (official.is_latest === true) chips.push(`<span class="badge">latest</span>`);
+
+                const div = document.createElement("div");
+                div.className = "card clickable";
+                const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
+                const repoHost = repository?.url ? hostFromUrl(repository.url) : '';
+                const siteHost = website_url ? hostFromUrl(website_url) : '';
+                const isNew = official?.published_at && daysSince(official.published_at) <= 30;
+
+                div.innerHTML = `
+                    <div class="title-row">
+                        <h3>${escapeHtml(name || "(no name)")}</h3>
+                        <span class="status-pill ${statusClass}">${escapeHtml(fieldOrDash(status))}</span>
+                    </div>
+                    <div class="sub-row meta">
+                        <span class="code">v${escapeHtml(fieldOrDash(version))}</span>
+                        ${isNew ? `<span class="badge">NEW</span>` : ''}
+                    </div>
+                    <div class="desc">${escapeHtml(description || "")}</div>
+                    <div class="capabilities">${chips.join('')}</div>
+                    <div class="footer-row">
+                        <div class="foot-left">${updated_at ? `updated ${escapeHtml(relativeTime(updated_at))}` : ''}</div>
+                        <div class="foot-links">
+                            ${website_url ? `<a class="icon-link" href="${escapeAttr(website_url)}" target="_blank" rel="noopener noreferrer" title="${escapeAttr(siteHost)}">website ↗</a>` : ''}
+                            <!-- repository link moved to modal only -->
+                        </div>
+                    </div>
+                `;
+                if (official?.id) div.dataset.serverId = official.id;
+                // アクセシビリティ: ボタン相当として扱う
+                div.setAttribute('role','button');
+                div.tabIndex = 0;
+                div.title = 'クリックで詳細を見る';
+                return div;
+            }
+
+            let allItems = [];
+            let manifest = null;
+            let nextPage = 1;
+            function applyFilter(items) {
+                const q = (state.search || '').trim().toLowerCase();
+                if (!q) return items;
+                const match = (s) => (s||'').toString().toLowerCase().includes(q);
+                return items.filter(it =>
+                    match(it.name) || match(it.description) || match(it?.repository?.url) ||
+                    (Array.isArray(it.packages) && it.packages.some(p => match(p.identifier) || match(p.registry_type)))
+                );
+            }
+            function renderAll() {
+                const items = applyFilter(allItems);
+                resultsEl.innerHTML = "";
+                if (items.length === 0) {
+                    resultsEl.innerHTML = `<div class="meta">該当する結果がありません。</div>`;
+                    return;
+                }
+                if (state.view === 'list') {
+                    resultsEl.classList.remove('grid');
+                    const rows = items.map(renderItemRow).join('');
+                    resultsEl.innerHTML = `
+                        <table class="list-table" aria-label="Server list">
+                            <colgroup>
+                                <col style="width:34%" />
+                                <col />
+                                <col class="col-version" style="width:12%" />
+                            </colgroup>
+                            <thead>
+                                <tr><th>Name</th><th>Description</th><th class="col-version">Version</th></tr>
+                            </thead>
+                            <tbody>
+                                ${rows}
+                            </tbody>
+                        </table>`;
+                } else {
+                    // card view
+                    resultsEl.classList.add('grid');
+                    const frag = document.createDocumentFragment();
+                    items.forEach(item => frag.appendChild(renderItemCard(item)));
+                    resultsEl.appendChild(frag);
+                }
+            }
+
+            function renderItemRow(item) {
+                const { name, description, version, packages = [], remotes = [], _meta = {}, status } = item;
+                const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
+                const chips = [];
+                const publisher = (typeof name === 'string' && name.includes('/')) ? name.split('/')[0] : '';
+                if (publisher) chips.push(`<span class="chip sm muted">${escapeHtml(publisher)}</span>`);
+                const eco = packages[0]?.registry_type; if (eco) chips.push(`<span class="chip sm">${escapeHtml(eco)}</span>`);
+                const runtime = packages.find(p => p.runtime_hint)?.runtime_hint; if (runtime) chips.push(`<span class="chip sm">${escapeHtml(runtime)}</span>`);
+                const transports = Array.from(new Set((remotes||[]).map(r => r.transport_type).filter(Boolean))); if (transports.length) chips.push(`<span class="chip sm">${escapeHtml(transports.join('/'))}</span>`);
+                return `
+                    <tr data-server-id="${escapeAttr(official.id||'')}">
+                        <td>
+                            <div class="list-name">${escapeHtml(name||'(no name)')}</div>
+                            <div class="list-meta"><span class="status-pill sm ${statusClass}">${escapeHtml(fieldOrDash(status))}</span> ${chips.join('')}</div>
+                        </td>
+                        <td><div class="list-desc">${escapeHtml(description||'')}</div></td>
+                        <td class="mono td-version">v${escapeHtml(fieldOrDash(version))}</td>
+                    </tr>`;
+            }
+
+            async function ensureSufficientResults(minCount = 24, maxPages = 5) {
+                if (state.prefetching) return;
+                state.prefetching = true;
+                try {
+                    while (applyFilter(allItems).length < minCount && !state.end && maxPages-- > 0) {
+                        await loadNext(false);
+                    }
+                } finally {
+                    state.prefetching = false;
+                }
+            }
+
+            // pager removed (infinite scroll)
+
+            // タグ/カテゴリの取得処理は削除（API未提供）
+
+            function renderSkeleton(n = 12) {
+                resultsEl.innerHTML = "";
+                const frag = document.createDocumentFragment();
+                for (let i = 0; i < n; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'skeleton skeleton-card';
+                    frag.appendChild(div);
+                }
+                resultsEl.appendChild(frag);
+            }
+
+            // Source indicator is not used in static-data mode
+            function updateSourcePill() {}
+
+            function hostFromUrl(u) {
+                try { return new URL(u).host; } catch { return u; }
+            }
+
+            function relativeTime(iso) {
+                const d = new Date(iso);
+                const now = Date.now();
+                const diff = Math.max(0, now - d.getTime());
+                const sec = Math.floor(diff / 1000);
+                const min = Math.floor(sec / 60);
+                const hr = Math.floor(min / 60);
+                const day = Math.floor(hr / 24);
+                if (day > 0) return `${day}日前`;
+                if (hr > 0) return `${hr}時間前`;
+                if (min > 0) return `${min}分前`;
+                return `${sec}秒前`;
+            }
+
+            function daysSince(iso) {
+                const d = new Date(iso);
+                return Math.floor((Date.now() - d.getTime()) / (24*60*60*1000));
+            }
+
+            async function copyToClipboard(text) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    // toast等は出さない方針のため無表示
+                } catch (e) {
+                    // 失敗時も無表示（必要ならエラー表示に切替可）
+                }
+            }
+
+            async function openDetail(id) {
+                const modal = document.getElementById('detail-modal');
+                const body = document.getElementById('detail-body');
+                const title = document.getElementById('detail-title');
+                if (!modal || !body) return;
+                modal.setAttribute('open','');
+                body.innerHTML = '<div class="spinner lg" aria-hidden="true"></div>';
+                title.textContent = '詳細';
+                let prevFocus = document.activeElement;
+                try {
+                    const data = await tryFetchWithFallback(`/servers/${encodeURIComponent(id)}`);
+                    title.textContent = data?.name || '詳細';
+                    body.innerHTML = renderDetailBody(data);
+                } catch (e) {
+                    body.innerHTML = `<div class="error">${escapeHtml(e?.message || String(e))}</div>`;
+                }
+                const closer = document.getElementById('detail-close');
+                if (closer) { closer.onclick = () => { modal.removeAttribute('open'); if (prevFocus && prevFocus.focus) prevFocus.focus(); }; closer.focus(); }
+                modal.onclick = (ev) => { if (ev.target === modal) { modal.removeAttribute('open'); if (prevFocus && prevFocus.focus) prevFocus.focus(); } };
+                body.onclick = (ev) => {
+                    const btn = ev.target.closest('button[data-copy]');
+                    if (btn) copyToClipboard(btn.getAttribute('data-copy'));
+                };
+                window.addEventListener('keydown', escCloseOnce);
+                function escCloseOnce(ev){ if (ev.key === 'Escape'){ modal.removeAttribute('open'); if (prevFocus && prevFocus.focus) prevFocus.focus(); window.removeEventListener('keydown', escCloseOnce);} }
+            }
+
+            function renderDetailBody(item) {
+                const official = item?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const repo = item?.repository || {};
+                const site = item?.website_url;
+                const pkgs = Array.isArray(item?.packages) ? item.packages : [];
+                const rems = Array.isArray(item?.remotes) ? item.remotes : [];
+                const envCount = pkgs.reduce((acc,p)=> acc + (Array.isArray(p.environment_variables)?p.environment_variables.length:0), 0);
+                const pkgRows = pkgs.map(p => `
+                    <tr>
+                        <td>${escapeHtml(p.registry_type||'')}</td>
+                        <td class="mono">${escapeHtml(p.identifier||'')}</td>
+                        <td>${escapeHtml(p.version||'')}</td>
+                        <td class="mono">${escapeHtml(p.file_sha256||'')}</td>
+                        <td class="mono">${escapeHtml(p.registry_base_url||'')}</td>
+                        <td>${escapeHtml(p.runtime_hint||'')}</td>
+                    </tr>`).join('');
+                const remRows = rems.map(r => `
+                    <tr>
+                        <td>${escapeHtml(r.transport_type||'')}</td>
+                        <td class="mono">${escapeHtml(r.url||'')}</td>
+                        <td>${Array.isArray(r.headers)&&r.headers.length? 'yes':'no'}</td>
+                    </tr>`).join('');
+                const envRows = pkgs.flatMap(p => (p.environment_variables||[]).map(ev => `
+                    <tr>
+                        <td class="mono">${escapeHtml(ev.name||'')}</td>
+                        <td>${escapeHtml(ev.description||'')}</td>
+                        <td>${ev.is_secret? 'yes':'no'}</td>
+                        <td class="mono">${escapeHtml(ev.default||'')}</td>
+                    </tr>`)).join('');
+                const runtimeBlocks = pkgs.filter(p => p.runtime_hint || (p.runtime_arguments&&p.runtime_arguments.length) || (p.package_arguments&&p.package_arguments.length)).map(p => {
+                    const json = JSON.stringify({ runtime_hint: p.runtime_hint, runtime_arguments: p.runtime_arguments, package_arguments: p.package_arguments }, null, 2);
+                    return `<details><summary>${escapeHtml(p.identifier||'(package)')} のランタイム詳細</summary><pre class="code mono">${escapeHtml(json)}</pre></details>`;
+                }).join('');
+                return `
+                    <div class="modal-section">
+                        <div class="meta">${escapeHtml(item?.description||'')}</div>
+                    </div>
+                    <div class="modal-section">
+                        <table class="kv-table">
+                            <tr><th>Status</th><td>${escapeHtml(item?.status||'')}</td></tr>
+                            <tr><th>Version</th><td class="mono">${escapeHtml(item?.version||'')}</td></tr>
+                            ${official.id? `<tr><th>Registry ID</th><td class="mono">${escapeHtml(official.id)} <button class="copy-btn" data-copy="${escapeAttr(official.id)}">copy</button></td></tr>`:''}
+                            ${official.published_at? `<tr><th>Published</th><td>${escapeHtml(new Date(official.published_at).toISOString())}${official.is_latest? ' <span class="badge">latest</span>':''}</td></tr>`:''}
+                            ${item?.updated_at? `<tr><th>Updated</th><td>${escapeHtml(new Date(item.updated_at).toISOString())}</td></tr>`:''}
+                            ${item?.created_at? `<tr><th>Created</th><td>${escapeHtml(new Date(item.created_at).toISOString())}</td></tr>`:''}
+                            ${repo.url? `<tr><th>Repository</th><td><a href="${escapeAttr(repo.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(repo.url)}</a> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''}</td></tr>`:''}
+                            ${site? `<tr><th>Website</th><td><a href="${escapeAttr(site)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site)}</a></td></tr>`:''}
+                            ${envCount? `<tr><th>Environment</th><td>${envCount} vars</td></tr>`:''}
+                        </table>
+                    </div>
+                    ${pkgs.length? `<div class="modal-section"><h3 class="meta" style="margin:6px 0;">Packages</h3>
+                        <table class="kv-table">
+                            <thead><tr><th>Type</th><th>Identifier</th><th>Version</th><th>SHA-256</th><th>Registry</th><th>Runtime</th></tr></thead>
+                            <tbody>${pkgRows}</tbody>
+                        </table>
+                    </div>`: ''}
+                    ${runtimeBlocks? `<div class="modal-section"><h3 class="meta" style="margin:6px 0;">Runtime</h3>${runtimeBlocks}</div>`: ''}
+                    ${envRows? `<div class="modal-section"><h3 class="meta" style="margin:6px 0;">Environment Variables</h3>
+                        <table class="kv-table">
+                            <thead><tr><th>Name</th><th>Description</th><th>Secret</th><th>Default</th></tr></thead>
+                            <tbody>${envRows}</tbody>
+                        </table>
+                    </div>`: ''}
+                    ${rems.length? `<div class="modal-section"><h3 class="meta" style="margin:6px 0;">Remotes</h3>
+                        <table class="kv-table">
+                            <thead><tr><th>Transport</th><th>URL</th><th>Headers</th></tr></thead>
+                            <tbody>${remRows}</tbody>
+                        </table>
+                        ${rems.some(r=>Array.isArray(r.headers)&&r.headers.length) ? `<details style="margin-top:8px;"><summary>Headers 詳細</summary>
+                            <table class="kv-table">
+                                <thead><tr><th>Name</th><th>Description</th><th>Default</th></tr></thead>
+                                <tbody>
+                                    ${rems.flatMap(r => (r.headers||[]).map(h => `<tr><td class="mono">${escapeHtml(h.name||'')}</td><td>${escapeHtml(h.description||'')}</td><td class="mono">${escapeHtml(h.default||'')}</td></tr>`)).join('')}
+                                </tbody>
+                            </table>
+                        </details>` : ''}
+                    </div>`: ''}
+                `;
+            }
+
+            async function loadNext(initial = false) {
+                if (state.loading || state.end) return;
+                clearError();
+                state.loading = true;
+                if (!manifest) {
+                    try {
+                        manifest = await loadManifest();
+                        state.limit = manifest.pageSize || DEFAULT_LIMIT;
+                    } catch (e) {
+                        showError('ローカルデータ(manifest.json)が見つかりません。先に "npm run build:data" を実行して data/ を生成してください。');
+                        state.loading = false; return;
+                    }
+                }
+                if (initial) {
+                    showOverlay();
+                } else if (bottomSpinner) {
+                    bottomSpinner.style.display = 'inline-block';
+                }
+                try {
+                    if (nextPage > (manifest.pages || 0)) { state.end = true; return; }
+                    const data = await fetchJSON(`${DATA_BASE}/page-${nextPage}.json`);
+                    const newItems = Array.isArray(data.servers) ? data.servers : (data.items||[]);
+                    allItems = allItems.concat(newItems);
+                    renderAll();
+                    nextPage += 1;
+                    if (nextPage > (manifest.pages || 0)) state.end = true;
+                } catch (e) {
+                    showError(`${e?.message || e}.\n\nローカルデータの読み込みに失敗しました。build:data で data/ を再生成してください。`);
+                } finally {
+                    state.loading = false;
+                    if (initial && !state.initialLoaded) { state.initialLoaded = true; hideOverlay(); }
+                    if (bottomSpinner) bottomSpinner.style.display = 'none';
+                }
+            }
+
+            // URLでの状態復元は省略（シンプル化）
+            function applyFromURL() { return; }
+
+            function escapeHtml(str) {
+                return String(str)
+                    .replaceAll("&", "&amp;")
+                    .replaceAll("<", "&lt;")
+                    .replaceAll(">", "&gt;")
+                    .replaceAll('"', "&quot;")
+                    .replaceAll("'", "&#39;");
+            }
+            function escapeAttr(str) {
+                return escapeHtml(str);
+            }
+
+            // 初期化（起動時に一覧を自動取得）
+            (async function init() {
+                updateSourcePill();
+                // ページ切替のキーバインドは廃止（無限スクロール）
+                // 一覧クリックで詳細モーダル（委任）
+                resultsEl.addEventListener('click', (e) => {
+                    const btn = e.target.closest('button[data-copy]');
+                    if (btn) { copyToClipboard(btn.getAttribute('data-copy')); return; }
+                    // If clicking a link inside a card, don't open the modal
+                    if (e.target.closest('a[href]')) { return; }
+                    // Card click
+                    const card = e.target.closest('.card.clickable');
+                    let id = card?.dataset?.serverId;
+                    // List row click
+                    if (!id) {
+                        const row = e.target.closest('tbody tr[data-server-id]');
+                        id = row?.dataset?.serverId;
+                    }
+                    if (id) openDetail(id);
+                });
+                resultsEl.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        const card = e.target.closest('.card.clickable');
+                        if (card && document.activeElement === card) {
+                            e.preventDefault();
+                            const id = card.dataset.serverId;
+                            if (id) openDetail(id);
+                        }
+                    }
+                });
+                // 検索（ローカルフィルタ）
+                function debounce(fn, ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), ms); }; }
+                const onSearch = debounce(async ()=>{
+                    state.search = (searchInput?.value||'');
+                    renderAll();
+                    // ヒットが少ない場合は先読みして補う
+                    await ensureSufficientResults(24, 8);
+                }, 150);
+                if (searchInput) searchInput.addEventListener('input', (e)=>{
+                    const has = (e.target.value||'').length>0;
+                    if (searchClear) searchClear.style.display = has? 'inline':'none';
+                    onSearch();
+                });
+                if (searchClear) searchClear.addEventListener('click', async ()=>{
+                    if(!searchInput) return;
+                    searchInput.value='';
+                    state.search='';
+                    renderAll();
+                    // クリアしたのでボタン自体も非表示にする
+                    searchClear.style.display = 'none';
+                    searchInput.focus();
+                    // クリア後も足りなければ次を読む（画面直後でデータが少ない場合）
+                    await ensureSufficientResults(24, 4);
+                });
+                // キーボードショートカットはミニマム化のため廃止
+                // 初回ロード + 無限スクロール監視
+                showOverlay();
+                loadNext(true);
+                // View toggle init
+                function applyView(v){
+                    state.view = v; localStorage.setItem('view', v);
+                    if (viewCardBtn && viewListBtn){
+                        viewCardBtn.setAttribute('aria-pressed', String(v==='card'));
+                        viewListBtn.setAttribute('aria-pressed', String(v==='list'));
+                    }
+                    renderAll();
+                }
+                if (viewCardBtn) viewCardBtn.onclick = ()=> applyView('card');
+                if (viewListBtn) viewListBtn.onclick = ()=> applyView('list');
+                // apply initial
+                if (state.view === 'list') { if (viewCardBtn&&viewListBtn){ viewCardBtn.setAttribute('aria-pressed','false'); viewListBtn.setAttribute('aria-pressed','true'); } }
+                if ('IntersectionObserver' in window && sentinel) {
+                    const io = new IntersectionObserver((entries) => {
+                        if (entries.some(e => e.isIntersecting)) {
+                            loadNext(false);
+                        }
+                    }, { root: null, rootMargin: '800px 0px 0px 0px', threshold: 0 });
+                    io.observe(sentinel);
+                }
+            })();
+        </script>
+    </body>
+</html>
