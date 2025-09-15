@@ -1,0 +1,198 @@
+{
+  "servers": [
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.dubuqingfeng/gitlab-mcp-server",
+      "description": "GitLab MCP (Model Context Protocol) server for AI agents",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/dubuqingfeng/gitlab-mcp-server",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "packages": [
+        {
+          "registry_type": "npm",
+          "registry_base_url": "https://registry.npmjs.org",
+          "identifier": "@dubuqingfeng/gitlab-mcp-server",
+          "version": "2.0.12",
+          "transport": {
+            "type": "stdio"
+          },
+          "environment_variables": [
+            {
+              "description": "Your API key for the gitlab",
+              "is_required": true,
+              "format": "string",
+              "is_secret": true,
+              "name": "GITLAB_TOKEN"
+            },
+            {
+              "description": "Gitlab URL",
+              "format": "string",
+              "name": "GITLAB_URL"
+            },
+            {
+              "description": "Lark 机器人 Webhook URL",
+              "format": "string",
+              "is_secret": true,
+              "name": "LARK_WEBHOOK_URL"
+            },
+            {
+              "description": "可选：签名密钥（如果机器人启用了签名验证）",
+              "format": "string",
+              "is_secret": true,
+              "name": "LARK_SECRET_KEY"
+            },
+            {
+              "description": "可选：是否启用通知，默认为 true",
+              "format": "boolean",
+              "name": "LARK_ENABLE_NOTIFICATION"
+            },
+            {
+              "description": "可选：通知模式 - gitlab_only(仅GitLab)、lark_only(仅Lark)、both(两者都发)，默认为 gitlab_only",
+              "format": "string",
+              "name": "GITLAB_NOTE_MODE"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fbae7b01-59cc-4777-a9e6-22b171703fe7",
+          "published_at": "2025-09-11T09:41:43.896888413Z",
+          "updated_at": "2025-09-11T09:41:43.896888413Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.mcpcap/mcpcap",
+      "description": "An MCP server for analyzing PCAP files.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/mcpcap/mcpcap",
+        "source": "github"
+      },
+      "version": "0.4.4",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "registry_base_url": "https://pypi.org",
+          "identifier": "mcpcap",
+          "version": "0.4.4",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fc7be6d0-3fb9-4f63-9858-86a62c456a15",
+          "published_at": "2025-09-11T01:06:15.722886488Z",
+          "updated_at": "2025-09-12T01:41:27.484537348Z",
+          "is_latest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/kesslerio-attio-mcp-server",
+      "description": "Enable AI assistants to interact directly with your Attio CRM data through natural language querie…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/kesslerio/attio-mcp-server",
+        "source": "github"
+      },
+      "version": "0.2.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@kesslerio/attio-mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fca4551c-4c86-485f-a548-9263a147effb",
+          "published_at": "2025-09-10T17:52:23.110357722Z",
+          "updated_at": "2025-09-10T17:52:23.110357722Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/CryptoCultCurt-appfolio-mcp-server",
+      "description": "Provide seamless access to Appfolio Property Manager Reporting API through a standardized MCP serv…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/CryptoCultCurt/appfolio-mcp-server",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@CryptoCultCurt/appfolio-mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fd5f5556-3f1d-46a1-8b5d-90f1f3d66078",
+          "published_at": "2025-09-11T00:42:54.55597845Z",
+          "updated_at": "2025-09-11T00:42:54.55597845Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.henilcalagiya/mcp-apple-notes",
+      "description": "MCP server for Apple Notes integration using AppleScript with full CRUD operations",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/henilcalagiya/mcp-apple-notes",
+        "source": "github"
+      },
+      "version": "0.1.2",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "registry_base_url": "https://pypi.org",
+          "identifier": "mcp-apple-notes",
+          "version": "0.1.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fe025150-d0bd-42e5-8c5f-3ea6ec61db33",
+          "published_at": "2025-09-11T05:36:33.726309509Z",
+          "updated_at": "2025-09-11T05:36:33.726309509Z",
+          "is_latest": true
+        }
+      }
+    }
+  ]
+}
