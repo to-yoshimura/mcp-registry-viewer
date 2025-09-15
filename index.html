@@ -37,80 +37,52 @@
                 /* header gradient (dark) */
                 --header-grad-top: rgba(84, 108, 255, 0.18);
                 --header-grad-mid: rgba(84, 108, 255, 0.06);
-                --header-veil: rgba(11, 16, 32, 0.72);
+                --header-veil: rgba(11, 16, 32, 0.50);
                 /* liquid glass (dark) */
                 --glass-bg: rgba(17, 24, 49, 0.45);
                 --glass-border-hi: rgba(255, 255, 255, 0.14);
                 --glass-border-lo: rgba(0, 0, 0, 0.35);
                 --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
                 --glass-highlight: rgba(110, 168, 254, 0.12);
+                /* background image config */
+                --bg-image: url('assets/bg-fixed.jpg'); /* ここに画像を配置 */
+                --bg-veil: rgba(11, 16, 32, 0.2);     /* 画像の上に被せる薄いベール */
             }
-            [data-theme="light"] {
-                --bg: #f6f8fd;
-                --card: #ffffff;
-                --muted: #5c6b85;
-                --text: #0b1020;
-                --accent: #2b67f6;
-                --ok: #1a9f6e;
-                --warn: #b36a00;
-                --err: #d9363e;
-                --border: #d9e0ef;
-                --chip-bg: #eef3ff;
-                --chip-border: #d7e2fb;
-                --chip-fg: #3b4b6e;
-                --code-bg: #f7f9ff;
-                --code-border: #e6ecfb;
-                --overlay: rgba(255, 255, 255, 0.65);
-                --thead-bg: #eef3ff;
-                --header-shadow: rgba(10, 20, 40, 0.12);
-                /* status colors (light) */
-                --status-active-bg: rgba(26, 159, 110, 0.12);
-                --status-active-fg: #166a4e;
-                --status-active-border: #9bd8c1;
-                --status-deprec-bg: rgba(179, 106, 0, 0.12);
-                --status-deprec-fg: #7a4b00;
-                --status-deprec-border: #efd3a7;
-                --modal-header-bg: linear-gradient(180deg, rgba(246,248,253,0.95), rgba(246,248,253,0.85));
-                /* header gradient (light) */
-                --header-grad-top: rgba(43, 103, 246, 0.12);
-                --header-grad-mid: rgba(43, 103, 246, 0.04);
-                --header-veil: rgba(246, 248, 253, 0.78);
-                /* liquid glass (light) */
-                --glass-bg: rgba(255, 255, 255, 0.62);
-                --glass-border-hi: rgba(255, 255, 255, 0.85);
-                --glass-border-lo: rgba(161, 177, 204, 0.55);
-                --glass-shadow: 0 8px 24px rgba(34, 58, 94, 0.12);
-                --glass-highlight: rgba(43, 103, 246, 0.08);
-            }
+            /* Light theme removed: dark-only design */
             html, body {
                 margin: 0;
                 padding: 0;
-                background: var(--bg);
+                /* Fixed background image tied to viewport (explicit URL for reliability) */
+                background: var(--bg) url('assets/bg-fixed.jpg') center center / cover no-repeat fixed;
                 color: var(--text);
                 font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
             }
+            /* Fixed underlay image (robust across browsers) */
+            .underlay {
+                position: fixed; inset: 0; z-index: 0; pointer-events: none;
+                background:
+                    linear-gradient(0deg, var(--bg-veil), var(--bg-veil)),
+                    url('assets/bg-fixed.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            /* Keep header positioned; avoid z-index on main so modal can overlay it */
+            header, main { position: relative; }
             header {
                 padding: 16px 20px;
-                /* 透過をやめ、下のカードが透けないように不透明背景に */
-                background:
-                    linear-gradient(180deg, var(--header-grad-top) 0%, var(--header-grad-mid) 42%, rgba(0,0,0,0) 100%),
-                    var(--bg);
+                /* Match card glass style: neutral, no blue tint */
+                background: rgba(255, 255, 255, 0.20);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.30);
                 position: sticky;
                 top: 0;
                 z-index: 10;
-                /* デフォルトはシャドウ無し（スクロール時に付与） */
                 box-shadow: none;
                 transition: box-shadow 120ms ease;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
             }
-            header.scrolled {
-                box-shadow: 0 1px 16px var(--header-shadow);
-                /* Slight translucency + blur when overlapping content */
-                background:
-                    linear-gradient(180deg, var(--header-grad-top) 0%, var(--header-grad-mid) 42%, rgba(0,0,0,0) 100%),
-                    var(--header-veil);
-                backdrop-filter: saturate(110%) blur(8px);
-                -webkit-backdrop-filter: saturate(110%) blur(8px);
-            }
+            header.scrolled { box-shadow: 0 1px 16px var(--header-shadow); }
             header h1 {
                 margin: 0 0 8px 0;
                 font-size: 18px;
@@ -162,31 +134,34 @@
             }
             .card {
                 position: relative;
-                background:
-                    linear-gradient(180deg, var(--glass-highlight), transparent 60%),
-                    var(--glass-bg);
+                /* Glassmorphism from https://css.glass */
+                background: rgba(255, 255, 255, 0.2);
                 border-radius: 16px;
-                border: 1px solid transparent;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 padding: 16px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 min-width: 0; /* 長い文字列でのあふれ対策 */
-                box-shadow: var(--glass-shadow);
-                backdrop-filter: saturate(150%) blur(14px);
-                -webkit-backdrop-filter: saturate(150%) blur(14px);
                 overflow: hidden;
+                /* Card-specific color overrides to keep text white
+                   even under light theme */
+                color: #ffffff;
+                --text: #ffffff;
+                --muted: rgba(255, 255, 255, 0.78);
+                --chip-bg: rgba(255, 255, 255, 0.12);
+                --chip-border: rgba(255, 255, 255, 0.28);
+                --chip-fg: #ffffff;
+                --code-bg: rgba(0, 0, 0, 0.18);
+                --code-border: rgba(255, 255, 255, 0.18);
             }
-            /* Remove hairline to avoid visible border on some displays */
+            .card a { color: #ffffff; }
+            .card a:hover { text-decoration-color: rgba(255, 255, 255, 0.85); }
+            /* 以前のハイライト/装飾は削除 */
             .card::after { content: none; }
-            /* Subtle top-left sheen */
-            .card::before {
-                content: "";
-                position: absolute; inset: -20% -20% 40% 40%;
-                border-radius: 50%;
-                background: radial-gradient(80% 80% at 20% 0%, var(--glass-highlight), transparent 60%);
-                pointer-events: none;
-            }
             .card.clickable { cursor: pointer; }
             .card.clickable:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
             .card.clickable:focus { outline: 2px solid #33509a; outline-offset: 2px; }
@@ -264,7 +239,9 @@
             /* Detail Modal */
             .modal {
                 position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center;
-                background: var(--overlay); backdrop-filter: blur(3px);
+                background: transparent; /* no dimming */
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
                 animation: fadeIn 160ms ease-out;
             }
             .modal[open] { display: flex; }
@@ -272,29 +249,41 @@
                 width: min(920px, 94vw);
                 max-height: 86vh;
                 display: flex; flex-direction: column;
-                background:
-                    linear-gradient(180deg, var(--glass-highlight), transparent 60%),
-                    var(--glass-bg);
-                border: none; border-radius: 18px;
-                box-shadow: var(--glass-shadow);
+                /* Glassmorphism from https://css.glass */
+                background: rgba(255, 255, 255, 0.26);
+                border-radius: 16px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.30);
+                backdrop-filter: blur(7px);
+                -webkit-backdrop-filter: blur(7px);
+                border: 1px solid rgba(255, 255, 255, 0.42);
                 overflow: hidden;
                 transform: translateY(4px); animation: popIn 140ms ease-out forwards;
-                backdrop-filter: saturate(150%) blur(16px);
-                -webkit-backdrop-filter: saturate(150%) blur(16px);
                 position: relative;
+                /* Modal-specific color overrides for readability */
+                color: #ffffff;
+                --text: #ffffff;
+                --muted: rgba(255, 255, 255, 0.78);
+                --border: rgba(255, 255, 255, 0.18);
+                --chip-bg: rgba(255, 255, 255, 0.12);
+                --chip-border: rgba(255, 255, 255, 0.28);
+                --chip-fg: #ffffff;
+                --code-bg: rgba(0, 0, 0, 0.18);
+                --code-border: rgba(255, 255, 255, 0.18);
             }
+            /* Harmonize link/underline and separators inside modal */
+            .modal-card a { color: #ffffff; text-decoration-color: rgba(255,255,255,0.35); text-underline-offset: 2px; }
+            .modal-card a:hover { text-decoration-color: rgba(255,255,255,0.85); }
+            .modal-card .kv-table th, .modal-card .kv-table td { border-bottom-color: rgba(255,255,255,0.18); }
+            .modal-card .kv-table tbody tr:hover { background: rgba(255,255,255,0.04); }
             .modal-card::after { content: none; }
-            .modal-card::before {
-                content: ""; position: absolute; inset: -20% -20% 40% 40%; border-radius: 50%; pointer-events: none;
-                background: radial-gradient(80% 80% at 20% 0%, var(--glass-highlight), transparent 60%);
-            }
             .modal-header {
                 position: sticky; top: 0; z-index: 1;
                 display: flex; justify-content: space-between; align-items: center; gap: 8px;
                 padding: 12px 14px; margin: 0;
-                background: var(--modal-header-bg);
-                backdrop-filter: saturate(140%) blur(8px);
-                -webkit-backdrop-filter: saturate(140%) blur(8px);
+                background: rgba(255,255,255,0.18);
+                border-bottom: 1px solid rgba(255,255,255,0.28);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
             }
             .modal-title { font-size: 18px; margin: 0; letter-spacing: .2px; }
             .close-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
@@ -303,7 +292,11 @@
             .modal-section { margin: 12px 0; }
             .kv-table { width: 100%; border-collapse: collapse; }
             .kv-table th, .kv-table td { text-align: left; padding: 8px 10px; font-size: 13px; vertical-align: top; border-bottom: 1px solid var(--border); }
-            .kv-table thead th { position: sticky; top: 0; background: var(--thead-bg); z-index: 1; }
+            .kv-table thead th { position: sticky; top: 0; background: rgba(255,255,255,0.16); color: var(--text); z-index: 1; }
+            .kv-table thead th + th { border-left: 1px solid rgba(255,255,255,0.08); }
+            .kv-table.tabular th, .kv-table.tabular td { padding: 10px 12px; }
+            .kv-table.tabular thead th { font-weight: 700; letter-spacing: 0.2px; }
+            .mono.url-text { color: #fff; word-break: break-all; }
             .kv-table tbody tr:hover { background: rgba(255,255,255,0.02); }
             .kv-table th { color: var(--muted); width: 180px; font-weight: 600; }
             .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
@@ -402,23 +395,22 @@
             .skeleton-card { height: 140px; border-radius: 12px; border: 1px solid var(--border); }
             .copy-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; font-size: 11px; cursor: pointer; }
             .copy-btn:hover { color: var(--text); border-color: #33509a; }
-            .theme-switch { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; cursor: pointer; }
-            .theme-switch:hover { color: var(--text); border-color: #33509a; }
-            .intro { max-width: 72ch; line-height: 1.55; font-size: 14px; color: var(--muted); margin-top: 2px; margin-bottom: 2px; }
+            /* .theme-switch removed (dark-only) */
+            .intro { max-width: 72ch; line-height: 1.55; font-size: 14px; color: rgba(255,255,255,0.82); margin-top: 2px; margin-bottom: 2px; }
             /* Toolbar: search on the left (max 640px), view switch on right */
             .searchbar { display: grid; grid-template-columns: minmax(280px, 640px) auto; gap: 12px; align-items: center; margin-top: 12px; }
             .searchbar .field { position: relative; min-width: 0; width: 100%; }
-            .searchbar .icon { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: var(--muted); transition: color 120ms ease; }
+            .searchbar .icon { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.72); transition: color 120ms ease; }
             .searchbar input {
                 width: 100%; height: 36px;
                 background: transparent; color: var(--text);
-                border: none; border-bottom: 1.5px solid var(--border);
+                border: none; border-bottom: 1.5px solid rgba(255,255,255,0.28);
                 border-radius: 0;
                 padding: 0 28px 4px 30px; line-height: 1.3; font-size: 14px;
                 outline: none;
                 transition: border-color 120ms ease, color 120ms ease;
             }
-            .searchbar input::placeholder { color: var(--muted); }
+            .searchbar input::placeholder { color: rgba(255,255,255,0.72); }
             .searchbar .clear {
                 position: absolute; right: 0; top: 50%; transform: translateY(-50%);
                 border: none; background: transparent; color: var(--muted);
@@ -427,12 +419,13 @@
                 font-size: 16px; line-height: 1; /* テキストの×をそのまま表示 */
             }
             .searchbar .clear:hover { color: var(--text); }
-            .searchbar:focus-within input { border-bottom-color: var(--accent); }
-            .searchbar:focus-within .icon { color: var(--accent); }
+            .searchbar:focus-within input { border-bottom-color: rgba(255,255,255,0.70); }
+            .searchbar:focus-within .icon { color: #ffffff; }
             .view-switch { display: inline-flex; gap: 8px; align-items: center; justify-content: flex-end; }
-            .segmented { display: inline-flex; background: var(--chip-bg); border: 1px solid var(--chip-border); border-radius: 999px; padding: 2px; }
-            .segmented .seg { background: transparent; border: 0; color: var(--muted); padding: 4px 10px; border-radius: 999px; cursor: pointer; font-size: 12px; }
-            .segmented .seg[aria-pressed="true"] { background: var(--card); color: var(--text); box-shadow: 0 0 0 1px var(--border) inset; }
+            .view-switch .meta { color: rgba(255,255,255,0.78); }
+            .segmented { display: inline-flex; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; padding: 2px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+            .segmented .seg { background: transparent; border: 0; color: rgba(255,255,255,0.82); padding: 4px 10px; border-radius: 999px; cursor: pointer; font-size: 12px; }
+            .segmented .seg[aria-pressed="true"] { background: rgba(255,255,255,0.20); color: #ffffff; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.30); }
             @media (max-width: 880px){ .searchbar { grid-template-columns: 1fr; } .view-switch { width: 100%; justify-content: flex-end; } }
 
             /* Full-screen loading overlay */
@@ -457,12 +450,33 @@
             .spinner.sm { width: 12px; height: 12px; border-width: 2px; vertical-align: -1px; }
             @keyframes spin { to { transform: rotate(360deg); } }
 
-            /* List view */
-            .list-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; table-layout: fixed; }
-            .list-table th, .list-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
-            .list-table thead th { background: var(--bg-alt); color: var(--muted); font-weight: 600; }
+            /* List view (glass palette to match cards) */
+            .list-table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid rgba(255,255,255,0.30);
+                border-radius: 12px;
+                overflow: hidden;
+                table-layout: fixed;
+                background: rgba(255,255,255,0.12);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+            }
+            .list-table th, .list-table td {
+                padding: 14px 16px;
+                border-bottom: 1px solid rgba(255,255,255,0.14);
+                vertical-align: top;
+            }
+            .list-table thead th {
+                background: rgba(255,255,255,0.20);
+                color: #ffffff;
+                font-weight: 700;
+            }
             .list-table tbody tr { cursor: pointer; }
-            .list-table tbody tr:hover { background: rgba(51,80,154,0.06); }
+            .list-table tbody tr:hover { background: rgba(255,255,255,0.06); }
+            /* Chips in list rows: match card's white-based palette */
+            .list-table .chip { background: rgba(255,255,255,0.12); color: #ffffff; border-color: rgba(255,255,255,0.28); }
+            .list-table .chip.muted { color: rgba(255,255,255,0.78); border-color: rgba(255,255,255,0.24); }
             .list-name { font-weight: 700; font-size: 16px; line-height: 1.35; }
             .list-meta { color: var(--muted); font-size: 12px; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
             .list-desc { color: var(--text); font-size: 14px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -475,14 +489,15 @@
         </style>
     </head>
     <body>
+        <div class="underlay" aria-hidden="true"></div>
         <header>
             <div class="wrap">
-                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                <div style="display:flex; align-items:center; justify-content:flex-start; gap:8px;">
                     <div>
                         <h1 style="margin-bottom:6px;">MCP Registry Viewer</h1>
                         <div class="meta intro">MCPサーバーのレジストリを閲覧し、ローカルフィルターで目的のサーバーを素早く絞り込めます。カードをクリックすると詳細（パッケージ、リモート、環境変数など）を表示します。</div>
                     </div>
-                    <button id="theme-toggle" class="theme-switch" type="button" aria-label="テーマ切り替え">🌙</button>
+                    <!-- theme toggle removed -->
                 </div>
                 <div class="searchbar" role="search" aria-label="ローカル検索">
                     <div class="field">
@@ -526,23 +541,7 @@
         </main>
 
         <script>
-            // ===== テーマ切替 =====
-            (function setupTheme() {
-                const root = document.documentElement;
-                const toggleBtn = () => document.getElementById('theme-toggle');
-                const saved = localStorage.getItem('theme');
-                function systemPrefersDark(){ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
-                function apply(theme){ root.setAttribute('data-theme', theme); const b = toggleBtn(); if (b) b.textContent = theme === 'dark' ? '🌙' : '☀️'; }
-                const initial = saved === 'dark' || saved === 'light' ? saved : (systemPrefersDark() ? 'dark' : 'light');
-                apply(initial);
-                const btn = toggleBtn();
-                if (btn) btn.onclick = () => { const next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark'; apply(next); localStorage.setItem('theme', next); };
-                // システム設定が変わった時：ユーザーが手動変更していなければ追随
-                if (!saved && window.matchMedia) {
-                    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-                    try { mq.addEventListener('change', e => { apply(e.matches ? 'dark' : 'light'); }); } catch { /* Safari */ mq.addListener && mq.addListener(e => { apply(e.matches ? 'dark' : 'light'); }); }
-                }
-            })();
+            // テーマ切替ロジックは削除（ダーク固定）
 
             // ===== ヘッダーシャドウ（スクロール時のみ表示） =====
             (function headerShadowOnScroll(){
@@ -771,8 +770,21 @@
                     (Array.isArray(it.packages) && it.packages.some(p => match(p.identifier) || match(p.registry_type)))
                 );
             }
+            // ソートキー: updated_at（なければ published_at → created_at）
+            function timeOrZero(v){ const t = Date.parse(v); return isNaN(t) ? 0 : t; }
+            function updatedTime(item){
+                const off = item?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const u = timeOrZero(item?.updated_at);
+                if (u) return u;
+                const p = timeOrZero(off?.published_at);
+                if (p) return p;
+                return timeOrZero(item?.created_at);
+            }
+
             function renderAll() {
-                const items = applyFilter(allItems);
+                const items = applyFilter(allItems).slice().sort((a,b)=>
+                    (updatedTime(b) - updatedTime(a)) || String(a.name||'').localeCompare(String(b.name||''))
+                );
                 resultsEl.innerHTML = "";
                 if (items.length === 0) {
                     resultsEl.innerHTML = `<div class="meta">該当する結果がありません。</div>`;
@@ -959,7 +971,7 @@
                             ${official.published_at? `<tr><th>Published</th><td>${escapeHtml(new Date(official.published_at).toISOString())}${official.is_latest? ' <span class="badge">latest</span>':''}</td></tr>`:''}
                             ${item?.updated_at? `<tr><th>Updated</th><td>${escapeHtml(new Date(item.updated_at).toISOString())}</td></tr>`:''}
                             ${item?.created_at? `<tr><th>Created</th><td>${escapeHtml(new Date(item.created_at).toISOString())}</td></tr>`:''}
-                            ${repo.url? `<tr><th>Repository</th><td><a href="${escapeAttr(repo.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(repo.url)}</a> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''}</td></tr>`:''}
+                            ${repo.url? `<tr><th>Repository</th><td class="mono"><span class="url-text">${escapeHtml(repo.url)}</span> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''} <button class="copy-btn" data-copy="${escapeAttr(repo.url)}">copy</button></td></tr>`:''}
                             ${site? `<tr><th>Website</th><td><a href="${escapeAttr(site)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site)}</a></td></tr>`:''}
                             ${envCount? `<tr><th>Environment</th><td>${envCount} vars</td></tr>`:''}
                         </table>
@@ -978,7 +990,7 @@
                         </table>
                     </div>`: ''}
                     ${rems.length? `<div class="modal-section"><h3 class="meta" style="margin:6px 0;">Remotes</h3>
-                        <table class="kv-table">
+                        <table class="kv-table tabular">
                             <thead><tr><th>Transport</th><th>URL</th><th>Headers</th></tr></thead>
                             <tbody>${remRows}</tbody>
                         </table>
