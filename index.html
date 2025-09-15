@@ -7,6 +7,8 @@
             content="width=device-width, initial-scale=1"
         />
         <title>MCP Registry Viewer</title>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
         <style>
             :root {
                 --bg: #0b1020;
@@ -745,7 +747,7 @@
                     <div class="footer-row">
                         <div class="foot-left">${updated_at ? `updated ${escapeHtml(relativeTime(updated_at))}` : ''}</div>
                         <div class="foot-links">
-                            ${website_url ? `<a class="icon-link" href="${escapeAttr(website_url)}" target="_blank" rel="noopener noreferrer" title="${escapeAttr(siteHost)}">website ↗</a>` : ''}
+                            ${(() => { const u = safeHref(website_url); return u ? `<a class=\"icon-link\" href=\"${escapeAttr(u)}\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"${escapeAttr(siteHost)}\">website ↗</a>` : '' })()}
                             <!-- repository link moved to modal only -->
                         </div>
                     </div>
@@ -972,7 +974,7 @@
                             ${item?.updated_at? `<tr><th>Updated</th><td>${escapeHtml(new Date(item.updated_at).toISOString())}</td></tr>`:''}
                             ${item?.created_at? `<tr><th>Created</th><td>${escapeHtml(new Date(item.created_at).toISOString())}</td></tr>`:''}
                             ${repo.url? `<tr><th>Repository</th><td class="mono"><span class="url-text">${escapeHtml(repo.url)}</span> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''} <button class="copy-btn" data-copy="${escapeAttr(repo.url)}">copy</button></td></tr>`:''}
-                            ${site? `<tr><th>Website</th><td><a href="${escapeAttr(site)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site)}</a></td></tr>`:''}
+                            ${(() => { const u = safeHref(site); return u ? `<tr><th>Website</th><td><a href=\"${escapeAttr(u)}\" target=\"_blank\" rel=\"noopener noreferrer\">${escapeHtml(site)}</a></td></tr>` : (site ? `<tr><th>Website</th><td><span class=\"mono url-text\">${escapeHtml(site)}</span></td></tr>` : '') })()}
                             ${envCount? `<tr><th>Environment</th><td>${envCount} vars</td></tr>`:''}
                         </table>
                     </div>
@@ -1054,6 +1056,14 @@
             }
             function escapeAttr(str) {
                 return escapeHtml(str);
+            }
+            function safeHref(u) {
+                try {
+                    const url = new URL(u, location.href);
+                    const p = (url.protocol||'').toLowerCase();
+                    if (p === 'http:' || p === 'https:') return url.href;
+                } catch {}
+                return null;
             }
 
             // 初期化（起動時に一覧を自動取得）
