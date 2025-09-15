@@ -4,11 +4,16 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -21,8 +26,9 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
             git commit -m "chore(data): refresh registry data"
+            # 念のため最新を取り込んでからpush（競合回避）
+            git pull --rebase origin "$GITHUB_REF_NAME" || true
             git push
           else
             echo "No changes in data/"
           fi
-
