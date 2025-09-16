@@ -2,6 +2,129 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.cmpxchg16/mcp-ethical-hacking",
+      "description": "An MCP server that provides LinkedIn & Reddit data",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/cmpxchg16/mcp-ethical-hacking",
+        "source": "github"
+      },
+      "version": "1.2.0",
+      "packages": [
+        {
+          "registry_type": "mcpb",
+          "identifier": "https://github.com/cmpxchg16/mcp-ethical-hacking/releases/download/v1.0.0/server.mcpb",
+          "version": "1.2.0",
+          "file_sha256": "294365cbf53a602df093e3757e6a31cca6c50dd6af343fefa4a528ab869d24a0",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fa434ba2-0704-4420-859e-2a5aa9fa14d9",
+          "published_at": "2025-09-15T12:55:00.133512333Z",
+          "updated_at": "2025-09-15T12:56:52.963416323Z",
+          "is_latest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "app.getdialer/dialer",
+      "description": "An MCP server that provides lets you make outbound phone calls using your own phone number",
+      "status": "active",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://getdialer.app/mcp"
+        },
+        {
+          "type": "sse",
+          "url": "https://getdialer.app/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "faa26cb9-3aad-415e-aece-f715fff5fe5e",
+          "published_at": "2025-09-09T00:16:49.107842808Z",
+          "updated_at": "2025-09-09T00:16:49.107842808Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/smithery-ai-cookbook-python-quickstart",
+      "description": "A simple MCP server built with FastMCP and python",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/smithery-ai/smithery-cookbook",
+        "source": "github",
+        "subfolder": "servers/python/quickstart"
+      },
+      "version": "1.13.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@smithery-ai/cookbook-python-quickstart/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fb85b1a6-168c-4775-ae6b-2ab63c5506c2",
+          "published_at": "2025-09-10T16:07:02.461934808Z",
+          "updated_at": "2025-09-10T16:07:02.461934808Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "com.notion/mcp",
+      "description": "Official Notion MCP server",
+      "status": "active",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.notion.com/mcp"
+        },
+        {
+          "type": "sse",
+          "url": "https://mcp.notion.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fb955a62-b750-4145-926a-824b47307d13",
+          "published_at": "2025-09-11T22:25:50.737872147Z",
+          "updated_at": "2025-09-11T22:25:50.737872147Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
       "name": "io.github.dubuqingfeng/gitlab-mcp-server",
       "description": "GitLab MCP (Model Context Protocol) server for AI agents",
       "status": "active",
@@ -62,6 +185,36 @@
           "id": "fbae7b01-59cc-4777-a9e6-22b171703fe7",
           "published_at": "2025-09-11T09:41:43.896888413Z",
           "updated_at": "2025-09-11T09:41:43.896888413Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.SnowLeopard-AI/bigquery-mcp",
+      "description": "A SnowLeopardAI-managed MCP server that provides access to Google BigQuery data.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/SnowLeopard-AI/bigquery-mcp",
+        "source": "github"
+      },
+      "version": "0.1.0",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "registry_base_url": "https://pypi.org",
+          "identifier": "sl-bigquery-mcp",
+          "version": "0.1.8",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fc1a3aad-1f9b-4a33-9a96-3f19509d4419",
+          "published_at": "2025-09-15T22:35:28.327511086Z",
+          "updated_at": "2025-09-15T22:35:28.327511086Z",
           "is_latest": true
         }
       }

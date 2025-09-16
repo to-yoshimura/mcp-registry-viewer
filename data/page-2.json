@@ -2636,8 +2636,8 @@
         "io.modelcontextprotocol.registry/official": {
           "id": "868fcbf0-a0d5-40fc-ab05-90150f408d12",
           "published_at": "2025-09-15T00:05:40.274408146Z",
-          "updated_at": "2025-09-15T00:05:40.274408146Z",
-          "is_latest": true
+          "updated_at": "2025-09-16T01:51:47.036829827Z",
+          "is_latest": false
         }
       }
     },
