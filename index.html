@@ -746,10 +746,7 @@
                     <div class="capabilities">${chips.join('')}</div>
                     <div class="footer-row">
                         <div class="foot-left">${updated_at ? `updated ${escapeHtml(relativeTime(updated_at))}` : ''}</div>
-                        <div class="foot-links">
-                            ${(() => { const u = safeHref(website_url); return u ? `<a class=\"icon-link\" href=\"${escapeAttr(u)}\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"${escapeAttr(siteHost)}\">website ↗</a>` : '' })()}
-                            <!-- repository link moved to modal only -->
-                        </div>
+                        <div class="foot-links"></div>
                     </div>
                 `;
                 if (official?.id) div.dataset.serverId = official.id;
