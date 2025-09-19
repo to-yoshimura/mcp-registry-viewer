@@ -353,6 +353,42 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.Lyellr88/marm-mcp-server",
+      "description": "Universal MCP Server with advanced AI memory capabilities and semantic search.",
+      "repository": {
+        "url": "https://github.com/Lyellr88/MARM-Systems",
+        "source": "github"
+      },
+      "version": "2.2.1",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "identifier": "marm-mcp-server",
+          "version": "2.2.1",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registry_type": "oci",
+          "identifier": "lyellr88/marm-mcp-server",
+          "version": "2.2.1",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "0760bf55-1b79-4018-9d07-b1344286092e",
+          "published_at": "2025-09-19T01:23:00.859132392Z",
+          "updated_at": "2025-09-19T01:23:00.859132392Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
       "name": "io.github.cmpxchg16/mcp-ethical-hacking",
       "description": "An MCP server that provides LinkedIn & Reddit data",
       "status": "active",
@@ -1038,6 +1074,70 @@
           "published_at": "2025-09-12T05:10:59.806509357Z",
           "updated_at": "2025-09-18T00:54:49.018200576Z",
           "is_latest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.marlenezw/publish-mcp-server",
+      "description": "An MCP server that helps developers publish their MCP servers to the registry",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/marlenezw/publish-mcp-server",
+        "source": "github"
+      },
+      "version": "0.1.3",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "registry_base_url": "https://pypi.org",
+          "identifier": "publish-mcp-server",
+          "version": "0.1.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "1357cfee-84de-4f73-b696-a06de4bd0ebf",
+          "published_at": "2025-09-18T22:42:06.320770941Z",
+          "updated_at": "2025-09-18T22:42:06.320770941Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/callmybot-hello-mcp-server",
+      "description": "Generate quick, friendly greetings by name. Personalize salutations for any context. Explore the o…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/callmybot/hello-mcp-server",
+        "source": "github"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@callmybot/hello-mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "13e18ea1-9b63-4967-abde-7e8eac896218",
+          "published_at": "2025-09-18T07:48:26.611267285Z",
+          "updated_at": "2025-09-18T07:48:26.611267285Z",
+          "is_latest": true
         }
       }
     },
@@ -1938,8 +2038,8 @@
         "io.modelcontextprotocol.registry/official": {
           "id": "1f03f6b8-4a9d-45b3-9f7c-704390897d0b",
           "published_at": "2025-09-15T20:35:36.816470801Z",
-          "updated_at": "2025-09-15T20:35:36.816470801Z",
-          "is_latest": true
+          "updated_at": "2025-09-18T21:32:17.517420898Z",
+          "is_latest": false
         }
       }
     },
@@ -2595,6 +2695,40 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/alphago2580-naramarketmcp",
+      "description": "Access Korea’s G2B procurement and Nara Market data for bid notices, awards, contracts, statistics…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/alphago2580/naramarketmcp",
+        "source": "github"
+      },
+      "version": "1.14.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@alphago2580/naramarketmcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "25e1e4ce-1eae-45d6-9b48-0ae6ae00d59d",
+          "published_at": "2025-09-19T02:36:55.167644104Z",
+          "updated_at": "2025-09-19T02:36:55.167644104Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
       "name": "io.github.MasonChow/source-map-parser-mcp",
       "description": "Parse JavaScript error stack traces back to original source code using source maps",
       "status": "active",
@@ -2939,6 +3073,36 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.jkawamoto/mcp-florence2",
+      "description": "An MCP server for processing images using Florence-2",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/jkawamoto/mcp-florence2",
+        "source": "github"
+      },
+      "version": "0.3.2",
+      "packages": [
+        {
+          "registry_type": "mcpb",
+          "identifier": "https://github.com/jkawamoto/mcp-florence2/releases/download/v0.3.2/mcp-florence2.mcpb",
+          "version": "0.3.2",
+          "file_sha256": "58fcb84d444c01f3d7e9a3dd3ea6fa45dc7515663141527936ee8daec2cd0f63",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "296598bd-aa8c-4ec5-acc8-4d57ad677139",
+          "published_at": "2025-09-18T22:50:50.36439604Z",
+          "updated_at": "2025-09-19T00:50:28.853946312Z",
+          "is_latest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
       "name": "io.github.spences10/mcp-sqlite-tools",
       "description": "MCP server for local SQLite database operations",
       "status": "active",
@@ -3260,8 +3424,8 @@
         "io.modelcontextprotocol.registry/official": {
           "id": "2de2ee3a-fc9a-4ac4-8ded-3fda14b29051",
           "published_at": "2025-09-17T01:44:26.040148686Z",
-          "updated_at": "2025-09-17T01:44:26.040148686Z",
-          "is_latest": true
+          "updated_at": "2025-09-18T17:33:36.29275102Z",
+          "is_latest": false
         }
       }
     },
@@ -4016,201 +4180,6 @@
           "id": "36b0da99-4b6f-4d12-b60f-b66950d8600d",
           "published_at": "2025-09-14T21:38:57.98433852Z",
           "updated_at": "2025-09-14T21:38:57.98433852Z",
-          "is_latest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://registry.modelcontextprotocol.org/server.schema.json",
-      "name": "io.github.croit/mcp-croit-ceph",
-      "description": "MCP server for Croit Ceph cluster management with dynamic OpenAPI tool generation",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/croit/mcp-croit-ceph",
-        "source": "github",
-        "id": "1058156155"
-      },
-      "version": "0.2.16",
-      "packages": [
-        {
-          "registry_type": "oci",
-          "registry_base_url": "https://docker.io",
-          "identifier": "croit/mcp-croit-ceph",
-          "version": "0.2.16",
-          "transport": {
-            "type": "stdio"
-          },
-          "environment_variables": [
-            {
-              "description": "Croit cluster URL (e.g., http://your-cluster.croit.io:8080)",
-              "name": "CROIT_HOST"
-            },
-            {
-              "description": "API authentication token for Croit cluster",
-              "name": "CROIT_API_TOKEN"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "id": "36c22c9a-0448-40af-8312-2fb36b8b7cea",
-          "published_at": "2025-09-17T09:30:42.325917413Z",
-          "updated_at": "2025-09-17T09:30:42.325917413Z",
-          "is_latest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "io.github.karanb192/reddit-buddy-mcp",
-      "description": "Reddit MCP server - browse posts, search content, analyze users.",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "1.0.6-test.7",
-      "packages": [
-        {
-          "registry_type": "npm",
-          "identifier": "@karanb192/reddit-buddy-mcp",
-          "version": "1.0.6-test.7",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "id": "37a73b98-7065-4144-8bd2-9b7aa57340a5",
-          "published_at": "2025-09-15T07:27:45.7983415Z",
-          "updated_at": "2025-09-15T07:27:45.7983415Z",
-          "is_latest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "com.devcycle/mcp",
-      "description": "DevCycle MCP server for feature flag management",
-      "repository": {
-        "url": "https://github.com/DevCycleHQ/cli",
-        "source": "github"
-      },
-      "version": "6.1.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://mcp.devcycle.com/mcp"
-        },
-        {
-          "type": "sse",
-          "url": "https://mcp.devcycle.com/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "id": "37cb7306-1433-4aae-9aa4-79eaedfb7b5a",
-          "published_at": "2025-09-17T20:28:36.449466527Z",
-          "updated_at": "2025-09-17T20:28:36.449466527Z",
-          "is_latest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "io.github.cr7258/elasticsearch-mcp-server",
-      "description": "MCP server for interacting with Elasticsearch",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/cr7258/elasticsearch-mcp-server",
-        "source": "github"
-      },
-      "version": "2.0.14",
-      "packages": [
-        {
-          "registry_type": "pypi",
-          "registry_base_url": "https://pypi.org",
-          "identifier": "elasticsearch-mcp-server",
-          "version": "2.0.14",
-          "transport": {
-            "type": "stdio"
-          },
-          "environment_variables": [
-            {
-              "description": "Comma-separated list of Elasticsearch hosts (e.g., https://localhost:9200)",
-              "format": "string",
-              "default": "https://localhost:9200",
-              "name": "ELASTICSEARCH_HOSTS"
-            },
-            {
-              "description": "API key for Elasticsearch or Elastic Cloud authentication (recommended)",
-              "format": "string",
-              "is_secret": true,
-              "name": "ELASTICSEARCH_API_KEY"
-            },
-            {
-              "description": "Username for basic authentication (alternative to API key)",
-              "format": "string",
-              "name": "ELASTICSEARCH_USERNAME"
-            },
-            {
-              "description": "Password for basic authentication (used with ELASTICSEARCH_USERNAME)",
-              "format": "string",
-              "is_secret": true,
-              "name": "ELASTICSEARCH_PASSWORD"
-            },
-            {
-              "description": "Whether to verify SSL certificates (true/false)",
-              "format": "boolean",
-              "default": "false",
-              "name": "ELASTICSEARCH_VERIFY_CERTS"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "id": "3ace42d4-426f-4aed-bb97-1ef46d6cdcb5",
-          "published_at": "2025-09-11T03:19:12.574630083Z",
-          "updated_at": "2025-09-15T14:34:34.785294588Z",
-          "is_latest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "io.github.nerfels/mind-map",
-      "description": "Experimental code intelligence platform for Claude Code with AST parsing and context analysis",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/nerfels/mind-map",
-        "source": "github"
-      },
-      "version": "1.12.13",
-      "packages": [
-        {
-          "registry_type": "npm",
-          "registry_base_url": "https://registry.npmjs.org",
-          "identifier": "mind-map-mcp",
-          "version": "1.12.13",
-          "transport": {
-            "type": "stdio"
-          },
-          "environment_variables": [
-            {
-              "description": "Project root directory for MCP to analyze (optional - uses current working directory if not specified)",
-              "format": "string",
-              "name": "MCP_PROJECT_ROOT"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "id": "3b9a8107-0e4f-4b30-b1af-004ba2e5db16",
-          "published_at": "2025-09-16T16:29:26.08179909Z",
-          "updated_at": "2025-09-16T16:29:26.08179909Z",
           "is_latest": true
         }
       }
