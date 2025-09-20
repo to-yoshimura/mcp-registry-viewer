@@ -1,0 +1,85 @@
+{
+  "servers": [
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "ai.smithery/CryptoCultCurt-appfolio-mcp-server",
+      "description": "Provide seamless access to Appfolio Property Manager Reporting API through a standardized MCP serv…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/CryptoCultCurt/appfolio-mcp-server",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@CryptoCultCurt/appfolio-mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "is_required": true,
+              "value": "Bearer {smithery_api_key}",
+              "is_secret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fd5f5556-3f1d-46a1-8b5d-90f1f3d66078",
+          "published_at": "2025-09-11T00:42:54.55597845Z",
+          "updated_at": "2025-09-11T00:42:54.55597845Z",
+          "is_latest": true
+        }
+      }
+    },
+    {
+      "name": "io.github.OtherVibes/mcp-as-a-judge",
+      "description": "MCP as a Judge: a behavioral MCP that strengthens AI coding assistants via explicit LLM evaluations",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "0.3.13",
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fe00dad0-f665-453b-a667-ff147be8ff07",
+          "published_at": "2025-09-18T22:00:36.893962101Z",
+          "updated_at": "2025-09-18T22:05:09.298621446Z",
+          "is_latest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.henilcalagiya/mcp-apple-notes",
+      "description": "MCP server for Apple Notes integration using AppleScript with full CRUD operations",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/henilcalagiya/mcp-apple-notes",
+        "source": "github"
+      },
+      "version": "0.1.2",
+      "packages": [
+        {
+          "registry_type": "pypi",
+          "registry_base_url": "https://pypi.org",
+          "identifier": "mcp-apple-notes",
+          "version": "0.1.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "fe025150-d0bd-42e5-8c5f-3ea6ec61db33",
+          "published_at": "2025-09-11T05:36:33.726309509Z",
+          "updated_at": "2025-09-11T05:36:33.726309509Z",
+          "is_latest": true
+        }
+      }
+    }
+  ]
+}
