@@ -481,8 +481,8 @@
           "serverId": "98619929-a570-46c1-8e35-4cde888731ee",
           "versionId": "085cf170-4e61-449a-8fdf-18508f251382",
           "publishedAt": "2025-09-19T21:00:37.853652239Z",
-          "updatedAt": "2025-09-19T21:00:37.853652239Z",
-          "isLatest": true
+          "updatedAt": "2025-09-22T16:13:17.248942811Z",
+          "isLatest": false
         }
       }
     },
@@ -1562,6 +1562,25 @@
       }
     },
     {
+      "$schema": "https://registry.modelcontextprotocol.io/schema/mcp-server-v0.json",
+      "name": "io.github.Lungshot/ninjaone",
+      "description": "MCP server for NinjaONE RMM with device management, monitoring, and automation",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.2.9",
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "32389d4c-f3b8-4702-87a7-d6880ecd8bb2",
+          "versionId": "13fa19a2-024f-412b-93dd-41620933bc23",
+          "publishedAt": "2025-09-22T17:51:28.941427211Z",
+          "updatedAt": "2025-09-22T17:51:28.941427211Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.florentine-ai/mcp",
       "description": "MCP server for Florentine.ai - Natural language to MongoDB aggregations",
@@ -1945,6 +1964,88 @@
           "versionId": "175bfcef-d334-420a-bedd-80f47cb1a53d",
           "publishedAt": "2025-09-17T09:26:34.424829695Z",
           "updatedAt": "2025-09-17T09:26:34.424829695Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.xcodebuildmcp/XcodeBuildMCP",
+      "description": "XcodeBuildMCP provides tools for Xcode project management, simulator management, and app utilities.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/cameroncooke/XcodeBuildMCP",
+        "source": "github",
+        "id": "945551361"
+      },
+      "version": "1.14.1",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "xcodebuildmcp",
+          "version": "1.14.1",
+          "runtimeHint": "npx",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Enable experimental xcodemake incremental builds (true/false or 1/0).",
+              "format": "boolean",
+              "default": "false",
+              "choices": [
+                "true",
+                "false",
+                "1",
+                "0"
+              ],
+              "name": "INCREMENTAL_BUILDS_ENABLED"
+            },
+            {
+              "description": "Enable AI-powered dynamic tool discovery to load only relevant workflows.",
+              "format": "boolean",
+              "default": "false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "name": "XCODEBUILDMCP_DYNAMIC_TOOLS"
+            },
+            {
+              "description": "Comma-separated list of workflows to load in Static Mode (e.g., 'simulator,device,project-discovery').",
+              "format": "string",
+              "name": "XCODEBUILDMCP_ENABLED_WORKFLOWS"
+            },
+            {
+              "description": "Disable Sentry error reporting (preferred flag).",
+              "format": "boolean",
+              "default": "false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "name": "XCODEBUILDMCP_SENTRY_DISABLED"
+            },
+            {
+              "description": "Enable verbose debug logging from the server.",
+              "format": "boolean",
+              "default": "false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "name": "XCODEBUILDMCP_DEBUG"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "be9105fb-f8cb-4151-b6f8-21b49fd71fed",
+          "versionId": "1796acca-2fb5-431d-9fd0-4f5f5be0f020",
+          "publishedAt": "2025-09-22T20:19:27.621246958Z",
+          "updatedAt": "2025-09-22T20:19:27.621246958Z",
           "isLatest": true
         }
       }
@@ -3594,8 +3695,8 @@
           "serverId": "be9105fb-f8cb-4151-b6f8-21b49fd71fed",
           "versionId": "288ccf72-1fde-4754-8d0e-9d67a9795125",
           "publishedAt": "2025-09-10T14:44:46.398091571Z",
-          "updatedAt": "2025-09-10T14:44:46.398091571Z",
-          "isLatest": true
+          "updatedAt": "2025-09-22T20:19:27.627630397Z",
+          "isLatest": false
         }
       }
     },
@@ -4032,74 +4133,6 @@
           "publishedAt": "2025-09-20T23:26:13.62772396Z",
           "updatedAt": "2025-09-20T23:26:13.62772396Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.timheuer/sampledotnetmcpserver",
-      "description": "Sample .NET MCP Server",
-      "repository": {
-        "url": "https://github.com/timheuer/sampledotnetmcpserver",
-        "source": "github"
-      },
-      "version": "0.1.30-beta",
-      "packages": [
-        {
-          "registryType": "nuget",
-          "identifier": "TimHeuer.SampleDotnetMcpServer",
-          "version": "0.1.30-beta",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "98619929-a570-46c1-8e35-4cde888731ee",
-          "versionId": "2de2ee3a-fc9a-4ac4-8ded-3fda14b29051",
-          "publishedAt": "2025-09-17T01:44:26.040148686Z",
-          "updatedAt": "2025-09-18T17:33:36.29275102Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.pshivapr/selenium-mcp",
-      "description": "Selenium Tools for MCP",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/pshivapr/selenium-mcp",
-        "source": "github"
-      },
-      "version": "0.3.8",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "selenium-webdriver-mcp",
-          "version": "0.3.8",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your API key for the service",
-              "format": "string",
-              "isSecret": true,
-              "name": "YOUR_API_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "e6648a72-6a2f-4b64-991e-4be3ed59ed3c",
-          "versionId": "2e84c83f-1672-4916-a337-84e76d93b4e2",
-          "publishedAt": "2025-09-09T13:53:12.051952089Z",
-          "updatedAt": "2025-09-09T19:08:26.438447364Z",
-          "isLatest": false
         }
       }
     }
