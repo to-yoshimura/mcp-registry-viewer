@@ -650,7 +650,10 @@
             async function tryFetchWithFallback(urlPath) {
                 if (typeof urlPath === 'string' && urlPath.startsWith('/servers/')) {
                     const id = decodeURIComponent(urlPath.slice('/servers/'.length));
-                    const getId = (it) => it?._meta?.["io.modelcontextprotocol.registry/official"]?.id || null;
+                    const getId = (it) => {
+                        const official = it?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+                        return official.serverId || official.id || null;
+                    };
                     let item = allItems.find(it => getId(it) === id);
                     if (item) return item;
                     // Ensure manifest is loaded to know total pages
@@ -702,6 +705,12 @@
                 } = item;
 
                 const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const serverId = official.serverId || official.id;
+                const latestFlag = official.isLatest === true || official.is_latest === true;
+                const publishedValue = official.publishedAt || official.published_at;
+                const publishedIso = formatIsoSafe(publishedValue);
+                const updatedValueRaw = updated_at || item?.updatedAt || official.updatedAt || official.updated_at;
+                const updatedIso = formatIsoSafe(updatedValueRaw);
 
                 // Chips
                 const chips = [];
@@ -724,14 +733,12 @@
                 const hasHash = (packages||[]).some(p => p.file_sha256);
                 if (hasHash) chips.push(`<span class="chip">sha256</span>`);
                 // latest flag
-                if (official.is_latest === true) chips.push(`<span class="badge">latest</span>`);
+                if (latestFlag) chips.push(`<span class="badge">latest</span>`);
 
                 const div = document.createElement("div");
                 div.className = "card clickable";
                 const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
-                const repoHost = repository?.url ? hostFromUrl(repository.url) : '';
-                const siteHost = website_url ? hostFromUrl(website_url) : '';
-                const isNew = official?.published_at && daysSince(official.published_at) <= 30;
+                const isNew = publishedIso && daysSince(publishedIso) <= 30;
 
                 div.innerHTML = `
                     <div class="title-row">
@@ -745,11 +752,11 @@
                     <div class="desc">${escapeHtml(description || "")}</div>
                     <div class="capabilities">${chips.join('')}</div>
                     <div class="footer-row">
-                        <div class="foot-left">${updated_at ? `updated ${escapeHtml(relativeTime(updated_at))}` : ''}</div>
+                        <div class="foot-left">${updatedIso ? `updated ${escapeHtml(relativeTime(updatedIso))}` : ''}</div>
                         <div class="foot-links"></div>
                     </div>
                 `;
-                if (official?.id) div.dataset.serverId = official.id;
+                if (serverId) div.dataset.serverId = serverId;
                 // アクセシビリティ: ボタン相当として扱う
                 div.setAttribute('role','button');
                 div.tabIndex = 0;
@@ -818,6 +825,8 @@
             function renderItemRow(item) {
                 const { name, description, version, packages = [], remotes = [], _meta = {}, status } = item;
                 const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const serverId = official.serverId || official.id;
+                const latestFlag = official.isLatest === true || official.is_latest === true;
                 const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
                 const chips = [];
                 const publisher = (typeof name === 'string' && name.includes('/')) ? name.split('/')[0] : '';
@@ -825,8 +834,9 @@
                 const eco = packages[0]?.registry_type; if (eco) chips.push(`<span class="chip sm">${escapeHtml(eco)}</span>`);
                 const runtime = packages.find(p => p.runtime_hint)?.runtime_hint; if (runtime) chips.push(`<span class="chip sm">${escapeHtml(runtime)}</span>`);
                 const transports = Array.from(new Set((remotes||[]).map(r => r.transport_type).filter(Boolean))); if (transports.length) chips.push(`<span class="chip sm">${escapeHtml(transports.join('/'))}</span>`);
+                if (latestFlag) chips.push(`<span class="badge">latest</span>`);
                 return `
-                    <tr data-server-id="${escapeAttr(official.id||'')}">
+                    <tr data-server-id="${escapeAttr(serverId||'')}">
                         <td>
                             <div class="list-name">${escapeHtml(name||'(no name)')}</div>
                             <div class="list-meta"><span class="status-pill sm ${statusClass}">${escapeHtml(fieldOrDash(status))}</span> ${chips.join('')}</div>
@@ -866,10 +876,6 @@
             // Source indicator is not used in static-data mode
             function updateSourcePill() {}
 
-            function hostFromUrl(u) {
-                try { return new URL(u).host; } catch { return u; }
-            }
-
             function relativeTime(iso) {
                 const d = new Date(iso);
                 const now = Date.now();
@@ -887,6 +893,13 @@
             function daysSince(iso) {
                 const d = new Date(iso);
                 return Math.floor((Date.now() - d.getTime()) / (24*60*60*1000));
+            }
+
+            function formatIsoSafe(value) {
+                if (!value) return null;
+                const date = new Date(value);
+                if (Number.isNaN(date.getTime())) return null;
+                return date.toISOString();
             }
 
             async function copyToClipboard(text) {
@@ -927,11 +940,18 @@
 
             function renderDetailBody(item) {
                 const official = item?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+                const serverId = official.serverId || official.id;
                 const repo = item?.repository || {};
-                const site = item?.website_url;
                 const pkgs = Array.isArray(item?.packages) ? item.packages : [];
                 const rems = Array.isArray(item?.remotes) ? item.remotes : [];
                 const envCount = pkgs.reduce((acc,p)=> acc + (Array.isArray(p.environment_variables)?p.environment_variables.length:0), 0);
+                const officialLatest = official.isLatest === true || official.is_latest === true;
+                const publishedAt = official.publishedAt || official.published_at || null;
+                const updatedAt = item?.updatedAt || item?.updated_at || official.updatedAt || official.updated_at || null;
+                const createdAt = item?.createdAt || item?.created_at || null;
+                const publishedIso = formatIsoSafe(publishedAt);
+                const updatedIso = formatIsoSafe(updatedAt);
+                const createdIso = formatIsoSafe(createdAt);
                 const pkgRows = pkgs.map(p => `
                     <tr>
                         <td>${escapeHtml(p.registry_type||'')}</td>
@@ -966,12 +986,11 @@
                         <table class="kv-table">
                             <tr><th>Status</th><td>${escapeHtml(item?.status||'')}</td></tr>
                             <tr><th>Version</th><td class="mono">${escapeHtml(item?.version||'')}</td></tr>
-                            ${official.id? `<tr><th>Registry ID</th><td class="mono">${escapeHtml(official.id)} <button class="copy-btn" data-copy="${escapeAttr(official.id)}">copy</button></td></tr>`:''}
-                            ${official.published_at? `<tr><th>Published</th><td>${escapeHtml(new Date(official.published_at).toISOString())}${official.is_latest? ' <span class="badge">latest</span>':''}</td></tr>`:''}
-                            ${item?.updated_at? `<tr><th>Updated</th><td>${escapeHtml(new Date(item.updated_at).toISOString())}</td></tr>`:''}
-                            ${item?.created_at? `<tr><th>Created</th><td>${escapeHtml(new Date(item.created_at).toISOString())}</td></tr>`:''}
+                            ${serverId? `<tr><th>Registry ID</th><td class="mono">${escapeHtml(serverId)} <button class="copy-btn" data-copy="${escapeAttr(serverId)}">copy</button></td></tr>`:''}
+                            ${publishedIso? `<tr><th>Published</th><td>${escapeHtml(publishedIso)}${officialLatest? ' <span class="badge">latest</span>':''}</td></tr>`:''}
+                            ${updatedIso? `<tr><th>Updated</th><td>${escapeHtml(updatedIso)}</td></tr>`:''}
+                            ${createdIso? `<tr><th>Created</th><td>${escapeHtml(createdIso)}</td></tr>`:''}
                             ${repo.url? `<tr><th>Repository</th><td class="mono"><span class="url-text">${escapeHtml(repo.url)}</span> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''} <button class="copy-btn" data-copy="${escapeAttr(repo.url)}">copy</button></td></tr>`:''}
-                            ${(() => { const u = safeHref(site); return u ? `<tr><th>Website</th><td><a href=\"${escapeAttr(u)}\" target=\"_blank\" rel=\"noopener noreferrer\">${escapeHtml(site)}</a></td></tr>` : (site ? `<tr><th>Website</th><td><span class=\"mono url-text\">${escapeHtml(site)}</span></td></tr>` : '') })()}
                             ${envCount? `<tr><th>Environment</th><td>${envCount} vars</td></tr>`:''}
                         </table>
                     </div>
@@ -1054,15 +1073,6 @@
             function escapeAttr(str) {
                 return escapeHtml(str);
             }
-            function safeHref(u) {
-                try {
-                    const url = new URL(u, location.href);
-                    const p = (url.protocol||'').toLowerCase();
-                    if (p === 'http:' || p === 'https:') return url.href;
-                } catch {}
-                return null;
-            }
-
             // 初期化（起動時に一覧を自動取得）
             (async function init() {
                 updateSourcePill();
