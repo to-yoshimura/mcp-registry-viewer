@@ -85,6 +85,32 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.biodnd/agent-ip",
+      "description": "Agent IP: MCP server with patents search tools",
+      "repository": {
+        "url": "https://github.com/markchiang/go-agents",
+        "source": "github",
+        "subfolder": "src/go_agents/agents/ip"
+      },
+      "version": "0.1.2",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://agent-ip.biodnd.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "30c71c78-e9f2-480d-969f-a352e650a85c",
+          "versionId": "01b8ec9c-fcc1-4608-89c0-02072bf95738",
+          "publishedAt": "2025-09-23T09:47:07.378272466Z",
+          "updatedAt": "2025-09-23T09:47:07.378272466Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "com.make/mcp-server",
       "description": "MCP server for building, running, and managing Make automations.",
       "status": "active",
@@ -453,6 +479,32 @@
           "versionId": "0760bf55-1b79-4018-9d07-b1344286092e",
           "publishedAt": "2025-09-19T01:23:00.859132392Z",
           "updatedAt": "2025-09-19T04:27:24.541089113Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.biodnd/agent-press",
+      "description": "Agent Press: news MCP server streaming company headlines",
+      "repository": {
+        "url": "https://github.com/markchiang/go-agents",
+        "source": "github",
+        "subfolder": "src/go_agents/agents/press"
+      },
+      "version": "0.1.1",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://agent-press.biodnd.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "8475fdbb-a38f-4d19-95ad-00e601276b42",
+          "versionId": "078a7b91-4b4f-4caa-b696-1c1f11478b00",
+          "publishedAt": "2025-09-23T09:08:14.844607103Z",
+          "updatedAt": "2025-09-23T09:47:04.199964082Z",
           "isLatest": false
         }
       }
@@ -834,6 +886,32 @@
           "versionId": "0a5a9ada-cc20-4a8f-8cf6-78be9c377014",
           "publishedAt": "2025-09-17T14:43:14.554349016Z",
           "updatedAt": "2025-09-17T15:07:56.628066042Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.biodnd/agent-fin",
+      "description": "Agent Fin: finance MCP server with market data tools",
+      "repository": {
+        "url": "https://github.com/markchiang/go-agents",
+        "source": "github",
+        "subfolder": "src/go_agents/agents/fin"
+      },
+      "version": "0.1.0",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://agent-fin.biodnd.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "ff2fd401-9a5b-4e68-90c2-442e8adfce1c",
+          "versionId": "0a5e2f2f-3292-4617-9b0d-f48d0b1764c5",
+          "publishedAt": "2025-09-23T08:26:54.846586034Z",
+          "updatedAt": "2025-09-23T09:08:15.445609211Z",
           "isLatest": false
         }
       }
@@ -4028,111 +4106,6 @@
           "publishedAt": "2025-09-10T21:06:07.509501146Z",
           "updatedAt": "2025-09-12T18:25:16.141869963Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.shalevshalit/image-recognition-mcp",
-      "description": "MCP server for AI-powered image recognition and description using OpenAI vision models.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/mcp-s-ai/image-recognition-mcp",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "image-recognition-mcp",
-          "version": "1.0.0",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your OpenAI API key for image recognition and description services",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "OPENAI_API_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "b50c16a4-57a0-4f1f-a0f6-3081e2a8cccc",
-          "versionId": "2d6c8c1c-bbd0-4bd1-8a22-1fbb8c23014b",
-          "publishedAt": "2025-09-10T15:18:06.73756302Z",
-          "updatedAt": "2025-09-10T15:18:06.73756302Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "app.thoughtspot/mcp-server",
-      "description": "MCP Server for ThoughtSpot - provides OAuth authentication and tools for querying data",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/thoughtspot/mcp-server",
-        "source": "github"
-      },
-      "version": "0.5.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://agent.thoughtspot.app/mcp"
-        },
-        {
-          "type": "sse",
-          "url": "https://agent.thoughtspot.app/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c695356d-8607-402e-b15d-651af6d3cac7",
-          "versionId": "2dafc3fb-4bde-4a22-aac2-9d3dc3c78f74",
-          "publishedAt": "2025-09-17T20:04:01.821026897Z",
-          "updatedAt": "2025-09-17T20:14:22.510543332Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/kaszek-kaszek-attio-mcp",
-      "description": "Automate Attio CRM workflows with fast search and bulk operations across companies, people, deals,…",
-      "status": "active",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "0.2.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@kaszek/kaszek-attio-mcp/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "8adb4b44-ff32-48b3-9c2c-0ecdff6527a0",
-          "versionId": "2dcc8f42-3551-4968-9b98-fff8a5c6111d",
-          "publishedAt": "2025-09-20T23:26:13.62772396Z",
-          "updatedAt": "2025-09-20T23:26:13.62772396Z",
-          "isLatest": true
         }
       }
     }
