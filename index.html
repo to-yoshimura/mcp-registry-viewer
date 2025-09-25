@@ -648,34 +648,58 @@
             // 1) Return from in-memory items if present
             // 2) Otherwise scan data/page-*.json until found (deduping into allItems)
             async function tryFetchWithFallback(urlPath) {
-                if (typeof urlPath === 'string' && urlPath.startsWith('/servers/')) {
-                    const id = decodeURIComponent(urlPath.slice('/servers/'.length));
-                    const getId = (it) => {
-                        const official = it?._meta?.["io.modelcontextprotocol.registry/official"] || {};
-                        return official.serverId || official.id || null;
+                const resolveLocal = async ({ serverId, versionId }) => {
+                    const matches = (item) => {
+                        if (versionId) {
+                            const vid = versionIdOf(item);
+                            if (vid) return vid === versionId;
+                        }
+                        if (serverId) return serverIdOf(item) === serverId;
+                        return false;
                     };
-                    let item = allItems.find(it => getId(it) === id);
+                    let item = allItems.find(matches);
                     if (item) return item;
                     // Ensure manifest is loaded to know total pages
                     if (!manifest) {
                         manifest = await loadManifest();
                         state.limit = manifest.pageSize || DEFAULT_LIMIT;
                     }
-                    // Build a dedup set for already loaded items
-                    const seen = new Set(allItems.map(it => getId(it)).filter(Boolean));
+                    const keyOf = (it) => versionIdOf(it) || serverIdOf(it);
+                    const seen = new Set(allItems.map(it => keyOf(it)).filter(Boolean));
                     const total = Number(manifest.pages || 0);
                     for (let p = 1; p <= total; p++) {
                         try {
                             const data = await fetchJSON(`${DATA_BASE}/page-${p}.json`);
                             const arr = Array.isArray(data.servers) ? data.servers : (data.items || []);
                             for (const it of arr) {
-                                const k = getId(it);
-                                if (k && !seen.has(k)) { seen.add(k); allItems.push(it); }
-                                if (k === id) return it;
+                                const key = keyOf(it);
+                                if (key && !seen.has(key)) { seen.add(key); allItems.push(it); }
+                                if (matches(it)) return it;
                             }
                         } catch (_) { /* ignore missing pages */ }
                     }
                     throw new Error('詳細データが見つかりませんでした。');
+                };
+
+                if (urlPath && typeof urlPath === 'object') {
+                    const serverId = urlPath.serverId || urlPath.id || null;
+                    const versionId = urlPath.versionId || urlPath.version || null;
+                    if (!serverId && !versionId) throw new Error('ID が指定されていません。');
+                    return resolveLocal({ serverId, versionId });
+                }
+
+                if (typeof urlPath === 'string' && urlPath.startsWith('/servers/')) {
+                    let serverId = '';
+                    let versionId = null;
+                    try {
+                        const parsed = new URL(urlPath, 'http://local');
+                        serverId = decodeURIComponent(parsed.pathname.slice('/servers/'.length));
+                        versionId = parsed.searchParams.get('version') || parsed.searchParams.get('versionId');
+                    } catch (_) {
+                        serverId = decodeURIComponent(urlPath.slice('/servers/'.length));
+                    }
+                    if (!serverId && !versionId) throw new Error('ID が指定されていません。');
+                    return resolveLocal({ serverId, versionId });
                 }
                 // Fallback: plain fetch for other paths
                 return fetchJSON(urlPath);
@@ -704,8 +728,9 @@
                     _meta = {}
                 } = item;
 
-                const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
-                const serverId = official.serverId || official.id;
+                const official = officialMeta(item);
+                const serverId = serverIdOf(item);
+                const versionId = versionIdOf(item);
                 const latestFlag = official.isLatest === true || official.is_latest === true;
                 const publishedValue = official.publishedAt || official.published_at;
                 const publishedIso = formatIsoSafe(publishedValue);
@@ -757,6 +782,7 @@
                     </div>
                 `;
                 if (serverId) div.dataset.serverId = serverId;
+                if (versionId) div.dataset.versionId = versionId;
                 // アクセシビリティ: ボタン相当として扱う
                 div.setAttribute('role','button');
                 div.tabIndex = 0;
@@ -776,15 +802,36 @@
                     (Array.isArray(it.packages) && it.packages.some(p => match(p.identifier) || match(p.registry_type)))
                 );
             }
+            function officialMeta(item){
+                return item?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+            }
+            function serverIdOf(item){
+                const official = officialMeta(item);
+                return official.serverId || official.id || null;
+            }
+            function versionIdOf(item){
+                const official = officialMeta(item);
+                return official.versionId || official.version_id || null;
+            }
             // ソートキー: updated_at（なければ published_at → created_at）
             function timeOrZero(v){ const t = Date.parse(v); return isNaN(t) ? 0 : t; }
             function updatedTime(item){
-                const off = item?._meta?.["io.modelcontextprotocol.registry/official"] || {};
-                const u = timeOrZero(item?.updated_at);
-                if (u) return u;
-                const p = timeOrZero(off?.published_at);
-                if (p) return p;
-                return timeOrZero(item?.created_at);
+                const off = officialMeta(item);
+                const candidates = [
+                    item?.updated_at,
+                    item?.updatedAt,
+                    off?.updatedAt,
+                    off?.updated_at,
+                    off?.publishedAt,
+                    off?.published_at,
+                    item?.created_at,
+                    item?.createdAt
+                ];
+                for (const value of candidates) {
+                    const t = timeOrZero(value);
+                    if (t) return t;
+                }
+                return 0;
             }
 
             function renderAll() {
@@ -824,8 +871,9 @@
 
             function renderItemRow(item) {
                 const { name, description, version, packages = [], remotes = [], _meta = {}, status } = item;
-                const official = _meta?.["io.modelcontextprotocol.registry/official"] || {};
-                const serverId = official.serverId || official.id;
+                const official = officialMeta(item);
+                const serverId = serverIdOf(item);
+                const versionId = versionIdOf(item);
                 const latestFlag = official.isLatest === true || official.is_latest === true;
                 const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
                 const chips = [];
@@ -835,8 +883,9 @@
                 const runtime = packages.find(p => p.runtime_hint)?.runtime_hint; if (runtime) chips.push(`<span class="chip sm">${escapeHtml(runtime)}</span>`);
                 const transports = Array.from(new Set((remotes||[]).map(r => r.transport_type).filter(Boolean))); if (transports.length) chips.push(`<span class="chip sm">${escapeHtml(transports.join('/'))}</span>`);
                 if (latestFlag) chips.push(`<span class="badge">latest</span>`);
+                const versionAttr = versionId ? ` data-version-id="${escapeAttr(versionId)}"` : '';
                 return `
-                    <tr data-server-id="${escapeAttr(serverId||'')}">
+                    <tr data-server-id="${escapeAttr(serverId||'')}"${versionAttr}>
                         <td>
                             <div class="list-name">${escapeHtml(name||'(no name)')}</div>
                             <div class="list-meta"><span class="status-pill sm ${statusClass}">${escapeHtml(fieldOrDash(status))}</span> ${chips.join('')}</div>
@@ -884,10 +933,14 @@
                 const min = Math.floor(sec / 60);
                 const hr = Math.floor(min / 60);
                 const day = Math.floor(hr / 24);
-                if (day > 0) return `${day}日前`;
-                if (hr > 0) return `${hr}時間前`;
-                if (min > 0) return `${min}分前`;
-                return `${sec}秒前`;
+                const format = (value, unit) => {
+                    const plural = value === 1 ? unit : `${unit}s`;
+                    return `${value} ${plural} ago`;
+                };
+                if (day > 0) return format(day, 'day');
+                if (hr > 0) return format(hr, 'hour');
+                if (min > 0) return format(min, 'minute');
+                return format(sec, 'second');
             }
 
             function daysSince(iso) {
@@ -911,17 +964,26 @@
                 }
             }
 
-            async function openDetail(id) {
+            async function openDetail(target) {
                 const modal = document.getElementById('detail-modal');
                 const body = document.getElementById('detail-body');
                 const title = document.getElementById('detail-title');
                 if (!modal || !body) return;
+                let serverId = null;
+                let versionId = null;
+                if (typeof target === 'string') {
+                    serverId = target;
+                } else if (target && typeof target === 'object') {
+                    serverId = target.serverId || target.id || null;
+                    versionId = target.versionId || target.version || null;
+                }
+                if (!serverId && !versionId) return;
                 modal.setAttribute('open','');
                 body.innerHTML = '<div class="spinner lg" aria-hidden="true"></div>';
                 title.textContent = '詳細';
                 let prevFocus = document.activeElement;
                 try {
-                    const data = await tryFetchWithFallback(`/servers/${encodeURIComponent(id)}`);
+                    const data = await tryFetchWithFallback({ serverId, versionId });
                     title.textContent = data?.name || '詳細';
                     body.innerHTML = renderDetailBody(data);
                 } catch (e) {
@@ -1085,21 +1147,24 @@
                     if (e.target.closest('a[href]')) { return; }
                     // Card click
                     const card = e.target.closest('.card.clickable');
-                    let id = card?.dataset?.serverId;
+                    let targetEl = card;
                     // List row click
-                    if (!id) {
-                        const row = e.target.closest('tbody tr[data-server-id]');
-                        id = row?.dataset?.serverId;
+                    if (!targetEl) {
+                        targetEl = e.target.closest('tbody tr[data-server-id]');
                     }
-                    if (id) openDetail(id);
+                    if (!targetEl) return;
+                    const serverId = targetEl.dataset?.serverId || null;
+                    const versionId = targetEl.dataset?.versionId || null;
+                    if (serverId || versionId) openDetail({ serverId, versionId });
                 });
                 resultsEl.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                         const card = e.target.closest('.card.clickable');
                         if (card && document.activeElement === card) {
                             e.preventDefault();
-                            const id = card.dataset.serverId;
-                            if (id) openDetail(id);
+                            const serverId = card.dataset.serverId || null;
+                            const versionId = card.dataset.versionId || null;
+                            if (serverId || versionId) openDetail({ serverId, versionId });
                         }
                     }
                 });
