@@ -2,6 +2,214 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.mcpcap/mcpcap",
+      "description": "An MCP server for analyzing PCAP files.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/mcpcap/mcpcap",
+        "source": "github"
+      },
+      "version": "0.4.3",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcpcap",
+          "version": "0.4.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "1a77c0fe-c133-468d-aad0-52c60574d088",
+          "versionId": "2aa61ac7-1ddc-4b02-9493-2bf42458130c",
+          "publishedAt": "2025-09-11T01:00:19.713725403Z",
+          "updatedAt": "2025-09-11T01:06:15.729222586Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/smithery-ai-cookbook-ts-smithery-cli",
+      "description": "A simple Typescript MCP server built using the official MCP Typescript SDK and smithery/cli. This…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/smithery-ai/smithery-cookbook",
+        "source": "github",
+        "subfolder": "servers/typescript/migrate_stdio_to_http/server_with_smithery_cli"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@smithery-ai/cookbook-ts-smithery-cli/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "794aa361-eb55-40c4-8f4c-1be4a8a1c047",
+          "versionId": "2aaa0953-917f-43d5-bbe3-d4c99688a86b",
+          "publishedAt": "2025-09-13T12:45:28.964187978Z",
+          "updatedAt": "2025-09-13T12:45:28.964187978Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/brave",
+      "description": "Visit https://brave.com/search/api/ for a free API key. Search the web, local businesses, images,…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/brave/brave-search-mcp-server",
+        "source": "github"
+      },
+      "version": "1.3.7",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/brave/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "72fbc728-2894-4a60-aaf5-44d616ddd249",
+          "versionId": "2ad4f9a6-1c40-4839-948a-9749d9435395",
+          "publishedAt": "2025-09-10T19:25:38.948771647Z",
+          "updatedAt": "2025-09-12T14:23:41.796186943Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/Kryptoskatt-mcp-server",
+      "description": "Enable AI assistants to interact seamlessly with the DefiLlama API by translating MCP tool calls i…",
+      "status": "active",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "0.1.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@Kryptoskatt/mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "99e3a9ea-0f34-4ae6-acfc-0fb3e821b058",
+          "versionId": "2b930666-203a-431f-838e-34c408c93126",
+          "publishedAt": "2025-09-16T19:42:06.349266762Z",
+          "updatedAt": "2025-09-17T10:41:17.53656895Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/smithery-ai-national-weather-service",
+      "description": "Provide real-time and forecast weather information for locations in the United States using natura…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/smithery-ai/mcp-servers",
+        "source": "github",
+        "subfolder": "weather"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@smithery-ai/national-weather-service/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "b9c2130f-a35c-44ac-afea-412d4631814d",
+          "versionId": "2bfeb809-2c63-4a03-94b6-5a9e316cda41",
+          "publishedAt": "2025-09-11T02:29:56.9281054Z",
+          "updatedAt": "2025-09-11T02:29:56.9281054Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/docfork-mcp",
+      "description": "@latest documentation and code examples to 9000+ libraries for LLMs and AI code editors in a singl…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/docfork/docfork-mcp",
+        "source": "github"
+      },
+      "version": "0.6.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@docfork/mcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "3bbe0c48-41f7-4742-83d1-045499bef360",
+          "versionId": "2d44fea0-9779-4e2b-b37f-fb8c4fd42e6e",
+          "publishedAt": "2025-09-10T21:06:07.509501146Z",
+          "updatedAt": "2025-09-12T18:25:16.141869963Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.shalevshalit/image-recognition-mcp",
       "description": "MCP server for AI-powered image recognition and description using OpenAI vision models.",
       "status": "active",
@@ -1034,6 +1242,37 @@
           "versionId": "35516102-2530-4e9f-9c13-4e613c3375f3",
           "publishedAt": "2025-09-13T08:34:23.401483403Z",
           "updatedAt": "2025-09-13T08:34:23.401483403Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "description": "MCP server for Chrome DevTools",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "source": "github"
+      },
+      "version": "0.2.7",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "chrome-devtools-mcp",
+          "version": "0.2.7",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a90d8a5b-ca0c-4e52-a82c-36027fdf7de2",
+          "versionId": "35610df8-a6ad-400b-bab0-58cb21d0c5c5",
+          "publishedAt": "2025-09-24T12:57:07.916238607Z",
+          "updatedAt": "2025-09-24T12:57:07.916238607Z",
           "isLatest": true
         }
       }
@@ -2296,6 +2535,110 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.jztan/redmine-mcp-server",
+      "description": "Production-ready MCP server for Redmine with security, pagination, and enterprise features",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/jztan/redmine-mcp-server",
+        "source": "github"
+      },
+      "version": "0.4.5",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "redmine-mcp-server",
+          "version": "0.4.5",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "URL of your Redmine server (e.g., https://your-redmine-server.com)",
+              "isRequired": true,
+              "format": "string",
+              "name": "REDMINE_URL"
+            },
+            {
+              "description": "Redmine username for authentication (alternative to API key)",
+              "format": "string",
+              "name": "REDMINE_USERNAME"
+            },
+            {
+              "description": "Redmine password for authentication (alternative to API key)",
+              "format": "string",
+              "isSecret": true,
+              "name": "REDMINE_PASSWORD"
+            },
+            {
+              "description": "Redmine API key for authentication (alternative to username/password)",
+              "format": "string",
+              "isSecret": true,
+              "name": "REDMINE_API_KEY"
+            },
+            {
+              "description": "Host address for the MCP server (default: 0.0.0.0)",
+              "format": "string",
+              "default": "0.0.0.0",
+              "name": "SERVER_HOST"
+            },
+            {
+              "description": "Port for the MCP server (default: 8000)",
+              "format": "integer",
+              "default": "8000",
+              "name": "SERVER_PORT"
+            },
+            {
+              "description": "Public hostname for file download URLs (default: localhost)",
+              "format": "string",
+              "default": "localhost",
+              "name": "PUBLIC_HOST"
+            },
+            {
+              "description": "Public port for file download URLs (default: 8000)",
+              "format": "integer",
+              "default": "8000",
+              "name": "PUBLIC_PORT"
+            },
+            {
+              "description": "Directory for storing downloaded attachments (default: ./attachments)",
+              "format": "string",
+              "default": "./attachments",
+              "name": "ATTACHMENTS_DIR"
+            },
+            {
+              "description": "Enable automatic cleanup of expired files (default: true)",
+              "format": "boolean",
+              "default": "true",
+              "name": "AUTO_CLEANUP_ENABLED"
+            },
+            {
+              "description": "Interval between cleanup runs in minutes (default: 10)",
+              "format": "integer",
+              "default": "10",
+              "name": "CLEANUP_INTERVAL_MINUTES"
+            },
+            {
+              "description": "Default expiry time for attachments in minutes (default: 60)",
+              "format": "integer",
+              "default": "60",
+              "name": "ATTACHMENT_EXPIRES_MINUTES"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a583b5d9-530d-4f56-97b4-d061b3aa9a2a",
+          "versionId": "429e5de1-9038-4791-9b53-49a2710edfb7",
+          "publishedAt": "2025-09-24T12:09:39.852727599Z",
+          "updatedAt": "2025-09-24T12:09:39.852727599Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.nickzren/opentargets",
       "description": "Open Targets MCP server for targets, diseases, drugs, variants, and evidence",
       "status": "active",
@@ -2695,6 +3038,35 @@
           "versionId": "45dd171d-1cc6-4868-a6a3-e56dab5185ce",
           "publishedAt": "2025-09-12T20:09:50.974662926Z",
           "updatedAt": "2025-09-12T20:09:50.974662926Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.srikrishna235/scrimba-teaching-mcp",
+      "description": "Unified MCP for Scrimba interactive programming education with visual learning",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "3.0.1",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "identifier": "scrimba-teaching-mcp",
+          "version": "3.0.1",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9af8219e-a44d-4cce-a08d-8d5b8b7466fe",
+          "versionId": "46761a87-81e6-4126-bc3e-4c0c35decf40",
+          "publishedAt": "2025-09-24T14:46:53.165686451Z",
+          "updatedAt": "2025-09-24T14:46:53.165686451Z",
           "isLatest": true
         }
       }
@@ -3654,308 +4026,6 @@
           "publishedAt": "2025-09-15T00:26:36.144735854Z",
           "updatedAt": "2025-09-15T00:26:36.144735854Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.cmpxchg16/mcp-ethical-hacking",
-      "description": "An MCP server that provides LinkedIn & Reddit data",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/cmpxchg16/mcp-ethical-hacking",
-        "source": "github"
-      },
-      "version": "1.4.0",
-      "packages": [
-        {
-          "registryType": "mcpb",
-          "identifier": "https://github.com/cmpxchg16/mcp-ethical-hacking/releases/download/v1.4.0/server.mcpb",
-          "version": "1.4.0",
-          "fileSha256": "5e4f25e7f21b62974861f055cff90c1aef80d3b8bd1f32e05db744d1cbd67605",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "ebe9848e-d092-4007-88bc-09b67823681b",
-          "versionId": "5197fe61-3f7f-45dd-9c93-2f43dd37787d",
-          "publishedAt": "2025-09-16T04:55:02.185050652Z",
-          "updatedAt": "2025-09-16T04:55:02.185050652Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.b1ff/atlassian-dc-mcp-confluence",
-      "description": "MCP server for Atlassian Confluence Data Center - access and manage content",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/b1ff/atlassian-dc-mcp",
-        "source": "github"
-      },
-      "version": "0.9.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@atlassian-dc-mcp/confluence",
-          "version": "0.9.0",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Confluence host domain (e.g. your-instance.atlassian.net)",
-              "format": "string",
-              "name": "CONFLUENCE_HOST"
-            },
-            {
-              "description": "Confluence API base path (alternative to CONFLUENCE_HOST)",
-              "format": "string",
-              "name": "CONFLUENCE_API_BASE_PATH"
-            },
-            {
-              "description": "Confluence Personal Access Token or API token",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "CONFLUENCE_API_TOKEN"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "b6e7826e-d1cb-43c9-8c12-391ed0538937",
-          "versionId": "52318e0f-56de-406f-8558-4fd4e638060e",
-          "publishedAt": "2025-09-13T11:40:42.156626724Z",
-          "updatedAt": "2025-09-13T13:17:33.205675704Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.stefanoamorelli/sec-edgar-mcp",
-      "description": "SEC EDGAR MCP server that provides access to the US public filings through the US SEC EDGAR API",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/stefanoamorelli/sec-edgar-mcp",
-        "source": "github"
-      },
-      "version": "1.0.5",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "sec-edgar-mcp",
-          "version": "1.0.5",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "The user agent to access the SEC EDGAR API",
-              "isRequired": true,
-              "format": "string",
-              "name": "SEC_EDGAR_USER_AGENT"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "3f9d168d-8b11-4737-87f4-8397667c84eb",
-          "versionId": "526b6940-2ff7-4b65-a4b4-03439dd8e4d4",
-          "publishedAt": "2025-09-09T07:06:26.344648212Z",
-          "updatedAt": "2025-09-09T07:06:26.344648212Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.augee99/mcp-weather",
-      "description": "An MCP server that provides [describe what your server does]",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/augee99/mcp-weather",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "mcp-weather-augee99",
-          "version": "0.1.0",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "2df85161-93f2-44e0-b0e3-c2dcfa8ce275",
-          "versionId": "5289430f-1a42-4a32-a130-7dd851f9a378",
-          "publishedAt": "2025-09-12T13:24:44.527456713Z",
-          "updatedAt": "2025-09-12T13:24:44.527456713Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "com.apple-rag/mcp-server",
-      "description": "Apple Developer Documentation with Semantic Search, RAG, and AI reranking for MCP clients",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/BingoWon/apple-rag-mcp",
-        "source": "github"
-      },
-      "version": "1.1.3",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://mcp.apple-rag.com",
-          "headers": [
-            {
-              "description": "MCP Token for authentication (optional - free tier available without token)",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "803e4dc4-c3d4-43d2-b6a3-65885c8eefb4",
-          "versionId": "52c6f0fa-7114-4adc-afae-d48cfbbe97c0",
-          "publishedAt": "2025-09-17T14:15:14.604093039Z",
-          "updatedAt": "2025-09-17T14:41:53.299387399Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.waystation/miro",
-      "description": "Collaborate on visual boards with your team using Miro integration.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/waystation-ai/mcp",
-        "source": "github"
-      },
-      "version": "0.3.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://waystation.ai/miro/mcp"
-        },
-        {
-          "type": "sse",
-          "url": "https://waystation.ai/miro/mcp/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "cb55e211-c76f-4ebd-bc1c-c51de032ec76",
-          "versionId": "54131da0-99e1-4d90-a5d3-e0333a265843",
-          "publishedAt": "2025-09-09T14:32:52.805916164Z",
-          "updatedAt": "2025-09-09T14:32:52.805916164Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.domdomegg/time-mcp-nuget",
-      "description": "Get the current UTC time in RFC 3339 format.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/domdomegg/time-mcp-nuget.git",
-        "source": "github"
-      },
-      "version": "1.0.8",
-      "packages": [
-        {
-          "registryType": "nuget",
-          "identifier": "TimeMcpServer",
-          "version": "1.0.8",
-          "runtimeHint": "dnx",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "648002ec-8d7c-4112-862d-9e8cc114c178",
-          "versionId": "542b567a-17c2-4a09-905b-313d6ead48d7",
-          "publishedAt": "2025-09-12T02:58:39.843958183Z",
-          "updatedAt": "2025-09-12T02:58:39.843958183Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.isamu/mulmocast-vision",
-      "description": "Easy and stylish presentation slide generator.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/receptron/mulmocast-vision",
-        "source": "github"
-      },
-      "version": "1.0.1",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mulmocast-vision",
-          "version": "1.0.1",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "7c35ddbb-8891-4f3d-bd6e-91bf9357da83",
-          "versionId": "5473ea29-7534-4d74-ad1d-5b8185114052",
-          "publishedAt": "2025-09-12T21:46:16.168898479Z",
-          "updatedAt": "2025-09-12T21:46:16.168898479Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "io.github.kevincogan/demo-mcp-server",
-      "description": "Demo server entry for local testing",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/kevincogan/demo-mcp-server",
-        "source": "github"
-      },
-      "version": "1.0.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://kevincogan.github.io/mcp"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "78162e28-0738-46be-b2ef-b1c6469a1616",
-          "versionId": "54a3da15-1724-4507-b6ba-60f6384d8619",
-          "publishedAt": "2025-09-22T11:59:44.974868968Z",
-          "updatedAt": "2025-09-22T11:59:44.974868968Z",
-          "isLatest": false
         }
       }
     }

@@ -1127,7 +1127,7 @@
           "versionId": "0d69f0ab-96b0-454a-96b5-60aeaaa4fbbc",
           "publishedAt": "2025-09-13T10:28:59.278154953Z",
           "updatedAt": "2025-09-13T10:28:59.278154953Z",
-          "isLatest": true
+          "isLatest": false
         }
       }
     },
@@ -1158,6 +1158,37 @@
           "versionId": "0db74a8b-5a5f-49de-8f78-fd983d4a9c11",
           "publishedAt": "2025-09-09T19:05:37.138310617Z",
           "updatedAt": "2025-09-09T19:54:23.231288713Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "description": "MCP server for Chrome DevTools",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "source": "github"
+      },
+      "version": "0.2.6",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "chrome-devtools-mcp",
+          "version": "0.2.6",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a90d8a5b-ca0c-4e52-a82c-36027fdf7de2",
+          "versionId": "0df0a91b-c0f0-4054-b53c-0472b408ba70",
+          "publishedAt": "2025-09-24T08:32:44.48646114Z",
+          "updatedAt": "2025-09-24T12:57:07.92042999Z",
           "isLatest": false
         }
       }
@@ -1262,6 +1293,33 @@
           "versionId": "0f9ce6bc-c6b5-4901-ba87-ac6dbf3bbc25",
           "publishedAt": "2025-09-11T13:43:51.350537778Z",
           "updatedAt": "2025-09-11T13:43:51.350537778Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "com.redpanda/docs-mcp",
+      "description": "Get authoritative answers to questions about Redpanda.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/redpanda-data/docs-site",
+        "source": "github",
+        "subfolder": "netlify"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://docs.redpanda.com/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "2a581223-2940-486f-8905-e30db3e84951",
+          "versionId": "0fb59115-b315-4b68-92db-8046316b8ba8",
+          "publishedAt": "2025-09-24T16:34:00.228680722Z",
+          "updatedAt": "2025-09-24T16:34:00.228680722Z",
           "isLatest": true
         }
       }
@@ -1500,6 +1558,48 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.snyk/mcp",
+      "description": "Easily find and fix security issues in your applications leveraging Snyk platform capabilities.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/snyk/snyk-ls",
+        "source": "github",
+        "subfolder": "mcp_extension"
+      },
+      "version": "1.1299.1",
+      "packages": [
+        {
+          "registryType": "npm",
+          "identifier": "snyk",
+          "version": "1.1299.1",
+          "transport": {
+            "type": "stdio"
+          },
+          "packageArguments": [
+            {
+              "value": "mcp",
+              "type": "positional"
+            },
+            {
+              "value": "stdio",
+              "type": "named",
+              "name": "-t"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "1302015a-5b8c-4b50-ab63-58c4c04648d3",
+          "versionId": "1208b4cd-51b9-4f90-a3d0-520ed037bc4d",
+          "publishedAt": "2025-09-24T13:33:59.9152605Z",
+          "updatedAt": "2025-09-24T13:33:59.9152605Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "ai.smithery/blockscout-mcp-server",
       "description": "Provide AI agents and automation tools with contextual access to blockchain data including balance…",
       "status": "active",
@@ -1529,6 +1629,116 @@
           "versionId": "12f9bf42-5702-44ee-9f39-a85d6bf7e7c1",
           "publishedAt": "2025-09-20T00:50:33.619951617Z",
           "updatedAt": "2025-09-20T00:50:33.619951617Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.SamYuan1990/i18n-agent-action",
+      "description": "An i18n github action for language translate",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "mcp",
+      "packages": [
+        {
+          "registryType": "oci",
+          "registryBaseUrl": "https://ghcr.io",
+          "identifier": "SamYuan1990/i18n-agent-action",
+          "version": "mcp",
+          "runtimeHint": "docker",
+          "transport": {
+            "type": "sse",
+            "url": "https://example.com:8080/sse"
+          },
+          "runtimeArguments": [
+            {
+              "description": "Port mapping from host to container",
+              "value": "8080:8080",
+              "type": "named",
+              "name": "-p"
+            },
+            {
+              "description": "API key for the i18n service",
+              "value": "api_key={api_key}",
+              "variables": {
+                "api_key": {
+                  "description": "Your API key for the translation service",
+                  "isRequired": true,
+                  "format": "string",
+                  "isSecret": true
+                }
+              },
+              "type": "named",
+              "name": "-e"
+            },
+            {
+              "description": "Volume mount for model files",
+              "value": "{models_path}:/app/models",
+              "variables": {
+                "models_path": {
+                  "description": "Path to your models directory on the host",
+                  "isRequired": true,
+                  "format": "filepath",
+                  "default": "/path/to/your/models"
+                }
+              },
+              "type": "named",
+              "name": "-v"
+            },
+            {
+              "description": "Encoder model file path",
+              "value": "encoder={encoder_file}",
+              "variables": {
+                "encoder_file": {
+                  "description": "Encoder model file name",
+                  "isRequired": true,
+                  "format": "string",
+                  "default": "/app/models/your-encoder.onnx"
+                }
+              },
+              "type": "named",
+              "name": "-e"
+            },
+            {
+              "description": "Decoder model file path",
+              "value": "decoder={decoder_file}",
+              "variables": {
+                "decoder_file": {
+                  "description": "Decoder model file name",
+                  "isRequired": true,
+                  "format": "string",
+                  "default": "/app/models/your-decoder.onnx"
+                }
+              },
+              "type": "named",
+              "name": "-e"
+            },
+            {
+              "description": "Tokens model file path",
+              "value": "tokens={tokens_file}",
+              "variables": {
+                "tokens_file": {
+                  "description": "Tokens model file name",
+                  "isRequired": true,
+                  "format": "string",
+                  "default": "/app/models/your-tokens.onnx"
+                }
+              },
+              "type": "named",
+              "name": "-e"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "26b74645-f671-4e10-b47a-751373353dc6",
+          "versionId": "131fbf7d-e6c3-4059-acb0-6de5943bfe82",
+          "publishedAt": "2025-09-24T12:17:46.198378149Z",
+          "updatedAt": "2025-09-24T12:17:46.198378149Z",
           "isLatest": true
         }
       }
@@ -2392,6 +2602,36 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.vfarcic/dot-ai",
+      "description": "AI-powered development platform for Kubernetes deployments and intelligent automation",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/vfarcic/dot-ai",
+        "source": "github"
+      },
+      "version": "0.100.0",
+      "packages": [
+        {
+          "registryType": "npm",
+          "identifier": "@vfarcic/dot-ai",
+          "version": "0.100.0",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "6836138f-2ad2-4feb-8043-ea425ecb0d71",
+          "versionId": "1b4d9835-1839-4365-b9bc-0b689c371247",
+          "publishedAt": "2025-09-24T21:49:38.605228419Z",
+          "updatedAt": "2025-09-24T21:49:38.605228419Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.nesquikm/rubber-duck",
       "description": "An MCP server that bridges to multiple OpenAI-compatible LLMs - your AI rubber duck debugging panel",
       "status": "active",
@@ -2512,6 +2752,31 @@
           "publishedAt": "2025-09-09T20:04:16.022584551Z",
           "updatedAt": "2025-09-09T20:04:16.022584551Z",
           "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "co.pipeboard/meta-ads-mcp",
+      "description": "Facebook / Meta Ads automation with AI: analyze performance, test creatives, optimize spend.",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.11",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.pipeboard.co/meta-ads-mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "51e23615-8cdd-47f0-84d3-df448e34a4e7",
+          "versionId": "1dfd25e7-717b-4f95-a6be-5c41f761baf3",
+          "publishedAt": "2025-09-24T15:11:32.888511284Z",
+          "updatedAt": "2025-09-24T16:14:42.455796841Z",
+          "isLatest": false
         }
       }
     },
@@ -3626,8 +3891,8 @@
           "serverId": "9b94aaa3-e02f-4538-972e-f332b1428a1d",
           "versionId": "280397f6-cca9-4a7f-8aa9-c82ec4f4518b",
           "publishedAt": "2025-09-21T23:11:11.731178823Z",
-          "updatedAt": "2025-09-21T23:11:11.731178823Z",
-          "isLatest": true
+          "updatedAt": "2025-09-24T08:48:44.278992465Z",
+          "isLatest": false
         }
       }
     },
@@ -3898,214 +4163,6 @@
           "publishedAt": "2025-09-10T19:01:31.903922632Z",
           "updatedAt": "2025-09-10T19:01:31.903922632Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.mcpcap/mcpcap",
-      "description": "An MCP server for analyzing PCAP files.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/mcpcap/mcpcap",
-        "source": "github"
-      },
-      "version": "0.4.3",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "mcpcap",
-          "version": "0.4.3",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "1a77c0fe-c133-468d-aad0-52c60574d088",
-          "versionId": "2aa61ac7-1ddc-4b02-9493-2bf42458130c",
-          "publishedAt": "2025-09-11T01:00:19.713725403Z",
-          "updatedAt": "2025-09-11T01:06:15.729222586Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/smithery-ai-cookbook-ts-smithery-cli",
-      "description": "A simple Typescript MCP server built using the official MCP Typescript SDK and smithery/cli. This…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/smithery-ai/smithery-cookbook",
-        "source": "github",
-        "subfolder": "servers/typescript/migrate_stdio_to_http/server_with_smithery_cli"
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@smithery-ai/cookbook-ts-smithery-cli/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "794aa361-eb55-40c4-8f4c-1be4a8a1c047",
-          "versionId": "2aaa0953-917f-43d5-bbe3-d4c99688a86b",
-          "publishedAt": "2025-09-13T12:45:28.964187978Z",
-          "updatedAt": "2025-09-13T12:45:28.964187978Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/brave",
-      "description": "Visit https://brave.com/search/api/ for a free API key. Search the web, local businesses, images,…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/brave/brave-search-mcp-server",
-        "source": "github"
-      },
-      "version": "1.3.7",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/brave/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "72fbc728-2894-4a60-aaf5-44d616ddd249",
-          "versionId": "2ad4f9a6-1c40-4839-948a-9749d9435395",
-          "publishedAt": "2025-09-10T19:25:38.948771647Z",
-          "updatedAt": "2025-09-12T14:23:41.796186943Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/Kryptoskatt-mcp-server",
-      "description": "Enable AI assistants to interact seamlessly with the DefiLlama API by translating MCP tool calls i…",
-      "status": "active",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "0.1.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@Kryptoskatt/mcp-server/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "99e3a9ea-0f34-4ae6-acfc-0fb3e821b058",
-          "versionId": "2b930666-203a-431f-838e-34c408c93126",
-          "publishedAt": "2025-09-16T19:42:06.349266762Z",
-          "updatedAt": "2025-09-17T10:41:17.53656895Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/smithery-ai-national-weather-service",
-      "description": "Provide real-time and forecast weather information for locations in the United States using natura…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/smithery-ai/mcp-servers",
-        "source": "github",
-        "subfolder": "weather"
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@smithery-ai/national-weather-service/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "b9c2130f-a35c-44ac-afea-412d4631814d",
-          "versionId": "2bfeb809-2c63-4a03-94b6-5a9e316cda41",
-          "publishedAt": "2025-09-11T02:29:56.9281054Z",
-          "updatedAt": "2025-09-11T02:29:56.9281054Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/docfork-mcp",
-      "description": "@latest documentation and code examples to 9000+ libraries for LLMs and AI code editors in a singl…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/docfork/docfork-mcp",
-        "source": "github"
-      },
-      "version": "0.6.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@docfork/mcp/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "3bbe0c48-41f7-4742-83d1-045499bef360",
-          "versionId": "2d44fea0-9779-4e2b-b37f-fb8c4fd42e6e",
-          "publishedAt": "2025-09-10T21:06:07.509501146Z",
-          "updatedAt": "2025-09-12T18:25:16.141869963Z",
-          "isLatest": false
         }
       }
     }
