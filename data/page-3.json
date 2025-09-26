@@ -2,6 +2,168 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.ChiR24/unreal-engine-mcp",
+      "description": "Production-ready MCP server for Unreal Engine with comprehensive game development tools",
+      "repository": {
+        "url": "https://github.com/ChiR24/Unreal_mcp.git",
+        "source": "github"
+      },
+      "version": "0.3.1",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "unreal-engine-mcp-server",
+          "version": "0.3.1",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Unreal Engine host address",
+              "value": "127.0.0.1",
+              "name": "UE_HOST"
+            },
+            {
+              "description": "Remote Control HTTP port",
+              "value": "30010",
+              "name": "UE_RC_HTTP_PORT"
+            },
+            {
+              "description": "Remote Control WebSocket port",
+              "value": "30020",
+              "name": "UE_RC_WS_PORT"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "49c64feb-2e4c-406d-b39f-1236bf2212a6",
+          "versionId": "50c79598-1f20-41a4-8c5f-e429a69b6af9",
+          "publishedAt": "2025-09-19T06:41:59.942159455Z",
+          "updatedAt": "2025-09-20T06:29:35.19162833Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.rfdez/pvpc-mcp-server",
+      "description": "Fetch the Voluntary Price for the Small Consumer (PVPC) published daily by Red Eléctrica.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/rfdez/pvpc-mcp-server",
+        "source": "github"
+      },
+      "version": "3.2.2",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@rfdez/pvpc-mcp-server",
+          "version": "3.2.2",
+          "runtimeHint": "npx",
+          "transport": {
+            "type": "stdio"
+          },
+          "packageArguments": [
+            {
+              "description": "Use stdio transport type for MCP server",
+              "value": "stdio",
+              "type": "named",
+              "name": "--transport"
+            },
+            {
+              "description": "ESIOS API key for authentication",
+              "isRequired": true,
+              "isSecret": true,
+              "type": "named",
+              "name": "--api-key"
+            }
+          ]
+        },
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@rfdez/pvpc-mcp-server",
+          "version": "3.2.2",
+          "runtimeHint": "npx",
+          "transport": {
+            "type": "streamable-http",
+            "url": "http://127.0.0.1:8080/mcp",
+            "headers": [
+              {
+                "description": "ESIOS API key for authentication",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "X-API-Key"
+              }
+            ]
+          },
+          "packageArguments": [
+            {
+              "description": "Use HTTP transport type for MCP server",
+              "value": "http",
+              "type": "named",
+              "name": "--transport"
+            },
+            {
+              "description": "Port for HTTP transport",
+              "default": "8080",
+              "type": "named",
+              "name": "--port"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9c2d3dad-6914-4484-b9e2-2393f397e1cf",
+          "versionId": "511f2dc8-4b9d-4e80-a0eb-4abb26a36c74",
+          "publishedAt": "2025-09-10T16:28:04.867936223Z",
+          "updatedAt": "2025-09-10T16:53:23.925845807Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/cpretzinger-ai-assistant-simple",
+      "description": "UPDATED 9/1/2025! NEW TOOLS! Use the Redis Stream tools with n8n MCP Client Node for use anywhere!…",
+      "status": "active",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@cpretzinger/ai-assistant-simple/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "19ef2899-58cb-4184-bcd5-43f04db4cc85",
+          "versionId": "51513004-36e9-4683-88d3-91221c43d2f3",
+          "publishedAt": "2025-09-15T00:26:36.144735854Z",
+          "updatedAt": "2025-09-15T00:26:36.144735854Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.cmpxchg16/mcp-ethical-hacking",
       "description": "An MCP server that provides LinkedIn & Reddit data",
       "status": "active",
@@ -711,6 +873,194 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.alex-feel/mcp-context-server",
+      "description": "An MCP server that provides persistent multimodal context storage for LLM agents.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/alex-feel/mcp-context-server",
+        "source": "github"
+      },
+      "version": "0.1.0",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-context-server",
+          "version": "0.1.0",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Log level",
+              "format": "string",
+              "name": "LOG_LEVEL"
+            },
+            {
+              "description": "Maximum individual image size in megabytes",
+              "format": "number",
+              "name": "MAX_IMAGE_SIZE_MB"
+            },
+            {
+              "description": "Maximum total request size in megabytes",
+              "format": "number",
+              "name": "MAX_TOTAL_SIZE_MB"
+            },
+            {
+              "description": "Custom database file location path",
+              "format": "string",
+              "name": "DB_PATH"
+            },
+            {
+              "description": "Maximum number of concurrent read connections in the pool",
+              "format": "number",
+              "name": "POOL_MAX_READERS"
+            },
+            {
+              "description": "Maximum number of concurrent write connections in the pool",
+              "format": "number",
+              "name": "POOL_MAX_WRITERS"
+            },
+            {
+              "description": "Connection timeout in seconds",
+              "format": "number",
+              "name": "POOL_CONNECTION_TIMEOUT_S"
+            },
+            {
+              "description": "Idle connection timeout in seconds",
+              "format": "number",
+              "name": "POOL_IDLE_TIMEOUT_S"
+            },
+            {
+              "description": "Connection health check interval in seconds",
+              "format": "number",
+              "name": "POOL_HEALTH_CHECK_INTERVAL_S"
+            },
+            {
+              "description": "Maximum number of retry attempts for failed operations",
+              "format": "number",
+              "name": "RETRY_MAX_RETRIES"
+            },
+            {
+              "description": "Base delay in seconds between retry attempts",
+              "format": "number",
+              "name": "RETRY_BASE_DELAY_S"
+            },
+            {
+              "description": "Maximum delay in seconds between retry attempts",
+              "format": "number",
+              "name": "RETRY_MAX_DELAY_S"
+            },
+            {
+              "description": "Enable random jitter in retry delays",
+              "format": "boolean",
+              "name": "RETRY_JITTER"
+            },
+            {
+              "description": "Exponential backoff multiplication factor for retries",
+              "format": "number",
+              "name": "RETRY_BACKOFF_FACTOR"
+            },
+            {
+              "description": "Enable SQLite foreign key constraints",
+              "format": "boolean",
+              "name": "SQLITE_FOREIGN_KEYS"
+            },
+            {
+              "description": "SQLite journal mode (e.g., WAL, DELETE)",
+              "format": "string",
+              "name": "SQLITE_JOURNAL_MODE"
+            },
+            {
+              "description": "SQLite synchronous mode (e.g., NORMAL, FULL, OFF)",
+              "format": "string",
+              "name": "SQLITE_SYNCHRONOUS"
+            },
+            {
+              "description": "SQLite temporary storage location (e.g., MEMORY, FILE)",
+              "format": "string",
+              "name": "SQLITE_TEMP_STORE"
+            },
+            {
+              "description": "SQLite memory-mapped I/O size in bytes",
+              "format": "number",
+              "name": "SQLITE_MMAP_SIZE"
+            },
+            {
+              "description": "SQLite cache size (negative value for KB, positive for pages)",
+              "format": "number",
+              "name": "SQLITE_CACHE_SIZE"
+            },
+            {
+              "description": "SQLite page size in bytes",
+              "format": "number",
+              "name": "SQLITE_PAGE_SIZE"
+            },
+            {
+              "description": "SQLite WAL autocheckpoint threshold in pages",
+              "format": "number",
+              "name": "SQLITE_WAL_AUTOCHECKPOINT"
+            },
+            {
+              "description": "SQLite busy timeout in milliseconds",
+              "format": "number",
+              "name": "SQLITE_BUSY_TIMEOUT_MS"
+            },
+            {
+              "description": "SQLite WAL checkpoint mode (e.g., PASSIVE, FULL, RESTART)",
+              "format": "string",
+              "name": "SQLITE_WAL_CHECKPOINT"
+            },
+            {
+              "description": "Server shutdown timeout in seconds",
+              "format": "number",
+              "name": "SHUTDOWN_TIMEOUT_S"
+            },
+            {
+              "description": "Test mode shutdown timeout in seconds",
+              "format": "number",
+              "name": "SHUTDOWN_TIMEOUT_TEST_S"
+            },
+            {
+              "description": "Queue operation timeout in seconds",
+              "format": "number",
+              "name": "QUEUE_TIMEOUT_S"
+            },
+            {
+              "description": "Test mode queue timeout in seconds",
+              "format": "number",
+              "name": "QUEUE_TIMEOUT_TEST_S"
+            },
+            {
+              "description": "Circuit breaker failure threshold before opening",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_FAILURE_THRESHOLD"
+            },
+            {
+              "description": "Circuit breaker recovery timeout in seconds",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_RECOVERY_TIMEOUT_S"
+            },
+            {
+              "description": "Maximum calls allowed in circuit breaker half-open state",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_HALF_OPEN_MAX_CALLS"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a352f0e9-bd3c-4736-90de-2dce46081c89",
+          "versionId": "592e3e2a-dd9d-422c-b427-7365303b314b",
+          "publishedAt": "2025-09-25T11:37:36.007594626Z",
+          "updatedAt": "2025-09-25T11:37:36.007594626Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.ycjcl868/mcp-server-fear-greed",
       "description": "An MCP server for mcp-server-fear-greed",
       "status": "active",
@@ -1143,6 +1493,35 @@
           "publishedAt": "2025-09-10T16:59:34.218265771Z",
           "updatedAt": "2025-09-10T16:59:34.218265771Z",
           "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.srikrishna235/scrimba-teaching-mcp",
+      "description": "Unified MCP for Scrimba's interactive programming education with visual learning",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "3.0.2",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "identifier": "scrimba-teaching-mcp",
+          "version": "3.0.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9af8219e-a44d-4cce-a08d-8d5b8b7466fe",
+          "versionId": "5eb74f2b-f434-4da6-a776-39e53f84de1c",
+          "publishedAt": "2025-09-25T05:38:56.280550336Z",
+          "updatedAt": "2025-09-25T05:38:56.280550336Z",
+          "isLatest": false
         }
       }
     },
@@ -1643,6 +2022,35 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.martymarkenson/postgres-connector",
+      "description": "MCP server for querying PostgreSQL databases",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.2",
+      "packages": [
+        {
+          "registryType": "npm",
+          "identifier": "postgres-connector",
+          "version": "1.0.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "5fe9408b-2370-41fb-90f9-3fce961c0968",
+          "versionId": "65d4b8da-348a-4461-bc5b-85c8b1fcdd2d",
+          "publishedAt": "2025-09-25T21:59:51.445715331Z",
+          "updatedAt": "2025-09-25T21:59:51.445715331Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.karanb192/reddit-buddy-mcp",
       "description": "Reddit MCP server - browse posts, search content, analyze users.",
       "repository": {
@@ -1880,6 +2288,31 @@
           "publishedAt": "2025-09-19T00:25:42.425081591Z",
           "updatedAt": "2025-09-19T16:03:41.846198999Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.tableall/mcp",
+      "description": "Access Japan's finest Michelin-starred restaurants. Search, check availability, and browse menus.",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://mcp.tableall.com/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "905c32bd-7f6a-495f-ae25-f2a1716b7ff2",
+          "versionId": "68fd2769-066d-4c66-b197-45cd1c664388",
+          "publishedAt": "2025-09-25T13:06:07.208445287Z",
+          "updatedAt": "2025-09-25T13:06:07.208445287Z",
+          "isLatest": true
         }
       }
     },
@@ -2538,6 +2971,37 @@
           "versionId": "71de5a2a-6cfb-4250-a196-f93080ecc860",
           "publishedAt": "2025-09-10T18:54:52.764339069Z",
           "updatedAt": "2025-09-10T18:54:52.764339069Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.guanqun-yang/mcp-server-r-counter",
+      "description": "A MCP Server Counting Number of r's for a Given Query",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/guanqun-yang/mcp-server-r-counter",
+        "source": "github"
+      },
+      "version": "0.0.3",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-server-r-counter",
+          "version": "0.0.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "d25dab7d-1a05-4679-b314-a2911998f316",
+          "versionId": "72ce38fd-8465-4198-b8fd-5dc4fac8dce3",
+          "publishedAt": "2025-09-26T03:25:25.186688278Z",
+          "updatedAt": "2025-09-26T03:25:25.186688278Z",
           "isLatest": true
         }
       }
@@ -3292,278 +3756,6 @@
           "publishedAt": "2025-09-22T11:58:38.187266164Z",
           "updatedAt": "2025-09-22T11:58:38.187266164Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/sachicali-discordmcp-suite",
-      "description": "Control your Discord community: send/read messages, manage channels and forums, and handle webhook…",
-      "status": "active",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "1.2.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@sachicali/discordmcp-suite/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "cb845f6c-2635-484a-baaa-59da84b7963d",
-          "versionId": "79ba496b-2c62-45ca-8fd7-2f00f259c6d2",
-          "publishedAt": "2025-09-10T18:19:06.20151699Z",
-          "updatedAt": "2025-09-10T18:19:06.20151699Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/yuna0x0-hackmd-mcp",
-      "description": "Interact with your HackMD notes and teams seamlessly. Manage your notes, view reading history, and…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/yuna0x0/hackmd-mcp",
-        "source": "github"
-      },
-      "version": "1.5.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@yuna0x0/hackmd-mcp/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "a85afd07-0178-49e6-b962-178f24839d99",
-          "versionId": "7a139c10-a255-4de8-a17a-0046fa3916ae",
-          "publishedAt": "2025-09-15T03:33:42.649641272Z",
-          "updatedAt": "2025-09-15T03:33:42.649641272Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.KylinMountain/web-fetch-mcp",
-      "description": "MCP server for web content fetching, summarizing, comparing, and extracting information",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/KylinMountain/web-fetch-mcp.git",
-        "source": "github"
-      },
-      "version": "0.1.1",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "web-fetch-mcp",
-          "version": "0.1.1",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your Gemini API key for the service",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "GEMINI_API_KEY"
-            },
-            {
-              "description": "Your proxy for the gemini api service",
-              "format": "string",
-              "name": "HTTP_PROXY"
-            },
-            {
-              "description": "Your proxy for the gemini api service",
-              "format": "string",
-              "name": "HTTPS_PROXY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "278a7db1-8bd6-49bf-b4c1-e8f298feee07",
-          "versionId": "7a248a2b-7b8e-4d28-82c2-89d2949190dc",
-          "publishedAt": "2025-09-18T09:15:43.239066581Z",
-          "updatedAt": "2025-09-18T09:15:43.239066581Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.waystation/slack",
-      "description": "Send messages, access channels, and manage files in your Slack workspace.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/waystation-ai/mcp",
-        "source": "github"
-      },
-      "version": "0.3.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://waystation.ai/slack/mcp"
-        },
-        {
-          "type": "sse",
-          "url": "https://waystation.ai/slack/mcp/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c202d96c-de6b-469f-ad60-2426beb1e06d",
-          "versionId": "7a6efd6d-130c-4586-9399-376f11836b1a",
-          "publishedAt": "2025-09-09T14:32:49.571767151Z",
-          "updatedAt": "2025-09-09T14:32:49.571767151Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "trade.neglect/mcp-server",
-      "description": "Full Solana DeFi coverage: launchpads, tokens, trades, and wallets, decoded at scale.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/609NFT/solana-mcp",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://api.neglect.trade/mcp"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c2749ea7-87d0-4d7f-8b4e-e7d687ff6500",
-          "versionId": "7aa88faa-c1df-49a2-a33e-51c79f67be2b",
-          "publishedAt": "2025-09-17T22:59:34.044420412Z",
-          "updatedAt": "2025-09-17T22:59:34.044420412Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.ryanbaumann/platform-ai",
-      "description": "Google Maps Platform Code Assist MCP",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/googlemaps/platform-ai",
-        "source": "github"
-      },
-      "version": "0.2.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "@googlemaps/code-assist-mcp",
-          "version": "0.2.0",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "cbcbdd1a-d310-451f-9843-c83edf658b11",
-          "versionId": "7b66d3bf-72fa-4832-87fa-c80a60668aae",
-          "publishedAt": "2025-09-10T17:56:34.808006126Z",
-          "updatedAt": "2025-09-10T17:56:34.808006126Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/morosss-sdfsdf",
-      "description": "Find academic papers across major sources like arXiv, PubMed, bioRxiv, and more. Download PDFs whe…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/morosss/sdfsdf",
-        "source": "github"
-      },
-      "version": "1.14.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@morosss/sdfsdf/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "22b3dc31-3039-45bf-9033-10d401c10bb6",
-          "versionId": "7bc56184-ea78-465a-863c-76c9fe7e48a8",
-          "publishedAt": "2025-09-13T17:26:11.858999857Z",
-          "updatedAt": "2025-09-13T17:26:11.858999857Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.henilcalagiya/google-sheets-mcp",
-      "description": "Powerful tools for automating Google Sheets using Model Context Protocol (MCP)",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/henilcalagiya/google-sheets-mcp",
-        "source": "github"
-      },
-      "version": "0.1.6",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "google-sheets-mcp",
-          "version": "0.1.6",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "86a4cb67-7331-47cd-8231-0068272c149d",
-          "versionId": "7bf7e778-039a-4420-b96b-c614bef2f879",
-          "publishedAt": "2025-09-11T05:56:37.073750488Z",
-          "updatedAt": "2025-09-11T05:56:37.073750488Z",
-          "isLatest": true
         }
       }
     }

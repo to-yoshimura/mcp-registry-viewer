@@ -571,6 +571,32 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.blockscout/mcp-server",
+      "description": "MCP server for Blockscout",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/blockscout/mcp-server",
+        "source": "github"
+      },
+      "version": "0.11.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.blockscout.com/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "7fcc8569-45f7-48c1-92b4-6530543951ab",
+          "versionId": "08d33ec3-9bfa-4960-81e2-b6cc9068a586",
+          "publishedAt": "2025-09-25T03:53:22.145545753Z",
+          "updatedAt": "2025-09-25T03:53:22.145545753Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "com.mintmcp/gmail",
       "description": "A MCP server for Gmail that lets you search, read, and draft emails and replies.",
       "status": "active",
@@ -3198,6 +3224,39 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "technology.draup/api-server",
+      "description": "Global labour & market data for skills, workforce, planning, stakeholders, jobs, news & profiles",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.draup.technology/mcp/",
+          "headers": [
+            {
+              "description": "Get the API key from Draup Support (support@draup.com)",
+              "isRequired": true,
+              "isSecret": true,
+              "name": "X-API-Key"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "df95026a-1446-48e1-b7fc-5f97736668cf",
+          "versionId": "23c1cf54-2ea0-4625-aa2e-4450bf8877be",
+          "publishedAt": "2025-09-25T15:32:50.991403872Z",
+          "updatedAt": "2025-09-25T15:32:50.991403872Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.jjlabsio/korea-stock-mcp",
       "description": "MCP server for korea stock",
       "status": "active",
@@ -3444,7 +3503,7 @@
           "versionId": "25a214da-4b05-45e3-832e-601fd8092aa1",
           "publishedAt": "2025-09-09T04:42:11.802682449Z",
           "updatedAt": "2025-09-09T04:42:11.802682449Z",
-          "isLatest": true
+          "isLatest": false
         }
       }
     },
@@ -3700,6 +3759,35 @@
           "publishedAt": "2025-09-19T02:36:55.167644104Z",
           "updatedAt": "2025-09-19T02:36:55.167644104Z",
           "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+      "name": "io.github.srikrishna235/scrimba-teaching-mcp",
+      "description": "Unified MCP for Scrimba's interactive programming education with visual learning",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "3.0.3",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "identifier": "scrimba-teaching-mcp",
+          "version": "3.0.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9af8219e-a44d-4cce-a08d-8d5b8b7466fe",
+          "versionId": "25fcdc11-06b9-43af-8eed-ae91b1a55bfc",
+          "publishedAt": "2025-09-25T06:06:17.156574957Z",
+          "updatedAt": "2025-09-25T06:06:17.156574957Z",
+          "isLatest": false
         }
       }
     },
@@ -4065,103 +4153,6 @@
           "versionId": "29029c32-4067-48c0-b831-058bc34623a1",
           "publishedAt": "2025-09-09T20:02:38.025522049Z",
           "updatedAt": "2025-09-09T20:02:38.025522049Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/smithery-toolbox",
-      "description": "Toolbox dynamically routes to all MCPs in the Smithery registry based on your agent's need. When a…",
-      "status": "active",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@smithery/toolbox/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "35c6a9c3-9439-440a-9d97-b5d539c08b9d",
-          "versionId": "292995df-7000-4eda-9cdb-2048ac93e8c4",
-          "publishedAt": "2025-09-10T20:39:40.188723394Z",
-          "updatedAt": "2025-09-10T20:39:40.188723394Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.jkawamoto/mcp-florence2",
-      "description": "An MCP server for processing images using Florence-2",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/jkawamoto/mcp-florence2",
-        "source": "github"
-      },
-      "version": "0.3.2",
-      "packages": [
-        {
-          "registryType": "mcpb",
-          "identifier": "https://github.com/jkawamoto/mcp-florence2/releases/download/v0.3.2/mcp-florence2.mcpb",
-          "version": "0.3.2",
-          "fileSha256": "58fcb84d444c01f3d7e9a3dd3ea6fa45dc7515663141527936ee8daec2cd0f63",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "dcf30ab3-ffde-4a3f-8d36-522b9e3016e3",
-          "versionId": "296598bd-aa8c-4ec5-acc8-4d57ad677139",
-          "publishedAt": "2025-09-18T22:50:50.36439604Z",
-          "updatedAt": "2025-09-19T00:50:28.853946312Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.spences10/mcp-sqlite-tools",
-      "description": "MCP server for local SQLite database operations",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/spences10/mcp-sqlite-tools",
-        "source": "github"
-      },
-      "version": "0.0.11",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mcp-sqlite-tools",
-          "version": "0.0.11",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "7650c939-7113-4dc9-a03d-54d191d03139",
-          "versionId": "2a4159ec-d44c-4b6b-85c5-67aa9d054fa0",
-          "publishedAt": "2025-09-10T19:01:31.903922632Z",
-          "updatedAt": "2025-09-10T19:01:31.903922632Z",
           "isLatest": true
         }
       }
