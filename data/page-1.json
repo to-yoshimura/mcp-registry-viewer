@@ -111,6 +111,82 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.teamwork/mcp",
+      "description": "The Teamwork.com official MCP server helps teams efficiently manage client projects with AI.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/teamwork/mcp",
+        "source": "github"
+      },
+      "version": "1.5.2",
+      "packages": [
+        {
+          "registryType": "oci",
+          "registryBaseUrl": "https://docker.io",
+          "identifier": "teamwork/mcp",
+          "version": "v1.5.2",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "API key generated from the Teamwork.com OAuth2 process: https://apidocs.teamwork.com/guides/teamwork/app-login-flow",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "TW_MCP_BEARER_TOKEN"
+            },
+            {
+              "description": "Choose log output format between 'text' or 'json'. Default is 'text'.",
+              "format": "string",
+              "name": "TW_MCP_LOG_FORMAT"
+            },
+            {
+              "description": "Choose log level between 'debug', 'info', 'warn' or 'error'. Default is 'info'.",
+              "format": "string",
+              "name": "TW_MCP_LOG_LEVEL"
+            }
+          ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://mcp.ai.teamwork.com",
+          "headers": [
+            {
+              "description": "API key generated from the Teamwork.com OAuth2 process: https://apidocs.teamwork.com/guides/teamwork/app-login-flow",
+              "isRequired": true,
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        },
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.ai.teamwork.com",
+          "headers": [
+            {
+              "description": "API key generated from the Teamwork.com OAuth2 process: https://apidocs.teamwork.com/guides/teamwork/app-login-flow",
+              "isRequired": true,
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "8e1daf12-8a74-4718-93ec-86b05728241d",
+          "versionId": "01e35e08-420f-4c65-9b53-c40a613ba77c",
+          "publishedAt": "2025-09-26T17:26:33.291166144Z",
+          "updatedAt": "2025-09-26T19:37:40.311230945Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "com.make/mcp-server",
       "description": "MCP server for building, running, and managing Make automations.",
       "status": "active",
@@ -206,8 +282,8 @@
           "serverId": "8e1daf12-8a74-4718-93ec-86b05728241d",
           "versionId": "028de86b-0027-4eb9-875b-c40b9b089215",
           "publishedAt": "2025-09-17T18:13:49.724857292Z",
-          "updatedAt": "2025-09-17T18:13:49.724857292Z",
-          "isLatest": true
+          "updatedAt": "2025-09-26T17:26:33.304628511Z",
+          "isLatest": false
         }
       }
     },
@@ -995,6 +1071,46 @@
         "url": "https://github.com/brave/brave-search-mcp-server",
         "source": "github"
       },
+      "version": "2.0.24",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@brave/brave-search-mcp-server",
+          "version": "2.0.24",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Your API key for the service",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "BRAVE_API_KEY"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "fe2e0e07-1466-499a-bcdd-16d07b8ccb40",
+          "versionId": "0ceb28e5-5c88-4b82-b336-f17305b7802b",
+          "publishedAt": "2025-09-26T09:53:32.927168719Z",
+          "updatedAt": "2025-09-26T09:53:32.927168719Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.brave/brave-search-mcp-server",
+      "description": "Brave Search MCP Server: web results, images, videos, rich results, AI summaries, and more.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/brave/brave-search-mcp-server",
+        "source": "github"
+      },
       "version": "2.0.10",
       "packages": [
         {
@@ -1021,7 +1137,33 @@
           "serverId": "fe2e0e07-1466-499a-bcdd-16d07b8ccb40",
           "versionId": "0d2d9f39-6ac9-452e-b1d9-41ebc0147c5c",
           "publishedAt": "2025-09-19T13:21:42.73531992Z",
-          "updatedAt": "2025-09-19T13:21:42.73531992Z",
+          "updatedAt": "2025-09-26T09:53:32.930134233Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.textarttools/textarttools-mcp",
+      "description": "Unicode text styling and ASCII art generation with 23 styles and 322+ figlet fonts",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/humanjesse/textarttools-mcp",
+        "source": "github"
+      },
+      "version": "1.1.1",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://mcp.textarttools.com/"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "341ff90c-b897-48d0-8b1c-4f00dd448806",
+          "versionId": "0d397f9c-ee74-4655-b69a-afee87d1d036",
+          "publishedAt": "2025-09-27T01:54:33.927690661Z",
+          "updatedAt": "2025-09-27T01:54:33.927690661Z",
           "isLatest": true
         }
       }
@@ -1537,6 +1679,32 @@
           "publishedAt": "2025-09-12T05:10:59.806509357Z",
           "updatedAt": "2025-09-18T00:54:49.018200576Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "xyz.dreamtap/mcp",
+      "description": "Dreamtap provides sources of inspiration to your AI to make it more creative.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/salexashenko/dreamtap",
+        "source": "github"
+      },
+      "version": "0.1.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://dreamtap.xyz/mcp"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "0b59e2af-1e92-4a6d-91cf-d53b76041d07",
+          "versionId": "119af48a-b211-4120-b0d0-e75cec3e205a",
+          "publishedAt": "2025-09-26T04:11:38.085711256Z",
+          "updatedAt": "2025-09-26T04:11:38.085711256Z",
+          "isLatest": true
         }
       }
     },
@@ -3981,179 +4149,6 @@
           "publishedAt": "2025-09-21T23:11:11.731178823Z",
           "updatedAt": "2025-09-24T08:48:44.278992465Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.timheuer/sampledotnetmcpserver",
-      "description": "Sample .NET MCP Server",
-      "repository": {
-        "url": "https://github.com/timheuer/sampledotnetmcpserver",
-        "source": "github"
-      },
-      "version": "0.1.28-beta",
-      "packages": [
-        {
-          "registryType": "nuget",
-          "identifier": "TimHeuer.SampleDotnetMcpServer",
-          "version": "0.1.28-beta",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "98619929-a570-46c1-8e35-4cde888731ee",
-          "versionId": "282edfdd-a4e5-46cb-877f-eae2ef06897c",
-          "publishedAt": "2025-09-17T01:27:02.813144548Z",
-          "updatedAt": "2025-09-17T01:44:26.048539235Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.Antonytm/mcp-sitecore-server",
-      "description": "A Model Context Protocol server for Sitecore",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/Antonytm/mcp-sitecore-server",
-        "source": "github"
-      },
-      "version": "1.3.2",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@antonytm/mcp-sitecore-server",
-          "version": "1.3.2",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "name": ""
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "397fbabe-4af0-4772-84f5-d660b761255c",
-          "versionId": "28732cec-512d-49ec-940e-832ee19277bc",
-          "publishedAt": "2025-09-17T16:49:19.073211847Z",
-          "updatedAt": "2025-09-17T16:49:19.073211847Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "com.xcodebuildmcp/XcodeBuildMCP",
-      "description": "XcodeBuildMCP provides tools for Xcode project management, simulator management, and app utilities.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/cameroncooke/XcodeBuildMCP",
-        "source": "github",
-        "id": "945551361"
-      },
-      "version": "1.12.10",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "xcodebuildmcp",
-          "version": "1.12.10",
-          "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Enable experimental xcodemake incremental builds (true/false or 1/0).",
-              "format": "boolean",
-              "default": "false",
-              "choices": [
-                "true",
-                "false",
-                "1",
-                "0"
-              ],
-              "name": "INCREMENTAL_BUILDS_ENABLED"
-            },
-            {
-              "description": "Enable AI-powered dynamic tool discovery to load only relevant workflows.",
-              "format": "boolean",
-              "default": "false",
-              "choices": [
-                "true",
-                "false"
-              ],
-              "name": "XCODEBUILDMCP_DYNAMIC_TOOLS"
-            },
-            {
-              "description": "Comma-separated list of workflows to load in Static Mode (e.g., 'simulator,device,project-discovery').",
-              "format": "string",
-              "name": "XCODEBUILDMCP_ENABLED_WORKFLOWS"
-            },
-            {
-              "description": "Disable Sentry error reporting (preferred flag).",
-              "format": "boolean",
-              "default": "false",
-              "choices": [
-                "true",
-                "false"
-              ],
-              "name": "XCODEBUILDMCP_SENTRY_DISABLED"
-            },
-            {
-              "description": "Enable verbose debug logging from the server.",
-              "format": "boolean",
-              "default": "false",
-              "choices": [
-                "true",
-                "false"
-              ],
-              "name": "XCODEBUILDMCP_DEBUG"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "be9105fb-f8cb-4151-b6f8-21b49fd71fed",
-          "versionId": "288ccf72-1fde-4754-8d0e-9d67a9795125",
-          "publishedAt": "2025-09-10T14:44:46.398091571Z",
-          "updatedAt": "2025-09-22T20:19:27.627630397Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "com.mintmcp/outlook-email",
-      "description": "A MCP server for Outlook email that lets you search, read, and draft emails and replies.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/mintmcp/servers",
-        "source": "github"
-      },
-      "version": "1.0.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://outlook-email.mintmcp.com/mcp"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c331c604-5fd3-409f-b076-7790b9acbb20",
-          "versionId": "29029c32-4067-48c0-b831-058bc34623a1",
-          "publishedAt": "2025-09-09T20:02:38.025522049Z",
-          "updatedAt": "2025-09-09T20:02:38.025522049Z",
-          "isLatest": true
         }
       }
     }
