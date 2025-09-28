@@ -2,6 +2,135 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.himorishige/hatago-mcp-hub",
+      "description": "Unified MCP Hub for managing multiple Model Context Protocol servers",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/himorishige/hatago-mcp-hub",
+        "source": "github"
+      },
+      "version": "0.0.13",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@himorishige/hatago-mcp-hub",
+          "version": "0.0.13",
+          "runtimeHint": "npx",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "27980499-f44a-453a-8b3c-6450b5c0947b",
+          "versionId": "94cfdee1-6a62-4d40-8bf4-dab7646d4548",
+          "publishedAt": "2025-09-13T14:40:04.386322089Z",
+          "updatedAt": "2025-09-14T07:53:18.719599831Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.priyankark/lighthouse-mcp",
+      "description": "MCP server for Google Lighthouse performance metrics",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/priyankark/lighthouse-mcp",
+        "source": "github"
+      },
+      "version": "0.1.9",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "lighthouse-mcp",
+          "version": "0.1.9",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "00115c3f-4478-431b-9752-a6438a66cadc",
+          "versionId": "94d6b736-48d0-46f1-909f-9ce1dd82851e",
+          "publishedAt": "2025-09-09T10:02:57.086660409Z",
+          "updatedAt": "2025-09-09T10:02:57.086660409Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.jkakar/recipe-mcp",
+      "description": "Generate and remix recipes using cookwith.co",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/blaideinc/recipe-mcp",
+        "source": "github"
+      },
+      "version": "1.0.3",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@cookwith/recipe-mcp",
+          "version": "1.0.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "c3b3c3c7-4e0d-4529-bc19-85c18239baf4",
+          "versionId": "94e6cd5b-6def-4054-bf2d-91c8c31205a5",
+          "publishedAt": "2025-09-11T18:30:58.5302013Z",
+          "updatedAt": "2025-09-11T18:33:51.807883948Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/airmang-hwpx-mcp",
+      "description": "자동화하여 HWPX 문서의 로딩, 탐색, 편집, 검증을 한 번에 처리합니다. 문단·표·주석 추가, 텍스트 일괄 치환, 머리말·꼬리말 설정 등 반복 작업을 신속히 수행합니다. 기…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/airmang/hwpx-mcp",
+        "source": "github"
+      },
+      "version": "1.14.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@airmang/hwpx-mcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "56691578-8bf7-43f5-a69e-b89ada4f687a",
+          "versionId": "950bc7a1-ad16-45d1-b41e-14d41a6d4e55",
+          "publishedAt": "2025-09-18T07:51:38.712980993Z",
+          "updatedAt": "2025-09-18T07:51:38.712980993Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "md.install/try",
       "description": "Create guides to instruct coding agents to use your software (SDK, library, framework, API, etc).",
       "status": "active",
@@ -3669,6 +3798,38 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.habedi/omni-lpr",
+      "description": "An MCP server for automatic license plate recognition",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/habedi/omni-lpr",
+        "source": "github"
+      },
+      "version": "0.3.2",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "omni-lpr",
+          "version": "0.3.2",
+          "transport": {
+            "type": "streamable-http",
+            "url": "http://127.0.0.1:8000/mcp/"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "0128b7ed-e370-4fdd-8dbf-13375620ea58",
+          "versionId": "b862651a-49ab-4a83-909a-c75a33a44a6e",
+          "publishedAt": "2025-09-27T08:52:54.853352758Z",
+          "updatedAt": "2025-09-27T08:52:54.853352758Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.burningion/video-editing-mcp",
       "description": "An MCP server that provides [describe what your server does]",
       "status": "active",
@@ -3957,175 +4118,6 @@
           "versionId": "b9e12cd8-2660-4dc1-9e63-de7491c63002",
           "publishedAt": "2025-09-24T16:24:17.268236123Z",
           "updatedAt": "2025-09-24T16:24:17.268236123Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.spences10/mcp-omnisearch",
-      "description": "MCP server for integrating Omnisearch with LLMs",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/spences10/mcp-omnisearch",
-        "source": "github"
-      },
-      "version": "0.0.15",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mcp-omnisearch",
-          "version": "0.0.15",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "573a18a8-3a1e-494b-a88d-dff1af7226e8",
-          "versionId": "b9e152e0-8f25-4edb-96be-81e19075dbe6",
-          "publishedAt": "2025-09-10T19:32:04.459621013Z",
-          "updatedAt": "2025-09-10T19:32:04.459621013Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
-      "description": "Manage Supabase projects end to end across database, auth, storage, realtime, and migrations. Moni…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/MisterSandFR/Supabase-MCP-SelfHosted",
-        "source": "github"
-      },
-      "version": "1.14.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@MisterSandFR/supabase-mcp-selfhosted/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "d07e588e-585e-44b0-a8d4-4cf7ad928ba0",
-          "versionId": "babb48c9-0ae5-4436-b957-3fd988656ac2",
-          "publishedAt": "2025-09-18T14:42:06.197814736Z",
-          "updatedAt": "2025-09-18T14:42:06.197814736Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.saucelabs-sample-test-frameworks/sauce-api-mcp",
-      "description": "An open-source MCP server that provides LLM access to the Sauce Labs API",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/saucelabs/sauce-api-mcp",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "sauce-api-mcp",
-          "version": "1.0.1",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "value": "<sauce-user-name>",
-              "name": "SAUCE_USERNAME"
-            },
-            {
-              "value": "<sauce-access-key>",
-              "name": "SAUCE_ACCESS_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "8b7288a5-d7e6-4139-9ad8-fcb85c1a20df",
-          "versionId": "bb04de05-3784-4641-a864-e8eb37b1a901",
-          "publishedAt": "2025-09-12T22:36:40.555152268Z",
-          "updatedAt": "2025-09-12T22:36:40.555152268Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.Nekzus/npm-sentinel-mcp",
-      "description": "NPM Sentinel MCP - AI-powered NPM package analysis for security, dependencies, and performance.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-        "source": "github"
-      },
-      "version": "1.11.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@nekzus/mcp-server",
-          "version": "1.11.0",
-          "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "364d771b-c515-4071-805d-75513fa308ce",
-          "versionId": "bb9ad48f-71d3-4e68-8701-43bc9eb97cc1",
-          "publishedAt": "2025-09-20T21:15:29.259860449Z",
-          "updatedAt": "2025-09-20T21:30:51.466951132Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.nrwl/nx-console",
-      "description": "A Model Context Protocol server implementation for Nx",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/nrwl/nx-console",
-        "source": "github"
-      },
-      "version": "0.6.12",
-      "packages": [
-        {
-          "registryType": "npm",
-          "identifier": "nx-mcp",
-          "version": "0.6.12",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "02e518c5-4348-4600-b521-7a09364276c3",
-          "versionId": "bbc51e33-09d6-4830-8406-1712d1907cc1",
-          "publishedAt": "2025-09-23T09:55:22.303227162Z",
-          "updatedAt": "2025-09-23T09:55:22.303227162Z",
           "isLatest": true
         }
       }

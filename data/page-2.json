@@ -2,6 +2,54 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.delorenj/mcp-server-trello",
+      "description": "MCP server for Trello boards with rate limiting, type safety, and comprehensive API integration.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/delorenj/mcp-server-trello",
+        "source": "github"
+      },
+      "version": "1.5.5",
+      "websiteUrl": "https://delorenj.github.io/mcp-server-trello",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@delorenj/mcp-server-trello",
+          "version": "1.5.5",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Your Trello API key",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "TRELLO_API_KEY"
+            },
+            {
+              "description": "Your Trello token",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "TRELLO_TOKEN"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9b94aaa3-e02f-4538-972e-f332b1428a1d",
+          "versionId": "280397f6-cca9-4a7f-8aa9-c82ec4f4518b",
+          "publishedAt": "2025-09-21T23:11:11.731178823Z",
+          "updatedAt": "2025-09-24T08:48:44.278992465Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.timheuer/sampledotnetmcpserver",
       "description": "Sample .NET MCP Server",
       "repository": {
@@ -609,6 +657,37 @@
           "publishedAt": "2025-09-17T01:44:26.040148686Z",
           "updatedAt": "2025-09-18T17:33:36.29275102Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.TonySimonovsky/claude-code-conversation-search-mcp",
+      "description": "Search Claude Code conversation history with natural language queries across all projects",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/TonySimonovsky/claude-code-conversation-search-mcp",
+        "source": "github"
+      },
+      "version": "1.1.3",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "claude-code-conversation-search-mcp",
+          "version": "1.1.3",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "bad1e277-654e-492f-bbd9-063702fb42a2",
+          "versionId": "2e60e113-3363-40a4-97d0-0ff8cbed03d8",
+          "publishedAt": "2025-09-27T10:30:26.181168547Z",
+          "updatedAt": "2025-09-27T10:30:26.181168547Z",
+          "isLatest": true
         }
       }
     },
@@ -2280,6 +2359,37 @@
           "publishedAt": "2025-09-13T16:13:29.782164285Z",
           "updatedAt": "2025-09-15T11:11:03.326685721Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.BenAHammond/code-auditor-mcp",
+      "description": "Code Quality Auditor: Analyze code for SOLID principles, DRY violations, and more",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/BenAHammond/code-auditor-mcp",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "code-auditor-mcp",
+          "version": "1.17.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "da4e7c0a-854f-46b7-86ab-35564aa3069f",
+          "versionId": "3e07d24f-a331-4344-adb5-c456dfa7c817",
+          "publishedAt": "2025-09-27T17:09:06.204827689Z",
+          "updatedAt": "2025-09-27T17:09:06.204827689Z",
+          "isLatest": true
         }
       }
     },
@@ -4132,94 +4242,6 @@
           "publishedAt": "2025-09-19T11:31:50.983916145Z",
           "updatedAt": "2025-09-19T11:38:30.02190701Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.p1va/symbols",
-      "description": "MCP server to read, inspect and troubleshoot codebase symbols",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/p1va/symbols",
-        "source": "github"
-      },
-      "version": "0.0.11",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@p1va/symbols",
-          "version": "0.0.11",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "d827a965-33bc-4262-87df-98ca6eac9a12",
-          "versionId": "4a8da115-afef-47ee-af61-c4fbd1c6b0c4",
-          "publishedAt": "2025-09-16T07:43:34.104606016Z",
-          "updatedAt": "2025-09-16T07:43:34.104606016Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.iworkist/btcmcp",
-      "description": "An MCP server that provides Bitcoin price data from Binance API",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/iworkist/btcmcp",
-        "source": "github"
-      },
-      "version": "0.1.2",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "btcmcp",
-          "version": "0.1.2",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "00c3fbf9-d8f5-4ee9-9672-d7181c6a6026",
-          "versionId": "4b81ac7a-cf9e-4960-9b82-529681ed11b1",
-          "publishedAt": "2025-09-23T08:31:39.293571745Z",
-          "updatedAt": "2025-09-23T08:31:39.293571745Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ch.martinelli/jooq-mcp",
-      "description": "An MCP server that provides access to the jOOQ documentation",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/martinellich/jooq-mcp",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "sse",
-          "url": "https://jooq-mcp.martinelli.ch/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "912ef6fa-adcf-405b-a27d-ab1807b18aad",
-          "versionId": "4bb00657-4481-44a5-be50-27f6382d0dd2",
-          "publishedAt": "2025-09-12T13:41:08.40707085Z",
-          "updatedAt": "2025-09-12T13:41:08.40707085Z",
-          "isLatest": true
         }
       }
     }

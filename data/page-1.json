@@ -914,8 +914,8 @@
           "serverId": "bd0c41d1-2209-4c3f-8602-d40900053217",
           "versionId": "09bac2ad-8fbe-458f-8832-c465f2e020e7",
           "publishedAt": "2025-09-20T04:37:07.839680863Z",
-          "updatedAt": "2025-09-20T04:37:07.839680863Z",
-          "isLatest": true
+          "updatedAt": "2025-09-27T13:06:49.501120766Z",
+          "isLatest": false
         }
       }
     },
@@ -1587,6 +1587,75 @@
           "publishedAt": "2025-09-20T03:20:23.182803591Z",
           "updatedAt": "2025-09-20T03:40:04.425108177Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.xorrkaz/cml-mcp",
+      "description": "An MCP server that provides access to common Cisco Modeling Labs (CML) operations.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/xorrkaz/cml-mcp",
+        "source": "github"
+      },
+      "version": "0.9.3",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "cml-mcp",
+          "version": "0.9.3",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "URL for the CML Server",
+              "isRequired": true,
+              "format": "string",
+              "name": "CML_URL"
+            },
+            {
+              "description": "Username for CML authentication",
+              "isRequired": true,
+              "format": "string",
+              "name": "CML_USERNAME"
+            },
+            {
+              "description": "Password for CML authentication",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "CML_PASSWORD"
+            },
+            {
+              "description": "Username for authentication to devices running in CML",
+              "format": "string",
+              "name": "PYATS_USERNAME"
+            },
+            {
+              "description": "Password for authentication to devices running in CML",
+              "format": "string",
+              "isSecret": true,
+              "name": "PYATS_PASSWORD"
+            },
+            {
+              "description": "Enable password for authentication to devices running in CML",
+              "format": "string",
+              "isSecret": true,
+              "name": "PYATS_AUTH_PASS"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "bd0c41d1-2209-4c3f-8602-d40900053217",
+          "versionId": "10f4d545-ed03-4a50-97ba-3f86c3c004e5",
+          "publishedAt": "2025-09-27T19:37:16.175635965Z",
+          "updatedAt": "2025-09-27T19:37:16.175635965Z",
+          "isLatest": true
         }
       }
     },
@@ -4101,54 +4170,6 @@
           "publishedAt": "2025-09-10T20:31:27.714450245Z",
           "updatedAt": "2025-09-10T20:31:27.714450245Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.delorenj/mcp-server-trello",
-      "description": "MCP server for Trello boards with rate limiting, type safety, and comprehensive API integration.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/delorenj/mcp-server-trello",
-        "source": "github"
-      },
-      "version": "1.5.5",
-      "websiteUrl": "https://delorenj.github.io/mcp-server-trello",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@delorenj/mcp-server-trello",
-          "version": "1.5.5",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your Trello API key",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "TRELLO_API_KEY"
-            },
-            {
-              "description": "Your Trello token",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "TRELLO_TOKEN"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "9b94aaa3-e02f-4538-972e-f332b1428a1d",
-          "versionId": "280397f6-cca9-4a7f-8aa9-c82ec4f4518b",
-          "publishedAt": "2025-09-21T23:11:11.731178823Z",
-          "updatedAt": "2025-09-24T08:48:44.278992465Z",
-          "isLatest": false
         }
       }
     }

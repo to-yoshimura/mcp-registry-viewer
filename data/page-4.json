@@ -1,6 +1,147 @@
 {
   "servers": [
     {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.Lyellr88/marm-mcp-server",
+      "description": "Universal MCP Server with advanced AI memory capabilities and semantic search.",
+      "repository": {
+        "url": "https://github.com/Lyellr88/MARM-Systems",
+        "source": "github"
+      },
+      "version": "2.2.4",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "identifier": "marm-mcp-server",
+          "version": "2.2.4",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registryType": "oci",
+          "identifier": "lyellr88/marm-mcp-server",
+          "version": "2.2.4",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "73eda8a1-8138-43c0-ac0e-5f953d1d304e",
+          "versionId": "74d60051-d76b-4b9b-9bff-33ef5a462ee6",
+          "publishedAt": "2025-09-19T08:07:18.942315795Z",
+          "updatedAt": "2025-09-23T06:50:35.607631842Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.timheuer/sampledotnetmcpserver",
+      "description": "Sample .NET MCP Server",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/timheuer/sampledotnetmcpserver",
+        "source": "github"
+      },
+      "version": "0.1.56-beta-g9538a23d37",
+      "packages": [
+        {
+          "registryType": "nuget",
+          "registryBaseUrl": "https://api.nuget.org",
+          "identifier": "TimHeuer.SampleDotnetMcpServer",
+          "version": "0.1.56-beta-g9538a23d37",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "98619929-a570-46c1-8e35-4cde888731ee",
+          "versionId": "75f4d79f-8e5a-4a80-a9e5-4f4dddac7693",
+          "publishedAt": "2025-09-22T16:13:17.246045769Z",
+          "updatedAt": "2025-09-22T17:04:35.121526999Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.apple-rag/mcp-server",
+      "description": "Apple Developer Documentation with Semantic Search, RAG, and AI reranking for MCP clients",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/BingoWon/apple-rag-mcp",
+        "source": "github"
+      },
+      "version": "2.5.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.apple-rag.com",
+          "headers": [
+            {
+              "description": "MCP Token for authentication (optional - free tier available without token)",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "803e4dc4-c3d4-43d2-b6a3-65885c8eefb4",
+          "versionId": "76d4ea95-489a-41e7-8bc9-f8d3263fc913",
+          "publishedAt": "2025-09-17T15:07:56.618881283Z",
+          "updatedAt": "2025-09-17T15:08:38.010176491Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.tedfytw1209/mcp-server-EVEfleet",
+      "description": "An MCP server that provides tools for EVE Online players to manage their fleets",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/tedfytw1209/mcp-server-EVEfleet",
+        "source": "github"
+      },
+      "version": "1.0.0",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-server-evefleet",
+          "version": "0.1.1",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Your API key for the service",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "YOUR_API_KEY"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "540d0e52-a6cb-4d28-9377-887eca830e5d",
+          "versionId": "76d8def5-54d8-478e-93ea-cfb8a7bd827a",
+          "publishedAt": "2025-09-20T02:52:57.271854833Z",
+          "updatedAt": "2025-09-20T03:21:10.606324721Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
       "name": "io.github.Skills03/scrimba-teaching",
       "description": "Interactive programming teacher using Scrimba methodology for 10x retention",
       "repository": {
@@ -505,8 +646,8 @@
           "serverId": "da4e7c0a-854f-46b7-86ab-35564aa3069f",
           "versionId": "79ecb8eb-6d8d-4e4e-84f7-9dc334e6ce8f",
           "publishedAt": "2025-09-26T03:37:09.745161864Z",
-          "updatedAt": "2025-09-26T03:37:09.745161864Z",
-          "isLatest": true
+          "updatedAt": "2025-09-27T17:09:06.208862272Z",
+          "isLatest": false
         }
       }
     },
@@ -3833,135 +3974,6 @@
           "publishedAt": "2025-09-13T11:40:51.735988794Z",
           "updatedAt": "2025-09-13T13:17:32.83365354Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.himorishige/hatago-mcp-hub",
-      "description": "Unified MCP Hub for managing multiple Model Context Protocol servers",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/himorishige/hatago-mcp-hub",
-        "source": "github"
-      },
-      "version": "0.0.13",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@himorishige/hatago-mcp-hub",
-          "version": "0.0.13",
-          "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "27980499-f44a-453a-8b3c-6450b5c0947b",
-          "versionId": "94cfdee1-6a62-4d40-8bf4-dab7646d4548",
-          "publishedAt": "2025-09-13T14:40:04.386322089Z",
-          "updatedAt": "2025-09-14T07:53:18.719599831Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.priyankark/lighthouse-mcp",
-      "description": "MCP server for Google Lighthouse performance metrics",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/priyankark/lighthouse-mcp",
-        "source": "github"
-      },
-      "version": "0.1.9",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "lighthouse-mcp",
-          "version": "0.1.9",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "00115c3f-4478-431b-9752-a6438a66cadc",
-          "versionId": "94d6b736-48d0-46f1-909f-9ce1dd82851e",
-          "publishedAt": "2025-09-09T10:02:57.086660409Z",
-          "updatedAt": "2025-09-09T10:02:57.086660409Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.jkakar/recipe-mcp",
-      "description": "Generate and remix recipes using cookwith.co",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/blaideinc/recipe-mcp",
-        "source": "github"
-      },
-      "version": "1.0.3",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@cookwith/recipe-mcp",
-          "version": "1.0.3",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c3b3c3c7-4e0d-4529-bc19-85c18239baf4",
-          "versionId": "94e6cd5b-6def-4054-bf2d-91c8c31205a5",
-          "publishedAt": "2025-09-11T18:30:58.5302013Z",
-          "updatedAt": "2025-09-11T18:33:51.807883948Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/airmang-hwpx-mcp",
-      "description": "자동화하여 HWPX 문서의 로딩, 탐색, 편집, 검증을 한 번에 처리합니다. 문단·표·주석 추가, 텍스트 일괄 치환, 머리말·꼬리말 설정 등 반복 작업을 신속히 수행합니다. 기…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/airmang/hwpx-mcp",
-        "source": "github"
-      },
-      "version": "1.14.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@airmang/hwpx-mcp/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "56691578-8bf7-43f5-a69e-b89ada4f687a",
-          "versionId": "950bc7a1-ad16-45d1-b41e-14d41a6d4e55",
-          "publishedAt": "2025-09-18T07:51:38.712980993Z",
-          "updatedAt": "2025-09-18T07:51:38.712980993Z",
-          "isLatest": true
         }
       }
     }

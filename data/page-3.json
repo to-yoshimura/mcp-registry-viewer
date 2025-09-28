@@ -2,6 +2,94 @@
   "servers": [
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.p1va/symbols",
+      "description": "MCP server to read, inspect and troubleshoot codebase symbols",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/p1va/symbols",
+        "source": "github"
+      },
+      "version": "0.0.11",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@p1va/symbols",
+          "version": "0.0.11",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "d827a965-33bc-4262-87df-98ca6eac9a12",
+          "versionId": "4a8da115-afef-47ee-af61-c4fbd1c6b0c4",
+          "publishedAt": "2025-09-16T07:43:34.104606016Z",
+          "updatedAt": "2025-09-16T07:43:34.104606016Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.iworkist/btcmcp",
+      "description": "An MCP server that provides Bitcoin price data from Binance API",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/iworkist/btcmcp",
+        "source": "github"
+      },
+      "version": "0.1.2",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "btcmcp",
+          "version": "0.1.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "00c3fbf9-d8f5-4ee9-9672-d7181c6a6026",
+          "versionId": "4b81ac7a-cf9e-4960-9b82-529681ed11b1",
+          "publishedAt": "2025-09-23T08:31:39.293571745Z",
+          "updatedAt": "2025-09-23T08:31:39.293571745Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ch.martinelli/jooq-mcp",
+      "description": "An MCP server that provides access to the jOOQ documentation",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/martinellich/jooq-mcp",
+        "source": "github"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://jooq-mcp.martinelli.ch/sse"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "912ef6fa-adcf-405b-a27d-ab1807b18aad",
+          "versionId": "4bb00657-4481-44a5-be50-27f6382d0dd2",
+          "publishedAt": "2025-09-12T13:41:08.40707085Z",
+          "updatedAt": "2025-09-12T13:41:08.40707085Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "com.devopness.mcp/server",
       "description": "An MCP server that uses Devopness to allow AI Agents to provision infrastructure to any cloud",
       "status": "active",
@@ -1677,6 +1765,75 @@
           "versionId": "5ccbb7c4-a540-465f-8457-936802e52673",
           "publishedAt": "2025-09-18T21:45:57.092950721Z",
           "updatedAt": "2025-09-18T22:00:36.898440904Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.xorrkaz/cml-mcp",
+      "description": "An MCP server that provides access to common Cisco Modeling Labs (CML) operations.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/xorrkaz/cml-mcp",
+        "source": "github"
+      },
+      "version": "0.9.2",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "cml-mcp",
+          "version": "0.9.2",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "URL for the CML Server",
+              "isRequired": true,
+              "format": "string",
+              "name": "CML_URL"
+            },
+            {
+              "description": "Username for CML authentication",
+              "isRequired": true,
+              "format": "string",
+              "name": "CML_USERNAME"
+            },
+            {
+              "description": "Password for CML authentication",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "CML_PASSWORD"
+            },
+            {
+              "description": "Username for authentication to devices running in CML",
+              "format": "string",
+              "name": "PYATS_USERNAME"
+            },
+            {
+              "description": "Password for authentication to devices running in CML",
+              "format": "string",
+              "isSecret": true,
+              "name": "PYATS_PASSWORD"
+            },
+            {
+              "description": "Enable password for authentication to devices running in CML",
+              "format": "string",
+              "isSecret": true,
+              "name": "PYATS_AUTH_PASS"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "bd0c41d1-2209-4c3f-8602-d40900053217",
+          "versionId": "5cecd3d7-2830-490f-b3bc-ddbf8d068b24",
+          "publishedAt": "2025-09-27T13:06:49.494028033Z",
+          "updatedAt": "2025-09-27T19:37:16.179620263Z",
           "isLatest": false
         }
       }
@@ -3596,147 +3753,6 @@
           "publishedAt": "2025-09-11T01:31:51.354566076Z",
           "updatedAt": "2025-09-11T01:31:51.354566076Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.Lyellr88/marm-mcp-server",
-      "description": "Universal MCP Server with advanced AI memory capabilities and semantic search.",
-      "repository": {
-        "url": "https://github.com/Lyellr88/MARM-Systems",
-        "source": "github"
-      },
-      "version": "2.2.4",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "identifier": "marm-mcp-server",
-          "version": "2.2.4",
-          "transport": {
-            "type": "stdio"
-          }
-        },
-        {
-          "registryType": "oci",
-          "identifier": "lyellr88/marm-mcp-server",
-          "version": "2.2.4",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "73eda8a1-8138-43c0-ac0e-5f953d1d304e",
-          "versionId": "74d60051-d76b-4b9b-9bff-33ef5a462ee6",
-          "publishedAt": "2025-09-19T08:07:18.942315795Z",
-          "updatedAt": "2025-09-23T06:50:35.607631842Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.timheuer/sampledotnetmcpserver",
-      "description": "Sample .NET MCP Server",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/timheuer/sampledotnetmcpserver",
-        "source": "github"
-      },
-      "version": "0.1.56-beta-g9538a23d37",
-      "packages": [
-        {
-          "registryType": "nuget",
-          "registryBaseUrl": "https://api.nuget.org",
-          "identifier": "TimHeuer.SampleDotnetMcpServer",
-          "version": "0.1.56-beta-g9538a23d37",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "98619929-a570-46c1-8e35-4cde888731ee",
-          "versionId": "75f4d79f-8e5a-4a80-a9e5-4f4dddac7693",
-          "publishedAt": "2025-09-22T16:13:17.246045769Z",
-          "updatedAt": "2025-09-22T17:04:35.121526999Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "com.apple-rag/mcp-server",
-      "description": "Apple Developer Documentation with Semantic Search, RAG, and AI reranking for MCP clients",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/BingoWon/apple-rag-mcp",
-        "source": "github"
-      },
-      "version": "2.5.0",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://mcp.apple-rag.com",
-          "headers": [
-            {
-              "description": "MCP Token for authentication (optional - free tier available without token)",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "803e4dc4-c3d4-43d2-b6a3-65885c8eefb4",
-          "versionId": "76d4ea95-489a-41e7-8bc9-f8d3263fc913",
-          "publishedAt": "2025-09-17T15:07:56.618881283Z",
-          "updatedAt": "2025-09-17T15:08:38.010176491Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.tedfytw1209/mcp-server-EVEfleet",
-      "description": "An MCP server that provides tools for EVE Online players to manage their fleets",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/tedfytw1209/mcp-server-EVEfleet",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "registryBaseUrl": "https://pypi.org",
-          "identifier": "mcp-server-evefleet",
-          "version": "0.1.1",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your API key for the service",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "YOUR_API_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "540d0e52-a6cb-4d28-9377-887eca830e5d",
-          "versionId": "76d8def5-54d8-478e-93ea-cfb8a7bd827a",
-          "publishedAt": "2025-09-20T02:52:57.271854833Z",
-          "updatedAt": "2025-09-20T03:21:10.606324721Z",
-          "isLatest": false
         }
       }
     }
