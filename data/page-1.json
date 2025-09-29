@@ -921,6 +921,35 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.CodeCraftersLLC/local-voice-mcp",
+      "description": "Give your MCP clients the ability to speak by running local voice models using Chatterbox TTS",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "0.1.5",
+      "packages": [
+        {
+          "registryType": "npm",
+          "identifier": "@codecraftersllc/local-voice-mcp",
+          "version": "0.1.5",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "65855b9a-02f2-4d4b-b7bd-2331a6200b8a",
+          "versionId": "09bf92d8-67cb-4dd7-b041-aa9d7b8909c8",
+          "publishedAt": "2025-09-28T21:11:08.235551638Z",
+          "updatedAt": "2025-09-28T21:11:08.235551638Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.augmnt/augments-mcp-server",
       "description": "Augments MCP Server - A comprehensive framework documentation provider for Claude Code",
       "status": "active",
@@ -2364,6 +2393,61 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.slingdata/sling-cli",
+      "description": "Sling CLI MCP server for data pipeline and replication management",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.4.24",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "identifier": "sling",
+          "version": "1.4.23.post1",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "d15ace18-8e69-4e21-a342-796e44cf5489",
+          "versionId": "16b64bd4-09b7-4f5a-a3c2-7dd083f68b65",
+          "publishedAt": "2025-09-28T22:21:25.744436024Z",
+          "updatedAt": "2025-09-28T22:25:06.473721364Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.klavis/strata",
+      "description": "MCP server for progressive tool usage at any scale (see https://klavis.ai)",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/Klavis-AI/klavis",
+        "source": "github"
+      },
+      "version": "1.0.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://strata.klavis.ai/mcp/"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "9451d58d-fb97-4fd9-918e-585feeb663a7",
+          "versionId": "16bd89ae-3cc6-45be-abeb-bc15be8dc87d",
+          "publishedAt": "2025-09-28T19:13:44.307076494Z",
+          "updatedAt": "2025-09-28T19:13:44.307076494Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.domdomegg/airtable-mcp-server",
       "description": "Read and write access to Airtable database schemas, tables, and records.",
       "status": "active",
@@ -2698,8 +2782,8 @@
           "serverId": "06d38121-a76a-47ba-9827-dc181b7cc167",
           "versionId": "18d8185d-62e2-4d83-bbbc-37675b55ef26",
           "publishedAt": "2025-09-10T14:04:47.647565515Z",
-          "updatedAt": "2025-09-10T14:04:47.647565515Z",
-          "isLatest": true
+          "updatedAt": "2025-09-28T22:41:40.003484173Z",
+          "isLatest": false
         }
       }
     },
@@ -2888,8 +2972,8 @@
           "serverId": "6836138f-2ad2-4feb-8043-ea425ecb0d71",
           "versionId": "1b4d9835-1839-4365-b9bc-0b689c371247",
           "publishedAt": "2025-09-24T21:49:38.605228419Z",
-          "updatedAt": "2025-09-24T21:49:38.605228419Z",
-          "isLatest": true
+          "updatedAt": "2025-09-28T16:21:23.447924914Z",
+          "isLatest": false
         }
       }
     },
@@ -2945,6 +3029,37 @@
           "versionId": "1be3d1ef-0844-4f16-a4b9-e34e458b5485",
           "publishedAt": "2025-09-17T13:24:12.420293436Z",
           "updatedAt": "2025-09-17T13:24:12.420293436Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.BenAHammond/code-auditor-mcp",
+      "description": "Code Quality Auditor: Analyze code for SOLID principles, DRY violations, and more",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/BenAHammond/code-auditor-mcp",
+        "source": "github"
+      },
+      "version": "1.0.5",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "code-auditor-mcp",
+          "version": "1.18.0",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "da4e7c0a-854f-46b7-86ab-35564aa3069f",
+          "versionId": "1c1d5f17-ee72-4e2f-9e4e-02ff6546cca0",
+          "publishedAt": "2025-09-29T02:41:50.23206487Z",
+          "updatedAt": "2025-09-29T02:41:50.23206487Z",
           "isLatest": true
         }
       }
@@ -3399,6 +3514,194 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.alex-feel/mcp-context-server",
+      "description": "An MCP server that provides persistent multimodal context storage for LLM agents.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/alex-feel/mcp-context-server",
+        "source": "github"
+      },
+      "version": "0.2.0",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-context-server",
+          "version": "0.2.0",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Log level",
+              "format": "string",
+              "name": "LOG_LEVEL"
+            },
+            {
+              "description": "Maximum individual image size in megabytes",
+              "format": "number",
+              "name": "MAX_IMAGE_SIZE_MB"
+            },
+            {
+              "description": "Maximum total request size in megabytes",
+              "format": "number",
+              "name": "MAX_TOTAL_SIZE_MB"
+            },
+            {
+              "description": "Custom database file location path",
+              "format": "string",
+              "name": "DB_PATH"
+            },
+            {
+              "description": "Maximum number of concurrent read connections in the pool",
+              "format": "number",
+              "name": "POOL_MAX_READERS"
+            },
+            {
+              "description": "Maximum number of concurrent write connections in the pool",
+              "format": "number",
+              "name": "POOL_MAX_WRITERS"
+            },
+            {
+              "description": "Connection timeout in seconds",
+              "format": "number",
+              "name": "POOL_CONNECTION_TIMEOUT_S"
+            },
+            {
+              "description": "Idle connection timeout in seconds",
+              "format": "number",
+              "name": "POOL_IDLE_TIMEOUT_S"
+            },
+            {
+              "description": "Connection health check interval in seconds",
+              "format": "number",
+              "name": "POOL_HEALTH_CHECK_INTERVAL_S"
+            },
+            {
+              "description": "Maximum number of retry attempts for failed operations",
+              "format": "number",
+              "name": "RETRY_MAX_RETRIES"
+            },
+            {
+              "description": "Base delay in seconds between retry attempts",
+              "format": "number",
+              "name": "RETRY_BASE_DELAY_S"
+            },
+            {
+              "description": "Maximum delay in seconds between retry attempts",
+              "format": "number",
+              "name": "RETRY_MAX_DELAY_S"
+            },
+            {
+              "description": "Enable random jitter in retry delays",
+              "format": "boolean",
+              "name": "RETRY_JITTER"
+            },
+            {
+              "description": "Exponential backoff multiplication factor for retries",
+              "format": "number",
+              "name": "RETRY_BACKOFF_FACTOR"
+            },
+            {
+              "description": "Enable SQLite foreign key constraints",
+              "format": "boolean",
+              "name": "SQLITE_FOREIGN_KEYS"
+            },
+            {
+              "description": "SQLite journal mode (e.g., WAL, DELETE)",
+              "format": "string",
+              "name": "SQLITE_JOURNAL_MODE"
+            },
+            {
+              "description": "SQLite synchronous mode (e.g., NORMAL, FULL, OFF)",
+              "format": "string",
+              "name": "SQLITE_SYNCHRONOUS"
+            },
+            {
+              "description": "SQLite temporary storage location (e.g., MEMORY, FILE)",
+              "format": "string",
+              "name": "SQLITE_TEMP_STORE"
+            },
+            {
+              "description": "SQLite memory-mapped I/O size in bytes",
+              "format": "number",
+              "name": "SQLITE_MMAP_SIZE"
+            },
+            {
+              "description": "SQLite cache size (negative value for KB, positive for pages)",
+              "format": "number",
+              "name": "SQLITE_CACHE_SIZE"
+            },
+            {
+              "description": "SQLite page size in bytes",
+              "format": "number",
+              "name": "SQLITE_PAGE_SIZE"
+            },
+            {
+              "description": "SQLite WAL autocheckpoint threshold in pages",
+              "format": "number",
+              "name": "SQLITE_WAL_AUTOCHECKPOINT"
+            },
+            {
+              "description": "SQLite busy timeout in milliseconds",
+              "format": "number",
+              "name": "SQLITE_BUSY_TIMEOUT_MS"
+            },
+            {
+              "description": "SQLite WAL checkpoint mode (e.g., PASSIVE, FULL, RESTART)",
+              "format": "string",
+              "name": "SQLITE_WAL_CHECKPOINT"
+            },
+            {
+              "description": "Server shutdown timeout in seconds",
+              "format": "number",
+              "name": "SHUTDOWN_TIMEOUT_S"
+            },
+            {
+              "description": "Test mode shutdown timeout in seconds",
+              "format": "number",
+              "name": "SHUTDOWN_TIMEOUT_TEST_S"
+            },
+            {
+              "description": "Queue operation timeout in seconds",
+              "format": "number",
+              "name": "QUEUE_TIMEOUT_S"
+            },
+            {
+              "description": "Test mode queue timeout in seconds",
+              "format": "number",
+              "name": "QUEUE_TIMEOUT_TEST_S"
+            },
+            {
+              "description": "Circuit breaker failure threshold before opening",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_FAILURE_THRESHOLD"
+            },
+            {
+              "description": "Circuit breaker recovery timeout in seconds",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_RECOVERY_TIMEOUT_S"
+            },
+            {
+              "description": "Maximum calls allowed in circuit breaker half-open state",
+              "format": "number",
+              "name": "CIRCUIT_BREAKER_HALF_OPEN_MAX_CALLS"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a352f0e9-bd3c-4736-90de-2dce46081c89",
+          "versionId": "21fce873-ecf6-4706-b66f-d8b98009dde2",
+          "publishedAt": "2025-09-28T19:00:48.072789641Z",
+          "updatedAt": "2025-09-28T19:00:48.072789641Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "ai.mcpcap/mcpcap",
       "description": "An MCP server for analyzing PCAP files.",
       "status": "active",
@@ -3424,6 +3727,37 @@
           "versionId": "221fc588-c202-4bdf-ad8a-8b5843e604f7",
           "publishedAt": "2025-09-12T04:24:04.024827907Z",
           "updatedAt": "2025-09-12T04:28:40.56365786Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.BenAHammond/code-auditor-mcp",
+      "description": "Code Quality Auditor: Analyze code for SOLID principles, DRY violations, and more",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/BenAHammond/code-auditor-mcp",
+        "source": "github"
+      },
+      "version": "1.0.4",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "code-auditor-mcp",
+          "version": "1.17.5",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "da4e7c0a-854f-46b7-86ab-35564aa3069f",
+          "versionId": "22ff7a09-ecaa-4322-a847-1768bcf94c56",
+          "publishedAt": "2025-09-29T01:21:09.057133123Z",
+          "updatedAt": "2025-09-29T02:41:50.241153466Z",
           "isLatest": false
         }
       }
@@ -3960,215 +4294,6 @@
           "versionId": "25d413a1-8cc0-491e-bfdd-cb759305516b",
           "publishedAt": "2025-09-11T12:17:16.508389545Z",
           "updatedAt": "2025-09-11T12:17:16.508389545Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/alphago2580-naramarketmcp",
-      "description": "Access Korea’s G2B procurement and Nara Market data for bid notices, awards, contracts, statistics…",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/alphago2580/naramarketmcp",
-        "source": "github"
-      },
-      "version": "1.14.1",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@alphago2580/naramarketmcp/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "df96996d-30f8-49ea-9012-02117777747c",
-          "versionId": "25e1e4ce-1eae-45d6-9b48-0ae6ae00d59d",
-          "publishedAt": "2025-09-19T02:36:55.167644104Z",
-          "updatedAt": "2025-09-19T02:36:55.167644104Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-      "name": "io.github.srikrishna235/scrimba-teaching-mcp",
-      "description": "Unified MCP for Scrimba's interactive programming education with visual learning",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "3.0.3",
-      "packages": [
-        {
-          "registryType": "pypi",
-          "identifier": "scrimba-teaching-mcp",
-          "version": "3.0.3",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "9af8219e-a44d-4cce-a08d-8d5b8b7466fe",
-          "versionId": "25fcdc11-06b9-43af-8eed-ae91b1a55bfc",
-          "publishedAt": "2025-09-25T06:06:17.156574957Z",
-          "updatedAt": "2025-09-25T06:06:17.156574957Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.MasonChow/source-map-parser-mcp",
-      "description": "Parse JavaScript error stack traces back to original source code using source maps",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/MasonChow/source-map-parser-mcp",
-        "source": "github"
-      },
-      "version": "1.3.2",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "source-map-parser-mcp",
-          "version": "1.3.2",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Context lines around error locations in source code",
-              "format": "string",
-              "name": "SOURCE_MAP_PARSER_CONTEXT_OFFSET_LINE"
-            },
-            {
-              "description": "Maximum memory cache size in MB for source maps",
-              "format": "string",
-              "name": "SOURCE_MAP_PARSER_RESOURCE_CACHE_MAX_SIZE"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c3b2f423-320c-4bee-8463-ec298459b767",
-          "versionId": "26bccebb-a881-4993-b339-5d2ea18fd2cb",
-          "publishedAt": "2025-09-10T15:03:12.048715379Z",
-          "updatedAt": "2025-09-10T15:03:12.048715379Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.jkakar/recipe-mcp",
-      "description": "Generate and remix recipes using cookwith.co",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/blaideinc/recipe-mcp",
-        "source": "github"
-      },
-      "version": "1.0.2",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@cookwith/recipe-mcp",
-          "version": "1.0.2",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "c3b3c3c7-4e0d-4529-bc19-85c18239baf4",
-          "versionId": "2735b14b-33d9-43d1-905f-1166e419ed82",
-          "publishedAt": "2025-09-11T18:27:40.577812923Z",
-          "updatedAt": "2025-09-11T18:30:58.534722167Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.dba-i/mssql-dba",
-      "description": "An MCP server that provides [describe what your server does]",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/dba-i/mssql-dba",
-        "source": "github"
-      },
-      "version": "1.0.0",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mssql-dba",
-          "version": "1.0.0",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Your API key for the service",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "YOUR_API_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "faf601ec-41a1-4c62-af8d-b81461383e9c",
-          "versionId": "27519bf0-ff62-4be2-8806-6d0c9c7cd079",
-          "publishedAt": "2025-09-16T16:43:44.243434061Z",
-          "updatedAt": "2025-09-16T16:43:44.243434061Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.railwayapp/mcp-server",
-      "description": "Official Railway MCP server",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/railwayapp/railway-mcp-server",
-        "source": "github"
-      },
-      "version": "0.1.5",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@railway/mcp-server",
-          "version": "0.1.5",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "12a26f79-9d5d-41a3-a4c4-a1e855f3545f",
-          "versionId": "27d9860e-1449-4ff1-ab18-7adb02c09159",
-          "publishedAt": "2025-09-10T20:31:27.714450245Z",
-          "updatedAt": "2025-09-10T20:31:27.714450245Z",
           "isLatest": true
         }
       }

@@ -1,0 +1,336 @@
+{
+  "servers": [
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.Synclub-tech/synclub-dxt",
+      "description": "SynClub MCP Server for AI-powered comic creation with script generation and image tools",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/Synclub-tech/Synclub-dxt",
+        "source": "github"
+      },
+      "version": "0.6.0",
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "321cc940-43bb-4872-bb8f-69113a2801c0",
+          "versionId": "fcbfdd48-ec43-41b0-b8b0-ed36c8d0436d",
+          "publishedAt": "2025-09-20T11:20:51.672215792Z",
+          "updatedAt": "2025-09-20T11:20:51.672215792Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.github/github-mcp-server",
+      "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows through natural language.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/github/github-mcp-server",
+        "source": "github"
+      },
+      "version": "0.16.0",
+      "packages": [
+        {
+          "registryType": "oci",
+          "registryBaseUrl": "https://ghcr.io",
+          "identifier": "github/github-mcp-server",
+          "version": "0.16.0",
+          "transport": {
+            "type": "stdio"
+          },
+          "runtimeArguments": [
+            {
+              "description": "The runtime command to execute",
+              "value": "run",
+              "type": "positional"
+            },
+            {
+              "description": "Run container in interactive mode",
+              "type": "named",
+              "name": "-i"
+            },
+            {
+              "description": "Automatically remove the container when it exits",
+              "type": "named",
+              "name": "--rm"
+            },
+            {
+              "description": "Set an environment variable in the runtime",
+              "type": "named",
+              "name": "-e"
+            },
+            {
+              "description": "Environment variable name",
+              "value": "GITHUB_PERSONAL_ACCESS_TOKEN",
+              "type": "positional",
+              "valueHint": "env_var_name"
+            },
+            {
+              "description": "The container image to run",
+              "value": "ghcr.io/github/github-mcp-server",
+              "type": "positional",
+              "valueHint": "image_name"
+            }
+          ],
+          "environmentVariables": [
+            {
+              "description": "Your GitHub personal access token with appropriate scopes.",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "GITHUB_PERSONAL_ACCESS_TOKEN"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "02509d0f-a38d-41c7-a45b-af161711c61d",
+          "versionId": "fcce1eb9-3ba4-4ef7-8ab8-ded46e50b74a",
+          "publishedAt": "2025-09-26T15:06:49.295256276Z",
+          "updatedAt": "2025-09-26T15:06:49.295256276Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.r-huijts/strava-mcp",
+      "description": "MCP server for accessing Strava API",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/r-huijts/strava-mcp",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "strava-mcp-server",
+          "version": "1.0.1",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Your Strava API client ID",
+              "isRequired": true,
+              "format": "string",
+              "name": "STRAVA_CLIENT_ID"
+            },
+            {
+              "description": "Your Strava API client secret",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "STRAVA_CLIENT_SECRET"
+            },
+            {
+              "description": "Your Strava API access token",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "STRAVA_ACCESS_TOKEN"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "487c1cfc-fc8c-4487-94ba-68abf09a0e90",
+          "versionId": "fce998d0-3374-49ad-ab92-a1dce675be47",
+          "publishedAt": "2025-09-17T13:52:27.488577467Z",
+          "updatedAt": "2025-09-17T13:52:27.488577467Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/CryptoCultCurt-appfolio-mcp-server",
+      "description": "Provide seamless access to Appfolio Property Manager Reporting API through a standardized MCP serv…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/CryptoCultCurt/appfolio-mcp-server",
+        "source": "github"
+      },
+      "version": "1.0.1",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@CryptoCultCurt/appfolio-mcp-server/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "isRequired": true,
+              "value": "Bearer {smithery_api_key}",
+              "isSecret": true,
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "0f143383-471c-4fcd-87b3-6e81e77f7873",
+          "versionId": "fd5f5556-3f1d-46a1-8b5d-90f1f3d66078",
+          "publishedAt": "2025-09-11T00:42:54.55597845Z",
+          "updatedAt": "2025-09-11T00:42:54.55597845Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.MR901/mcp-plots",
+      "description": "MCP server for data visualization with Mermaid charts.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/MR901/mcp-plots",
+        "source": "github"
+      },
+      "version": "0.0.3",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-plots",
+          "version": "0.0.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "04db2a27-c1ff-4897-966f-aabc0d59805d",
+          "versionId": "fda11600-263f-46ad-a831-4a44439f5800",
+          "publishedAt": "2025-09-24T12:22:55.555052849Z",
+          "updatedAt": "2025-09-24T12:22:55.555052849Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.smartbear/smartbear-mcp",
+      "description": "MCP server for AI access to SmartBear tools, including BugSnag, Reflect, API Hub, PactFlow.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/SmartBear/smartbear-mcp",
+        "source": "github"
+      },
+      "version": "0.6.0",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@smartbear/mcp",
+          "version": "0.6.0",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "BugSnag auth token. Leave empty to disable BugSnag tools. Learn more: https://developer.smartbear.com/smartbear-mcp/docs/bugsnag-integration",
+              "isSecret": true,
+              "name": "BUGSNAG_AUTH_TOKEN"
+            },
+            {
+              "description": "BugSnag project API key (optional; narrows interactions to a single project). Learn more: https://developer.smartbear.com/smartbear-mcp/docs/bugsnag-integration",
+              "name": "BUGSNAG_PROJECT_API_KEY"
+            },
+            {
+              "description": "Reflect API token. Leave empty to disable Reflect tools. Learn more: https://developer.smartbear.com/smartbear-mcp/docs/test-hub-integration",
+              "isSecret": true,
+              "name": "REFLECT_API_TOKEN"
+            },
+            {
+              "description": "API Hub API key. Leave empty to disable API Hub tools. Learn more: https://developer.smartbear.com/smartbear-mcp/docs/api-hub-integration",
+              "isSecret": true,
+              "name": "API_HUB_API_KEY"
+            },
+            {
+              "description": "PactFlow/Pact Broker base URL. Leave empty to disable Pact tools. Learn more: https://developer.smartbear.com/smartbear-mcp/docs/contract-testing-with-pactflow",
+              "name": "PACT_BROKER_BASE_URL"
+            },
+            {
+              "description": "PactFlow authentication token. Learn more: https://developer.smartbear.com/smartbear-mcp/docs/contract-testing-with-pactflow",
+              "isSecret": true,
+              "name": "PACT_BROKER_TOKEN"
+            },
+            {
+              "description": "Pact Broker username (alternative to token). Learn more: https://developer.smartbear.com/smartbear-mcp/docs/contract-testing-with-pactflow",
+              "name": "PACT_BROKER_USERNAME"
+            },
+            {
+              "description": "Pact Broker password (alternative to token). Learn more: https://developer.smartbear.com/smartbear-mcp/docs/contract-testing-with-pactflow",
+              "isSecret": true,
+              "name": "PACT_BROKER_PASSWORD"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "6a483f7b-2acb-49e3-82ab-1a8ea387be43",
+          "versionId": "fdba73cd-2ed0-4c2d-8b14-abe89267820e",
+          "publishedAt": "2025-09-22T12:40:01.386189691Z",
+          "updatedAt": "2025-09-22T12:40:01.386189691Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "name": "io.github.OtherVibes/mcp-as-a-judge",
+      "description": "MCP as a Judge: a behavioral MCP that strengthens AI coding assistants via explicit LLM evaluations",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "0.3.13",
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "e8b7a95e-e0b7-44d1-9830-1ef945eed29d",
+          "versionId": "fe00dad0-f665-453b-a667-ff147be8ff07",
+          "publishedAt": "2025-09-18T22:00:36.893962101Z",
+          "updatedAt": "2025-09-18T22:05:09.298621446Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.henilcalagiya/mcp-apple-notes",
+      "description": "MCP server for Apple Notes integration using AppleScript with full CRUD operations",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/henilcalagiya/mcp-apple-notes",
+        "source": "github"
+      },
+      "version": "0.1.2",
+      "packages": [
+        {
+          "registryType": "pypi",
+          "registryBaseUrl": "https://pypi.org",
+          "identifier": "mcp-apple-notes",
+          "version": "0.1.2",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "612b3ba8-e026-4bf7-a6e8-24441c68b46a",
+          "versionId": "fe025150-d0bd-42e5-8c5f-3ea6ec61db33",
+          "publishedAt": "2025-09-11T05:36:33.726309509Z",
+          "updatedAt": "2025-09-11T05:36:33.726309509Z",
+          "isLatest": true
+        }
+      }
+    }
+  ]
+}
