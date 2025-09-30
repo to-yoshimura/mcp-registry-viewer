@@ -413,6 +413,39 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/mfukushim-map-traveler-mcp",
+      "description": "Create immersive travel experiences by instructing an avatar to navigate Google Maps. Report on th…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/mfukushim/map-traveler-mcp",
+        "source": "github"
+      },
+      "version": "0.2.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@mfukushim/map-traveler-mcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "value": "Bearer {smithery_api_key}",
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "6bdbfe7a-4c6a-472a-bb48-89b40031642e",
+          "versionId": "066f01a1-dc88-4d0b-859c-ce691e48b5ed",
+          "publishedAt": "2025-09-29T15:14:24.85336694Z",
+          "updatedAt": "2025-09-29T15:14:24.85336694Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "com.joelverhagen.mcp/Knapcode.SampleMcpServer",
       "description": "A sample MCP server using the MCP C# SDK. Generates random numbers and random weather.",
       "repository": {
@@ -487,6 +520,39 @@
           "versionId": "06fd2413-e1aa-4b5e-83c1-6dbfdba84c74",
           "publishedAt": "2025-09-15T11:36:02.956033052Z",
           "updatedAt": "2025-09-15T11:36:02.956033052Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/arjunkmrm-scrapermcp_el",
+      "description": "Extract and parse web pages into clean HTML, links, or Markdown. Handle dynamic, complex, or block…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/arjunkmrm/ScraperMcp_el",
+        "source": "github"
+      },
+      "version": "1.15.0",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@arjunkmrm/scrapermcp_el/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "value": "Bearer {smithery_api_key}",
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a75a26cf-7721-48b0-b74a-9903fc1e3135",
+          "versionId": "071f555d-06a0-451b-bf9b-63d2161a4f99",
+          "publishedAt": "2025-09-29T12:13:12.824688246Z",
+          "updatedAt": "2025-09-29T12:13:12.824688246Z",
           "isLatest": true
         }
       }
@@ -1093,6 +1159,110 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/yuna0x0-anilist-mcp",
+      "description": "Access and interact with anime and manga data seamlessly. Retrieve detailed information about your…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/yuna0x0/anilist-mcp",
+        "source": "github"
+      },
+      "version": "1.3.7",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@yuna0x0/anilist-mcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "value": "Bearer {smithery_api_key}",
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "bd7f3260-8768-49b4-be09-19cd13793ba2",
+          "versionId": "0b93517a-6ad1-4379-89e6-c46c0d3e9900",
+          "publishedAt": "2025-09-29T12:46:26.531502649Z",
+          "updatedAt": "2025-09-29T12:46:26.531502649Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.cloudquery/mcp",
+      "description": "CloudQuery MCP server for asset inventory data. Supports CLI, PostgreSQL, and Platform modes.",
+      "repository": {
+        "url": "",
+        "source": ""
+      },
+      "version": "1.6.8",
+      "packages": [
+        {
+          "registryType": "mcpb",
+          "identifier": "https://github.com/cloudquery/mcp-releases/releases/download/v1.6.8/cq-platform-mcp_1.6.8_darwin_arm64.mcpb",
+          "version": "1.6.8",
+          "fileSha256": "4358a05946f1d66bba4eb99413e6a4048b8bc22503a8cb0af477f163cf41cd6b",
+          "runtimeHint": "darwin-arm64",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registryType": "mcpb",
+          "identifier": "https://github.com/cloudquery/mcp-releases/releases/download/v1.6.8/cq-platform-mcp_1.6.8_darwin_amd64.mcpb",
+          "version": "1.6.8",
+          "fileSha256": "dd2987cc5ed558a1437095d27241b36729297484b3474e6e8337c2c254580a40",
+          "runtimeHint": "darwin-amd64",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registryType": "mcpb",
+          "identifier": "https://github.com/cloudquery/mcp-releases/releases/download/v1.6.8/cq-platform-mcp_1.6.8_linux_arm64.mcpb",
+          "version": "1.6.8",
+          "fileSha256": "38329ed2fd87991aea3f1273da67ad0a458517793e0bdde5a464f00d4bb4aa7e",
+          "runtimeHint": "linux-arm64",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registryType": "mcpb",
+          "identifier": "https://github.com/cloudquery/mcp-releases/releases/download/v1.6.8/cq-platform-mcp_1.6.8_linux_amd64.mcpb",
+          "version": "1.6.8",
+          "fileSha256": "7ff22d7bbd43e78c61bceead5943c94a0ef916d1f1d958e00a392531a76e15e2",
+          "runtimeHint": "linux-amd64",
+          "transport": {
+            "type": "stdio"
+          }
+        },
+        {
+          "registryType": "mcpb",
+          "identifier": "https://github.com/cloudquery/mcp-releases/releases/download/v1.6.8/cq-platform-mcp_1.6.8_windows_amd64.mcpb",
+          "version": "1.6.8",
+          "fileSha256": "2c4faeadc742296aa20fada1b227f1afba77be165051b21788dac4af94be3bef",
+          "runtimeHint": "windows-amd64",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "36513a73-5559-43ed-8b94-41ff5eb16f32",
+          "versionId": "0c4a8f49-cc3d-4a77-bc9f-db7361454898",
+          "publishedAt": "2025-09-29T16:54:44.655421346Z",
+          "updatedAt": "2025-09-29T16:54:44.655421346Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.brave/brave-search-mcp-server",
       "description": "Brave Search MCP Server: web results, images, videos, rich results, AI summaries, and more.",
       "status": "active",
@@ -1356,6 +1526,39 @@
           "publishedAt": "2025-09-09T19:05:37.138310617Z",
           "updatedAt": "2025-09-09T19:54:23.231288713Z",
           "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "ai.smithery/isnow890-data4library-mcp",
+      "description": "책 싫어하는 제가 책에 대해 아는척하고 싶어서 만들었습니다.. 내 주변 도서관 실시간 대출 확인 읽고 싶은 책을 검색하면 주변 도서관 대출 가능 여부를 즉시 확인 굳이 도서관…",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/isnow890/data4library-mcp",
+        "source": "github"
+      },
+      "version": "1.0.5",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://server.smithery.ai/@isnow890/data4library-mcp/mcp",
+          "headers": [
+            {
+              "description": "Bearer token for Smithery authentication",
+              "value": "Bearer {smithery_api_key}",
+              "name": "Authorization"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "42b4dec5-c275-4ff3-8cb5-2de4e0a5d57e",
+          "versionId": "0de79f70-d0dc-41b1-8bf0-2f841202a553",
+          "publishedAt": "2025-09-29T10:45:21.467985251Z",
+          "updatedAt": "2025-09-29T10:45:21.467985251Z",
+          "isLatest": true
         }
       }
     },
@@ -2333,6 +2536,48 @@
       }
     },
     {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "com.driflyte/driflyte-mcp-server",
+      "description": "Driflyte MCP server which lets AI assistants query topic-specific knowledge from web and GitHub.",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/serkan-ozal/driflyte-mcp-server",
+        "source": "github"
+      },
+      "version": "0.1.14",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@driflyte/mcp-server",
+          "version": "0.1.14",
+          "runtimeHint": "npx",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.driflyte.com/mcp"
+        },
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.driflyte.com/openai"
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "e4bf9279-bd3f-43d4-8c82-8b26d237876b",
+          "versionId": "15a825a6-ecb9-490d-8433-67af1d301742",
+          "publishedAt": "2025-09-29T16:01:11.618715834Z",
+          "updatedAt": "2025-09-29T16:01:11.618715834Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
       "name": "io.github.ruvnet/ruv-swarm",
       "description": "Neural network swarm orchestration with WebAssembly acceleration and MCP integration",
       "repository": {
@@ -2943,6 +3188,52 @@
           "versionId": "19e98005-9ca2-4eca-84a9-6af3a8c689d0",
           "publishedAt": "2025-09-13T06:08:16.370383217Z",
           "updatedAt": "2025-09-13T06:08:16.370383217Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.Decodo/mcp-web-scraper",
+      "description": "Enable your AI agents to scrape and parse web content dynamically, including geo-restricted sites",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/Decodo/mcp-web-scraper",
+        "source": "github"
+      },
+      "version": "1.0.3",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "@decodo/mcp-server",
+          "version": "1.0.3",
+          "transport": {
+            "type": "stdio"
+          },
+          "environmentVariables": [
+            {
+              "description": "Decodo Web Advanced API username",
+              "isRequired": true,
+              "format": "string",
+              "name": "SCRAPER_API_USERNAME"
+            },
+            {
+              "description": "Decodo Web Advanced API password",
+              "isRequired": true,
+              "format": "string",
+              "isSecret": true,
+              "name": "SCRAPER_API_PASSWORD"
+            }
+          ]
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "35684927-7146-4b72-902e-83c1e1bd8c39",
+          "versionId": "1b41add5-bb54-4d5a-a7a2-1414e9314218",
+          "publishedAt": "2025-09-29T08:00:36.224652849Z",
+          "updatedAt": "2025-09-29T08:00:36.224652849Z",
           "isLatest": true
         }
       }
@@ -3764,6 +4055,37 @@
     },
     {
       "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "description": "MCP server for Chrome DevTools",
+      "status": "active",
+      "repository": {
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "source": "github"
+      },
+      "version": "0.5.0",
+      "packages": [
+        {
+          "registryType": "npm",
+          "registryBaseUrl": "https://registry.npmjs.org",
+          "identifier": "chrome-devtools-mcp",
+          "version": "0.5.0",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "serverId": "a90d8a5b-ca0c-4e52-a82c-36027fdf7de2",
+          "versionId": "233fb805-f92c-4148-a765-aeaaed3fa6d7",
+          "publishedAt": "2025-09-29T14:19:58.808306494Z",
+          "updatedAt": "2025-09-29T14:56:48.98429989Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
       "name": "io.github.pkolawa/mcp-krs-poland",
       "description": "Polish National government's registry of all businesses, foundations, and other legal entities.",
       "status": "active",
@@ -3822,478 +4144,6 @@
           "versionId": "23c1cf54-2ea0-4625-aa2e-4450bf8877be",
           "publishedAt": "2025-09-25T15:32:50.991403872Z",
           "updatedAt": "2025-09-25T15:32:50.991403872Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.jjlabsio/korea-stock-mcp",
-      "description": "MCP server for korea stock",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/jjlabsio/korea-stock-mcp",
-        "source": "github"
-      },
-      "version": "1.1.4",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "korea-stock-mcp",
-          "version": "1.1.4",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "DART API key for the service",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "DART_API_KEY"
-            },
-            {
-              "description": "KRX API key for the service",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "KRX_API_KEY"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "02439721-a2d0-48d9-88ce-98494ba8e97f",
-          "versionId": "242d7040-4e0c-4736-a478-9815b9754c10",
-          "publishedAt": "2025-09-19T09:51:42.286475103Z",
-          "updatedAt": "2025-09-19T09:51:42.286475103Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.smithery/rfdez-pvpc-mcp-server",
-      "description": "Retrieve daily PVPC electricity tariffs for 2.0 TD consumers, published by Red Eléctrica.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/rfdez/pvpc-mcp-server",
-        "source": "github"
-      },
-      "version": "3.2.3",
-      "remotes": [
-        {
-          "type": "streamable-http",
-          "url": "https://server.smithery.ai/@rfdez/pvpc-mcp-server/mcp",
-          "headers": [
-            {
-              "description": "Bearer token for Smithery authentication",
-              "isRequired": true,
-              "value": "Bearer {smithery_api_key}",
-              "isSecret": true,
-              "name": "Authorization"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "351f53a0-7d2d-40aa-adeb-a203878ff560",
-          "versionId": "24646991-b0ea-4ad2-b588-37034ff85880",
-          "publishedAt": "2025-09-10T16:57:17.590562136Z",
-          "updatedAt": "2025-09-10T16:57:17.590562136Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "name": "io.github.jkakar/cookwith-mcp",
-      "description": "AI-powered recipe generation and transformation tools by Cookwith",
-      "repository": {
-        "url": "https://github.com/blaideinc/cookwith-mcp",
-        "source": "github"
-      },
-      "version": "1.0.1",
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "ad9ef150-dd99-4913-b5f4-3769ff823300",
-          "versionId": "2483b5fd-74cb-482a-8d83-364b07fc6a2b",
-          "publishedAt": "2025-09-12T19:23:45.409934957Z",
-          "updatedAt": "2025-09-12T19:27:49.34612908Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "ai.shawndurrani/mcp-merchant",
-      "description": "Search-only commerce MCP server backed by Stripe (test)",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "0.1.1",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mcp-merchant",
-          "version": "0.1.1",
-          "runtimeHint": "npx",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "Stripe secret key (test mode)",
-              "isRequired": true,
-              "isSecret": true,
-              "name": "STRIPE_SECRET_KEY"
-            },
-            {
-              "description": "Max products to cache",
-              "default": "100",
-              "name": "PRODUCT_LIMIT"
-            },
-            {
-              "description": "Catalog refresh interval in seconds",
-              "default": "600",
-              "name": "REFRESH_INTERVAL_SEC"
-            }
-          ]
-        }
-      ],
-      "remotes": [
-        {
-          "type": "sse",
-          "url": "https://mcp.shawndurrani.ai/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "8681fb6c-725d-4896-b15e-1088ffe74743",
-          "versionId": "24a55245-1997-4508-bb34-05d67c9795ad",
-          "publishedAt": "2025-09-14T02:22:00.475570659Z",
-          "updatedAt": "2025-09-16T22:54:28.465114324Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.anyproto/anytype-mcp",
-      "description": "Official MCP server for Anytype API - your encrypted, local and collaborative wiki.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/anyproto/anytype-mcp",
-        "source": "github"
-      },
-      "version": "1.0.7",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@anyproto/anytype-mcp",
-          "version": "1.0.7",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "JSON string of headers for Anytype API. Example: {\"Authorization\":\"Bearer <YOUR_API_KEY>\", \"Anytype-Version\":\"2025-05-20\"}",
-              "isRequired": true,
-              "format": "string",
-              "isSecret": true,
-              "name": "OPENAPI_MCP_HEADERS"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "26028bb5-46f8-4478-9948-a9213fb52ce8",
-          "versionId": "24ac8760-a6df-4111-bcb6-b2d77f2c42c1",
-          "publishedAt": "2025-09-17T11:42:47.920301036Z",
-          "updatedAt": "2025-09-17T11:42:47.920301036Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "net.nymbo/tools",
-      "description": "Remote MCP server: fetch, search, Python, TTS, memory, image, video.",
-      "status": "active",
-      "repository": {
-        "url": "",
-        "source": ""
-      },
-      "version": "1.0.0",
-      "remotes": [
-        {
-          "type": "sse",
-          "url": "https://mcp.nymbo.net/gradio_api/mcp/sse"
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "4ab22cda-40f6-4ac1-95eb-dc96474ae75f",
-          "versionId": "251bf0dd-c4b0-4889-a9e1-447bd23d3d36",
-          "publishedAt": "2025-09-13T23:56:21.830662858Z",
-          "updatedAt": "2025-09-13T23:56:21.830662858Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.formulahendry/code-runner",
-      "description": "Code Runner MCP Server which can run code in various programming languages.",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/formulahendry/mcp-server-code-runner",
-        "source": "github"
-      },
-      "version": "0.1.8",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "mcp-server-code-runner",
-          "version": "0.1.8",
-          "transport": {
-            "type": "stdio"
-          }
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "b835c535-cd49-4a14-85b0-88f2aa27738d",
-          "versionId": "25a214da-4b05-45e3-832e-601fd8092aa1",
-          "publishedAt": "2025-09-09T04:42:11.802682449Z",
-          "updatedAt": "2025-09-09T04:42:11.802682449Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-      "name": "io.github.mfukushim/map-traveler-mcp",
-      "description": "Virtual traveler library for MCP",
-      "status": "active",
-      "repository": {
-        "url": "https://github.com/mfukushim/map-traveler-mcp",
-        "source": "github"
-      },
-      "version": "0.1.4",
-      "packages": [
-        {
-          "registryType": "npm",
-          "registryBaseUrl": "https://registry.npmjs.org",
-          "identifier": "@mfukushim/map-traveler-mcp",
-          "version": "0.1.4",
-          "transport": {
-            "type": "stdio"
-          },
-          "environmentVariables": [
-            {
-              "description": "[Map] Google Map API key",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_GOOGLE_MAP_KEY"
-            },
-            {
-              "description": "[Image.gemini] Gemini Image Api key",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_GEMINI_IMAGE_KEY"
-            },
-            {
-              "description": "[Image.gemini] Number of retries when generating Gemini images Default: 0",
-              "format": "string",
-              "name": "MT_MAX_RETRY_GEMINI"
-            },
-            {
-              "description": "[Image.gemini] Character reference image uri (file:// or https://) when generating Gemini image. Multiple settings can be made by separating them with the '|'. When multiple settings are made, they will be selected randomly.",
-              "format": "string",
-              "name": "MT_AVATAR_IMAGE_URI"
-            },
-            {
-              "description": "[Map.etc] Optional: Map API custom endpoint. Example: direction=https://xxxx,places=https://yyyy ",
-              "format": "string",
-              "name": "MT_MAP_API_URL"
-            },
-            {
-              "description": "[Map] Optional:Scale of travel time on real roads duration. default 4",
-              "format": "string",
-              "name": "MT_TIME_SCALE"
-            },
-            {
-              "description": "[db.local] db save path: e.g. %USERPROFILE%/Desktop/traveler.sqlite ,$HOME/traveler.sqlite ",
-              "format": "string",
-              "name": "MT_SQLITE_PATH"
-            },
-            {
-              "description": "[db.api] Turso sqlite API URL",
-              "format": "string",
-              "name": "MT_TURSO_URL"
-            },
-            {
-              "description": "[db.api] Turso sqlite API access token",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_TURSO_TOKEN"
-            },
-            {
-              "description": "[rembg.local] absolute path of the installed rembg cli",
-              "format": "string",
-              "name": "MT_REMBG_PATH"
-            },
-            {
-              "description": "[rembg.api] withoutbg.com rembg API URL",
-              "format": "string",
-              "name": "MT_REMBG_URL"
-            },
-            {
-              "description": "[rembg.api] withoutbg.com rembg API key",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_REMBG_WO_KEY"
-            },
-            {
-              "description": "[Image.pixAi] pixAi API key",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_PIXAI_KEY"
-            },
-            {
-              "description": "[Image.sd] Stability.ai image generation API key",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_SD_KEY"
-            },
-            {
-              "description": "[Image.pixAi] Optional: pixAi ModelId, if not set use default model 1648918127446573124 ",
-              "format": "string",
-              "name": "MT_PIXAI_MODEL_ID"
-            },
-            {
-              "description": "[Image.local.ComfyUi] Option: Generate image using ComfyUI API at specified URL. Example: http://192.168.1.100:8188",
-              "format": "string",
-              "name": "MT_COMFY_URL"
-            },
-            {
-              "description": "[Image.local.ComfyUi] Optional: Path to API workflow file when using text to image with ComfyUI. If not specified: assets/comfy/t2i_sample.json",
-              "format": "string",
-              "name": "MT_COMFY_WORKFLOW_T2I"
-            },
-            {
-              "description": "[Image.local.ComfyUi] Optional: Path of API workflow file when image to image in ComfyUI. If not specified: assets/comfy/i2i_sample.json",
-              "format": "string",
-              "name": "MT_COMFY_WORKFLOW_I2I"
-            },
-            {
-              "description": "[Image.local.ComfyUi] Optional: Variable values to send to the workflow via comfyUI API",
-              "format": "string",
-              "name": "MT_COMFY_PARAMS"
-            },
-            {
-              "description": "[Image] Optional: Fixed avatar generation prompt. You will no longer be able to change your avatar during conversations.",
-              "format": "string",
-              "name": "MT_FIXED_MODEL_PROMPT"
-            },
-            {
-              "description": "[Image] Optional: Acceptable avatar image area ratio. default 0.042",
-              "format": "string",
-              "name": "MT_BODY_AREA_RATIO"
-            },
-            {
-              "description": "[Image] Optional: Acceptable avatar image aspect ratios. default 1.5~2.3",
-              "format": "string",
-              "name": "MT_BODY_HW_RATIO"
-            },
-            {
-              "description": "[Image] Optional: Avatar composite window horizontal ratio. default 0.5",
-              "format": "string",
-              "name": "MT_BODY_WINDOW_RATIO_W"
-            },
-            {
-              "description": "[Image] Optional: Avatar composite window aspect ratio. default 0.75",
-              "format": "string",
-              "name": "MT_BODY_WINDOW_RATIO_H"
-            },
-            {
-              "description": "[Sns.Bs] Bluesky sns registration address",
-              "format": "string",
-              "name": "MT_BS_ID"
-            },
-            {
-              "description": "[Sns.Bs] bluesky sns password",
-              "format": "string",
-              "isSecret": true,
-              "name": "MT_BS_PASS"
-            },
-            {
-              "description": "[Sns.Bs] bluesky sns handle name: e.g. xxxxxxxx.bsky.social ",
-              "format": "string",
-              "name": "MT_BS_HANDLE"
-            },
-            {
-              "description": "[etc] Optional: Directly filter the tools to be used. All are available if not specified. e.g. tips,set_traveler_location",
-              "format": "string",
-              "name": "MT_FILTER_TOOLS"
-            },
-            {
-              "description": "[etc] Option: Specify whether the movement mode is 'realtime' or 'skip'. default realtime",
-              "format": "string",
-              "name": "MT_MOVE_MODE"
-            },
-            {
-              "description": "[Image] Option: Output image width (pixels) Default is 512",
-              "format": "string",
-              "name": "MT_IMAGE_WIDTH"
-            },
-            {
-              "description": "[Image] Options: 'true' = do not output image, not specified = output image if possible, default is not specified",
-              "format": "string",
-              "name": "MT_NO_IMAGE"
-            },
-            {
-              "description": "[Image] Option: 'true' = Output StreetView image as is without avatar superimposition. Not specified = Superimpose avatar image. Default is not specified.",
-              "format": "string",
-              "name": "MT_NO_AVATAR"
-            },
-            {
-              "description": "[Sns] Optional: Specify the feed tag when posting to SNS (#required, 15 characters or more) Default is #geo_less_traveler",
-              "format": "string",
-              "name": "MT_FEED_TAG"
-            },
-            {
-              "description": "[Streamable-http] Maximum number of sessions when using Streamable-http",
-              "format": "string",
-              "name": "MT_MAX_SESSIONS"
-            },
-            {
-              "description": "[Streamable-http] Session TTL when using Streamable-http",
-              "format": "string",
-              "name": "MT_SESSION_TTL_MS"
-            },
-            {
-              "description": "[Streamable-http] Service TTL when using Streamable-http",
-              "format": "string",
-              "name": "MT_SERVICE_TTL_MS"
-            }
-          ]
-        }
-      ],
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "serverId": "700a297c-8d86-4f69-889c-7d3c1b20b7cf",
-          "versionId": "25d413a1-8cc0-491e-bfdd-cb759305516b",
-          "publishedAt": "2025-09-11T12:17:16.508389545Z",
-          "updatedAt": "2025-09-11T12:17:16.508389545Z",
           "isLatest": true
         }
       }
