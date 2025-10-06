@@ -1193,6 +1193,39 @@
           "status": "active",
           "publishedAt": "2025-10-03T09:43:19.045226Z",
           "updatedAt": "2025-10-03T09:43:19.045226Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/ChiR24-unreal_mcp",
+        "description": "Control Unreal Engine to browse assets, import content, and manage levels and sequences. Automate…",
+        "repository": {
+          "url": "https://github.com/ChiR24/Unreal_mcp",
+          "source": "github"
+        },
+        "version": "0.4.6",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@ChiR24/unreal_mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-05T05:30:22.169534Z",
+          "updatedAt": "2025-10-05T05:30:22.169534Z",
           "isLatest": true
         }
       }
@@ -1677,6 +1710,39 @@
           "status": "active",
           "publishedAt": "2025-09-17T02:23:35.312972Z",
           "updatedAt": "2025-09-17T02:23:35.312972Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/JunoJunHyun-festival-finder-mcp",
+        "description": "Discover festivals worldwide by location, date, and genre. Compare options with key details like d…",
+        "repository": {
+          "url": "https://github.com/JunoJunHyun/Festival-Finder-mcp",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@JunoJunHyun/festival-finder-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-05T15:14:35.748005Z",
+          "updatedAt": "2025-10-05T15:14:35.748005Z",
           "isLatest": true
         }
       }
@@ -3283,72 +3349,6 @@
           "status": "active",
           "publishedAt": "2025-10-04T03:00:46.274065Z",
           "updatedAt": "2025-10-04T03:00:46.274065Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-scrapermcp_el",
-        "description": "Extract and parse web pages into clean HTML, links, or Markdown. Handle dynamic, complex, or block…",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/ScraperMcp_el",
-          "source": "github"
-        },
-        "version": "1.15.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/scrapermcp_el/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-29T12:13:12.824688Z",
-          "updatedAt": "2025-09-29T12:13:12.824688Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-test0",
-        "description": "Get the current time in any timezone and quickly look up common timezone info. Set a default timez…",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/time",
-          "source": "github"
-        },
-        "version": "1.15.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/test0/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-03T08:18:08.952463Z",
-          "updatedAt": "2025-10-03T08:18:08.952463Z",
           "isLatest": true
         }
       }
