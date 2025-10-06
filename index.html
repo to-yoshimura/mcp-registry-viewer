@@ -589,6 +589,7 @@
             // ===== DOM参照 =====
             // シンプル版: 入力フォームはなし
             const DEFAULT_LIMIT = 12;
+            const NEW_CARD_WINDOW_DAYS = 7; // highlight cards published within the past week only
             const resultsEl = document.getElementById("results");
             const errorEl = document.getElementById("error");
             const sentinel = document.getElementById("infinite-sentinel");
@@ -903,7 +904,12 @@
                 div.className = "card clickable";
                 const statusValue = status ?? official.status;
                 const statusClass = String(statusValue || '').toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
-                const isNew = publishedIso && daysSince(publishedIso) <= 30;
+                const isNew = (() => {
+                    if (!publishedIso) return false;
+                    const ageInDays = daysSince(publishedIso);
+                    if (!Number.isFinite(ageInDays)) return false;
+                    return ageInDays >= 0 && ageInDays <= NEW_CARD_WINDOW_DAYS;
+                })();
 
                 div.innerHTML = `
                     <div class="title-row">
