@@ -644,6 +644,132 @@
 
             async function loadManifest() { return fetchJSON(`${DATA_BASE}/manifest.json`); }
 
+            function mergeMeta(baseMeta = {}, extraMeta = {}) {
+                const merged = { ...baseMeta };
+                for (const [key, value] of Object.entries(extraMeta || {})) {
+                    if (value && typeof value === 'object' && !Array.isArray(value)) {
+                        merged[key] = { ...(merged[key] || {}), ...value };
+                    } else {
+                        merged[key] = value;
+                    }
+                }
+                return merged;
+            }
+
+            function isNotFoundError(err) {
+                const msg = typeof err?.message === 'string' ? err.message : String(err || '');
+                return msg.includes('HTTP 404');
+            }
+
+            function normalizeEnvVar(ev) {
+                if (!ev || typeof ev !== 'object') return ev;
+                const normalized = { ...ev };
+                if (!('is_secret' in normalized)) {
+                    normalized.is_secret = ev.is_secret ?? ev.isSecret ?? ev.secret ?? false;
+                }
+                if (!('isSecret' in normalized)) normalized.isSecret = normalized.is_secret;
+                if (!('is_required' in normalized)) {
+                    normalized.is_required = ev.is_required ?? ev.isRequired ?? ev.required ?? false;
+                }
+                if (!('isRequired' in normalized)) normalized.isRequired = normalized.is_required;
+                if (!('default' in normalized) && ev.defaultValue !== undefined) {
+                    normalized.default = ev.defaultValue;
+                }
+                return normalized;
+            }
+
+            function normalizePackage(pkg) {
+                if (!pkg || typeof pkg !== 'object') return pkg;
+                const normalized = { ...pkg };
+                normalized.registry_type = pkg.registry_type ?? pkg.registryType ?? pkg.type ?? normalized.registry_type;
+                normalized.registryType = normalized.registryType ?? normalized.registry_type;
+                normalized.registry_base_url = pkg.registry_base_url ?? pkg.registryBaseUrl ?? normalized.registry_base_url;
+                normalized.registryBaseUrl = normalized.registryBaseUrl ?? normalized.registry_base_url;
+                normalized.runtime_hint = pkg.runtime_hint ?? pkg.runtimeHint ?? normalized.runtime_hint;
+                normalized.runtimeHint = normalized.runtimeHint ?? normalized.runtime_hint;
+                normalized.runtime_arguments = pkg.runtime_arguments ?? pkg.runtimeArguments ?? normalized.runtime_arguments;
+                normalized.package_arguments = pkg.package_arguments ?? pkg.packageArguments ?? normalized.package_arguments;
+                const fileHash = pkg.file_sha256 ?? pkg.fileSha256;
+                if (fileHash) {
+                    normalized.file_sha256 = fileHash;
+                    normalized.fileSha256 = fileHash;
+                }
+                const env = Array.isArray(pkg.environment_variables)
+                    ? pkg.environment_variables.map(normalizeEnvVar)
+                    : Array.isArray(pkg.environmentVariables)
+                        ? pkg.environmentVariables.map(normalizeEnvVar)
+                        : undefined;
+                if (env) {
+                    normalized.environment_variables = env;
+                    normalized.environmentVariables = env;
+                }
+                const transportType = pkg.transport_type ?? pkg.transportType ?? pkg.transport?.type ?? normalized.transport_type;
+                if (transportType) {
+                    normalized.transport_type = transportType;
+                    normalized.transportType = transportType;
+                }
+                return normalized;
+            }
+
+            function normalizeRemote(remote) {
+                if (!remote || typeof remote !== 'object') return remote;
+                const normalized = { ...remote };
+                const transportType = remote.transport_type ?? remote.transportType ?? remote.transport?.type ?? remote.type ?? normalized.transport_type;
+                if (transportType) {
+                    normalized.transport_type = transportType;
+                    normalized.transportType = transportType;
+                }
+                if (!normalized.url && remote.endpoint) normalized.url = remote.endpoint;
+                const headers = Array.isArray(remote.headers) ? remote.headers
+                    : Array.isArray(remote.requestHeaders) ? remote.requestHeaders
+                    : null;
+                if (headers) {
+                    normalized.headers = headers.map((h) => ({
+                        ...h,
+                        name: h.name,
+                        description: h.description ?? h.details ?? h.summary,
+                        default: h.default ?? h.value
+                    }));
+                }
+                return normalized;
+            }
+
+            function normalizeServerEntry(raw) {
+                if (!raw || typeof raw !== 'object') return null;
+                const base = (raw.server && typeof raw.server === 'object') ? raw.server : raw;
+                const normalized = { ...base };
+                for (const [key, value] of Object.entries(raw)) {
+                    if (key === 'server' || key === '_meta') continue;
+                    if (normalized[key] === undefined) normalized[key] = value;
+                }
+                if (raw._meta || base._meta) {
+                    normalized._meta = mergeMeta(base._meta, raw._meta);
+                }
+                if (Array.isArray(base.packages) || Array.isArray(raw.packages)) {
+                    const pkgs = Array.isArray(base.packages) ? base.packages : raw.packages;
+                    normalized.packages = pkgs.map(normalizePackage);
+                }
+                if (Array.isArray(base.remotes) || Array.isArray(raw.remotes)) {
+                    const remotes = Array.isArray(base.remotes) ? base.remotes : raw.remotes;
+                    normalized.remotes = remotes.map(normalizeRemote);
+                }
+                if (!Array.isArray(normalized.packages)) normalized.packages = [];
+                if (!Array.isArray(normalized.remotes)) normalized.remotes = [];
+                const serverIdentifier = normalized.serverId || normalized.id || (normalized._meta?.["io.modelcontextprotocol.registry/official"]?.serverId) || (normalized._meta?.["io.modelcontextprotocol.registry/official"]?.id) || normalized.name || null;
+                const versionIdentifier = normalized.versionId || normalized.version_id || (normalized._meta?.["io.modelcontextprotocol.registry/official"]?.versionId) || (normalized._meta?.["io.modelcontextprotocol.registry/official"]?.version_id) || (normalized.name && normalized.version ? `${normalized.name}@${normalized.version}` : null);
+                if (serverIdentifier) normalized.serverId = serverIdentifier;
+                if (versionIdentifier) normalized.versionId = versionIdentifier;
+                const official = normalized?._meta?.["io.modelcontextprotocol.registry/official"] || {};
+                if (normalized.status == null && official.status) normalized.status = official.status;
+                if (!normalized.updatedAt && !normalized.updated_at && (official.updatedAt || official.updated_at)) {
+                    normalized.updatedAt = official.updatedAt || official.updated_at;
+                }
+                if (!normalized.publishedAt && !normalized.published_at && (official.publishedAt || official.published_at)) {
+                    normalized.publishedAt = official.publishedAt || official.published_at;
+                }
+                return normalized;
+            }
+
             // Try to get server detail by ID without network access.
             // 1) Return from in-memory items if present
             // 2) Otherwise scan data/page-*.json until found (deduping into allItems)
@@ -666,17 +792,31 @@
                     }
                     const keyOf = (it) => versionIdOf(it) || serverIdOf(it);
                     const seen = new Set(allItems.map(it => keyOf(it)).filter(Boolean));
-                    const total = Number(manifest.pages || 0);
-                    for (let p = 1; p <= total; p++) {
+                    const totalFromCount = Array.isArray(manifest.files) ? manifest.files.length : 0;
+                    const totalFromItems = manifest.totalItems && state.limit
+                        ? Math.ceil(Number(manifest.totalItems) / Number(state.limit || 1))
+                        : 0;
+                    const hintTotal = Math.max(
+                        Number(manifest.pages || 0),
+                        totalFromCount,
+                        totalFromItems
+                    );
+                    const cap = hintTotal > 0 ? Math.max(hintTotal, 50) : 50;
+                    for (let p = 1; p <= cap; p++) {
                         try {
                             const data = await fetchJSON(`${DATA_BASE}/page-${p}.json`);
                             const arr = Array.isArray(data.servers) ? data.servers : (data.items || []);
                             for (const it of arr) {
-                                const key = keyOf(it);
-                                if (key && !seen.has(key)) { seen.add(key); allItems.push(it); }
-                                if (matches(it)) return it;
+                                const normalized = normalizeServerEntry(it);
+                                if (!normalized) continue;
+                                const key = keyOf(normalized);
+                                if (key && !seen.has(key)) { seen.add(key); allItems.push(normalized); }
+                                if (matches(normalized)) return normalized;
                             }
-                        } catch (_) { /* ignore missing pages */ }
+                        } catch (err) {
+                            if (isNotFoundError(err)) break;
+                            // ignore other failures and continue scanning
+                        }
                     }
                     throw new Error('詳細データが見つかりませんでした。');
                 };
@@ -721,7 +861,6 @@
                     status,
                     version,
                     repository = {},
-                    website_url,
                     updated_at,
                     packages = [],
                     remotes = [],
@@ -762,13 +901,14 @@
 
                 const div = document.createElement("div");
                 div.className = "card clickable";
-                const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
+                const statusValue = status ?? official.status;
+                const statusClass = String(statusValue || '').toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
                 const isNew = publishedIso && daysSince(publishedIso) <= 30;
 
                 div.innerHTML = `
                     <div class="title-row">
                         <h3>${escapeHtml(name || "(no name)")}</h3>
-                        <span class="status-pill ${statusClass}">${escapeHtml(fieldOrDash(status))}</span>
+                        <span class="status-pill ${statusClass}">${escapeHtml(fieldOrDash(statusValue))}</span>
                     </div>
                     <div class="sub-row meta">
                         <span class="code">v${escapeHtml(fieldOrDash(version))}</span>
@@ -807,11 +947,11 @@
             }
             function serverIdOf(item){
                 const official = officialMeta(item);
-                return official.serverId || official.id || null;
+                return item?.serverId || item?.server_id || item?.id || official.serverId || official.id || item?.name || null;
             }
             function versionIdOf(item){
                 const official = officialMeta(item);
-                return official.versionId || official.version_id || null;
+                return item?.versionId || item?.version_id || official.versionId || official.version_id || (item?.name && item?.version ? `${item.name}@${item.version}` : null);
             }
             // ソートキー: updated_at（なければ published_at → created_at）
             function timeOrZero(v){ const t = Date.parse(v); return isNaN(t) ? 0 : t; }
@@ -875,7 +1015,8 @@
                 const serverId = serverIdOf(item);
                 const versionId = versionIdOf(item);
                 const latestFlag = official.isLatest === true || official.is_latest === true;
-                const statusClass = String(status).toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
+                const statusValue = status ?? official.status;
+                const statusClass = String(statusValue || '').toLowerCase() === 'deprecated' ? 'status-deprecated' : 'status-active';
                 const chips = [];
                 const publisher = (typeof name === 'string' && name.includes('/')) ? name.split('/')[0] : '';
                 if (publisher) chips.push(`<span class="chip sm muted">${escapeHtml(publisher)}</span>`);
@@ -888,7 +1029,7 @@
                     <tr data-server-id="${escapeAttr(serverId||'')}"${versionAttr}>
                         <td>
                             <div class="list-name">${escapeHtml(name||'(no name)')}</div>
-                            <div class="list-meta"><span class="status-pill sm ${statusClass}">${escapeHtml(fieldOrDash(status))}</span> ${chips.join('')}</div>
+                            <div class="list-meta"><span class="status-pill sm ${statusClass}">${escapeHtml(fieldOrDash(statusValue))}</span> ${chips.join('')}</div>
                         </td>
                         <td><div class="list-desc">${escapeHtml(description||'')}</div></td>
                         <td class="mono td-version">v${escapeHtml(fieldOrDash(version))}</td>
@@ -1014,6 +1155,8 @@
                 const publishedIso = formatIsoSafe(publishedAt);
                 const updatedIso = formatIsoSafe(updatedAt);
                 const createdIso = formatIsoSafe(createdAt);
+                const statusValue = item?.status ?? official.status ?? '';
+                const repoUrl = repo.url || repo.href || repo.html_url;
                 const pkgRows = pkgs.map(p => `
                     <tr>
                         <td>${escapeHtml(p.registry_type||'')}</td>
@@ -1046,13 +1189,13 @@
                     </div>
                     <div class="modal-section">
                         <table class="kv-table">
-                            <tr><th>Status</th><td>${escapeHtml(item?.status||'')}</td></tr>
+                            <tr><th>Status</th><td>${escapeHtml(statusValue)}</td></tr>
                             <tr><th>Version</th><td class="mono">${escapeHtml(item?.version||'')}</td></tr>
                             ${serverId? `<tr><th>Registry ID</th><td class="mono">${escapeHtml(serverId)} <button class="copy-btn" data-copy="${escapeAttr(serverId)}">copy</button></td></tr>`:''}
                             ${publishedIso? `<tr><th>Published</th><td>${escapeHtml(publishedIso)}${officialLatest? ' <span class="badge">latest</span>':''}</td></tr>`:''}
                             ${updatedIso? `<tr><th>Updated</th><td>${escapeHtml(updatedIso)}</td></tr>`:''}
                             ${createdIso? `<tr><th>Created</th><td>${escapeHtml(createdIso)}</td></tr>`:''}
-                            ${repo.url? `<tr><th>Repository</th><td class="mono"><span class="url-text">${escapeHtml(repo.url)}</span> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''} <button class="copy-btn" data-copy="${escapeAttr(repo.url)}">copy</button></td></tr>`:''}
+                            ${repoUrl? `<tr><th>Repository</th><td class="mono"><span class="url-text">${escapeHtml(repoUrl)}</span> ${repo.source?`<span class="chip muted">${escapeHtml(repo.source)}</span>`:''} ${repo.subfolder?`<span class="chip muted">/${escapeHtml(repo.subfolder)}</span>`:''} <button class="copy-btn" data-copy="${escapeAttr(repoUrl)}">copy</button></td></tr>`:''}
                             ${envCount? `<tr><th>Environment</th><td>${envCount} vars</td></tr>`:''}
                         </table>
                     </div>
@@ -1105,15 +1248,19 @@
                     bottomSpinner.style.display = 'inline-block';
                 }
                 try {
-                    if (nextPage > (manifest.pages || 0)) { state.end = true; return; }
                     const data = await fetchJSON(`${DATA_BASE}/page-${nextPage}.json`);
-                    const newItems = Array.isArray(data.servers) ? data.servers : (data.items||[]);
-                    allItems = allItems.concat(newItems);
+                    const rawItems = Array.isArray(data.servers) ? data.servers : (data.items||[]);
+                    const normalizedItems = rawItems.map(normalizeServerEntry).filter(Boolean);
+                    allItems = allItems.concat(normalizedItems);
                     renderAll();
                     nextPage += 1;
-                    if (nextPage > (manifest.pages || 0)) state.end = true;
+                    if (normalizedItems.length === 0) state.end = true;
                 } catch (e) {
-                    showError(`${e?.message || e}.\n\nローカルデータの読み込みに失敗しました。build:data で data/ を再生成してください。`);
+                    if (isNotFoundError(e)) {
+                        state.end = true;
+                    } else {
+                        showError(`${e?.message || e}.\n\nローカルデータの読み込みに失敗しました。build:data で data/ を再生成してください。`);
+                    }
                 } finally {
                     state.loading = false;
                     if (initial && !state.initialLoaded) { state.initialLoaded = true; hideOverlay(); }

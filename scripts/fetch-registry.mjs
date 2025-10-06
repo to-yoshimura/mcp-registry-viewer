@@ -20,7 +20,7 @@ async function fetchJSON(url) {
 
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
-  const pages = [];
+  const chunks = [];
   let cursor; let page = 1; let totalItems = 0;
   const pageSize = limitArg;
   while (true) {
@@ -33,7 +33,7 @@ async function main() {
     const data = await fetchJSON(url);
     const servers = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.items) ? data.items : []);
     await fs.writeFile(path.join(outDir, `page-${page}.json`), JSON.stringify({ servers }, null, 2));
-    pages.push({ page, count: servers.length });
+    chunks.push({ page, count: servers.length });
     totalItems += servers.length;
     cursor = data?.metadata?.next_cursor || null;
     if (!cursor) break;
@@ -42,13 +42,16 @@ async function main() {
   const manifest = {
     generatedAt: new Date().toISOString(),
     pageSize,
-    pages: page,
     totalItems,
-    files: pages.map(p => ({ page: p.page, file: `page-${p.page}.json`, count: p.count }))
+    files: chunks.map((chunk) => ({
+      page: chunk.page,
+      file: `page-${chunk.page}.json`,
+      count: chunk.count
+    }))
   };
   await fs.writeFile(path.join(outDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
   // eslint-disable-next-line no-console
-  console.log(`Wrote ${pages.length} pages (${totalItems} items) to ${outDir}`);
+  console.log(`Wrote ${chunks.length} pages (${totalItems} items) to ${outDir}`);
 }
 
 main().catch((e) => {
