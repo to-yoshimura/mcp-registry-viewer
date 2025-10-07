@@ -890,6 +890,39 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/Artin0123-gemini-image-mcp-server",
+        "description": "Analyze images and videos with Gemini to get fast, reliable visual insights. Handle content from U…",
+        "repository": {
+          "url": "https://github.com/Artin0123/gemini-image-mcp-server",
+          "source": "github"
+        },
+        "version": "1.2.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@Artin0123/gemini-image-mcp-server/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-06T07:34:28.779387Z",
+          "updatedAt": "2025-10-06T07:34:28.779387Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.smithery/BadRooBot-my_test_mcp",
         "description": "Get current weather for any city and create images from your prompts. Streamline planning, reports…",
@@ -1743,6 +1776,39 @@
           "status": "active",
           "publishedAt": "2025-10-05T15:14:35.748005Z",
           "updatedAt": "2025-10-05T15:14:35.748005Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/JunoJunHyun-festival-finder-mcp",
+        "description": "Discover festivals worldwide by location, date, and genre. Compare options with key details like d…",
+        "repository": {
+          "url": "https://github.com/JunoJunHyun/Festival-Finder-mcp",
+          "source": "github"
+        },
+        "version": "1.16.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@JunoJunHyun/festival-finder-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-06T09:40:14.759675Z",
+          "updatedAt": "2025-10-06T09:40:14.759675Z",
           "isLatest": true
         }
       }
@@ -2603,6 +2669,39 @@
           "status": "active",
           "publishedAt": "2025-10-04T03:03:54.256827Z",
           "updatedAt": "2025-10-04T03:03:54.256827Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/aicastle-school-openai-api-agent-project",
+        "description": "Fetch current stock prices and key data for symbols across global markets. Look up companies like…",
+        "repository": {
+          "url": "https://github.com/aicastle-school/openai-api-agent-project",
+          "source": "github"
+        },
+        "version": "1.16.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@aicastle-school/openai-api-agent-project/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-06T11:12:18.988861Z",
+          "updatedAt": "2025-10-06T11:12:18.988861Z",
           "isLatest": true
         }
       }
@@ -2636,6 +2735,39 @@
           "status": "active",
           "publishedAt": "2025-10-04T02:42:49.15996Z",
           "updatedAt": "2025-10-04T02:42:49.15996Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/aicastle-school-openai-api-agent-project11",
+        "description": "Fetch the latest available stock quotes by ticker symbol across international markets. Check price…",
+        "repository": {
+          "url": "https://github.com/aicastle-school/openai-api-agent-project",
+          "source": "github"
+        },
+        "version": "1.16.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@aicastle-school/openai-api-agent-project11/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-06T11:12:19.115931Z",
+          "updatedAt": "2025-10-06T11:12:19.115931Z",
           "isLatest": true
         }
       }
@@ -2671,6 +2803,39 @@
           "status": "active",
           "publishedAt": "2025-09-18T07:51:38.712981Z",
           "updatedAt": "2025-09-18T07:51:38.712981Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/akilat-spec-leave-manager-mcp",
+        "description": "Track and manage employee time off with quick balance lookups and streamlined applications. Find t…",
+        "repository": {
+          "url": "https://github.com/akilat-spec/leave-manager-mcp",
+          "source": "github"
+        },
+        "version": "1.16.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@akilat-spec/leave-manager-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-06T10:13:37.506388Z",
+          "updatedAt": "2025-10-06T10:13:37.506388Z",
           "isLatest": true
         }
       }
@@ -3180,175 +3345,6 @@
           "status": "active",
           "publishedAt": "2025-10-03T09:02:26.911871Z",
           "updatedAt": "2025-10-03T09:02:26.911871Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-lta-mcp",
-        "description": "Provide real-time transportation data including bus arrivals, train service alerts, carpark availa…",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/lta-mcp",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/lta-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-11T16:52:48.059122Z",
-          "updatedAt": "2025-09-11T16:52:48.059122Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-mango-sago",
-        "description": "Create cheerful, personalized greetings in seconds. Switch to playful pirate-speak for extra flair…",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/mango-sago",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/mango-sago/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-04T02:20:25.785458Z",
-          "updatedAt": "2025-10-04T02:20:25.785458Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-perplexity-search",
-        "description": "Enable AI assistants to perform web searches using Perplexity's Sonar Pro.",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/perplexity-search",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/perplexity-search/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-10T13:59:26.758557Z",
-          "updatedAt": "2025-09-10T13:59:26.758557Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-py-test-0",
-        "description": "Send personalized greetings by name, with an optional pirate tone. Generate greeting prompts and e…",
-        "repository": {
-          "url": "",
-          "source": ""
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/py-test-0/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-04T02:06:51.365096Z",
-          "updatedAt": "2025-10-04T02:06:51.365096Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/arjunkmrm-py-test-2",
-        "description": "Greet people by name with friendly, customizable messages. Toggle Pirate Mode to speak like a swas…",
-        "repository": {
-          "url": "https://github.com/arjunkmrm/mango-sago",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@arjunkmrm/py-test-2/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-04T03:00:46.274065Z",
-          "updatedAt": "2025-10-04T03:00:46.274065Z",
           "isLatest": true
         }
       }
