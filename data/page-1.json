@@ -1115,6 +1115,72 @@
           "status": "active",
           "publishedAt": "2025-10-07T15:57:33.366017Z",
           "updatedAt": "2025-10-07T15:57:33.366017Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/Artin0123-gemini-image-mcp-server",
+        "description": "Analyze images and videos with Gemini to get fast, reliable visual insights. Handle content from U…",
+        "repository": {
+          "url": "https://github.com/Artin0123/gemini-vision-mcp",
+          "source": "github"
+        },
+        "version": "1.4.2",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@Artin0123/gemini-image-mcp-server/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-08T06:00:18.979771Z",
+          "updatedAt": "2025-10-08T06:00:18.979771Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/Artin0123-gemini-image-mcp-server",
+        "description": "Analyze images and videos with Gemini to get fast, reliable visual insights. Handle content from U…",
+        "repository": {
+          "url": "https://github.com/Artin0123/gemini-vision-mcp",
+          "source": "github"
+        },
+        "version": "1.4.3",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@Artin0123/gemini-image-mcp-server/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-08T06:18:22.754577Z",
+          "updatedAt": "2025-10-08T06:18:22.754577Z",
           "isLatest": true
         }
       }
@@ -1636,6 +1702,39 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/DynamicEndpoints-m365-core-mcp",
+        "description": "*Updated September 25th 2025** Manage your Microsoft 365 services effortlessly. Create and manage…",
+        "repository": {
+          "url": "https://github.com/DynamicEndpoints/m365-core-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@DynamicEndpoints/m365-core-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-08T04:00:42.356429Z",
+          "updatedAt": "2025-10-08T04:00:42.356429Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.smithery/DynamicEndpoints-m365-core-mcp",
         "description": "*Updated June 17th 2025** Manage your Microsoft 365 services effortlessly. Create and manage distr…",
@@ -1939,6 +2038,39 @@
           "status": "active",
           "publishedAt": "2025-09-16T06:05:33.453619Z",
           "updatedAt": "2025-09-16T06:05:33.453619Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/IndianAppGuy-magicslide-mcp",
+        "description": "Generate professional PowerPoint presentations from text, YouTube videos, or structured JSON data.…",
+        "repository": {
+          "url": "",
+          "source": ""
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@IndianAppGuy/magicslide-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-08T05:29:39.856257Z",
+          "updatedAt": "2025-10-08T05:29:39.856257Z",
           "isLatest": true
         }
       }
@@ -2868,6 +3000,39 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+        "name": "ai.smithery/RectiFlex-centerassist-mcp1",
+        "description": "Manage CenterPoint Connect data across properties, companies, employees, invoices, materials, and…",
+        "repository": {
+          "url": "",
+          "source": ""
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@RectiFlex/centerassist-mcp1/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "value": "Bearer {smithery_api_key}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-08T05:13:44.681143Z",
+          "updatedAt": "2025-10-08T05:13:44.681143Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.smithery/STUzhy-py_execute_mcp",
         "description": "Run Python code in a secure sandbox without local setup. Declare inline dependencies and execute s…",
@@ -3165,175 +3330,6 @@
           "publishedAt": "2025-10-04T02:42:49.15996Z",
           "updatedAt": "2025-10-04T02:42:49.15996Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/aicastle-school-openai-api-agent-project11",
-        "description": "Fetch the latest available stock quotes by ticker symbol across international markets. Check price…",
-        "repository": {
-          "url": "https://github.com/aicastle-school/openai-api-agent-project",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@aicastle-school/openai-api-agent-project11/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-06T11:12:19.115931Z",
-          "updatedAt": "2025-10-06T11:12:19.115931Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/airmang-hwpx-mcp",
-        "description": "자동화하여 HWPX 문서의 로딩, 탐색, 편집, 검증을 한 번에 처리합니다. 문단·표·주석 추가, 텍스트 일괄 치환, 머리말·꼬리말 설정 등 반복 작업을 신속히 수행합니다. 기…",
-        "repository": {
-          "url": "https://github.com/airmang/hwpx-mcp",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@airmang/hwpx-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-18T07:51:38.712981Z",
-          "updatedAt": "2025-09-18T07:51:38.712981Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/akilat-spec-leave-manager-mcp",
-        "description": "Track and manage employee time off with quick balance lookups and streamlined applications. Find t…",
-        "repository": {
-          "url": "https://github.com/akilat-spec/leave-manager-mcp",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@akilat-spec/leave-manager-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-06T10:13:37.506388Z",
-          "updatedAt": "2025-10-06T10:13:37.506388Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/alex-llm-attack-mcp-server",
-        "description": "Query and retrieve information about various adversarial tactics and techniques used in cyber atta…",
-        "repository": {
-          "url": "https://github.com/alex-llm/attAck-mcp-server",
-          "source": "github"
-        },
-        "version": "2.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@alex-llm/attack-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-30T17:11:31.060313Z",
-          "updatedAt": "2025-09-30T17:11:31.060313Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/alphago2580-naramarketmcp",
-        "description": "Access Korea’s G2B procurement and Nara Market data for bid notices, awards, contracts, statistics…",
-        "repository": {
-          "url": "https://github.com/alphago2580/naramarketmcp",
-          "source": "github"
-        },
-        "version": "1.14.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@alphago2580/naramarketmcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-19T02:36:55.167644Z",
-          "updatedAt": "2025-09-19T02:36:55.167644Z",
-          "isLatest": true
         }
       }
     }
