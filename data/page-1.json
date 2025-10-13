@@ -596,6 +596,39 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.meminal/meminal",
+        "description": "Memory for deep conversational context across any platform",
+        "repository": {
+          "url": "",
+          "source": ""
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://meminal.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for authentication (OAuth or Personal Access Token)",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-12T23:40:10.473855Z",
+          "updatedAt": "2025-10-12T23:40:10.473855Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.shawndurrani/mcp-merchant",
         "description": "Search-only commerce MCP server backed by Stripe (test)",
         "repository": {
@@ -3303,39 +3336,6 @@
           "publishedAt": "2025-10-04T03:03:54.256827Z",
           "updatedAt": "2025-10-04T03:03:54.256827Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/aicastle-school-openai-api-agent-project",
-        "description": "Fetch current stock prices and key data for symbols across global markets. Look up companies like…",
-        "repository": {
-          "url": "https://github.com/aicastle-school/openai-api-agent-project",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@aicastle-school/openai-api-agent-project/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-06T11:12:18.988861Z",
-          "updatedAt": "2025-10-06T11:12:18.988861Z",
-          "isLatest": true
         }
       }
     }
