@@ -13,9 +13,7 @@
         "packages": [
           {
             "registryType": "oci",
-            "registryBaseUrl": "https://docker.io",
-            "identifier": "aliengiraffe/spotdb",
-            "version": "0.1.0",
+            "identifier": "docker.io/aliengiraffe/spotdb:0.1.0",
             "transport": {
               "type": "stdio"
             },
