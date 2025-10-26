@@ -3164,6 +3164,41 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.smithery/ScrapeGraphAI-scrapegraph-mcp",
+        "description": "Enable language models to perform advanced AI-powered web scraping with enterprise-grade reliabili…",
+        "repository": {
+          "url": "https://github.com/ScrapeGraphAI/scrapegraph-mcp",
+          "source": "github"
+        },
+        "version": "1.16.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@ScrapeGraphAI/scrapegraph-mcp/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "isRequired": true,
+                "value": "Bearer {smithery_api_key}",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-25T21:42:44.755249Z",
+          "updatedAt": "2025-10-25T21:42:44.755249Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
         "name": "ai.smithery/TakoData-tako-mcp",
         "description": "Provide real-time data querying and visualization by integrating Tako with your agents. Generate o…",
@@ -3292,40 +3327,6 @@
           "status": "active",
           "publishedAt": "2025-09-18T10:21:35.776286Z",
           "updatedAt": "2025-09-18T10:21:35.776286Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/afgong-sqlite-mcp-server",
-        "description": "Explore your Messages SQLite database to browse tables and inspect schemas with ease. Run flexible…",
-        "repository": {
-          "url": "https://github.com/afgong/sqlite-mcp-server",
-          "source": "github",
-          "subfolder": "sqlite-explorer-fastmcp-mcp-server"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@afgong/sqlite-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-02T21:47:24.293477Z",
-          "updatedAt": "2025-10-02T21:47:24.293477Z",
           "isLatest": true
         }
       }
