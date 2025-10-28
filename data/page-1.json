@@ -2445,6 +2445,41 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.smithery/LinkupPlatform-linkup-mcp-server",
+        "description": "Search the web in real time to get trustworthy, source-backed answers. Find the latest news and co…",
+        "repository": {
+          "url": "https://github.com/LinkupPlatform/linkup-mcp-server",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://server.smithery.ai/@LinkupPlatform/linkup-mcp-server/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Smithery authentication",
+                "isRequired": true,
+                "value": "Bearer {smithery_api_key}",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-27T11:25:12.402429Z",
+          "updatedAt": "2025-10-27T11:25:12.402429Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.smithery/MetehanGZL-pokemcp",
         "description": "Provide detailed Pokémon data and information through a standardized MCP interface. Enable LLMs an…",
@@ -3292,41 +3327,6 @@
           "status": "active",
           "publishedAt": "2025-09-30T00:21:20.72031Z",
           "updatedAt": "2025-09-30T00:21:20.72031Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/adamamer20-paper-search-mcp-openai",
-        "description": "Search and download academic papers from arXiv, PubMed, bioRxiv, medRxiv, Google Scholar, Semantic…",
-        "repository": {
-          "url": "https://github.com/adamamer20/paper-search-mcp-openai",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@adamamer20/paper-search-mcp-openai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-18T10:21:35.776286Z",
-          "updatedAt": "2025-09-18T10:21:35.776286Z",
           "isLatest": true
         }
       }
