@@ -62,6 +62,32 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.exa/exa",
+        "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
+        "repository": {
+          "url": "https://github.com/exa-labs/exa-mcp-server",
+          "source": "github"
+        },
+        "version": "3.0.7",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.exa.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-10-30T10:19:26.892476Z",
+          "updatedAt": "2025-10-30T10:19:26.892476Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.explorium/mcp-explorium",
         "description": "Access live company and contact data from Explorium's AgentSource B2B platform.",
@@ -3213,39 +3239,6 @@
           "status": "active",
           "publishedAt": "2025-10-05T00:50:43.815585Z",
           "updatedAt": "2025-10-05T00:50:43.815585Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/aamangeldi-dad-jokes-mcp",
-        "description": "Get a random dad joke or search by keyword to fit any moment. Retrieve specific jokes by ID for re…",
-        "repository": {
-          "url": "https://github.com/aamangeldi/dad-jokes-mcp",
-          "source": "github"
-        },
-        "version": "1.15.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@aamangeldi/dad-jokes-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-30T00:21:20.72031Z",
-          "updatedAt": "2025-09-30T00:21:20.72031Z",
           "isLatest": true
         }
       }
