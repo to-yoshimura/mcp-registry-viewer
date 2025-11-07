@@ -82,6 +82,32 @@
           "status": "active",
           "publishedAt": "2025-10-30T10:19:26.892476Z",
           "updatedAt": "2025-10-30T10:19:26.892476Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.exa/exa",
+        "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
+        "repository": {
+          "url": "https://github.com/exa-labs/exa-mcp-server",
+          "source": "github"
+        },
+        "version": "3.0.9",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.exa.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-11-07T01:00:19.262705Z",
+          "updatedAt": "2025-11-07T01:00:19.262705Z",
           "isLatest": true
         }
       }
@@ -3199,39 +3225,6 @@
           "status": "active",
           "publishedAt": "2025-10-25T21:42:44.755249Z",
           "updatedAt": "2025-10-25T21:42:44.755249Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/TakoData-tako-mcp",
-        "description": "Provide real-time data querying and visualization by integrating Tako with your agents. Generate o…",
-        "repository": {
-          "url": "https://github.com/TakoData/tako-mcp",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@TakoData/tako-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-07T20:40:52.702786Z",
-          "updatedAt": "2025-10-07T20:40:52.702786Z",
           "isLatest": true
         }
       }
