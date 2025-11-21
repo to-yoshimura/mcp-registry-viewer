@@ -108,6 +108,32 @@
           "status": "active",
           "publishedAt": "2025-11-07T01:00:19.262705Z",
           "updatedAt": "2025-11-07T01:00:19.262705Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.exa/exa",
+        "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
+        "repository": {
+          "url": "https://github.com/exa-labs/exa-mcp-server",
+          "source": "github"
+        },
+        "version": "3.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.exa.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-11-20T18:00:55.174988Z",
+          "updatedAt": "2025-11-20T18:00:55.174988Z",
           "isLatest": true
         }
       }
@@ -3190,41 +3216,6 @@
           "status": "active",
           "publishedAt": "2025-09-17T04:55:34.956438Z",
           "updatedAt": "2025-09-17T04:55:34.956438Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.smithery/ScrapeGraphAI-scrapegraph-mcp",
-        "description": "Enable language models to perform advanced AI-powered web scraping with enterprise-grade reliabili…",
-        "repository": {
-          "url": "https://github.com/ScrapeGraphAI/scrapegraph-mcp",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@ScrapeGraphAI/scrapegraph-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-25T21:42:44.755249Z",
-          "updatedAt": "2025-10-25T21:42:44.755249Z",
           "isLatest": true
         }
       }
