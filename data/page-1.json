@@ -738,6 +738,40 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.packmind/mcp-server",
+        "description": "Packmind captures, scales, and enforces your organization's technical decisions.",
+        "repository": {
+          "url": "https://github.com/PackmindHub/packmind",
+          "source": "github",
+          "subfolder": "apps/mcp-server"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.packmind.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for Packmind authentication",
+                "value": "Bearer {packmind_mcp_token}",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-11-24T15:23:52.365339Z",
+          "updatedAt": "2025-11-24T15:23:52.365339Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.shawndurrani/mcp-merchant",
         "description": "Search-only commerce MCP server backed by Stripe (test)",
@@ -3184,38 +3218,6 @@
           "status": "active",
           "publishedAt": "2025-10-08T05:13:44.681143Z",
           "updatedAt": "2025-10-08T05:13:44.681143Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/STUzhy-py_execute_mcp",
-        "description": "Run Python code in a secure sandbox without local setup. Declare inline dependencies and execute s…",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@STUzhy/py_execute_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-17T04:55:34.956438Z",
-          "updatedAt": "2025-09-17T04:55:34.956438Z",
           "isLatest": true
         }
       }
