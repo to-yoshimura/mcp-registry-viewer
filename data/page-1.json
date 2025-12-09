@@ -316,6 +316,41 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.kubit/mcp-server",
+        "description": "Bring Kubit into your AI workflow — query your warehouse with natural language",
+        "title": "Kubit",
+        "repository": {
+          "url": "https://github.com/Kubit-AI/mcp-server",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://docs.kubit.ai/docs/mcp-server",
+        "icons": [
+          {
+            "src": "https://kubit.ai/wp-content/uploads/2025/12/Logo-Blue-Background-Stacked.png",
+            "mimeType": "image/png",
+            "theme": "light"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.kubit.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-12-09T00:18:46.752966Z",
+          "updatedAt": "2025-12-09T00:18:46.752966Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.mcpanalytics/analytics",
         "description": "ML statistical analysis platform for data teams",
@@ -3175,38 +3210,6 @@
           "status": "active",
           "publishedAt": "2025-10-07T10:10:48.100762Z",
           "updatedAt": "2025-10-07T10:10:48.100762Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/ProfessionalWiki-mediawiki-mcp-server",
-        "description": "Enable Large Language Model clients to interact seamlessly with any MediaWiki wiki. Perform action…",
-        "repository": {},
-        "version": "0.1.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@ProfessionalWiki/mediawiki-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-18T12:49:06.317403Z",
-          "updatedAt": "2025-09-18T12:49:06.317403Z",
           "isLatest": true
         }
       }
