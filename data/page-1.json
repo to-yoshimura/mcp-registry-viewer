@@ -63,6 +63,42 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+        "name": "ai.cirra/salesforce-mcp",
+        "description": "Comprehensive Salesforce administration and data management capabilities",
+        "title": "Cirra AI Salesforce Admin MCP Server",
+        "repository": {
+          "url": "https://github.com/cirra-ai/mcp-server",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "icons": [
+          {
+            "src": "https://cirra.ai/icon-gradient-onwhite.svg"
+          },
+          {
+            "src": "https://cirra.ai/icon-gradient-onwhite.jpg"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.cirra.ai/sfdc/mcp"
+          }
+        ],
+        "_meta": {}
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2025-12-13T01:53:10.483779Z",
+          "updatedAt": "2025-12-13T01:53:10.483779Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.exa/exa",
         "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
         "repository": {
@@ -3177,39 +3213,6 @@
           "status": "active",
           "publishedAt": "2025-09-19T14:23:37.184036Z",
           "updatedAt": "2025-09-19T14:23:37.184036Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/Pratiksha-Kanoja-magicslide-mcp-test",
-        "description": "Create polished slide decks from text or YouTube links in seconds. Fetch video transcripts to tran…",
-        "repository": {
-          "url": "https://github.com/Pratiksha-Kanoja/magicslide-mcp-test",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Pratiksha-Kanoja/magicslide-mcp-test/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-07T10:10:48.100762Z",
-          "updatedAt": "2025-10-07T10:10:48.100762Z",
           "isLatest": true
         }
       }
