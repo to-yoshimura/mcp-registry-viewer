@@ -99,6 +99,91 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.com.mcp/contabo",
+        "description": "Contabo API (v1.0.0) as MCP tools for cloud provisioning, and management. Powered by HAPI MCP server",
+        "title": "Contabo (VPS) MCP Server",
+        "repository": {
+          "url": "https://github.com/la-rebelion/hapimcp",
+          "source": "github"
+        },
+        "version": "0.6.0",
+        "websiteUrl": "https://run.mcp.com.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://contabo.run.mcp.com.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for authenticating with the Contabo API. Obtain via the documented token endpoint.",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "Authorization"
+              },
+              {
+                "description": "Optional request ID for tracing (recommended for support/debugging)",
+                "format": "string",
+                "name": "x-request-id"
+              }
+            ]
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "documentation": "https://api.contabo.com/#section/Introduction",
+            "examples": [
+              {
+                "config": "Add 'https://contabo.run.mcp.com.ai/mcp' as a remote MCP server in your MCP client. Ensure ACCESS_TOKEN is set in Authorization argument.",
+                "description": "Connect to the Contabo MCP server to manage cloud resources (VPS, VDS, Object Storage, etc.)",
+                "name": "Basic Connection"
+              },
+              {
+                "description": "List all your Contabo compute instances using the MCP tools",
+                "name": "Get Instances",
+                "note": "Ask the MCP client (i.e.: https://chat.mcp.com.ai) to invoke the 'listInstances' tool to retrieve your VPS and VDS instances"
+              },
+              {
+                "config": "curl -d 'client_id=...' -d 'client_secret=...' --data-urlencode 'username=...' --data-urlencode 'password=...' -d 'grant_type=password' 'https://auth.contabo.com/auth/realms/contabo/protocol/openid-connect/token' | jq -r '.access_token'",
+                "description": "Obtain ACCESS_TOKEN using documented OAuth2 flow (see docs and example curl in contabo.md)",
+                "name": "Authentication"
+              }
+            ],
+            "keywords": [
+              "openapi",
+              "rest-api",
+              "contabo",
+              "cloud",
+              "vps",
+              "bare-metal",
+              "automation",
+              "infrastructure"
+            ],
+            "license": "MIT",
+            "notes": [
+              "This MCP server exposes the full Contabo API as MCP tools for cloud automation.",
+              "Authentication is required for all operations. Obtain credentials from the Contabo Customer Control Panel.",
+              "Download the full API specification from https://api.contabo.com, or from the HAPI MCP server documentation: https://docs.mcp.com.ai/servers-apis/openapi/",
+              "See https://api.contabo.com/#section/Introduction and https://contabo.com/en-us/contabo-api/ for full API documentation.",
+              "Run your own HAPI MCP server using Docker: docker run -p 3030:3030  -v ~/.hapi:/app/.hapi serve contabo --port 3030 --headless --url https://api.contabo.com",
+              "Or the HAPI MCP CLI: hapi serve contabo --port 3030 --headless --url https://api.contabo.com --openapi https://docs.mcp.com.ai/apis/openapi/contabo.json",
+              "Documentation: https://docs.mcp.com.ai/deployment/"
+            ],
+            "publisher": "La Rebelion Labs"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-08T13:19:46.430479Z",
+          "updatedAt": "2026-01-08T13:19:46.430479Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.com.mcp/hapi-mcp",
         "description": "HAPI MCP server: Dynamically exposes OpenAPI REST APIs as MCP tools for AI assistants",
         "title": "HAPI MCP Server",
@@ -3449,41 +3534,6 @@
           "status": "active",
           "publishedAt": "2025-09-30T15:08:39.247411Z",
           "updatedAt": "2025-09-30T15:08:39.247411Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/PabloLec-keyprobe-mcp",
-        "description": "Audit certificates and keystores to surface expiry risks, weak algorithms, and misconfigurations.…",
-        "repository": {
-          "url": "https://github.com/PabloLec/KeyProbe-MCP",
-          "source": "github"
-        },
-        "version": "1.13.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@PabloLec/keyprobe-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-10T18:08:11.479456Z",
-          "updatedAt": "2025-09-10T18:08:11.479456Z",
           "isLatest": true
         }
       }
