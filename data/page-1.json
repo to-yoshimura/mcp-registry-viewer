@@ -1375,6 +1375,178 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.parallel/search-mcp",
+        "description": "The best web search for your AI Agent",
+        "title": "Parallel Search MCP",
+        "repository": {
+          "url": "https://github.com/parallel-web/search-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://parallel.ai",
+        "icons": [
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-270.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "270x270"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-520.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "520x520"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-1080.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "1080x1080"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-1080.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-270.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "270x270"
+            ],
+            "theme": "light"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-540.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "540x540"
+            ],
+            "theme": "light"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-1080.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ],
+            "theme": "light"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://search-mcp.parallel.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-09T11:15:39.72942Z",
+          "updatedAt": "2026-01-09T11:15:39.72942Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.parallel/task-mcp",
+        "description": "An MCP server for deep research or task groups",
+        "title": "Parallel Task MCP",
+        "repository": {
+          "url": "https://github.com/parallel-web/task-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://parallel.ai",
+        "icons": [
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-270.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "270x270"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-520.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "520x520"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-1080.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "1080x1080"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/white-parallel-symbol-1080.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ],
+            "theme": "dark"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-270.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "270x270"
+            ],
+            "theme": "light"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-540.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "540x540"
+            ],
+            "theme": "light"
+          },
+          {
+            "src": "https://assets.p0web.com/dark-parallel-symbol-1080.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ],
+            "theme": "light"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://task-mcp.parallel.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-09T11:11:31.316037Z",
+          "updatedAt": "2026-01-09T11:11:31.316037Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.seltz/seltz-ai-seltz-mcp",
         "description": "Provides AI assistants with access to Seltz's powerful Web Search capabilities.\n",
@@ -3470,71 +3642,6 @@
           "publishedAt": "2025-09-20T20:30:22.451323Z",
           "updatedAt": "2025-09-20T21:15:59.347284Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Nekzus-npm-sentinel-mcp",
-        "description": "Provide AI-powered real-time analysis and intelligence on NPM packages, including security, depend…",
-        "repository": {
-          "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-          "source": "github"
-        },
-        "version": "{{VERSION}}",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Nekzus/npm-sentinel-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T19:40:51.557718Z",
-          "updatedAt": "2025-09-20T20:30:22.469112Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Open-Scout-mcp",
-        "description": "Create and publish one-pagers and boards for your organization. Upload images from the web, update…",
-        "repository": {},
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Open-Scout/mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-30T15:08:39.247411Z",
-          "updatedAt": "2025-09-30T15:08:39.247411Z",
-          "isLatest": true
         }
       }
     }
