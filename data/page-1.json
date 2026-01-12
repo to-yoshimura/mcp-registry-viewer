@@ -62,6 +62,96 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.autoblocks/contextlayer-mcp",
+        "description": "Personal context management for AI assistants",
+        "repository": {
+          "url": "https://github.com/autoblocksai/ctxl",
+          "source": "github"
+        },
+        "version": "0.0.3",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@contextlayer/mcp",
+            "version": "0.0.3",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-12T03:52:52.134106Z",
+          "updatedAt": "2026-01-12T03:52:52.134106Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.autoblocks/ctxl",
+        "description": "Personal context management for AI assistants",
+        "repository": {
+          "url": "https://github.com/autoblocksai/ctxl",
+          "source": "github"
+        },
+        "version": "0.0.2",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "ctxl",
+            "version": "0.0.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-12T03:52:12.746584Z",
+          "updatedAt": "2026-01-12T03:52:12.746584Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.autoblocks/ctxl-mcp",
+        "description": "Personal context management for AI assistants",
+        "repository": {
+          "url": "https://github.com/autoblocksai/ctxl",
+          "source": "github"
+        },
+        "version": "0.0.2",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "ctxl-mcp",
+            "version": "0.0.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-12T03:52:19.009876Z",
+          "updatedAt": "2026-01-12T03:52:19.009876Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.cirra/salesforce-mcp",
         "description": "Comprehensive Salesforce administration and data management capabilities",
@@ -3569,111 +3659,6 @@
           "publishedAt": "2025-09-20T21:15:59.3403Z",
           "updatedAt": "2025-09-20T21:32:48.552Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Nekzus-npm-sentinel-mcp",
-        "description": "Provide AI-powered real-time analysis and intelligence on NPM packages, including security, depend…",
-        "repository": {
-          "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-          "source": "github"
-        },
-        "version": "1.11.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Nekzus/npm-sentinel-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T21:32:48.546367Z",
-          "updatedAt": "2025-09-20T22:47:38.657177Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Nekzus-npm-sentinel-mcp",
-        "description": "Provide AI-powered real-time analysis and intelligence on NPM packages, including security, depend…",
-        "repository": {
-          "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-          "source": "github"
-        },
-        "version": "1.11.5",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Nekzus/npm-sentinel-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T22:47:38.649029Z",
-          "updatedAt": "2025-09-20T23:26:41.758996Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Nekzus-npm-sentinel-mcp",
-        "description": "Provide AI-powered real-time analysis and intelligence on NPM packages, including security, depend…",
-        "repository": {
-          "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-          "source": "github"
-        },
-        "version": "1.11.8",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Nekzus/npm-sentinel-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T23:26:41.744482Z",
-          "updatedAt": "2025-09-20T23:26:41.744482Z",
-          "isLatest": true
         }
       }
     }
