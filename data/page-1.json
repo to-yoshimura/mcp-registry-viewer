@@ -540,6 +540,77 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.com.mcp/lenny-rachitsky-podcast",
+        "description": "MCP server for structured access to Lenny Rachitsky podcast transcripts. For content creators.",
+        "title": "Lenny Rachitsky Podcast Transcripts MCP Server",
+        "repository": {
+          "url": "https://github.com/la-rebelion/hapimcp",
+          "source": "github"
+        },
+        "version": "0.6.0",
+        "websiteUrl": "https://mcp.com.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://lenny-rachitsky.run.mcp.com.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "documentation": "https://docs.mcp.com.ai/servers-apis/openapi/podcast-transcripts.yaml",
+            "examples": [
+              {
+                "config": "Add 'https://lenny-rachitsky.run.mcp.com.ai/mcp' as a remote MCP server in your MCP client.",
+                "description": "Connect to the Lenny Rachitsky Podcast MCP server to access and search podcast transcripts.",
+                "name": "Basic Connection"
+              },
+              {
+                "description": "The server exposes podcast transcript search, retrieval, and metadata operations as MCP tools.",
+                "name": "Available Operations",
+                "note": "See the OpenAPI spec for endpoints and schema: https://docs.mcp.com.ai/servers-apis/openapi/podcast-transcripts.yaml"
+              }
+            ],
+            "keywords": [
+              "openapi",
+              "rest-api",
+              "podcast",
+              "transcripts",
+              "lenny rachitsky",
+              "influencer",
+              "ai",
+              "content",
+              "search",
+              "archive",
+              "vlog",
+              "content creators"
+            ],
+            "license": "MIT",
+            "notes": [
+              "This MCP server is designed for influencers and content creators to make their content accessible to AI tools.",
+              "All that is needed are the transcripts in a structured format.",
+              "Lenny Rachitsky is a leading voice in product management and startups, hosting a popular podcast with industry experts.",
+              "The backend API is https://lenny-rachitsky.search.mcp.com.ai",
+              "No authentication required for public transcript access.",
+              "For production or private deployments, see the HAPI MCP server documentation.",
+              "OpenAPI spec: https://docs.mcp.com.ai/servers-apis/openapi/podcast-transcripts.yaml",
+              "Documentation: https://docs.mcp.com.ai"
+            ],
+            "publisher": "La Rebelion Labs"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-16T11:08:36.481149Z",
+          "updatedAt": "2026-01-16T11:08:36.481149Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.com.mcp/petstore",
         "description": "Swagger Petstore API (v1.0.27) as MCP for testing and prototyping powered by the HAPI MCP server",
         "title": "Petstore MCP Server",
@@ -3624,41 +3695,6 @@
           "publishedAt": "2025-09-18T14:42:06.197815Z",
           "updatedAt": "2025-09-18T14:42:06.197815Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Nekzus-npm-sentinel-mcp",
-        "description": "Provide AI-powered real-time analysis and intelligence on NPM packages, including security, depend…",
-        "repository": {
-          "url": "https://github.com/Nekzus/npm-sentinel-mcp",
-          "source": "github"
-        },
-        "version": "1.10.2",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Nekzus/npm-sentinel-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T21:15:59.3403Z",
-          "updatedAt": "2025-09-20T21:32:48.552Z",
-          "isLatest": false
         }
       }
     }
