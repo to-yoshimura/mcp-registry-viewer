@@ -611,6 +611,85 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.com.mcp/openai-tools",
+        "description": "Focused MCP server for OpenAI image/audio generation (v2.0.0). Wraps endpoints via HAPI CLI.",
+        "title": "OpenAI Tools MCP Server",
+        "repository": {
+          "url": "https://github.com/la-rebelion/hapimcp",
+          "source": "github"
+        },
+        "version": "0.6.0",
+        "websiteUrl": "https://platform.openai.com/docs/api-reference",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://openai-tools.run.mcp.com.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for authenticating with the OpenAI API. Obtain via the OpenAI dashboard. https://platform.openai.com/api-keys",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "documentation": "https://docs.mcp.com.ai/examples/mcp-servers-from-oas/openai-mcp",
+            "examples": [
+              {
+                "command": "docker run -p 3030:3030 hapimcp/hapi-cli:0.6.0 serve openai-tools --port 3030 --headless --url https://api.openai.com/v1 --openapi https://docs.mcp.com.ai/servers-apis/openapi/openai-tools.yaml",
+                "description": "Run the OpenAI Tools MCP server using Docker",
+                "name": "Docker Run"
+              },
+              {
+                "command": "hapi serve openai-tools --headless --port 3030 --url https://api.openai.com/v1",
+                "description": "Run using local HAPI CLI integration",
+                "name": "HAPI CLI"
+              },
+              {
+                "command": "hapi serve openai-tools --headless --port 3030 --url https://api.openai.com/v1 | bunx @modelcontextprotocol/inspector",
+                "description": "Inspect the available tools",
+                "name": "MCP Inspector"
+              }
+            ],
+            "keywords": [
+              "openai",
+              "ai",
+              "images",
+              "audio",
+              "dalle",
+              "whisper",
+              "generation",
+              "mcp",
+              "hapi"
+            ],
+            "license": "MIT",
+            "notes": [
+              "This focused server prevents token bloat by only exposing image and audio generation tools.",
+              "Requires an OpenAI API Key.",
+              "Uses the HAPI CLI to dynamically convert the OpenAI OpenAPI spec to MCP tools.",
+              "The OpenAPI spec is a skimmed version of the full OpenAI API.",
+              "For scaling info, see: https://mcp.com.ai/mcp-at-scale"
+            ],
+            "publisher": "La Rebelion Labs"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-22T02:35:00.021804Z",
+          "updatedAt": "2026-01-22T02:35:00.021804Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.com.mcp/petstore",
         "description": "Swagger Petstore API (v1.0.27) as MCP for testing and prototyping powered by the HAPI MCP server",
         "title": "Petstore MCP Server",
@@ -1063,6 +1142,29 @@
           "status": "active",
           "publishedAt": "2025-12-09T00:18:46.752966Z",
           "updatedAt": "2025-12-09T00:18:46.752966Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.llmse/mcp",
+        "description": "Public MCP server for the LLM Search Engine",
+        "repository": {},
+        "version": "1.3.12",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://llmse.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-21T16:19:36.12182Z",
+          "updatedAt": "2026-01-21T16:19:36.12182Z",
           "isLatest": true
         }
       }
@@ -3624,76 +3726,6 @@
           "status": "active",
           "publishedAt": "2025-09-15T17:56:16.25232Z",
           "updatedAt": "2025-09-15T17:56:16.25232Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
-        "description": "Query and manage your Supabase database directly from your workspace. Execute SQL statements, brow…",
-        "repository": {
-          "url": "https://github.com/MisterSandFR/Supabase-MCP-SelfHosted",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@MisterSandFR/supabase-mcp-selfhosted/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-16T22:41:06.536212Z",
-          "updatedAt": "2025-09-18T14:42:06.205285Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/MisterSandFR-supabase-mcp-selfhosted",
-        "description": "Manage Supabase projects end to end across database, auth, storage, realtime, and migrations. Moni…",
-        "repository": {
-          "url": "https://github.com/MisterSandFR/Supabase-MCP-SelfHosted",
-          "source": "github"
-        },
-        "version": "1.14.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@MisterSandFR/supabase-mcp-selfhosted/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-18T14:42:06.197815Z",
-          "updatedAt": "2025-09-18T14:42:06.197815Z",
           "isLatest": true
         }
       }
