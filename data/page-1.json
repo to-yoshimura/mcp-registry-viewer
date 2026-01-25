@@ -1025,6 +1025,32 @@
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.filegraph/document-processing",
+        "description": "Extract text from documents, manipulate PDFs, and perform OCR via FileGraph API.",
+        "repository": {
+          "url": "https://github.com/filegraph/docconvert",
+          "source": "github"
+        },
+        "version": "0.2.2",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.filegraph.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-24T15:50:15.237565Z",
+          "updatedAt": "2026-01-24T15:50:15.237565Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.filegraph/document-processing",
         "description": "Extract text from documents, manipulate PDFs, and perform OCR on images.",
         "repository": {
           "url": "https://github.com/filegraph/docconvert",
@@ -1043,6 +1069,32 @@
           "status": "active",
           "publishedAt": "2026-01-24T02:32:35.476063Z",
           "updatedAt": "2026-01-24T02:32:35.476063Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.filegraph/document-processing",
+        "description": "Extract text from documents, manipulate PDFs, and perform OCR on images.",
+        "repository": {
+          "url": "https://github.com/filegraph/docconvert",
+          "source": "github"
+        },
+        "version": "1.0.1",
+        "remotes": [
+          {
+            "type": "sse",
+            "url": "https://api.filegraph.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-01-24T04:06:08.693646Z",
+          "updatedAt": "2026-01-24T04:06:08.693646Z",
           "isLatest": true
         }
       }
@@ -3653,71 +3705,6 @@
           "publishedAt": "2025-09-16T19:42:06.349267Z",
           "updatedAt": "2025-09-17T10:41:17.536569Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Kryptoskatt-mcp-server",
-        "description": "Enable AI assistants to interact seamlessly with the DefiLlama API by translating MCP tool calls i…",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Kryptoskatt/mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-17T10:41:17.402979Z",
-          "updatedAt": "2025-09-17T10:41:17.402979Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Leghis-smart-thinking",
-        "description": "Find relevant Smart‑Thinking memories fast. Fetch full entries by ID to get complete context. Spee…",
-        "repository": {
-          "url": "https://github.com/Leghis/Smart-Thinking",
-          "source": "github"
-        },
-        "version": "0.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Leghis/smart-thinking/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-29T14:04:13.933299Z",
-          "updatedAt": "2025-09-29T14:04:13.933299Z",
-          "isLatest": true
         }
       }
     }
