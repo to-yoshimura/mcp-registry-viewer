@@ -63,6 +63,99 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.auteng/docs",
+        "description": "Publish markdown documents as public share links with mermaid diagram support. Built by AutEng.ai",
+        "title": "AutEng MCP - Markdown Publishing & Document Share Links",
+        "version": "1.1.0",
+        "websiteUrl": "https://auteng.ai",
+        "icons": [
+          {
+            "src": "https://auteng.ai/auteng-sqr.jpg",
+            "mimeType": "image/jpeg",
+            "sizes": [
+              "755x755"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://auteng.ai/mcp/docs"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-06T20:56:39.150934Z",
+          "updatedAt": "2026-02-06T20:56:39.150934Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.auteng/mcp",
+        "description": "Publish markdown as a publicly shareable AutEng document",
+        "title": "AutEng Document Publisher",
+        "repository": {
+          "url": "https://github.com/auteng/auteng",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://auteng.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-06T16:52:00.816324Z",
+          "updatedAt": "2026-02-06T16:52:00.816324Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.auteng/mcp",
+        "description": "Publish markdown documents as public share links with mermaid diagrams. Built by AutEng.ai",
+        "title": "AutEng MCP - Markdown Publishing & Document Share Links",
+        "version": "1.0.1",
+        "websiteUrl": "https://auteng.ai",
+        "icons": [
+          {
+            "src": "https://auteng.ai/auteng-sqr.jpg",
+            "mimeType": "image/jpeg",
+            "sizes": [
+              "755x755"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://auteng.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-06T17:18:22.957864Z",
+          "updatedAt": "2026-02-06T17:18:22.957864Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.autoblocks/contextlayer-mcp",
         "description": "Personal context management for AI assistants",
         "repository": {
@@ -3728,104 +3821,6 @@
           "publishedAt": "2025-10-08T05:29:39.856257Z",
           "updatedAt": "2025-10-08T05:29:39.856257Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/IndianAppGuy-magicslide-mcp-actual-test",
-        "description": "Generate polished PowerPoint presentations from text prompts, YouTube videos, or structured outlin…",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@IndianAppGuy/magicslide-mcp-actual-test/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-07T12:06:34.023568Z",
-          "updatedAt": "2025-10-07T12:06:34.023568Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/JMoak-chrono-mcp",
-        "description": "Convert and compare dates and times across any timezone with flexible, locale-aware formatting. Ad…",
-        "repository": {
-          "url": "https://github.com/JMoak/chrono-mcp",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@JMoak/chrono-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-17T02:23:35.312972Z",
-          "updatedAt": "2025-09-17T02:23:35.312972Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/JunoJunHyun-festival-finder-mcp",
-        "description": "Discover festivals worldwide by location, date, and genre. Compare options with key details like d…",
-        "repository": {
-          "url": "https://github.com/JunoJunHyun/Festival-Finder-mcp",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@JunoJunHyun/festival-finder-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-05T15:14:35.748005Z",
-          "updatedAt": "2025-10-05T15:14:35.748005Z",
-          "isLatest": false
         }
       }
     }
