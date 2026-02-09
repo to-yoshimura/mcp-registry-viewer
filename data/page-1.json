@@ -2071,6 +2071,38 @@
           "status": "active",
           "publishedAt": "2026-02-07T14:09:42.691681Z",
           "updatedAt": "2026-02-07T14:09:42.691681Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.meetlark/mcp-server",
+        "description": "Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.",
+        "version": "1.0.3",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@meetlark/mcp-server",
+            "version": "1.0.3",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://meetlark.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-08T08:48:19.364402Z",
+          "updatedAt": "2026-02-08T08:48:19.364402Z",
           "isLatest": true
         }
       }
@@ -3787,41 +3819,6 @@
           "status": "active",
           "publishedAt": "2025-10-02T18:00:50.572805Z",
           "updatedAt": "2025-10-02T18:00:50.572805Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/ImRonAI-mcp-server-browserbase",
-        "description": "Automate cloud browsers to navigate websites, interact with elements, and extract structured data.…",
-        "repository": {
-          "url": "https://github.com/ImRonAI/mcp-server-browserbase",
-          "source": "github"
-        },
-        "version": "2.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@ImRonAI/mcp-server-browserbase/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-16T06:05:33.453619Z",
-          "updatedAt": "2025-09-16T06:05:33.453619Z",
           "isLatest": true
         }
       }
