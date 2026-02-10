@@ -63,6 +63,29 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.appdeploy/deploy-app",
+        "description": "AppDeploy turns app ideas described in AI chat into live full-stack web applications",
+        "title": "AppDeploy",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api-v2.appdeploy.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-09T15:16:30.60739Z",
+          "updatedAt": "2026-02-09T15:16:30.60739Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.auteng/docs",
         "description": "Publish markdown documents as public share links with mermaid diagram support. Built by AutEng.ai",
         "title": "AutEng MCP - Markdown Publishing & Document Share Links",
@@ -2368,6 +2391,38 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.rapay/mcp-server",
+        "description": "Send fiat payments via MCP with two-step confirmation and Stripe Connect.",
+        "title": "Ra Pay",
+        "repository": {
+          "url": "https://github.com/Ra-Pay-AI/rapay",
+          "source": "github"
+        },
+        "version": "1.2.5",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@rapay/mcp-server",
+            "version": "1.2.5",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-09T18:54:17.964435Z",
+          "updatedAt": "2026-02-09T18:54:17.964435Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.seltz/seltz-ai-seltz-mcp",
         "description": "Provides AI assistants with access to Seltz's powerful Web Search capabilities.\n",
@@ -3751,74 +3806,6 @@
           "status": "active",
           "publishedAt": "2025-09-14T15:20:36.371442Z",
           "updatedAt": "2025-09-14T15:20:36.371442Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/IlyaGusev-academia_mcp",
-        "description": "Search arXiv and ACL Anthology, retrieve citations and references, and browse web sources to accel…",
-        "repository": {
-          "url": "https://github.com/IlyaGusev/academia_mcp",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@IlyaGusev/academia_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-16T12:14:42.162776Z",
-          "updatedAt": "2025-09-16T12:14:42.162776Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/IlyaGusev-academia_mcp",
-        "description": "Search arXiv and ACL Anthology, retrieve citations and references, and browse web sources to accel…",
-        "repository": {
-          "url": "https://github.com/IlyaGusev/academia_mcp",
-          "source": "github"
-        },
-        "version": "1.16.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@IlyaGusev/academia_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-02T18:00:50.572805Z",
-          "updatedAt": "2025-10-02T18:00:50.572805Z",
           "isLatest": true
         }
       }
