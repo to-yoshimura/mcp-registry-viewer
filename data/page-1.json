@@ -2132,6 +2132,68 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.meetsquad/squad",
+        "description": "Your AI Product Manager. Surface insights, build roadmaps, and plan strategy with 30+ tools.",
+        "title": "Squad",
+        "repository": {
+          "url": "https://github.com/the-basilisk-ai/squad-mcp",
+          "source": "github"
+        },
+        "version": "3.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.meetsquad.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-12T21:01:17.340634Z",
+          "updatedAt": "2026-02-12T21:01:17.340634Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.meetsquad/squad",
+        "description": "Your AI Product Manager. Surface insights, build roadmaps, and plan strategy with 30+ tools.",
+        "title": "Squad",
+        "repository": {
+          "url": "https://github.com/the-basilisk-ai/squad-mcp",
+          "source": "github"
+        },
+        "version": "3.0.1",
+        "icons": [
+          {
+            "src": "https://assets.meetsquad.ai/images/squad-icon.png",
+            "sizes": [
+              "128x128"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.meetsquad.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-12T21:34:42.742193Z",
+          "updatedAt": "2026-02-12T21:34:42.742193Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.meminal/meminal",
         "description": "Memory for deep conversational context across any platform",
@@ -3736,76 +3798,6 @@
           "status": "active",
           "publishedAt": "2025-10-07T21:20:15.688859Z",
           "updatedAt": "2025-10-07T21:20:15.688859Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/HARJAP-SINGH-3105-splitwise_mcp",
-        "description": "Manage Splitwise balances, expenses, and groups from your workspace. Fetch friends and recent acti…",
-        "repository": {
-          "url": "https://github.com/HARJAP-SINGH-3105/Splitwise_MCP",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@HARJAP-SINGH-3105/splitwise_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-18T18:42:59.470988Z",
-          "updatedAt": "2025-09-18T18:42:59.470988Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Hint-Services-obsidian-github-mcp",
-        "description": "Connect AI assistants to your GitHub-hosted Obsidian vault to seamlessly access, search, and analy…",
-        "repository": {
-          "url": "https://github.com/Hint-Services/obsidian-github-mcp",
-          "source": "github"
-        },
-        "version": "0.4.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Hint-Services/obsidian-github-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-14T15:20:36.371442Z",
-          "updatedAt": "2025-09-14T15:20:36.371442Z",
           "isLatest": true
         }
       }
