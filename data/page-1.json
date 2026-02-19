@@ -39,6 +39,43 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.alpic.mcp/alpic-mcp",
+        "description": "Manage your projects, debug deployment, and check analytics for any MCP server you host with Alpic",
+        "title": "Alpic",
+        "version": "0.0.1",
+        "websiteUrl": "https://alpic.ai",
+        "icons": [
+          {
+            "src": "https://raw.githubusercontent.com/alpic-ai/public-assets/refs/heads/main/alpic%20logo%20light%20200x200.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "200x200"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.alpic.ai"
+          },
+          {
+            "type": "sse",
+            "url": "https://mcp.alpic.ai"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-18T15:32:32.672631Z",
+          "updatedAt": "2026-02-18T15:32:32.672631Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.alpic.test/test-mcp-server",
         "description": "Alpic Test MCP Server - great server!",
@@ -3785,41 +3822,6 @@
           "status": "active",
           "publishedAt": "2025-09-11T13:58:16.278261Z",
           "updatedAt": "2025-09-11T13:58:16.278261Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/DynamicEndpoints-powershell-exec-mcp-server",
-        "description": "Execute PowerShell commands securely with controlled timeouts and input validation. Retrieve syste…",
-        "repository": {
-          "url": "https://github.com/DynamicEndpoints/PowerShell-Exec-MCP-Server",
-          "source": "github"
-        },
-        "version": "1.13.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@DynamicEndpoints/powershell-exec-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-11T13:54:30.703395Z",
-          "updatedAt": "2025-09-11T13:54:30.703395Z",
           "isLatest": true
         }
       }
