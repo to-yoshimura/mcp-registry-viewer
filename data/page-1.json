@@ -764,6 +764,77 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.com.mcp/linkedin",
+        "description": "LinkedIn API as MCP tools to retrieve profile data and publish content. Powered by HAPI MCP.",
+        "title": "LinkedIn MCP Server",
+        "repository": {
+          "url": "https://github.com/la-rebelion/hapimcp",
+          "source": "github"
+        },
+        "version": "1.0.0+0.7.1",
+        "websiteUrl": "https://run.mcp.com.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://linkedin.run.mcp.com.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "documentation": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow",
+            "examples": [
+              {
+                "config": "Add 'https://linkedin.run.mcp.com.ai/mcp' as a remote MCP server in your MCP client, then authenticate with your LinkedIn app credentials when prompted.",
+                "description": "Connect once and let your MCP client + HAPI orchestrate the OAuth2 Authorization Code flow.",
+                "name": "Basic Connection"
+              },
+              {
+                "description": "This server exposes 3 LinkedIn operations as MCP tools:",
+                "name": "What You Can Do",
+                "note": "createSharePost, getSharePosts, getPersonProfile."
+              },
+              {
+                "config": "hapi deploy --openapi https://docs.mcp.com.ai/apis/openapi/linkedin-connector.yaml --url https://api.linkedin.com --host https://linkedin.run.mcp.com.ai",
+                "description": "Publish your LinkedIn MCP Server with a public host your clients can reach.",
+                "name": "Deploy your own in One Command"
+              }
+            ],
+            "keywords": [
+              "openapi",
+              "rest-api",
+              "linkedin",
+              "social",
+              "oauth2",
+              "mcp",
+              "automation",
+              "publishing"
+            ],
+            "license": "LinkedIn API License",
+            "notes": [
+              "MCP clients must support OAuth2 Authorization Code flow for LinkedIn integrations.",
+              "HAPI handles the heavy lifting for OAuth2 flow and API tool exposure.",
+              "Default LinkedIn API base URL: https://api.linkedin.com.",
+              "The --host value is required because ChatGPT, Claude, and other MCP clients connect to your server using that external FQDN/URL. Used to generate the absolute URLs as per MCP specification.",
+              "Use a public internet hostname (or VPN-reachable internal FQDN/IP) that clients can access.",
+              "OpenAPI source: https://docs.mcp.com.ai/apis/openapi/linkedin-connector.yaml",
+              "Documentation: https://docs.mcp.com.ai/deployment/"
+            ],
+            "publisher": "La Rebelion Labs"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-19T15:17:12.346134Z",
+          "updatedAt": "2026-02-19T15:17:12.346134Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.com.mcp/openai-tools",
         "description": "Focused MCP server for OpenAI image/audio generation (v2.0.0). Wraps endpoints via HAPI CLI.",
         "title": "OpenAI Tools MCP Server",
@@ -1044,6 +1115,78 @@
           "status": "active",
           "publishedAt": "2026-02-04T12:46:39.858109Z",
           "updatedAt": "2026-02-04T12:46:39.858109Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.com.mcp/strava",
+        "description": "Strava MCP tools for AI: athletes, activities, segments, clubs, routes. Powered by HAPI MCP server.",
+        "title": "HAPI Strava MCP Server",
+        "repository": {
+          "url": "https://github.com/la-rebelion/hapimcp",
+          "source": "github"
+        },
+        "version": "3.0.0+0.7.1",
+        "websiteUrl": "https://run.mcp.com.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://strava.run.mcp.com.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "documentation": "https://developers.strava.com/docs/",
+            "examples": [
+              {
+                "config": "Add 'https://strava.run.mcp.com.ai/mcp' as a remote MCP server in your MCP client, then sign in to Strava when prompted.",
+                "description": "Connect once and let your MCP client + HAPI handle OAuth2 Authorization Code flow and token exchange.",
+                "name": "Basic Connection"
+              },
+              {
+                "description": "This server exposes Strava operations as MCP tools for athlete, activities, segments, clubs, routes, uploads, and streams.",
+                "name": "What You Can Do",
+                "note": "Example tools include getLoggedInAthlete, getLoggedInAthleteActivities, getSegmentById, getClubById, createUpload, and getActivityStreams."
+              },
+              {
+                "config": "hapi deploy --name strava --project strava --openapi https://docs.mcp.com.ai/apis/openapi/strava.json --url https://www.strava.com/api/v3 --host https://strava.run.mcp.com.ai",
+                "description": "Publish your Strava MCP Server with a public host your clients can reach.",
+                "name": "Deploy your own in One Command"
+              }
+            ],
+            "keywords": [
+              "openapi",
+              "rest-api",
+              "strava",
+              "fitness",
+              "activities",
+              "oauth2",
+              "mcp",
+              "automation"
+            ],
+            "license": "Strava API Agreement",
+            "notes": [
+              "MCP clients must support OAuth2 Authorization Code flow for Strava integrations.",
+              "HAPI handles the heavy lifting for OAuth2 flow and API tool exposure.",
+              "Default Strava API base URL: https://www.strava.com/api/v3.",
+              "The --host value is required because ChatGPT, Claude, and other MCP clients connect to your server using that external FQDN/URL. Used to generate the absolute URLs as per MCP specification.",
+              "Use a public internet hostname (or VPN-reachable internal FQDN/IP) that clients can access.",
+              "OAuth endpoints: https://www.strava.com/oauth/authorize and https://www.strava.com/api/v3/oauth/token.",
+              "OpenAPI source: https://docs.mcp.com.ai/apis/openapi/strava.json",
+              "Documentation: https://docs.mcp.com.ai/deployment/"
+            ],
+            "publisher": "La Rebelion Labs"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-19T16:39:20.668626Z",
+          "updatedAt": "2026-02-19T16:39:20.668626Z",
           "isLatest": true
         }
       }
@@ -3754,74 +3897,6 @@
           "status": "active",
           "publishedAt": "2025-09-11T13:57:38.18553Z",
           "updatedAt": "2025-09-11T13:57:38.18553Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/DynamicEndpoints-m365-core-mcp",
-        "description": "*Updated September 25th 2025** Manage your Microsoft 365 services effortlessly. Create and manage…",
-        "repository": {
-          "url": "https://github.com/DynamicEndpoints/m365-core-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@DynamicEndpoints/m365-core-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-08T04:00:42.356429Z",
-          "updatedAt": "2025-10-08T04:00:42.356429Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/DynamicEndpoints-m365-core-mcp",
-        "description": "*Updated June 17th 2025** Manage your Microsoft 365 services effortlessly. Create and manage distr…",
-        "repository": {
-          "url": "https://github.com/DynamicEndpoints/m365-core-mcp",
-          "source": "github"
-        },
-        "version": "1.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@DynamicEndpoints/m365-core-mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-11T13:58:16.278261Z",
-          "updatedAt": "2025-09-11T13:58:16.278261Z",
           "isLatest": true
         }
       }
