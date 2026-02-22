@@ -99,6 +99,29 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.anzenna/anzenna",
+        "description": "MCP server for Anzenna",
+        "repository": {},
+        "version": "0.1",
+        "remotes": [
+          {
+            "type": "sse",
+            "url": "https://mcp.anzenna.ai/sse"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-02-21T23:53:55.798606Z",
+          "updatedAt": "2026-02-21T23:53:55.798606Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.appdeploy/deploy-app",
         "description": "AppDeploy turns app ideas described in AI chat into live full-stack web applications",
@@ -3862,41 +3885,6 @@
           "status": "active",
           "publishedAt": "2025-09-13T22:54:39.805525Z",
           "updatedAt": "2025-09-13T22:54:39.805525Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/DynamicEndpoints-autogen_mcp",
-        "description": "Create and manage AI agents that collaborate and solve problems through natural language interacti…",
-        "repository": {
-          "url": "https://github.com/DynamicEndpoints/Autogen_MCP",
-          "source": "github"
-        },
-        "version": "0.3.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@DynamicEndpoints/autogen_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-11T13:57:38.18553Z",
-          "updatedAt": "2025-09-11T13:57:38.18553Z",
           "isLatest": true
         }
       }
