@@ -433,6 +433,29 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.bezal/local-commerce",
+        "description": "Search 7,000+ local service businesses across America by category, location, or keyword.",
+        "title": "Bezal — Local Business Intelligence for AI Agents",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.bezal.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-03-03T01:28:17.439049Z",
+          "updatedAt": "2026-03-03T01:28:17.439049Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.cirra/salesforce-mcp",
         "description": "Comprehensive Salesforce administration and data management capabilities",
@@ -3865,41 +3888,6 @@
           "status": "active",
           "publishedAt": "2025-09-14T14:25:46.094496Z",
           "updatedAt": "2025-09-14T14:25:46.094496Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/BadRooBot-test_m",
-        "description": "Send quick greetings, scrape website content, and generate text or images on demand. Perform web s…",
-        "repository": {
-          "url": "https://github.com/BadRooBot/test_m",
-          "source": "github"
-        },
-        "version": "1.14.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@BadRooBot/test_m/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-20T14:41:53.772797Z",
-          "updatedAt": "2025-09-20T14:41:53.772797Z",
           "isLatest": true
         }
       }
