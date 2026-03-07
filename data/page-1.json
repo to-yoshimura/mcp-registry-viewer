@@ -107,6 +107,54 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenttrust/mcp-server",
+        "description": "Identity, trust, and A2A orchestration for autonomous AI agents. Official A2A partner.",
+        "title": "AgentTrust — Identity & Trust for A2A Agents",
+        "repository": {
+          "url": "https://github.com/agenttrust/mcp-server",
+          "source": "github"
+        },
+        "version": "1.1.1",
+        "websiteUrl": "https://agenttrust.ai",
+        "icons": [
+          {
+            "src": "https://agenttrust.ai/icon.png",
+            "sizes": [
+              "96x96"
+            ]
+          }
+        ],
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@agenttrust/mcp-server",
+            "version": "1.1.1",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Your AgentTrust API key from https://agenttrust.ai",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "AGENTTRUST_API_KEY"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-03-06T11:23:10.721165Z",
+          "updatedAt": "2026-03-06T11:23:10.721165Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.aliengiraffe/spotdb",
         "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
@@ -3027,6 +3075,126 @@
           "status": "active",
           "publishedAt": "2026-03-02T03:37:46.025768Z",
           "updatedAt": "2026-03-02T03:37:46.025768Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.obris/mcp",
+        "description": "Stop re-explaining yourself to AI. Save knowledge once, use it in every conversation.",
+        "title": "Obris",
+        "repository": {
+          "url": "https://github.com/obris-dev/obris-mcp",
+          "source": "github"
+        },
+        "version": "0.3.0",
+        "websiteUrl": "https://obris.ai",
+        "icons": [
+          {
+            "src": "https://raw.githubusercontent.com/obris-dev/obris-mcp/main/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "obris-mcp",
+            "version": "0.3.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Your Obris API key from app.obris.ai/api-keys",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "OBRIS_API_KEY"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.obris.ai/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-03-07T00:12:17.707082Z",
+          "updatedAt": "2026-03-07T00:12:17.707082Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.openmandate/mcp",
+        "description": "MCP server for OpenMandate — open protocol for bilateral matching.",
+        "title": "OpenMandate",
+        "version": "0.3.1",
+        "websiteUrl": "https://openmandate.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.openmandate.ai/mcp",
+            "headers": [
+              {
+                "description": "API key in Bearer format: Bearer om_live_... — get one at https://openmandate.ai/api-keys",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-03-06T18:04:56.127382Z",
+          "updatedAt": "2026-03-06T18:04:56.127382Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.openmandate/mcp",
+        "description": "MCP server for OpenMandate — open protocol for bilateral matching.",
+        "title": "OpenMandate",
+        "version": "0.3.2",
+        "websiteUrl": "https://openmandate.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.openmandate.ai/mcp",
+            "headers": [
+              {
+                "description": "API key in Bearer format: Bearer om_live_... — get one at https://openmandate.ai/api-keys",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2026-03-06T18:08:53.025712Z",
+          "updatedAt": "2026-03-06T18:08:53.025712Z",
           "isLatest": true
         }
       }
@@ -3799,140 +3967,6 @@
           "publishedAt": "2025-09-16T23:02:09.738662Z",
           "updatedAt": "2025-09-16T23:02:09.738662Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/222wcnm-bilistalkermcp",
-        "description": "Track Bilibili creators and get the latest updates on videos, dynamics, and articles. Fetch user p…",
-        "repository": {
-          "url": "https://github.com/222wcnm/BiliStalkerMCP",
-          "source": "github"
-        },
-        "version": "1.15.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@222wcnm/bilistalkermcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-02T06:57:33.936879Z",
-          "updatedAt": "2025-10-02T06:57:33.936879Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.smithery/Aman-Amith-Shastry-scientific_computation_mcp",
-        "description": "This MCP server enables users to perform scientific computations regarding linear algebra and vect…",
-        "repository": {
-          "url": "https://github.com/Aman-Amith-Shastry/scientific_computation_mcp",
-          "source": "github"
-        },
-        "version": "1.13.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Aman-Amith-Shastry/scientific_computation_mcp/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-12T01:14:07.07827Z",
-          "updatedAt": "2025-09-12T01:14:07.07827Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/Artin0123-gemini-image-mcp-server",
-        "description": "Analyze images and videos with Gemini to get fast, reliable visual insights. Handle content from U…",
-        "repository": {
-          "url": "https://github.com/Artin0123/gemini-vision-mcp",
-          "source": "github"
-        },
-        "version": "0.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Artin0123/gemini-image-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-07T17:47:25.005282Z",
-          "updatedAt": "2025-10-07T17:47:25.005282Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
-        "name": "ai.smithery/Artin0123-gemini-image-mcp-server",
-        "description": "Analyze images and videos with Gemini to get fast, reliable visual insights. Handle content from U…",
-        "repository": {
-          "url": "https://github.com/Artin0123/gemini-image-mcp-server",
-          "source": "github"
-        },
-        "version": "1.2.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://server.smithery.ai/@Artin0123/gemini-image-mcp-server/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "value": "Bearer {smithery_api_key}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-10-06T07:34:28.779387Z",
-          "updatedAt": "2025-10-06T07:34:28.779387Z",
-          "isLatest": false
         }
       }
     }
