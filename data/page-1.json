@@ -23,6 +23,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-24T00:07:27.525636Z",
           "publishedAt": "2026-02-24T00:07:27.525636Z",
           "updatedAt": "2026-02-24T00:07:27.525636Z",
           "isLatest": true
@@ -61,6 +62,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-28T12:39:22.82128Z",
           "publishedAt": "2026-02-28T12:39:22.82128Z",
           "updatedAt": "2026-02-28T12:39:22.82128Z",
           "isLatest": false
@@ -99,6 +101,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-28T13:09:52.236521Z",
           "publishedAt": "2026-02-28T13:09:52.236521Z",
           "updatedAt": "2026-02-28T13:09:52.236521Z",
           "isLatest": true
@@ -147,6 +150,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-06T11:23:10.721165Z",
           "publishedAt": "2026-03-06T11:23:10.721165Z",
           "updatedAt": "2026-03-06T11:23:10.721165Z",
           "isLatest": true
@@ -184,6 +188,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-10-09T17:05:17.793149Z",
           "publishedAt": "2025-10-09T17:05:17.793149Z",
           "updatedAt": "2025-10-09T17:05:17.793149Z",
           "isLatest": true
@@ -221,6 +226,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-18T15:32:32.672631Z",
           "publishedAt": "2026-02-18T15:32:32.672631Z",
           "updatedAt": "2026-02-18T15:32:32.672631Z",
           "isLatest": true
@@ -244,6 +250,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-10T13:57:43.256739Z",
           "publishedAt": "2025-09-10T13:57:43.256739Z",
           "updatedAt": "2025-09-10T13:57:43.256739Z",
           "isLatest": true
@@ -267,6 +274,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-21T23:53:55.798606Z",
           "publishedAt": "2026-02-21T23:53:55.798606Z",
           "updatedAt": "2026-02-21T23:53:55.798606Z",
           "isLatest": true
@@ -290,6 +298,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-09T15:16:30.60739Z",
           "publishedAt": "2026-02-09T15:16:30.60739Z",
           "updatedAt": "2026-02-09T15:16:30.60739Z",
           "isLatest": true
@@ -323,6 +332,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-06T20:56:39.150934Z",
           "publishedAt": "2026-02-06T20:56:39.150934Z",
           "updatedAt": "2026-02-06T20:56:39.150934Z",
           "isLatest": true
@@ -350,6 +360,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-06T16:52:00.816324Z",
           "publishedAt": "2026-02-06T16:52:00.816324Z",
           "updatedAt": "2026-02-06T16:52:00.816324Z",
           "isLatest": false
@@ -383,6 +394,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-06T17:18:22.957864Z",
           "publishedAt": "2026-02-06T17:18:22.957864Z",
           "updatedAt": "2026-02-06T17:18:22.957864Z",
           "isLatest": true
@@ -413,6 +425,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-12T03:52:52.134106Z",
           "publishedAt": "2026-01-12T03:52:52.134106Z",
           "updatedAt": "2026-01-12T03:52:52.134106Z",
           "isLatest": true
@@ -443,6 +456,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-12T03:52:12.746584Z",
           "publishedAt": "2026-01-12T03:52:12.746584Z",
           "updatedAt": "2026-01-12T03:52:12.746584Z",
           "isLatest": true
@@ -473,6 +487,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-12T03:52:19.009876Z",
           "publishedAt": "2026-01-12T03:52:19.009876Z",
           "updatedAt": "2026-01-12T03:52:19.009876Z",
           "isLatest": true
@@ -496,6 +511,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-03T01:28:17.439049Z",
           "publishedAt": "2026-03-03T01:28:17.439049Z",
           "updatedAt": "2026-03-03T01:28:17.439049Z",
           "isLatest": true
@@ -532,6 +548,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-13T01:53:10.483779Z",
           "publishedAt": "2025-12-13T01:53:10.483779Z",
           "updatedAt": "2025-12-13T01:53:10.483779Z",
           "isLatest": true
@@ -560,6 +577,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-26T19:00:43.930817Z",
           "publishedAt": "2026-02-26T19:00:43.930817Z",
           "updatedAt": "2026-02-26T19:00:43.930817Z",
           "isLatest": true
@@ -588,6 +606,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-26T19:00:44.38512Z",
           "publishedAt": "2026-02-26T19:00:44.38512Z",
           "updatedAt": "2026-02-26T19:00:44.38512Z",
           "isLatest": true
@@ -673,6 +692,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-08T13:19:46.430479Z",
           "publishedAt": "2026-01-08T13:19:46.430479Z",
           "updatedAt": "2026-01-08T13:19:46.430479Z",
           "isLatest": true
@@ -939,6 +959,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-07T00:32:01.41626Z",
           "publishedAt": "2026-01-07T00:32:01.41626Z",
           "updatedAt": "2026-01-07T00:32:01.41626Z",
           "isLatest": true
@@ -1010,6 +1031,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-16T11:08:36.481149Z",
           "publishedAt": "2026-01-16T11:08:36.481149Z",
           "updatedAt": "2026-01-16T11:08:36.481149Z",
           "isLatest": true
@@ -1081,6 +1103,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-19T15:17:12.346134Z",
           "publishedAt": "2026-02-19T15:17:12.346134Z",
           "updatedAt": "2026-02-19T15:17:12.346134Z",
           "isLatest": true
@@ -1160,6 +1183,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-22T02:35:00.021804Z",
           "publishedAt": "2026-01-22T02:35:00.021804Z",
           "updatedAt": "2026-01-22T02:35:00.021804Z",
           "isLatest": true
@@ -1222,6 +1246,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-07T14:13:05.674855Z",
           "publishedAt": "2026-01-07T14:13:05.674855Z",
           "updatedAt": "2026-01-07T14:13:05.674855Z",
           "isLatest": true
@@ -1289,6 +1314,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-10T22:33:54.03436Z",
           "publishedAt": "2026-01-10T22:33:54.03436Z",
           "updatedAt": "2026-01-10T22:33:54.03436Z",
           "isLatest": true
@@ -1368,6 +1394,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-04T12:46:39.858109Z",
           "publishedAt": "2026-02-04T12:46:39.858109Z",
           "updatedAt": "2026-02-04T12:46:39.858109Z",
           "isLatest": true
@@ -1440,6 +1467,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-19T16:39:20.668626Z",
           "publishedAt": "2026-02-19T16:39:20.668626Z",
           "updatedAt": "2026-02-19T16:39:20.668626Z",
           "isLatest": true
@@ -1471,6 +1499,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-27T11:50:11.005967Z",
           "publishedAt": "2026-02-27T11:50:11.005967Z",
           "updatedAt": "2026-02-27T11:50:11.005967Z",
           "isLatest": true
@@ -1497,6 +1526,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-10-30T10:19:26.892476Z",
           "publishedAt": "2025-10-30T10:19:26.892476Z",
           "updatedAt": "2025-10-30T10:19:26.892476Z",
           "isLatest": false
@@ -1523,6 +1553,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-11-07T01:00:19.262705Z",
           "publishedAt": "2025-11-07T01:00:19.262705Z",
           "updatedAt": "2025-11-07T01:00:19.262705Z",
           "isLatest": false
@@ -1549,6 +1580,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-11-20T18:00:55.174988Z",
           "publishedAt": "2025-11-20T18:00:55.174988Z",
           "updatedAt": "2025-11-20T18:00:55.174988Z",
           "isLatest": false
@@ -1575,6 +1607,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-03T16:45:12.14883Z",
           "publishedAt": "2025-12-03T16:45:12.14883Z",
           "updatedAt": "2025-12-03T16:45:12.14883Z",
           "isLatest": false
@@ -1601,6 +1634,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-04T20:59:29.845352Z",
           "publishedAt": "2025-12-04T20:59:29.845352Z",
           "updatedAt": "2025-12-04T20:59:29.845352Z",
           "isLatest": false
@@ -1627,6 +1661,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-05T21:51:53.421065Z",
           "publishedAt": "2025-12-05T21:51:53.421065Z",
           "updatedAt": "2025-12-05T21:51:53.421065Z",
           "isLatest": true
@@ -1650,6 +1685,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-16T21:06:15.352229Z",
           "publishedAt": "2025-09-16T21:06:15.352229Z",
           "updatedAt": "2025-09-16T21:06:15.352229Z",
           "isLatest": false
@@ -1676,6 +1712,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-11-03T13:21:46.054906Z",
           "publishedAt": "2025-11-03T13:21:46.054906Z",
           "updatedAt": "2025-11-03T13:21:46.054906Z",
           "isLatest": true
@@ -1707,6 +1744,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-05T17:07:19.663739Z",
           "publishedAt": "2026-03-05T17:07:19.663739Z",
           "updatedAt": "2026-03-05T17:07:19.663739Z",
           "isLatest": true
@@ -1733,6 +1771,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-24T15:50:15.237565Z",
           "publishedAt": "2026-01-24T15:50:15.237565Z",
           "updatedAt": "2026-01-24T15:50:15.237565Z",
           "isLatest": false
@@ -1759,6 +1798,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-24T02:32:35.476063Z",
           "publishedAt": "2026-01-24T02:32:35.476063Z",
           "updatedAt": "2026-01-24T02:32:35.476063Z",
           "isLatest": false
@@ -1785,6 +1825,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-24T04:06:08.693646Z",
           "publishedAt": "2026-01-24T04:06:08.693646Z",
           "updatedAt": "2026-01-24T04:06:08.693646Z",
           "isLatest": true
@@ -1843,6 +1884,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-16T19:33:48.522184Z",
           "publishedAt": "2026-02-16T19:33:48.522184Z",
           "updatedAt": "2026-02-16T19:33:48.522184Z",
           "isLatest": true
@@ -1866,6 +1908,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-10-14T05:56:54.505554Z",
           "publishedAt": "2025-10-14T05:56:54.505554Z",
           "updatedAt": "2025-10-14T05:56:54.505554Z",
           "isLatest": true
@@ -1907,8 +1950,40 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-06T18:20:42.175634Z",
           "publishedAt": "2026-01-06T18:20:42.175634Z",
           "updatedAt": "2026-01-06T18:20:42.175634Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.imboard/dossier",
+        "description": "MCP server for dossier automation standard - enables LLMs to discover, verify, and execute dossiers",
+        "repository": {
+          "url": "https://github.com/imboard-ai/ai-dossier",
+          "source": "github"
+        },
+        "version": "1.0.4",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@ai-dossier/mcp-server",
+            "version": "1.0.4",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-07T09:20:43.263852Z",
+          "publishedAt": "2026-03-07T09:20:43.263852Z",
+          "updatedAt": "2026-03-07T09:20:43.263852Z",
           "isLatest": true
         }
       }
@@ -1933,6 +2008,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-28T19:13:44.307076Z",
           "publishedAt": "2025-09-28T19:13:44.307076Z",
           "updatedAt": "2025-09-28T19:13:44.307076Z",
           "isLatest": true
@@ -1968,6 +2044,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-09T00:18:46.752966Z",
           "publishedAt": "2025-12-09T00:18:46.752966Z",
           "updatedAt": "2025-12-09T00:18:46.752966Z",
           "isLatest": true
@@ -1999,6 +2076,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-24T13:09:48.187879Z",
           "publishedAt": "2026-02-24T13:09:48.187879Z",
           "updatedAt": "2026-02-24T13:09:48.187879Z",
           "isLatest": false
@@ -2035,6 +2113,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-24T13:42:25.987571Z",
           "publishedAt": "2026-02-24T13:42:25.987571Z",
           "updatedAt": "2026-02-24T13:42:25.987571Z",
           "isLatest": true
@@ -2058,6 +2137,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-21T16:19:36.12182Z",
           "publishedAt": "2026-01-21T16:19:36.12182Z",
           "updatedAt": "2026-01-21T16:19:36.12182Z",
           "isLatest": true
@@ -2177,6 +2257,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-30T17:59:40.034021Z",
           "publishedAt": "2026-01-30T17:59:40.034021Z",
           "updatedAt": "2026-01-30T17:59:40.034021Z",
           "isLatest": true
@@ -2212,6 +2293,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-24T00:30:06.33677Z",
           "publishedAt": "2026-01-24T00:30:06.33677Z",
           "updatedAt": "2026-01-24T00:30:06.33677Z",
           "isLatest": true
@@ -2239,6 +2321,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-04T17:51:36.392611Z",
           "publishedAt": "2026-03-04T17:51:36.392611Z",
           "updatedAt": "2026-03-04T17:51:36.392611Z",
           "isLatest": false
@@ -2275,6 +2358,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-04T18:01:09.660995Z",
           "publishedAt": "2026-03-04T18:01:09.660995Z",
           "updatedAt": "2026-03-04T18:01:09.660995Z",
           "isLatest": false
@@ -2312,6 +2396,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-04T18:25:55.768179Z",
           "publishedAt": "2026-03-04T18:25:55.768179Z",
           "updatedAt": "2026-03-04T18:25:55.768179Z",
           "isLatest": true
@@ -2335,6 +2420,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-17T02:35:06.675809Z",
           "publishedAt": "2025-09-17T02:35:06.675809Z",
           "updatedAt": "2025-09-17T02:38:18.073872Z",
           "isLatest": false
@@ -2358,6 +2444,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-17T02:38:18.067163Z",
           "publishedAt": "2025-09-17T02:38:18.067163Z",
           "updatedAt": "2025-09-17T03:00:38.27521Z",
           "isLatest": false
@@ -2384,6 +2471,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-17T03:00:38.248012Z",
           "publishedAt": "2025-09-17T03:00:38.248012Z",
           "updatedAt": "2025-09-17T03:17:49.632449Z",
           "isLatest": false
@@ -2410,6 +2498,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-17T03:17:49.595346Z",
           "publishedAt": "2025-09-17T03:17:49.595346Z",
           "updatedAt": "2025-09-17T03:17:49.595346Z",
           "isLatest": true
@@ -2441,6 +2530,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-11T01:00:19.713725Z",
           "publishedAt": "2025-09-11T01:00:19.713725Z",
           "updatedAt": "2025-09-11T01:06:15.729223Z",
           "isLatest": false
@@ -2472,6 +2562,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-11T01:06:15.722886Z",
           "publishedAt": "2025-09-11T01:06:15.722886Z",
           "updatedAt": "2025-09-12T01:41:27.484537Z",
           "isLatest": false
@@ -2503,6 +2594,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T05:10:59.806509Z",
           "publishedAt": "2025-09-12T05:10:59.806509Z",
           "updatedAt": "2025-09-18T00:54:49.018201Z",
           "isLatest": false
@@ -2534,6 +2626,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T01:41:27.474865Z",
           "publishedAt": "2025-09-12T01:41:27.474865Z",
           "updatedAt": "2025-09-12T01:50:59.068605Z",
           "isLatest": false
@@ -2565,6 +2658,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T01:50:59.054897Z",
           "publishedAt": "2025-09-12T01:50:59.054897Z",
           "updatedAt": "2025-09-12T01:53:51.978639Z",
           "isLatest": false
@@ -2596,6 +2690,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T01:53:51.972295Z",
           "publishedAt": "2025-09-12T01:53:51.972295Z",
           "updatedAt": "2025-09-12T01:55:40.789432Z",
           "isLatest": false
@@ -2627,6 +2722,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T01:55:40.782814Z",
           "publishedAt": "2025-09-12T01:55:40.782814Z",
           "updatedAt": "2025-09-12T02:03:43.967161Z",
           "isLatest": false
@@ -2658,6 +2754,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T02:03:43.941695Z",
           "publishedAt": "2025-09-12T02:03:43.941695Z",
           "updatedAt": "2025-09-12T04:24:04.029498Z",
           "isLatest": false
@@ -2689,6 +2786,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T04:24:04.024828Z",
           "publishedAt": "2025-09-12T04:24:04.024828Z",
           "updatedAt": "2025-09-12T04:28:40.563658Z",
           "isLatest": false
@@ -2720,6 +2818,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T04:28:40.558477Z",
           "publishedAt": "2025-09-12T04:28:40.558477Z",
           "updatedAt": "2025-09-12T04:48:10.705163Z",
           "isLatest": false
@@ -2751,6 +2850,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-12T04:48:10.687272Z",
           "publishedAt": "2025-09-12T04:48:10.687272Z",
           "updatedAt": "2025-09-12T05:10:59.819864Z",
           "isLatest": false
@@ -2782,6 +2882,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-18T00:54:48.998145Z",
           "publishedAt": "2025-09-18T00:54:48.998145Z",
           "updatedAt": "2025-09-18T00:54:48.998145Z",
           "isLatest": true
@@ -2814,6 +2915,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-07T14:09:42.691681Z",
           "publishedAt": "2026-02-07T14:09:42.691681Z",
           "updatedAt": "2026-02-07T14:09:42.691681Z",
           "isLatest": false
@@ -2846,6 +2948,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-08T08:48:19.364402Z",
           "publishedAt": "2026-02-08T08:48:19.364402Z",
           "updatedAt": "2026-02-08T08:48:19.364402Z",
           "isLatest": true
@@ -2873,6 +2976,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-12T21:01:17.340634Z",
           "publishedAt": "2026-02-12T21:01:17.340634Z",
           "updatedAt": "2026-02-12T21:01:17.340634Z",
           "isLatest": false
@@ -2908,6 +3012,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-12T21:34:42.742193Z",
           "publishedAt": "2026-02-12T21:34:42.742193Z",
           "updatedAt": "2026-02-12T21:34:42.742193Z",
           "isLatest": true
@@ -2938,6 +3043,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-10-12T23:40:10.473855Z",
           "publishedAt": "2025-10-12T23:40:10.473855Z",
           "updatedAt": "2025-10-12T23:40:10.473855Z",
           "isLatest": true
@@ -2961,6 +3067,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-28T02:20:51.640868Z",
           "publishedAt": "2026-01-28T02:20:51.640868Z",
           "updatedAt": "2026-01-28T02:20:51.640868Z",
           "isLatest": true
@@ -3017,6 +3124,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-02T01:36:26.051491Z",
           "publishedAt": "2026-03-02T01:36:26.051491Z",
           "updatedAt": "2026-03-02T01:36:26.051491Z",
           "isLatest": false
@@ -3073,6 +3181,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-02T03:37:46.025768Z",
           "publishedAt": "2026-03-02T03:37:46.025768Z",
           "updatedAt": "2026-03-02T03:37:46.025768Z",
           "isLatest": false
@@ -3129,8 +3238,66 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-07T00:12:17.707082Z",
           "publishedAt": "2026-03-07T00:12:17.707082Z",
           "updatedAt": "2026-03-07T00:12:17.707082Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.obris/mcp",
+        "description": "Stop re-explaining yourself to AI. Save knowledge once, use it in every conversation.",
+        "title": "Obris",
+        "repository": {
+          "url": "https://github.com/obris-dev/obris-mcp",
+          "source": "github"
+        },
+        "version": "0.4.0",
+        "websiteUrl": "https://obris.ai",
+        "icons": [
+          {
+            "src": "https://raw.githubusercontent.com/obris-dev/obris-mcp/main/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "obris-mcp",
+            "version": "0.4.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Your Obris API key from app.obris.ai/api-keys",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "OBRIS_API_KEY"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.obris.ai/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-07T15:43:41.190623Z",
+          "publishedAt": "2026-03-07T15:43:41.190623Z",
+          "updatedAt": "2026-03-07T15:43:41.190623Z",
           "isLatest": true
         }
       }
@@ -3161,6 +3328,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-06T18:04:56.127382Z",
           "publishedAt": "2026-03-06T18:04:56.127382Z",
           "updatedAt": "2026-03-06T18:04:56.127382Z",
           "isLatest": false
@@ -3193,8 +3361,42 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-06T18:08:53.025712Z",
           "publishedAt": "2026-03-06T18:08:53.025712Z",
           "updatedAt": "2026-03-06T18:08:53.025712Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.openmandate/mcp",
+        "description": "MCP server for OpenMandate — post mandates and check matches for cofounders and early teams.",
+        "title": "OpenMandate",
+        "version": "0.3.3",
+        "websiteUrl": "https://openmandate.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.openmandate.ai/mcp",
+            "headers": [
+              {
+                "description": "API key in Bearer format: Bearer om_live_... — get one at https://openmandate.ai/api-keys",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-07T08:39:19.54151Z",
+          "publishedAt": "2026-03-07T08:39:19.54151Z",
+          "updatedAt": "2026-03-07T08:39:19.54151Z",
           "isLatest": true
         }
       }
@@ -3227,6 +3429,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-11-24T15:23:52.365339Z",
           "publishedAt": "2025-11-24T15:23:52.365339Z",
           "updatedAt": "2025-11-24T15:23:52.365339Z",
           "isLatest": true
@@ -3313,6 +3516,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-09T11:15:39.72942Z",
           "publishedAt": "2026-01-09T11:15:39.72942Z",
           "updatedAt": "2026-01-09T11:15:39.72942Z",
           "isLatest": true
@@ -3399,6 +3603,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-01-09T11:11:31.316037Z",
           "publishedAt": "2026-01-09T11:11:31.316037Z",
           "updatedAt": "2026-01-09T11:11:31.316037Z",
           "isLatest": true
@@ -3426,6 +3631,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-16T14:36:53.575623Z",
           "publishedAt": "2026-02-16T14:36:53.575623Z",
           "updatedAt": "2026-02-16T14:36:53.575623Z",
           "isLatest": false
@@ -3453,8 +3659,36 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-26T16:54:58.427121Z",
           "publishedAt": "2026-02-26T16:54:58.427121Z",
           "updatedAt": "2026-02-26T16:54:58.427121Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.pictomancer/image-processing",
+        "description": "Image processing for AI agents. Resize, convert, compress, and pipeline images.",
+        "repository": {
+          "url": "https://gitlab.com/pictomancer.ai/pig-gateway",
+          "source": "gitlab"
+        },
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.pictomancer.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-07T22:28:43.413285Z",
+          "publishedAt": "2026-03-07T22:28:43.413285Z",
+          "updatedAt": "2026-03-07T22:28:43.413285Z",
           "isLatest": true
         }
       }
@@ -3499,6 +3733,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-04T21:01:15.992017Z",
           "publishedAt": "2026-03-04T21:01:15.992017Z",
           "updatedAt": "2026-03-04T21:01:15.992017Z",
           "isLatest": true
@@ -3531,6 +3766,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-09T18:54:17.964435Z",
           "publishedAt": "2026-02-09T18:54:17.964435Z",
           "updatedAt": "2026-02-09T18:54:17.964435Z",
           "isLatest": true
@@ -3576,6 +3812,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-04T15:12:44.271447Z",
           "publishedAt": "2026-03-04T15:12:44.271447Z",
           "updatedAt": "2026-03-04T15:12:44.271447Z",
           "isLatest": false
@@ -3620,6 +3857,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-05T15:19:24.872701Z",
           "publishedAt": "2026-03-05T15:19:24.872701Z",
           "updatedAt": "2026-03-05T15:19:24.872701Z",
           "isLatest": false
@@ -3664,6 +3902,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-03-05T19:20:37.473267Z",
           "publishedAt": "2026-03-05T19:20:37.473267Z",
           "updatedAt": "2026-03-05T19:20:37.473267Z",
           "isLatest": true
@@ -3688,6 +3927,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2026-02-27T19:54:43.430271Z",
           "publishedAt": "2026-02-27T19:54:43.430271Z",
           "updatedAt": "2026-02-27T19:54:43.430271Z",
           "isLatest": true
@@ -3719,6 +3959,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-12-05T09:24:21.447908Z",
           "publishedAt": "2025-12-05T09:24:21.447908Z",
           "updatedAt": "2025-12-05T09:24:21.447908Z",
           "isLatest": true
@@ -3766,6 +4007,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-09T10:36:46.54185Z",
           "publishedAt": "2025-09-09T10:36:46.54185Z",
           "updatedAt": "2025-09-14T02:22:00.597355Z",
           "isLatest": false
@@ -3819,6 +4061,7 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-14T02:22:00.475571Z",
           "publishedAt": "2025-09-14T02:22:00.475571Z",
           "updatedAt": "2025-09-16T22:54:28.465114Z",
           "isLatest": false
@@ -3872,100 +4115,9 @@
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
+          "statusChangedAt": "2025-09-16T22:54:28.454307Z",
           "publishedAt": "2025-09-16T22:54:28.454307Z",
           "updatedAt": "2025-09-16T22:54:28.454307Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.shawndurrani/mcp-registry",
-        "description": "Search the public MCP Registry; discover servers and copy SSE URLs.",
-        "repository": {},
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "sse",
-            "url": "https://mcp-registry.shawndurrani.ai/sse"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-15T03:11:16.637454Z",
-          "updatedAt": "2025-09-15T04:01:11.068068Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.shawndurrani/mcp-registry",
-        "description": "Search the public MCP Registry; discover servers and copy SSE URLs.",
-        "repository": {},
-        "version": "0.1.1",
-        "remotes": [
-          {
-            "type": "sse",
-            "url": "https://mcp-registry.shawndurrani.ai/sse"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-15T04:01:11.057921Z",
-          "updatedAt": "2025-09-15T04:20:53.740529Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.shawndurrani/mcp-registry",
-        "description": "Search the public MCP Registry; discover servers and copy SSE URLs.",
-        "repository": {},
-        "version": "0.1.2",
-        "remotes": [
-          {
-            "type": "sse",
-            "url": "https://mcp-registry.shawndurrani.ai/sse"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-15T04:20:53.726246Z",
-          "updatedAt": "2025-09-16T23:02:09.747666Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.shawndurrani/mcp-registry",
-        "description": "Search the public MCP Registry; discover servers and copy SSE URLs.",
-        "repository": {},
-        "version": "0.1.3",
-        "remotes": [
-          {
-            "type": "sse",
-            "url": "https://mcp-registry.shawndurrani.ai/sse"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "publishedAt": "2025-09-16T23:02:09.738662Z",
-          "updatedAt": "2025-09-16T23:02:09.738662Z",
           "isLatest": true
         }
       }
