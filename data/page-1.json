@@ -4000,6 +4000,51 @@
           "statusChangedAt": "2026-03-05T19:20:37.473267Z",
           "publishedAt": "2026-03-05T19:20:37.473267Z",
           "updatedAt": "2026-03-05T19:20:37.473267Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.rolli/mcp",
+        "description": "Social media search and analytics across X, Reddit, Bluesky, YouTube, and more",
+        "repository": {
+          "url": "https://github.com/rolliinc/rolli-mcp",
+          "source": "github"
+        },
+        "version": "1.1.7",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@rolli/mcp",
+            "version": "1.1.7",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Rolli API token (purchase at rolli.ai)",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "ROLLI_API_TOKEN"
+              },
+              {
+                "description": "Rolli user ID (optional, defaults to \"rolli-mcp\")",
+                "format": "string",
+                "name": "ROLLI_USER_ID"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-13T12:54:13.259425Z",
+          "publishedAt": "2026-03-13T12:54:13.259425Z",
+          "updatedAt": "2026-03-13T12:54:13.259425Z",
           "isLatest": true
         }
       }
@@ -4025,38 +4070,6 @@
           "statusChangedAt": "2026-02-27T19:54:43.430271Z",
           "publishedAt": "2026-02-27T19:54:43.430271Z",
           "updatedAt": "2026-02-27T19:54:43.430271Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.seltz/seltz-ai-seltz-mcp",
-        "description": "Provides AI assistants with access to Seltz's powerful Web Search capabilities.\n",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.seltz.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Smithery authentication",
-                "isRequired": true,
-                "value": "Bearer {smithery_api_key}",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-12-05T09:24:21.447908Z",
-          "publishedAt": "2025-12-05T09:24:21.447908Z",
-          "updatedAt": "2025-12-05T09:24:21.447908Z",
           "isLatest": true
         }
       }
