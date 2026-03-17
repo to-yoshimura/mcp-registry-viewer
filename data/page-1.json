@@ -1502,6 +1502,63 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.cookiy/cookiy",
+        "description": "AI user research through MCP: studies, AI interviews, recruitment, and insight reports.",
+        "title": "Cookiy",
+        "repository": {
+          "url": "https://github.com/cookiy-ai/cookiy-code",
+          "source": "github"
+        },
+        "version": "1.7.5",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://s-api.cookiy.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-16T06:35:23.176865Z",
+          "publishedAt": "2026-03-16T06:35:23.176865Z",
+          "updatedAt": "2026-03-16T06:35:23.176865Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.cookiy/cookiy",
+        "description": "AI user research via study creation, interviews, recruitment, and reports.",
+        "title": "Cookiy",
+        "repository": {
+          "url": "https://github.com/cookiy-ai/cookiy-skill",
+          "source": "github"
+        },
+        "version": "1.7.6",
+        "websiteUrl": "https://cookiy.ai/developer-portal",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://s-api.cookiy.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-16T07:55:00.478875Z",
+          "publishedAt": "2026-03-16T07:55:00.478875Z",
+          "updatedAt": "2026-03-16T07:55:00.478875Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.datamerge/mcp",
         "description": "B2B data enrichment for 375M+ companies: legal entities, corporate hierarchies, and contacts.",
         "title": "DataMerge MCP",
@@ -2011,6 +2068,56 @@
           "statusChangedAt": "2026-01-06T18:20:42.175634Z",
           "publishedAt": "2026-01-06T18:20:42.175634Z",
           "updatedAt": "2026-01-06T18:20:42.175634Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.i18nagent/i18n-agent",
+        "description": "AI-powered translation for 48 languages with context-aware quality",
+        "title": "i18n-agent",
+        "repository": {
+          "url": "https://github.com/i18n-agent/mcp-client",
+          "source": "github"
+        },
+        "version": "1.16.3",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@i18n-agent/mcp-client",
+            "version": "1.16.3",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "API key from app.i18nagent.ai",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "I18N_AGENT_API_KEY"
+              },
+              {
+                "description": "MCP server URL",
+                "name": "MCP_SERVER_URL"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.i18nagent.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-16T10:02:49.134686Z",
+          "publishedAt": "2026-03-16T10:02:49.134686Z",
+          "updatedAt": "2026-03-16T10:02:49.134686Z",
           "isLatest": true
         }
       }
@@ -3005,6 +3112,130 @@
           "statusChangedAt": "2026-03-16T03:25:50.203637Z",
           "publishedAt": "2026-03-16T03:25:50.203637Z",
           "updatedAt": "2026-03-16T03:25:50.203637Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.mcpcap/mcpcap",
+        "description": "An MCP server for analyzing PCAP files.",
+        "repository": {
+          "url": "https://github.com/mcpcap/mcpcap",
+          "source": "github"
+        },
+        "version": "0.8.0",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcpcap",
+            "version": "0.8.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-16T23:47:24.291929Z",
+          "publishedAt": "2026-03-16T23:47:24.291929Z",
+          "updatedAt": "2026-03-16T23:47:24.291929Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.mcpcap/mcpcap",
+        "description": "An MCP server for analyzing PCAP files.",
+        "repository": {
+          "url": "https://github.com/mcpcap/mcpcap",
+          "source": "github"
+        },
+        "version": "0.9.0",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcpcap",
+            "version": "0.9.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T00:58:25.919539Z",
+          "publishedAt": "2026-03-17T00:58:25.919539Z",
+          "updatedAt": "2026-03-17T00:58:25.919539Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.mcpcap/mcpcap",
+        "description": "An MCP server for analyzing PCAP files.",
+        "repository": {
+          "url": "https://github.com/mcpcap/mcpcap",
+          "source": "github"
+        },
+        "version": "0.9.1",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcpcap",
+            "version": "0.9.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T01:24:33.242366Z",
+          "publishedAt": "2026-03-17T01:24:33.242366Z",
+          "updatedAt": "2026-03-17T01:24:33.242366Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.mcpcap/mcpcap",
+        "description": "An MCP server for analyzing PCAP files.",
+        "repository": {
+          "url": "https://github.com/mcpcap/mcpcap",
+          "source": "github"
+        },
+        "version": "0.9.2",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcpcap",
+            "version": "0.9.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T03:06:15.506141Z",
+          "publishedAt": "2026-03-17T03:06:15.506141Z",
+          "updatedAt": "2026-03-17T03:06:15.506141Z",
           "isLatest": true
         }
       }
@@ -3793,252 +4024,6 @@
           "publishedAt": "2026-01-09T11:11:31.316037Z",
           "updatedAt": "2026-01-09T11:11:31.316037Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.perplexity/mcp-server",
-        "description": "Real-time web search, reasoning, and research through Perplexity's API",
-        "title": "Perplexity API Platform",
-        "version": "0.8.2",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@perplexity-ai/mcp-server",
-            "version": "0.8.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-16T14:36:53.575623Z",
-          "publishedAt": "2026-02-16T14:36:53.575623Z",
-          "updatedAt": "2026-02-16T14:36:53.575623Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.perplexity/mcp-server",
-        "description": "Real-time web search, reasoning, and research through Perplexity's API",
-        "title": "Perplexity API Platform",
-        "version": "0.8.3",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@perplexity-ai/mcp-server",
-            "version": "0.8.3",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-26T16:54:58.427121Z",
-          "publishedAt": "2026-02-26T16:54:58.427121Z",
-          "updatedAt": "2026-02-26T16:54:58.427121Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.pictomancer/image-processing",
-        "description": "Image processing for AI agents. Resize, convert, compress, and pipeline images.",
-        "repository": {
-          "url": "https://gitlab.com/pictomancer.ai/pig-gateway",
-          "source": "gitlab"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.pictomancer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-07T22:28:43.413285Z",
-          "publishedAt": "2026-03-07T22:28:43.413285Z",
-          "updatedAt": "2026-03-07T22:28:43.413285Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ponlo/server",
-        "description": "Family calendar, tasks, meals, lists & rewards hub for AI assistants.",
-        "repository": {
-          "url": "https://github.com/ClaudioGodoyB/ponlo-ai",
-          "source": "github",
-          "subfolder": "mcp-server"
-        },
-        "version": "1.13.2",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "ponlo-ai",
-            "version": "1.13.2",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Your Ponlo.ai API URL (e.g., https://ponlo.ai)",
-                "isRequired": true,
-                "format": "string",
-                "name": "PONLO_API_URL"
-              },
-              {
-                "description": "Your Ponlo.ai API key (get it from Settings > API Keys)",
-                "isRequired": true,
-                "format": "string",
-                "isSecret": true,
-                "name": "PONLO_API_KEY"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-04T21:01:15.992017Z",
-          "publishedAt": "2026-03-04T21:01:15.992017Z",
-          "updatedAt": "2026-03-04T21:01:15.992017Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.preclick/preclick-mcp",
-        "description": "PreClick scans links for threats and confirms intent match with high accuracy before agents click.",
-        "title": "PreClick — An MCP-native URL preflight scanning service for autonomous agents.",
-        "repository": {
-          "url": "https://github.com/cybrlab-ai/preclick-mcp",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "websiteUrl": "https://preclick.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://preclick.ai/mcp",
-            "headers": [
-              {
-                "description": "Optional for hosted trial access (up to 100 requests/day). Required for higher limits.",
-                "isSecret": true,
-                "placeholder": "<your-api-key>",
-                "name": "X-API-Key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-10T13:08:25.0298Z",
-          "publishedAt": "2026-03-10T13:08:25.0298Z",
-          "updatedAt": "2026-03-10T13:08:25.0298Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.rapay/mcp-server",
-        "description": "Send fiat payments via MCP with two-step confirmation and Stripe Connect.",
-        "title": "Ra Pay",
-        "repository": {
-          "url": "https://github.com/Ra-Pay-AI/rapay",
-          "source": "github"
-        },
-        "version": "1.2.5",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@rapay/mcp-server",
-            "version": "1.2.5",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-09T18:54:17.964435Z",
-          "publishedAt": "2026-02-09T18:54:17.964435Z",
-          "updatedAt": "2026-02-09T18:54:17.964435Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.rolli/mcp",
-        "description": "Social media search and analytics across X, Reddit, Bluesky, YouTube, and more",
-        "repository": {
-          "url": "https://github.com/rolliinc/rolli-mcp",
-          "source": "github"
-        },
-        "version": "1.1.4",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@rolli/mcp",
-            "version": "1.1.4",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Rolli API token (purchase at rolli.ai)",
-                "isRequired": true,
-                "format": "string",
-                "isSecret": true,
-                "name": "ROLLI_API_TOKEN"
-              },
-              {
-                "description": "Rolli user ID",
-                "isRequired": true,
-                "format": "string",
-                "name": "ROLLI_USER_ID"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-04T15:12:44.271447Z",
-          "publishedAt": "2026-03-04T15:12:44.271447Z",
-          "updatedAt": "2026-03-04T15:12:44.271447Z",
-          "isLatest": false
         }
       }
     }
