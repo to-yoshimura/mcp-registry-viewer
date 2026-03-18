@@ -1552,6 +1552,64 @@
           "statusChangedAt": "2026-03-16T07:55:00.478875Z",
           "publishedAt": "2026-03-16T07:55:00.478875Z",
           "updatedAt": "2026-03-16T07:55:00.478875Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.cookiy/cookiy",
+        "description": "AI user research via study creation, interviews, recruitment, and reports.",
+        "title": "Cookiy",
+        "repository": {
+          "url": "https://github.com/cookiy-ai/cookiy-skill",
+          "source": "github"
+        },
+        "version": "1.7.7",
+        "websiteUrl": "https://cookiy.ai/developer-portal",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://s-api.cookiy.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T05:57:16.698006Z",
+          "publishedAt": "2026-03-17T05:57:16.698006Z",
+          "updatedAt": "2026-03-17T05:57:16.698006Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.cookiy/cookiy",
+        "description": "AI user research via study creation, interviews, recruitment, and reports.",
+        "title": "Cookiy",
+        "repository": {
+          "url": "https://github.com/cookiy-ai/cookiy-skill",
+          "source": "github"
+        },
+        "version": "1.7.9",
+        "websiteUrl": "https://cookiy.ai/developer-portal",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://s-api.cookiy.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T07:38:08.143522Z",
+          "publishedAt": "2026-03-17T07:38:08.143522Z",
+          "updatedAt": "2026-03-17T07:38:08.143522Z",
           "isLatest": true
         }
       }
@@ -3236,6 +3294,37 @@
           "statusChangedAt": "2026-03-17T03:06:15.506141Z",
           "publishedAt": "2026-03-17T03:06:15.506141Z",
           "updatedAt": "2026-03-17T03:06:15.506141Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.mcpcap/mcpcap",
+        "description": "An MCP server for analyzing PCAP files.",
+        "repository": {
+          "url": "https://github.com/mcpcap/mcpcap",
+          "source": "github"
+        },
+        "version": "0.9.6",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcpcap",
+            "version": "0.9.6",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-17T05:29:03.951926Z",
+          "publishedAt": "2026-03-17T05:29:03.951926Z",
+          "updatedAt": "2026-03-17T05:29:03.951926Z",
           "isLatest": true
         }
       }
@@ -3814,215 +3903,6 @@
           "statusChangedAt": "2026-03-15T19:44:56.410124Z",
           "publishedAt": "2026-03-15T19:44:56.410124Z",
           "updatedAt": "2026-03-15T19:44:56.410124Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.packmind/mcp-server",
-        "description": "Packmind captures, scales, and enforces your organization's technical decisions.",
-        "repository": {
-          "url": "https://github.com/PackmindHub/packmind",
-          "source": "github",
-          "subfolder": "apps/mcp-server"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.packmind.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for Packmind authentication",
-                "value": "Bearer {packmind_mcp_token}",
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-11-24T15:23:52.365339Z",
-          "publishedAt": "2025-11-24T15:23:52.365339Z",
-          "updatedAt": "2025-11-24T15:23:52.365339Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.parallel/search-mcp",
-        "description": "The best web search for your AI Agent",
-        "title": "Parallel Search MCP",
-        "repository": {
-          "url": "https://github.com/parallel-web/search-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://parallel.ai",
-        "icons": [
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-270.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "270x270"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-520.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "520x520"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-1080.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "1080x1080"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-1080.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-270.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "270x270"
-            ],
-            "theme": "light"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-540.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "540x540"
-            ],
-            "theme": "light"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-1080.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ],
-            "theme": "light"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://search-mcp.parallel.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-09T11:15:39.72942Z",
-          "publishedAt": "2026-01-09T11:15:39.72942Z",
-          "updatedAt": "2026-01-09T11:15:39.72942Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.parallel/task-mcp",
-        "description": "An MCP server for deep research or task groups",
-        "title": "Parallel Task MCP",
-        "repository": {
-          "url": "https://github.com/parallel-web/task-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://parallel.ai",
-        "icons": [
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-270.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "270x270"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-520.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "520x520"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-1080.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "1080x1080"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/white-parallel-symbol-1080.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ],
-            "theme": "dark"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-270.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "270x270"
-            ],
-            "theme": "light"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-540.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "540x540"
-            ],
-            "theme": "light"
-          },
-          {
-            "src": "https://assets.p0web.com/dark-parallel-symbol-1080.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ],
-            "theme": "light"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://task-mcp.parallel.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-09T11:11:31.316037Z",
-          "publishedAt": "2026-01-09T11:11:31.316037Z",
-          "updatedAt": "2026-01-09T11:11:31.316037Z",
           "isLatest": true
         }
       }
