@@ -268,6 +268,30 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+        "name": "ai.agentrapay/agentra",
+        "description": "Identity oracle and trust layer for autonomous AI agents. Bidirectional KYA and trust scoring.",
+        "repository": {},
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "sse",
+            "url": "https://api.agentrapay.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-22T18:16:07.628131Z",
+          "publishedAt": "2026-03-22T18:16:07.628131Z",
+          "updatedAt": "2026-03-22T18:16:07.628131Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.agenttrust/mcp-server",
         "description": "Identity, trust, and A2A orchestration for autonomous AI agents. Official A2A partner.",
@@ -3745,30 +3769,6 @@
           "statusChangedAt": "2025-10-12T23:40:10.473855Z",
           "publishedAt": "2025-10-12T23:40:10.473855Z",
           "updatedAt": "2025-10-12T23:40:10.473855Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.mino/web-agent",
-        "description": "AI-powered web automation. Navigate websites using AI agents for one page or a thousand",
-        "title": "TinyFish AI Web Agent",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mino.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-28T02:20:51.640868Z",
-          "publishedAt": "2026-01-28T02:20:51.640868Z",
-          "updatedAt": "2026-01-28T02:20:51.640868Z",
           "isLatest": true
         }
       }
