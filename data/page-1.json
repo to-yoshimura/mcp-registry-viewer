@@ -1834,6 +1834,35 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.deepledger/mcp",
+        "description": "AI bookkeeping for QuickBooks Online — 28 tools for transactions, reports, and bank feeds",
+        "title": "DeepLedger — AI Bookkeeper for QuickBooks",
+        "repository": {
+          "url": "https://github.com/naga-deepledger/deepledger-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://deepledger.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.deepledger.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-31T05:36:01.533546Z",
+          "publishedAt": "2026-03-31T05:36:01.533546Z",
+          "updatedAt": "2026-03-31T05:36:01.533546Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.exa/exa",
         "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
@@ -2421,6 +2450,87 @@
           "statusChangedAt": "2026-03-07T09:20:43.263852Z",
           "publishedAt": "2026-03-07T09:20:43.263852Z",
           "updatedAt": "2026-03-07T09:20:43.263852Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.inflowpay.app/inflow",
+        "description": "Inflow MCP Server",
+        "repository": {
+          "url": "https://github.com/inflowpay/inflow",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.inflowpay.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-31T06:18:04.101329Z",
+          "publishedAt": "2026-03-31T06:18:04.101329Z",
+          "updatedAt": "2026-03-31T06:18:04.101329Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.inflowpay.app/inflow",
+        "description": "MCP Server for agents to onboard, pay, and provision services autonomously",
+        "repository": {
+          "url": "https://github.com/inflowpay/inflow",
+          "source": "github"
+        },
+        "version": "1.0.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.inflowpay.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-31T07:47:45.171487Z",
+          "publishedAt": "2026-03-31T07:47:45.171487Z",
+          "updatedAt": "2026-03-31T07:47:45.171487Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.inflowpay.app/inflow",
+        "description": "MCP Server for agents to onboard, pay, and provision services autonomously with InFlow",
+        "repository": {
+          "url": "https://github.com/inflowpay/inflow",
+          "source": "github"
+        },
+        "version": "1.0.2",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.inflowpay.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-03-31T09:58:09.190687Z",
+          "publishedAt": "2026-03-31T09:58:09.190687Z",
+          "updatedAt": "2026-03-31T09:58:09.190687Z",
           "isLatest": true
         }
       }
@@ -3634,132 +3744,6 @@
           "statusChangedAt": "2026-03-17T00:58:25.919539Z",
           "publishedAt": "2026-03-17T00:58:25.919539Z",
           "updatedAt": "2026-03-17T00:58:25.919539Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.mcpcap/mcpcap",
-        "description": "An MCP server for analyzing PCAP files.",
-        "repository": {
-          "url": "https://github.com/mcpcap/mcpcap",
-          "source": "github"
-        },
-        "version": "0.9.1",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "mcpcap",
-            "version": "0.9.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-17T01:24:33.242366Z",
-          "publishedAt": "2026-03-17T01:24:33.242366Z",
-          "updatedAt": "2026-03-17T01:24:33.242366Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.mcpcap/mcpcap",
-        "description": "An MCP server for analyzing PCAP files.",
-        "repository": {
-          "url": "https://github.com/mcpcap/mcpcap",
-          "source": "github"
-        },
-        "version": "0.9.2",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "mcpcap",
-            "version": "0.9.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-17T03:06:15.506141Z",
-          "publishedAt": "2026-03-17T03:06:15.506141Z",
-          "updatedAt": "2026-03-17T03:06:15.506141Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.mcpcap/mcpcap",
-        "description": "An MCP server for analyzing PCAP files.",
-        "repository": {
-          "url": "https://github.com/mcpcap/mcpcap",
-          "source": "github"
-        },
-        "version": "0.9.6",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "mcpcap",
-            "version": "0.9.6",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-17T05:29:03.951926Z",
-          "publishedAt": "2026-03-17T05:29:03.951926Z",
-          "updatedAt": "2026-03-17T05:29:03.951926Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.meetlark/mcp-server",
-        "description": "Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times.",
-        "version": "1.0.2",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@meetlark/mcp-server",
-            "version": "1.0.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://meetlark.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-07T14:09:42.691681Z",
-          "publishedAt": "2026-02-07T14:09:42.691681Z",
-          "updatedAt": "2026-02-07T14:09:42.691681Z",
           "isLatest": false
         }
       }
