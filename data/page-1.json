@@ -2032,6 +2032,31 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.donethat/donethat",
+        "description": "Privacy-first work tracking with summaries, reports, coaching, and AI-ready long-term memory.",
+        "title": "DoneThat",
+        "version": "1.0.0",
+        "websiteUrl": "https://donethat.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.donethat.ai/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-08T10:14:41.080859Z",
+          "publishedAt": "2026-04-08T10:14:41.080859Z",
+          "updatedAt": "2026-04-08T10:14:41.080859Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.exa/exa",
         "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
@@ -2786,6 +2811,107 @@
           "statusChangedAt": "2026-04-06T06:05:56.31214Z",
           "publishedAt": "2026-04-06T06:05:56.31214Z",
           "updatedAt": "2026-04-06T06:05:56.31214Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.haymon/database",
+        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
+        "repository": {
+          "url": "https://github.com/haymon-ai/database",
+          "source": "github"
+        },
+        "version": "0.6.0",
+        "websiteUrl": "https://database.haymon.ai",
+        "packages": [
+          {
+            "registryType": "oci",
+            "identifier": "ghcr.io/haymon-ai/database:0.6.0",
+            "runtimeHint": "docker",
+            "transport": {
+              "type": "stdio"
+            },
+            "packageArguments": [
+              {
+                "description": "Start in stdio transport mode (default)",
+                "value": "stdio",
+                "type": "positional"
+              }
+            ]
+          },
+          {
+            "registryType": "oci",
+            "identifier": "ghcr.io/haymon-ai/database:0.6.0",
+            "runtimeHint": "docker",
+            "transport": {
+              "type": "streamable-http",
+              "url": "http://{--host}:{--port}/mcp"
+            },
+            "packageArguments": [
+              {
+                "description": "Start in HTTP transport mode",
+                "isRequired": true,
+                "value": "http",
+                "type": "positional"
+              },
+              {
+                "description": "HTTP bind host",
+                "default": "127.0.0.1",
+                "type": "named",
+                "name": "--host"
+              },
+              {
+                "description": "HTTP bind port",
+                "default": "9001",
+                "type": "named",
+                "name": "--port"
+              },
+              {
+                "description": "Allowed CORS origins (comma-separated)",
+                "type": "named",
+                "name": "--allowed-origins",
+                "isRepeated": true
+              },
+              {
+                "description": "Allowed host names (comma-separated)",
+                "type": "named",
+                "name": "--allowed-hosts",
+                "isRepeated": true
+              }
+            ],
+            "environmentVariables": [
+              {
+                "description": "HTTP bind host",
+                "default": "127.0.0.1",
+                "name": "HTTP_HOST"
+              },
+              {
+                "description": "HTTP bind port",
+                "format": "number",
+                "default": "9001",
+                "name": "HTTP_PORT"
+              },
+              {
+                "description": "Allowed CORS origins (comma-separated)",
+                "name": "HTTP_ALLOWED_ORIGINS"
+              },
+              {
+                "description": "Allowed host names (comma-separated)",
+                "name": "HTTP_ALLOWED_HOSTS"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-08T14:40:55.456277Z",
+          "publishedAt": "2026-04-08T14:40:55.456277Z",
+          "updatedAt": "2026-04-08T14:40:55.456277Z",
           "isLatest": true
         }
       }
@@ -3776,70 +3902,6 @@
           "statusChangedAt": "2025-09-12T05:10:59.806509Z",
           "publishedAt": "2025-09-12T05:10:59.806509Z",
           "updatedAt": "2025-09-18T00:54:49.018201Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.mcpcap/mcpcap",
-        "description": "An MCP server for analyzing PCAP files.",
-        "repository": {
-          "url": "https://github.com/mcpcap/mcpcap",
-          "source": "github"
-        },
-        "version": "0.5.2",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "registryBaseUrl": "https://pypi.org",
-            "identifier": "mcpcap",
-            "version": "0.4.4",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-09-12T01:41:27.474865Z",
-          "publishedAt": "2025-09-12T01:41:27.474865Z",
-          "updatedAt": "2025-09-12T01:50:59.068605Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.mcpcap/mcpcap",
-        "description": "An MCP server for analyzing PCAP files.",
-        "repository": {
-          "url": "https://github.com/mcpcap/mcpcap",
-          "source": "github"
-        },
-        "version": "0.5.3",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "registryBaseUrl": "https://pypi.org",
-            "identifier": "mcpcap",
-            "version": "0.4.4",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-09-12T01:50:59.054897Z",
-          "publishedAt": "2025-09-12T01:50:59.054897Z",
-          "updatedAt": "2025-09-12T01:53:51.978639Z",
           "isLatest": false
         }
       }
