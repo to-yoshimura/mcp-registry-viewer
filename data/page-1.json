@@ -3,6 +3,62 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ac.inference.sh/mcp",
+        "description": "Run 150+ AI apps — image, video, audio, LLMs, 3D and more. Browse, execute, stream results.",
+        "title": "inference.sh",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://sh.inference.ac"
+          },
+          {
+            "type": "streamable-http",
+            "url": "https://api.inference.sh/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-13T17:32:20.852269Z",
+          "publishedAt": "2026-04-13T17:32:20.852269Z",
+          "updatedAt": "2026-04-13T17:32:20.852269Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ac.inference.sh/mcp",
+        "description": "Run 150+ AI apps — image, video, audio, LLMs, 3D and more. Browse, execute, stream results.",
+        "title": "inference.sh",
+        "version": "1.0.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://sh.inference.ac"
+          },
+          {
+            "type": "streamable-http",
+            "url": "https://api.inference.sh/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-13T17:33:26.613537Z",
+          "publishedAt": "2026-04-13T17:33:26.613537Z",
+          "updatedAt": "2026-04-13T17:33:26.613537Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ac.tandem/docs-mcp",
         "description": "Remote MCP server for Tandem docs, install guides, SDKs, workflows, and agent setup help.",
         "repository": {
@@ -842,6 +898,38 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bluenexus/universal-mcp",
+        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
+        "title": "BlueNexus Universal MCP",
+        "version": "0.13.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bluenexus.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token for authentication (e.g. 'Bearer <ACCESS_TOKEN>')",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-13T11:45:12.186696Z",
+          "publishedAt": "2026-04-13T11:45:12.186696Z",
+          "updatedAt": "2026-04-13T11:45:12.186696Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.borealhost/mcp",
         "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
         "title": "BorealHost",
@@ -977,6 +1065,53 @@
           "statusChangedAt": "2026-04-13T01:16:56.635249Z",
           "publishedAt": "2026-04-13T01:16:56.635249Z",
           "updatedAt": "2026-04-13T01:16:56.635249Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.borealhost/mcp",
+        "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
+        "title": "BorealHost",
+        "repository": {
+          "url": "https://github.com/alainsvrd/borealhost-mcp",
+          "source": "github"
+        },
+        "version": "0.1.4",
+        "websiteUrl": "https://borealhost.ai",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "borealhost-mcp",
+            "version": "0.1.4",
+            "runtimeHint": "uvx",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "BorealHost API key (format: bh_<48 hex chars>). Optional — you can also call register() or set_api_key() at runtime.",
+                "isSecret": true,
+                "name": "BOREALHOST_API_KEY"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://borealhost.ai/mcp/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-14T03:40:09.037984Z",
+          "publishedAt": "2026-04-14T03:40:09.037984Z",
+          "updatedAt": "2026-04-14T03:40:09.037984Z",
           "isLatest": true
         }
       }
@@ -3985,129 +4120,6 @@
           "statusChangedAt": "2026-03-04T17:51:36.392611Z",
           "publishedAt": "2026-03-04T17:51:36.392611Z",
           "updatedAt": "2026-03-04T17:51:36.392611Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.marketcore/mcp",
-        "description": "Create on-brand marketing deliverables and GTM docs with AI-powered blueprints and brand guidelines.",
-        "title": "MarketCore MCP Server",
-        "version": "1.0.1",
-        "icons": [
-          {
-            "src": "https://mcp.marketcore.ai/favicon.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.marketcore.ai/"
-          },
-          {
-            "type": "sse",
-            "url": "https://mcp.marketcore.ai/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-04T18:01:09.660995Z",
-          "publishedAt": "2026-03-04T18:01:09.660995Z",
-          "updatedAt": "2026-03-04T18:01:09.660995Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.marketcore/mcp",
-        "description": "Create on-brand marketing deliverables and GTM docs with AI-powered blueprints and brand guidelines.",
-        "title": "MarketCore",
-        "version": "1.0.2",
-        "websiteUrl": "https://marketcore.ai",
-        "icons": [
-          {
-            "src": "https://mcp.marketcore.ai/favicon.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.marketcore.ai/"
-          },
-          {
-            "type": "sse",
-            "url": "https://mcp.marketcore.ai/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-04T18:25:55.768179Z",
-          "publishedAt": "2026-03-04T18:25:55.768179Z",
-          "updatedAt": "2026-03-04T18:25:55.768179Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.mcpanalytics/analytics",
-        "description": "ML statistical analysis platform for data teams",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.mcpanalytics.ai/auth0"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-09-17T02:35:06.675809Z",
-          "publishedAt": "2025-09-17T02:35:06.675809Z",
-          "updatedAt": "2025-09-17T02:38:18.073872Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.mcpanalytics/analytics",
-        "description": "MCP Analytics, searchable tools and reports with interactive HTML visualization",
-        "repository": {},
-        "version": "1.0.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.mcpanalytics.ai/auth0"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-09-17T02:38:18.067163Z",
-          "publishedAt": "2025-09-17T02:38:18.067163Z",
-          "updatedAt": "2025-09-17T03:00:38.27521Z",
           "isLatest": false
         }
       }
