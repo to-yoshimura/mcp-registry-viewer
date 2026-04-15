@@ -923,6 +923,30 @@
           "statusChangedAt": "2026-04-13T11:45:12.186696Z",
           "publishedAt": "2026-04-13T11:45:12.186696Z",
           "updatedAt": "2026-04-13T11:45:12.186696Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bluenexus/universal-mcp",
+        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
+        "title": "BlueNexus Universal MCP",
+        "version": "0.13.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bluenexus.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-15T04:56:26.990295Z",
+          "publishedAt": "2026-04-15T04:56:26.990295Z",
+          "updatedAt": "2026-04-15T04:56:26.990295Z",
           "isLatest": true
         }
       }
@@ -4093,34 +4117,6 @@
           "publishedAt": "2026-01-24T00:30:06.33677Z",
           "updatedAt": "2026-01-24T00:30:06.33677Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.marketcore/mcp",
-        "description": "Create on-brand marketing deliverables and GTM docs with AI-powered blueprints and brand guidelines.",
-        "title": "MarketCore MCP Server",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.marketcore.ai/"
-          },
-          {
-            "type": "sse",
-            "url": "https://mcp.marketcore.ai/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-04T17:51:36.392611Z",
-          "publishedAt": "2026-03-04T17:51:36.392611Z",
-          "updatedAt": "2026-03-04T17:51:36.392611Z",
-          "isLatest": false
         }
       }
     }
