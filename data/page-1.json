@@ -678,6 +678,29 @@
           "statusChangedAt": "2026-04-03T15:06:01.506001Z",
           "publishedAt": "2026-04-03T15:06:01.506001Z",
           "updatedAt": "2026-04-03T15:06:01.506001Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.artidrop/artidrop",
+        "description": "Publish HTML, Markdown, and multi-file sites as shareable URLs instantly via MCP.",
+        "version": "1.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://artidrop.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-17T04:01:26.724763Z",
+          "publishedAt": "2026-04-17T04:01:26.724763Z",
+          "updatedAt": "2026-04-17T04:01:26.724763Z",
           "isLatest": true
         }
       }
@@ -2683,6 +2706,36 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.fathom.api/mcp",
+        "description": "Give your AI assistant real meeting context via Fathom so every output grounded in your work",
+        "version": "1.0.0",
+        "websiteUrl": "https://api.fathom.ai/mcp",
+        "icons": [
+          {
+            "src": "https://storage.googleapis.com/fathom-static-web-assets/pages/mcp-registry/favicon.png",
+            "mimeType": "image/png"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.fathom.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-17T01:36:06.979854Z",
+          "publishedAt": "2026-04-17T01:36:06.979854Z",
+          "updatedAt": "2026-04-17T01:36:06.979854Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.fiber/mcp",
         "description": "Search companies, enrich contacts, and reveal emails and phones from your AI agent.",
         "title": "Fiber AI",
@@ -4116,75 +4169,6 @@
           "statusChangedAt": "2026-03-26T21:58:49.321402Z",
           "publishedAt": "2026-03-26T21:58:49.321402Z",
           "updatedAt": "2026-03-26T21:58:49.321402Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.limitguard.api/trust-intelligence",
-        "description": "Entity verification, sanctions screening, and trust scoring for AI agents.",
-        "title": "LimitGuard Trust Intelligence",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.limitguard.ai/mcp",
-            "headers": [
-              {
-                "description": "LimitGuard API key (get free at /v1/keys/create)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "X-API-Key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-24T13:09:48.187879Z",
-          "publishedAt": "2026-02-24T13:09:48.187879Z",
-          "updatedAt": "2026-02-24T13:09:48.187879Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.limitguard.api/trust-intelligence",
-        "description": "Entity verification, sanctions screening, and trust scoring for AI agents.",
-        "title": "LimitGuard Trust Intelligence",
-        "repository": {
-          "url": "https://github.com/JWconsultancy1234/limitguard-ai",
-          "source": "github"
-        },
-        "version": "1.0.1",
-        "websiteUrl": "https://limitguard.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.limitguard.ai/mcp",
-            "headers": [
-              {
-                "description": "LimitGuard API key (get free at /v1/keys/create)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "X-API-Key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-24T13:42:25.987571Z",
-          "publishedAt": "2026-02-24T13:42:25.987571Z",
-          "updatedAt": "2026-02-24T13:42:25.987571Z",
           "isLatest": true
         }
       }
