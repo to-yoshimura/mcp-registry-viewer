@@ -613,6 +613,54 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.anomalyarmor/armor-mcp",
+        "description": "Data observability tools for engineering teams: alerts, freshness, schema drift, lineage, quality.",
+        "title": "AnomalyArmor",
+        "repository": {
+          "url": "https://github.com/anomalyarmor/agents",
+          "source": "github",
+          "subfolder": "armor-mcp"
+        },
+        "version": "0.6.1",
+        "websiteUrl": "https://www.anomalyarmor.ai",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "armor-mcp",
+            "version": "0.6.1",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "AnomalyArmor API key (aa_live_*). Generate at https://app.anomalyarmor.ai/settings/api-keys.",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "ARMOR_API_KEY"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.anomalyarmor.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-18T00:51:37.350253Z",
+          "publishedAt": "2026-04-18T00:51:37.350253Z",
+          "updatedAt": "2026-04-18T00:51:37.350253Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.anzenna/anzenna",
         "description": "MCP server for Anzenna",
@@ -4134,41 +4182,6 @@
           "statusChangedAt": "2025-12-09T00:18:46.752966Z",
           "publishedAt": "2025-12-09T00:18:46.752966Z",
           "updatedAt": "2025-12-09T00:18:46.752966Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.lattiq/x402-trading-signals",
-        "description": "Regime-aware ES1/NQ futures trading signals. HMM + 15 quant strategies. x402 USDC micropayments.",
-        "title": "Lattiq x402 Trading Signals",
-        "repository": {
-          "url": "https://github.com/PoopsDavis/lattiq-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.lattiq.ai/mcp",
-            "headers": [
-              {
-                "description": "x402 payment header (USDC on Base). Required for paid tool calls.",
-                "isSecret": true,
-                "name": "X-PAYMENT"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-26T21:58:49.321402Z",
-          "publishedAt": "2026-03-26T21:58:49.321402Z",
-          "updatedAt": "2026-03-26T21:58:49.321402Z",
           "isLatest": true
         }
       }
