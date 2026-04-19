@@ -1214,6 +1214,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bringyour/portable",
+        "description": "Move your AI agent harness between 13 tools, or bootstrap one from GitHub. $49 lifetime.",
+        "title": "BringYour",
+        "version": "1.0.0",
+        "websiteUrl": "https://bringyour.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://bringyour.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-18T18:34:21.328329Z",
+          "publishedAt": "2026-04-18T18:34:21.328329Z",
+          "updatedAt": "2026-04-18T18:34:21.328329Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.byteray/byteray-mcp",
         "description": "AI-augmented binary vulnerability analysis with 38 MCP tools for taint tracing and zero-day hunting",
         "title": "ByteRay AI",
@@ -1275,6 +1300,40 @@
           "statusChangedAt": "2026-04-12T00:14:37.476037Z",
           "publishedAt": "2026-04-12T00:14:37.476037Z",
           "updatedAt": "2026-04-12T00:14:37.476037Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.byteray/byteray-mcp",
+        "description": "Hunt zero-days by talking to binaries. 40+ tools. Hosted, OAuth + SSO, invite: hi@byteray.ai",
+        "title": "ByteRay AI",
+        "version": "1.1.0",
+        "websiteUrl": "https://byteray.ai",
+        "icons": [
+          {
+            "src": "https://byteray.ai/favicon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.byteray.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-19T04:19:09.97653Z",
+          "publishedAt": "2026-04-19T04:19:09.97653Z",
+          "updatedAt": "2026-04-19T04:19:09.97653Z",
           "isLatest": true
         }
       }
@@ -4119,69 +4178,6 @@
           "statusChangedAt": "2026-03-18T05:01:22.823972Z",
           "publishedAt": "2026-03-18T05:01:22.823972Z",
           "updatedAt": "2026-03-18T05:01:22.823972Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.klavis/strata",
-        "description": "MCP server for progressive tool usage at any scale (see https://klavis.ai)",
-        "repository": {
-          "url": "https://github.com/Klavis-AI/klavis",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://strata.klavis.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-09-28T19:13:44.307076Z",
-          "publishedAt": "2025-09-28T19:13:44.307076Z",
-          "updatedAt": "2025-09-28T19:13:44.307076Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.kubit/mcp-server",
-        "description": "Bring Kubit into your AI workflow — query your warehouse with natural language",
-        "title": "Kubit",
-        "repository": {
-          "url": "https://github.com/Kubit-AI/mcp-server",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://docs.kubit.ai/docs/mcp-server",
-        "icons": [
-          {
-            "src": "https://kubit.ai/wp-content/uploads/2025/12/Logo-Blue-Background-Stacked.png",
-            "mimeType": "image/png",
-            "theme": "light"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.kubit.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-12-09T00:18:46.752966Z",
-          "publishedAt": "2025-12-09T00:18:46.752966Z",
-          "updatedAt": "2025-12-09T00:18:46.752966Z",
           "isLatest": true
         }
       }
