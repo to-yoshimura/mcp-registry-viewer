@@ -3925,6 +3925,108 @@
           "statusChangedAt": "2026-04-15T14:34:40.269387Z",
           "publishedAt": "2026-04-15T14:34:40.269387Z",
           "updatedAt": "2026-04-15T14:34:40.269387Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.haymon/database",
+        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
+        "repository": {
+          "url": "https://github.com/haymon-ai/database",
+          "source": "github"
+        },
+        "version": "0.7.0",
+        "websiteUrl": "https://database.haymon.ai",
+        "packages": [
+          {
+            "registryType": "oci",
+            "identifier": "ghcr.io/haymon-ai/database:0.7.0",
+            "runtimeHint": "docker",
+            "transport": {
+              "type": "stdio"
+            },
+            "packageArguments": [
+              {
+                "description": "Start in stdio transport mode",
+                "isRequired": true,
+                "value": "stdio",
+                "type": "positional"
+              }
+            ]
+          },
+          {
+            "registryType": "oci",
+            "identifier": "ghcr.io/haymon-ai/database:0.7.0",
+            "runtimeHint": "docker",
+            "transport": {
+              "type": "streamable-http",
+              "url": "http://{--host}:{--port}/mcp"
+            },
+            "packageArguments": [
+              {
+                "description": "Start in HTTP transport mode",
+                "isRequired": true,
+                "value": "http",
+                "type": "positional"
+              },
+              {
+                "description": "HTTP bind host",
+                "default": "127.0.0.1",
+                "type": "named",
+                "name": "--host"
+              },
+              {
+                "description": "HTTP bind port",
+                "default": "9001",
+                "type": "named",
+                "name": "--port"
+              },
+              {
+                "description": "Allowed CORS origins (comma-separated)",
+                "type": "named",
+                "name": "--allowed-origins",
+                "isRepeated": true
+              },
+              {
+                "description": "Allowed host names (comma-separated)",
+                "type": "named",
+                "name": "--allowed-hosts",
+                "isRepeated": true
+              }
+            ],
+            "environmentVariables": [
+              {
+                "description": "HTTP bind host",
+                "default": "127.0.0.1",
+                "name": "HTTP_HOST"
+              },
+              {
+                "description": "HTTP bind port",
+                "format": "number",
+                "default": "9001",
+                "name": "HTTP_PORT"
+              },
+              {
+                "description": "Allowed CORS origins (comma-separated)",
+                "name": "HTTP_ALLOWED_ORIGINS"
+              },
+              {
+                "description": "Allowed host names (comma-separated)",
+                "name": "HTTP_ALLOWED_HOSTS"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-20T18:05:53.960165Z",
+          "publishedAt": "2026-04-20T18:05:53.960165Z",
+          "updatedAt": "2026-04-20T18:05:53.960165Z",
           "isLatest": true
         }
       }
@@ -4147,39 +4249,6 @@
           "statusChangedAt": "2026-03-18T04:58:25.711997Z",
           "publishedAt": "2026-03-18T04:58:25.711997Z",
           "updatedAt": "2026-03-18T04:58:25.711997Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.kawacode/mcp",
-        "description": "Intent tracking, decision recording, and team coordination for AI coding assistants",
-        "title": "Kawa Code MCP",
-        "repository": {
-          "url": "https://github.com/codeawareness/kawa.mcp",
-          "source": "github"
-        },
-        "version": "5.0.3",
-        "websiteUrl": "https://kawacode.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@kawacode/mcp",
-            "version": "5.0.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-18T05:00:03.803884Z",
-          "publishedAt": "2026-03-18T05:00:03.803884Z",
-          "updatedAt": "2026-03-18T05:00:03.803884Z",
           "isLatest": false
         }
       }
