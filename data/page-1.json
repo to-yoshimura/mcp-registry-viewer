@@ -3134,6 +3134,56 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.getperspective/mcp",
+        "description": "An AI concierge that turns static forms into adaptive AI conversations. From any MCP client.",
+        "title": "Perspective AI",
+        "repository": {
+          "url": "https://github.com/Perspective-AI/mcp",
+          "source": "github"
+        },
+        "version": "0.0.7",
+        "websiteUrl": "https://getperspective.ai/docs/build/mcp",
+        "icons": [
+          {
+            "src": "https://raw.githubusercontent.com/Perspective-AI/mcp/main/icon.png",
+            "mimeType": "image/png"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://getperspective.ai/mcp",
+            "headers": [
+              {
+                "description": "Authorization header for authenticated requests",
+                "value": "Bearer {perspective_token}",
+                "variables": {
+                  "perspective_token": {
+                    "description": "Access token generated at https://getperspective.ai/settings/mcp",
+                    "isRequired": true,
+                    "format": "string",
+                    "isSecret": true
+                  }
+                },
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-21T13:25:46.451335Z",
+          "publishedAt": "2026-04-21T13:25:46.451335Z",
+          "updatedAt": "2026-04-21T13:25:46.451335Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.gomarble/mcp-api",
         "description": "GoMarble MCP API Server",
@@ -4217,39 +4267,6 @@
           "publishedAt": "2026-04-01T08:15:17.136175Z",
           "updatedAt": "2026-04-01T08:15:17.136175Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.kawacode/mcp",
-        "description": "Intent tracking, decision recording, and team coordination for AI coding assistants",
-        "title": "Kawa Code MCP",
-        "repository": {
-          "url": "https://github.com/codeawareness/kawa.mcp",
-          "source": "github"
-        },
-        "version": "5.0.2",
-        "websiteUrl": "https://codeawareness.com",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@kawacode/mcp",
-            "version": "5.0.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-18T04:58:25.711997Z",
-          "publishedAt": "2026-03-18T04:58:25.711997Z",
-          "updatedAt": "2026-03-18T04:58:25.711997Z",
-          "isLatest": false
         }
       }
     }
