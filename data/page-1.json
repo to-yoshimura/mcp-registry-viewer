@@ -107,6 +107,34 @@
           "statusChangedAt": "2026-04-02T11:40:41.429277Z",
           "publishedAt": "2026-04-02T11:40:41.429277Z",
           "updatedAt": "2026-04-02T11:40:41.429277Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ac.tandem/docs-mcp",
+        "description": "Remote MCP server for Tandem docs, install guides, SDKs, workflows, and agent setup help.",
+        "repository": {
+          "url": "https://github.com/frumu-ai/tandem",
+          "source": "github"
+        },
+        "version": "0.3.2",
+        "websiteUrl": "https://tandem.ac/docs-mcp",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://tandem.ac/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-22T21:06:34.500049Z",
+          "publishedAt": "2026-04-22T21:06:34.500049Z",
+          "updatedAt": "2026-04-22T21:06:34.500049Z",
           "isLatest": true
         }
       }
@@ -1369,6 +1397,60 @@
           "statusChangedAt": "2026-04-19T04:19:09.97653Z",
           "publishedAt": "2026-04-19T04:19:09.97653Z",
           "updatedAt": "2026-04-19T04:19:09.97653Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.chinamarketing/intelligence",
+        "description": "Remote MCP server for China brand visibility, destination demand, and KOL discovery workflows.",
+        "title": "China Marketing AI Intelligence MCP",
+        "repository": {
+          "url": "https://github.com/REPLACE_WITH_ORG/REPLACE_WITH_REPO",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://www.chinamarketing.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.chinamarketing.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-22T09:12:29.983706Z",
+          "publishedAt": "2026-04-22T09:12:29.983706Z",
+          "updatedAt": "2026-04-22T09:12:29.983706Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.chinamarketing/intelligence",
+        "description": "Remote MCP server for China brand visibility, destination demand, and KOL discovery workflows.",
+        "title": "China Marketing AI Intelligence MCP",
+        "version": "1.0.1",
+        "websiteUrl": "https://www.chinamarketing.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.chinamarketing.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-22T09:16:14.642505Z",
+          "publishedAt": "2026-04-22T09:16:14.642505Z",
+          "updatedAt": "2026-04-22T09:16:14.642505Z",
           "isLatest": true
         }
       }
@@ -4186,87 +4268,6 @@
           "publishedAt": "2026-03-31T06:18:04.101329Z",
           "updatedAt": "2026-03-31T06:18:04.101329Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.inflowpay.app/inflow",
-        "description": "MCP Server for agents to onboard, pay, and provision services autonomously",
-        "repository": {
-          "url": "https://github.com/inflowpay/inflow",
-          "source": "github"
-        },
-        "version": "1.0.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.inflowpay.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-31T07:47:45.171487Z",
-          "publishedAt": "2026-03-31T07:47:45.171487Z",
-          "updatedAt": "2026-03-31T07:47:45.171487Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.inflowpay.app/inflow",
-        "description": "MCP Server for agents to onboard, pay, and provision services autonomously with InFlow",
-        "repository": {
-          "url": "https://github.com/inflowpay/inflow",
-          "source": "github"
-        },
-        "version": "1.0.2",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.inflowpay.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-31T09:58:09.190687Z",
-          "publishedAt": "2026-03-31T09:58:09.190687Z",
-          "updatedAt": "2026-03-31T09:58:09.190687Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.inflowpay.app/inflow",
-        "description": "MCP Server for agents to onboard, pay, and provision services autonomously with InFlow",
-        "repository": {
-          "url": "https://github.com/inflowpayai/inflow-mcp",
-          "source": "github"
-        },
-        "version": "1.0.3",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.inflowpay.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-01T08:15:17.136175Z",
-          "publishedAt": "2026-04-01T08:15:17.136175Z",
-          "updatedAt": "2026-04-01T08:15:17.136175Z",
-          "isLatest": true
         }
       }
     }
