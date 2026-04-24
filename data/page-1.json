@@ -677,6 +677,63 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.18.4",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.18.4",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T19:01:04.63097Z",
+          "publishedAt": "2026-04-23T19:01:04.63097Z",
+          "updatedAt": "2026-04-23T19:01:04.63097Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server-addon",
+        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
+        "title": "AnkiMCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
+          "source": "github"
+        },
+        "version": "0.15.0",
+        "websiteUrl": "https://ankimcp.ai"
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T12:59:15.983084Z",
+          "publishedAt": "2026-04-23T12:59:15.983084Z",
+          "updatedAt": "2026-04-23T12:59:15.983084Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.anomalyarmor/armor-mcp",
         "description": "Data observability tools for engineering teams: alerts, freshness, schema drift, lineage, quality.",
         "title": "AnomalyArmor",
@@ -2692,6 +2749,35 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.djwizard/tvwizard",
+        "description": "Control Android TV from any AI. 21 MCP tools: keys, apps, titles, playback, volume, observe.",
+        "title": "TVWizard",
+        "repository": {
+          "url": "https://github.com/fizzious1/TVWizard-mcp",
+          "source": "github"
+        },
+        "version": "0.5.5",
+        "websiteUrl": "https://tv.djwizard.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://tv.djwizard.ai/mcp/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T11:02:07.680305Z",
+          "publishedAt": "2026-04-23T11:02:07.680305Z",
+          "updatedAt": "2026-04-23T11:02:07.680305Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.donethat/donethat",
         "description": "Privacy-first work tracking with summaries, reports, coaching, and AI-ready long-term memory.",
         "title": "DoneThat",
@@ -2872,6 +2958,180 @@
           "statusChangedAt": "2025-12-05T21:51:53.421065Z",
           "publishedAt": "2025-12-05T21:51:53.421065Z",
           "updatedAt": "2025-12-05T21:51:53.421065Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "SCIP-backed semantic code intelligence over 800+ pre-indexed OSS libraries. Hosted, free.",
+        "title": "xmp4 — Semantic Code Intelligence",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.1",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T21:53:50.582926Z",
+          "publishedAt": "2026-04-23T21:53:50.582926Z",
+          "updatedAt": "2026-04-23T21:53:50.582926Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "Code knowledge base for AI agents: real source, tests, callers of 800+ OSS libs via MCP. 11 langs.",
+        "title": "xmp4 — Semantic Code Intelligence",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.2",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T21:59:39.828981Z",
+          "publishedAt": "2026-04-23T21:59:39.828981Z",
+          "updatedAt": "2026-04-23T21:59:39.828981Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "See how any OSS library is really used — real source, tests, callers. Python, TS, Rust, Java, Go+.",
+        "title": "xmp4 — Semantic Code Intelligence",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.3",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T22:01:15.855388Z",
+          "publishedAt": "2026-04-23T22:01:15.855388Z",
+          "updatedAt": "2026-04-23T22:01:15.855388Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "See how any OSS library is really used — real source, tests, callers. C#, Java, TS, Python, Rust+.",
+        "title": "xmp4 — Semantic Code Intelligence",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.4",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T22:01:57.58925Z",
+          "publishedAt": "2026-04-23T22:01:57.58925Z",
+          "updatedAt": "2026-04-23T22:01:57.58925Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "OSS libs in your stack, really used: source, tests, callers. C#, Java, TS, Python, Rust, PHP+.",
+        "title": "xmp4 — Semantic Code Intelligence",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.5",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T22:06:13.791106Z",
+          "publishedAt": "2026-04-23T22:06:13.791106Z",
+          "updatedAt": "2026-04-23T22:06:13.791106Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.example4/xmp4",
+        "description": "OSS libs in your stack, really used: source, tests, callers. C#, Java, TS, Python, Rust, PHP+.",
+        "title": "xmp4 — Semantic code knowledge for your stack",
+        "repository": {
+          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
+          "source": "github"
+        },
+        "version": "1.2.6",
+        "websiteUrl": "https://example4.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.example4.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-23T22:09:33.915723Z",
+          "publishedAt": "2026-04-23T22:09:33.915723Z",
+          "updatedAt": "2026-04-23T22:09:33.915723Z",
           "isLatest": true
         }
       }
@@ -3344,10 +3604,11 @@
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-01T08:12:41.17542Z",
+          "status": "deprecated",
+          "statusChangedAt": "2026-04-23T10:48:48.962283Z",
+          "statusMessage": "Renamed to ai.haymon/dbmcp",
           "publishedAt": "2026-04-01T08:12:41.17542Z",
-          "updatedAt": "2026-04-01T08:12:41.17542Z",
+          "updatedAt": "2026-04-23T10:48:48.962283Z",
           "isLatest": false
         }
       }
@@ -3445,10 +3706,11 @@
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-01T13:24:52.524719Z",
+          "status": "deprecated",
+          "statusChangedAt": "2026-04-23T10:48:48.962283Z",
+          "statusMessage": "Renamed to ai.haymon/dbmcp",
           "publishedAt": "2026-04-01T13:24:52.524719Z",
-          "updatedAt": "2026-04-01T13:24:52.524719Z",
+          "updatedAt": "2026-04-23T10:48:48.962283Z",
           "isLatest": false
         }
       }
@@ -3546,727 +3808,11 @@
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-06T06:05:56.31214Z",
+          "status": "deprecated",
+          "statusChangedAt": "2026-04-23T10:48:48.962283Z",
+          "statusMessage": "Renamed to ai.haymon/dbmcp",
           "publishedAt": "2026-04-06T06:05:56.31214Z",
-          "updatedAt": "2026-04-06T06:05:56.31214Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.6.0",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.0",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode (default)",
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.0",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-08T14:40:55.456277Z",
-          "publishedAt": "2026-04-08T14:40:55.456277Z",
-          "updatedAt": "2026-04-08T14:40:55.456277Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.6.1",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.1",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode (default)",
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.1",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-10T16:10:54.841623Z",
-          "publishedAt": "2026-04-10T16:10:54.841623Z",
-          "updatedAt": "2026-04-10T16:10:54.841623Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.6.2",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.2",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode (default)",
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.2",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-12T19:21:01.151866Z",
-          "publishedAt": "2026-04-12T19:21:01.151866Z",
-          "updatedAt": "2026-04-12T19:21:01.151866Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.6.3",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.3",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode",
-                "isRequired": true,
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.3",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-15T14:08:29.787696Z",
-          "publishedAt": "2026-04-15T14:08:29.787696Z",
-          "updatedAt": "2026-04-15T14:08:29.787696Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.6.4",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.4",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode",
-                "isRequired": true,
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.6.4",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-15T14:34:40.269387Z",
-          "publishedAt": "2026-04-15T14:34:40.269387Z",
-          "updatedAt": "2026-04-15T14:34:40.269387Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.7.0",
-        "websiteUrl": "https://database.haymon.ai",
-        "packages": [
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.7.0",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "stdio"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in stdio transport mode",
-                "isRequired": true,
-                "value": "stdio",
-                "type": "positional"
-              }
-            ]
-          },
-          {
-            "registryType": "oci",
-            "identifier": "ghcr.io/haymon-ai/database:0.7.0",
-            "runtimeHint": "docker",
-            "transport": {
-              "type": "streamable-http",
-              "url": "http://{--host}:{--port}/mcp"
-            },
-            "packageArguments": [
-              {
-                "description": "Start in HTTP transport mode",
-                "isRequired": true,
-                "value": "http",
-                "type": "positional"
-              },
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "type": "named",
-                "name": "--host"
-              },
-              {
-                "description": "HTTP bind port",
-                "default": "9001",
-                "type": "named",
-                "name": "--port"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "type": "named",
-                "name": "--allowed-origins",
-                "isRepeated": true
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "type": "named",
-                "name": "--allowed-hosts",
-                "isRepeated": true
-              }
-            ],
-            "environmentVariables": [
-              {
-                "description": "HTTP bind host",
-                "default": "127.0.0.1",
-                "name": "HTTP_HOST"
-              },
-              {
-                "description": "HTTP bind port",
-                "format": "number",
-                "default": "9001",
-                "name": "HTTP_PORT"
-              },
-              {
-                "description": "Allowed CORS origins (comma-separated)",
-                "name": "HTTP_ALLOWED_ORIGINS"
-              },
-              {
-                "description": "Allowed host names (comma-separated)",
-                "name": "HTTP_ALLOWED_HOSTS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-20T18:05:53.960165Z",
-          "publishedAt": "2026-04-20T18:05:53.960165Z",
-          "updatedAt": "2026-04-20T18:05:53.960165Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.i18nagent/i18n-agent",
-        "description": "AI-powered translation for 48 languages with context-aware quality",
-        "title": "i18n-agent",
-        "repository": {
-          "url": "https://github.com/i18n-agent/mcp-client",
-          "source": "github"
-        },
-        "version": "1.16.3",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@i18n-agent/mcp-client",
-            "version": "1.16.3",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "API key from app.i18nagent.ai",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "I18N_AGENT_API_KEY"
-              },
-              {
-                "description": "MCP server URL",
-                "name": "MCP_SERVER_URL"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.i18nagent.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-16T10:02:49.134686Z",
-          "publishedAt": "2026-03-16T10:02:49.134686Z",
-          "updatedAt": "2026-03-16T10:02:49.134686Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.imboard/dossier",
-        "description": "MCP server for dossier automation standard - enables LLMs to discover, verify, and execute dossiers",
-        "repository": {
-          "url": "https://github.com/imboard-ai/ai-dossier",
-          "source": "github"
-        },
-        "version": "1.0.4",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@ai-dossier/mcp-server",
-            "version": "1.0.4",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-07T09:20:43.263852Z",
-          "publishedAt": "2026-03-07T09:20:43.263852Z",
-          "updatedAt": "2026-03-07T09:20:43.263852Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.inflowpay.app/inflow",
-        "description": "Inflow MCP Server",
-        "repository": {
-          "url": "https://github.com/inflowpay/inflow",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.inflowpay.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-31T06:18:04.101329Z",
-          "publishedAt": "2026-03-31T06:18:04.101329Z",
-          "updatedAt": "2026-03-31T06:18:04.101329Z",
+          "updatedAt": "2026-04-23T10:48:48.962283Z",
           "isLatest": false
         }
       }
