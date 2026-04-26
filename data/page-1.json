@@ -1529,6 +1529,120 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.childadhd/library",
+        "description": "Clinician-reviewed library on ADHD in children — evaluation, treatment, school, parenting.",
+        "version": "1.0.0",
+        "websiteUrl": "https://childadhd.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://childadhd.ai/api/mcp/v1"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "agentSkills": "https://childadhd.ai/.well-known/agent-skills/index.json",
+            "displayName": "ADHD in Children",
+            "license": "Educational content, free to cite with attribution.",
+            "manifest": "https://childadhd.ai/.well-known/mcp.json",
+            "serverCard": "https://childadhd.ai/.well-known/mcp/server-card.json",
+            "sponsor": {
+              "homepage": "https://www.emorahealth.com",
+              "name": "Emora Health",
+              "relationship": "Articles are clinically reviewed under a sponsorship arrangement with Emora Health. The microsite itself is the publisher."
+            }
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-26T00:04:13.381323Z",
+          "publishedAt": "2026-04-26T00:04:13.381323Z",
+          "updatedAt": "2026-04-26T00:04:13.381323Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.childanxiety/library",
+        "description": "Clinician-reviewed library on anxiety, OCD, and phobias in children ages 5–12.",
+        "version": "1.0.0",
+        "websiteUrl": "https://childanxiety.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://childanxiety.ai/api/mcp/v1"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "agentSkills": "https://childanxiety.ai/.well-known/agent-skills/index.json",
+            "displayName": "Anxiety in Children",
+            "license": "Educational content, free to cite with attribution.",
+            "manifest": "https://childanxiety.ai/.well-known/mcp.json",
+            "serverCard": "https://childanxiety.ai/.well-known/mcp/server-card.json",
+            "sponsor": {
+              "homepage": "https://www.emorahealth.com",
+              "name": "Emora Health",
+              "relationship": "Articles are clinically reviewed under a sponsorship arrangement with Emora Health. The microsite itself is the publisher."
+            }
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-26T00:04:17.518812Z",
+          "publishedAt": "2026-04-26T00:04:17.518812Z",
+          "updatedAt": "2026-04-26T00:04:17.518812Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.childpsychiatry/library",
+        "description": "Clinician-reviewed library on child psychiatric evaluation and medication decision-making.",
+        "version": "1.0.0",
+        "websiteUrl": "https://childpsychiatry.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://childpsychiatry.ai/api/mcp/v1"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "agentSkills": "https://childpsychiatry.ai/.well-known/agent-skills/index.json",
+            "displayName": "Psychiatry for Children",
+            "license": "Educational content, free to cite with attribution.",
+            "manifest": "https://childpsychiatry.ai/.well-known/mcp.json",
+            "serverCard": "https://childpsychiatry.ai/.well-known/mcp/server-card.json",
+            "sponsor": {
+              "homepage": "https://www.emorahealth.com",
+              "name": "Emora Health",
+              "relationship": "Articles are clinically reviewed under a sponsorship arrangement with Emora Health. The microsite itself is the publisher."
+            }
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-26T00:04:20.484144Z",
+          "publishedAt": "2026-04-26T00:04:20.484144Z",
+          "updatedAt": "2026-04-26T00:04:20.484144Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.chinamarketing/intelligence",
         "description": "Remote MCP server for China brand visibility, destination demand, and KOL discovery workflows.",
         "title": "China Marketing AI Intelligence MCP",
@@ -3589,95 +3703,6 @@
           "publishedAt": "2026-04-21T13:25:46.451335Z",
           "updatedAt": "2026-04-21T13:25:46.451335Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.gomarble/mcp-api",
-        "description": "GoMarble MCP API Server",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "sse",
-            "url": "https://apps.gomarble.ai/mcp-api/sse"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-10-14T05:56:54.505554Z",
-          "publishedAt": "2025-10-14T05:56:54.505554Z",
-          "updatedAt": "2025-10-14T05:56:54.505554Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.gossiper/shopify-admin-mcp",
-        "description": "Control Shopify Admin tasks with agents or via prompt. Ultra slim integration, fast and secure.",
-        "title": "Gossiper Shopify Admin MCP Server",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.gossiper.io/mcp",
-            "headers": [
-              {
-                "description": "API key for authentication, alternative to OAuth",
-                "isSecret": true,
-                "name": "X-API-Key"
-              }
-            ]
-          },
-          {
-            "type": "sse",
-            "url": "https://mcp.gossiper.io/mcp",
-            "headers": [
-              {
-                "description": "API key for authentication, alternative to OAuth",
-                "isSecret": true,
-                "name": "X-API-Key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-06T18:20:42.175634Z",
-          "publishedAt": "2026-01-06T18:20:42.175634Z",
-          "updatedAt": "2026-01-06T18:20:42.175634Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.haymon/database",
-        "description": "Database MCP server for MySQL, MariaDB, PostgreSQL & SQLite",
-        "repository": {
-          "url": "https://github.com/haymon-ai/database",
-          "source": "github"
-        },
-        "version": "0.4.0",
-        "websiteUrl": "https://database.haymon.ai"
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "deprecated",
-          "statusChangedAt": "2026-04-23T10:48:48.962283Z",
-          "statusMessage": "Renamed to ai.haymon/dbmcp",
-          "publishedAt": "2026-04-01T08:12:41.17542Z",
-          "updatedAt": "2026-04-23T10:48:48.962283Z",
-          "isLatest": false
         }
       }
     }
