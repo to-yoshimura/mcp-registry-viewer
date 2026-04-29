@@ -1132,6 +1132,43 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bankee/inferventis-mcp",
+        "description": "Loan & mortgage calculator, compound interest, ROI, crypto prices, FX conversion for AI agents.",
+        "title": "Inferventis MCP Server",
+        "repository": {
+          "url": "https://github.com/Bankee-ai/inferventis",
+          "source": "github"
+        },
+        "version": "1.0.2",
+        "websiteUrl": "https://mcp-server-295985738387.europe-west1.run.app",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp-server-295985738387.europe-west1.run.app/mcp",
+            "headers": [
+              {
+                "description": "Inferventis API key — obtain at inferventis.ai",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "x-api-key"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-28T09:24:20.898632Z",
+          "publishedAt": "2026-04-28T09:24:20.898632Z",
+          "updatedAt": "2026-04-28T09:24:20.898632Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.bezal/local-commerce",
         "description": "Search 7,000+ local service businesses across America by category, location, or keyword.",
@@ -3657,30 +3694,6 @@
           "statusChangedAt": "2026-03-26T05:42:50.607071Z",
           "publishedAt": "2026-03-26T05:42:50.607071Z",
           "updatedAt": "2026-03-26T05:42:50.607071Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-        "name": "ai.geodesiclabs/governance-platform",
-        "description": "Deterministic AI governance platform. Validates agent outputs, discovers patterns, solves math.",
-        "repository": {},
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.geodesiclabs.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-03T18:34:34.343475Z",
-          "publishedAt": "2026-04-03T18:34:34.343475Z",
-          "updatedAt": "2026-04-03T18:34:34.343475Z",
           "isLatest": true
         }
       }
