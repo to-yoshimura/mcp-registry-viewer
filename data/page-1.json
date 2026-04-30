@@ -1464,6 +1464,52 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.buywhere/buywhere-mcp",
+        "description": "BuyWhere MCP server for product search, price comparison, and affiliate-ready shopping workflows.",
+        "title": "BuyWhere MCP",
+        "repository": {
+          "url": "https://github.com/BuyWhere/buywhere-mcp",
+          "source": "github"
+        },
+        "version": "0.1.2",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "buywhere-mcp",
+            "version": "0.1.2",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "BuyWhere API key used for authenticated product catalog requests.",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "BUYWHERE_API_KEY"
+              },
+              {
+                "description": "Optional override for the BuyWhere API base URL.",
+                "format": "string",
+                "name": "BUYWHERE_API_URL"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-04-29T09:22:01.124371Z",
+          "publishedAt": "2026-04-29T09:22:01.124371Z",
+          "updatedAt": "2026-04-29T09:22:01.124371Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.byteray/byteray-mcp",
         "description": "AI-augmented binary vulnerability analysis with 38 MCP tools for taint tracing and zero-day hunting",
         "title": "ByteRay AI",
@@ -3666,34 +3712,6 @@
           "statusChangedAt": "2026-02-16T19:33:48.522184Z",
           "publishedAt": "2026-02-16T19:33:48.522184Z",
           "updatedAt": "2026-02-16T19:33:48.522184Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.gavelin/mcp",
-        "description": "Search bills and speaker-attributed hearing transcripts across all 50 US state legislatures.",
-        "title": "Gavelin",
-        "repository": {
-          "url": "https://github.com/gavelin-ai/mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.gavelin.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-26T05:42:50.607071Z",
-          "publishedAt": "2026-03-26T05:42:50.607071Z",
-          "updatedAt": "2026-03-26T05:42:50.607071Z",
           "isLatest": true
         }
       }
