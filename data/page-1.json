@@ -1497,6 +1497,29 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.buyersense/buyersense",
+        "description": "MCP server for the BuyerSense API. Get buyer signals from any MCP client.",
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.buyersense.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-03T09:49:36.790849Z",
+          "publishedAt": "2026-05-03T09:49:36.790849Z",
+          "updatedAt": "2026-05-03T09:49:36.790849Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.buywhere/buywhere-mcp",
         "description": "BuyWhere MCP server for product search, price comparison, and affiliate-ready shopping workflows.",
         "title": "BuyWhere MCP",
@@ -1536,6 +1559,52 @@
           "statusChangedAt": "2026-04-29T09:22:01.124371Z",
           "publishedAt": "2026-04-29T09:22:01.124371Z",
           "updatedAt": "2026-04-29T09:22:01.124371Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.buywhere/buywhere-mcp",
+        "description": "Product search, price comparison, and affiliate-ready shopping across Singapore and US retailers.",
+        "title": "BuyWhere MCP",
+        "repository": {
+          "url": "https://github.com/BuyWhere/buywhere-mcp",
+          "source": "github"
+        },
+        "version": "0.3.1",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@buywhere/mcp-server",
+            "version": "0.3.1",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Your BuyWhere API key for authenticated product catalog requests",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "BUYWHERE_API_KEY"
+              },
+              {
+                "description": "Override the BuyWhere API base URL (default: https://api.buywhere.ai)",
+                "format": "string",
+                "name": "BUYWHERE_API_URL"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-03T21:45:08.750713Z",
+          "publishedAt": "2026-05-03T21:45:08.750713Z",
+          "updatedAt": "2026-05-03T21:45:08.750713Z",
           "isLatest": true
         }
       }
@@ -2812,6 +2881,31 @@
           "statusChangedAt": "2026-05-01T04:04:47.87512Z",
           "publishedAt": "2026-05-01T04:04:47.87512Z",
           "updatedAt": "2026-05-01T04:04:47.87512Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.complyhat/compliance",
+        "description": "MCP for AI compliance documentation across SR 26-2, EU AI Act, NIST AI RMF, and ISO/IEC 42001.",
+        "title": "ComplyHat",
+        "version": "1.2.0",
+        "websiteUrl": "https://complyhat.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://complyhat.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-04T00:07:47.982959Z",
+          "publishedAt": "2026-05-04T00:07:47.982959Z",
+          "updatedAt": "2026-05-04T00:07:47.982959Z",
           "isLatest": true
         }
       }
@@ -3579,95 +3673,6 @@
           "publishedAt": "2025-11-03T13:21:46.054906Z",
           "updatedAt": "2025-11-03T13:21:46.054906Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.fathom.api/mcp",
-        "description": "Give your AI assistant real meeting context via Fathom so every output grounded in your work",
-        "version": "1.0.0",
-        "websiteUrl": "https://api.fathom.ai/mcp",
-        "icons": [
-          {
-            "src": "https://storage.googleapis.com/fathom-static-web-assets/pages/mcp-registry/favicon.png",
-            "mimeType": "image/png"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.fathom.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-17T01:36:06.979854Z",
-          "publishedAt": "2026-04-17T01:36:06.979854Z",
-          "updatedAt": "2026-04-17T01:36:06.979854Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.fiber/mcp",
-        "description": "Search companies, enrich contacts, and reveal emails and phones from your AI agent.",
-        "title": "Fiber AI",
-        "repository": {
-          "url": "https://github.com/fiber-ai/mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.fiber.ai/mcp/v2/"
-          },
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.fiber.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-05T17:07:19.663739Z",
-          "publishedAt": "2026-03-05T17:07:19.663739Z",
-          "updatedAt": "2026-03-05T17:07:19.663739Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.filegraph/document-processing",
-        "description": "Extract text from documents, manipulate PDFs, and perform OCR via FileGraph API.",
-        "repository": {
-          "url": "https://github.com/filegraph/docconvert",
-          "source": "github"
-        },
-        "version": "0.2.2",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.filegraph.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-24T15:50:15.237565Z",
-          "publishedAt": "2026-01-24T15:50:15.237565Z",
-          "updatedAt": "2026-01-24T15:50:15.237565Z",
-          "isLatest": false
         }
       }
     }
