@@ -310,6 +310,37 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adeu/adeu",
+        "description": "Automated DOCX Redlining Engine",
+        "repository": {
+          "url": "https://github.com/dealfluence/adeu",
+          "source": "github"
+        },
+        "version": "1.5.2",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "adeu",
+            "version": "1.5.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-05T14:01:01.659721Z",
+          "publishedAt": "2026-05-05T14:01:01.659721Z",
+          "updatedAt": "2026-05-05T14:01:01.659721Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.adramp/google-ads",
         "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
         "repository": {
@@ -1276,6 +1307,30 @@
           "statusChangedAt": "2026-04-15T04:56:26.990295Z",
           "publishedAt": "2026-04-15T04:56:26.990295Z",
           "updatedAt": "2026-04-15T04:56:26.990295Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bluenexus/universal-mcp",
+        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
+        "title": "BlueNexus Universal MCP",
+        "version": "1.1.2",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bluenexus.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-06T05:48:24.58941Z",
+          "publishedAt": "2026-05-06T05:48:24.58941Z",
+          "updatedAt": "2026-05-06T05:48:24.58941Z",
           "isLatest": true
         }
       }
@@ -1605,6 +1660,42 @@
           "statusChangedAt": "2026-05-03T21:45:08.750713Z",
           "publishedAt": "2026-05-03T21:45:08.750713Z",
           "updatedAt": "2026-05-03T21:45:08.750713Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.buywhere/catalog-api",
+        "description": "Search 1.5M+ products across 20+ platforms. Compare prices, find deals, browse categories.",
+        "title": "BuyWhere Product Catalog",
+        "repository": {
+          "url": "https://github.com/BuyWhere/buywhere",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.buywhere.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token from https://api.buywhere.ai/v1/auth/register",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-05T09:47:07.387848Z",
+          "publishedAt": "2026-05-05T09:47:07.387848Z",
+          "updatedAt": "2026-05-05T09:47:07.387848Z",
           "isLatest": true
         }
       }
@@ -3183,6 +3274,35 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.cosmonote/notes",
+        "description": "Access your Cosmonote audio notes, transcriptions, summaries, and action items.",
+        "title": "Cosmonote",
+        "repository": {
+          "url": "https://github.com/cosmonote/pocketbase",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://cosmonote.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://nebula.cosmonote.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-05T08:30:35.974817Z",
+          "publishedAt": "2026-05-05T08:30:35.974817Z",
+          "updatedAt": "2026-05-05T08:30:35.974817Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.cueapi/mcp",
         "description": "Schedule agent work and report write-once outcomes via CueAPI from any MCP host.",
         "repository": {
@@ -3586,122 +3706,6 @@
           "publishedAt": "2026-04-23T21:59:39.828981Z",
           "updatedAt": "2026-04-23T21:59:39.828981Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.example4/xmp4",
-        "description": "See how any OSS library is really used — real source, tests, callers. Python, TS, Rust, Java, Go+.",
-        "title": "xmp4 — Semantic Code Intelligence",
-        "repository": {
-          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
-          "source": "github"
-        },
-        "version": "1.2.3",
-        "websiteUrl": "https://example4.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.example4.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T22:01:15.855388Z",
-          "publishedAt": "2026-04-23T22:01:15.855388Z",
-          "updatedAt": "2026-04-23T22:01:15.855388Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.example4/xmp4",
-        "description": "See how any OSS library is really used — real source, tests, callers. C#, Java, TS, Python, Rust+.",
-        "title": "xmp4 — Semantic Code Intelligence",
-        "repository": {
-          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
-          "source": "github"
-        },
-        "version": "1.2.4",
-        "websiteUrl": "https://example4.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.example4.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T22:01:57.58925Z",
-          "publishedAt": "2026-04-23T22:01:57.58925Z",
-          "updatedAt": "2026-04-23T22:01:57.58925Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.example4/xmp4",
-        "description": "OSS libs in your stack, really used: source, tests, callers. C#, Java, TS, Python, Rust, PHP+.",
-        "title": "xmp4 — Semantic Code Intelligence",
-        "repository": {
-          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
-          "source": "github"
-        },
-        "version": "1.2.5",
-        "websiteUrl": "https://example4.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.example4.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T22:06:13.791106Z",
-          "publishedAt": "2026-04-23T22:06:13.791106Z",
-          "updatedAt": "2026-04-23T22:06:13.791106Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.example4/xmp4",
-        "description": "OSS libs in your stack, really used: source, tests, callers. C#, Java, TS, Python, Rust, PHP+.",
-        "title": "xmp4 — Semantic code knowledge for your stack",
-        "repository": {
-          "url": "https://github.com/0ics-srls/lsai-xmp4.public",
-          "source": "github"
-        },
-        "version": "1.2.6",
-        "websiteUrl": "https://example4.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.example4.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T22:09:33.915723Z",
-          "publishedAt": "2026-04-23T22:09:33.915723Z",
-          "updatedAt": "2026-04-23T22:09:33.915723Z",
-          "isLatest": true
         }
       }
     }
