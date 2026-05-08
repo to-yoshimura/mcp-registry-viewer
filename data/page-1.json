@@ -549,10 +549,37 @@
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-06T16:11:54.5608Z",
+          "status": "deprecated",
+          "statusChangedAt": "2026-05-07T16:29:51.153646Z",
+          "statusMessage": "Pilot integration in progress; will re-activate when /m/graffeo/mcp is wired up.",
           "publishedAt": "2026-05-06T16:11:54.5608Z",
-          "updatedAt": "2026-05-06T16:11:54.5608Z",
+          "updatedAt": "2026-05-07T16:29:51.153646Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenticshelf/graffeo",
+        "description": "Live MCP catalog for Graffeo Coffee Roasting - Simply the World's Finest Coffee since 1935.",
+        "title": "Graffeo Coffee Roasting",
+        "version": "1.0.1",
+        "websiteUrl": "https://www.graffeo.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.agenticshelf.ai/m/graffeo/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "deprecated",
+          "statusChangedAt": "2026-05-07T16:29:51.153646Z",
+          "statusMessage": "Pilot integration in progress; will re-activate when /m/graffeo/mcp is wired up.",
+          "publishedAt": "2026-05-07T15:29:26.296543Z",
+          "updatedAt": "2026-05-07T16:29:51.153646Z",
           "isLatest": true
         }
       }
@@ -3673,33 +3700,6 @@
           "statusChangedAt": "2025-11-20T18:00:55.174988Z",
           "publishedAt": "2025-11-20T18:00:55.174988Z",
           "updatedAt": "2025-11-20T18:00:55.174988Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.exa/exa",
-        "description": "Fast, intelligent web search and web crawling.\n\nNew mcp tool: Exa-code is a context tool for coding ",
-        "repository": {
-          "url": "https://github.com/exa-labs/exa-mcp-server",
-          "source": "github"
-        },
-        "version": "3.1.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.exa.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2025-12-03T16:45:12.14883Z",
-          "publishedAt": "2025-12-03T16:45:12.14883Z",
-          "updatedAt": "2025-12-03T16:45:12.14883Z",
           "isLatest": false
         }
       }
