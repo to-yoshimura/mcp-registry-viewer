@@ -943,6 +943,29 @@
           "statusChangedAt": "2026-04-23T12:59:15.983084Z",
           "publishedAt": "2026-04-23T12:59:15.983084Z",
           "updatedAt": "2026-04-23T12:59:15.983084Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server-addon",
+        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
+        "title": "AnkiMCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
+          "source": "github"
+        },
+        "version": "0.15.1",
+        "websiteUrl": "https://ankimcp.ai"
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-13T11:58:07.559701Z",
+          "publishedAt": "2026-05-13T11:58:07.559701Z",
+          "updatedAt": "2026-05-13T11:58:07.559701Z",
           "isLatest": true
         }
       }
@@ -1464,6 +1487,34 @@
           "statusChangedAt": "2026-05-11T04:31:42.219913Z",
           "publishedAt": "2026-05-11T04:31:42.219913Z",
           "updatedAt": "2026-05-11T04:31:42.219913Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.auxen/auxen",
+        "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
+        "repository": {
+          "url": "https://github.com/auxen-ai/auxen-mcp",
+          "source": "github"
+        },
+        "version": "1.0.1",
+        "websiteUrl": "https://auxen.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.auxen.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-13T13:33:55.16904Z",
+          "publishedAt": "2026-05-13T13:33:55.16904Z",
+          "updatedAt": "2026-05-13T13:33:55.16904Z",
           "isLatest": true
         }
       }
@@ -3731,64 +3782,6 @@
           "publishedAt": "2026-02-27T11:50:11.005967Z",
           "updatedAt": "2026-02-27T11:50:11.005967Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.deepledger/mcp",
-        "description": "AI bookkeeping for QuickBooks Online — 28 tools for transactions, reports, and bank feeds",
-        "title": "DeepLedger — AI Bookkeeper for QuickBooks",
-        "repository": {
-          "url": "https://github.com/naga-deepledger/deepledger-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://deepledger.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.deepledger.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-31T05:36:01.533546Z",
-          "publishedAt": "2026-03-31T05:36:01.533546Z",
-          "updatedAt": "2026-03-31T05:36:01.533546Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.djwizard/tvwizard",
-        "description": "Control Android TV from any AI. 21 MCP tools: keys, apps, titles, playback, volume, observe.",
-        "title": "TVWizard",
-        "repository": {
-          "url": "https://github.com/fizzious1/TVWizard-mcp",
-          "source": "github"
-        },
-        "version": "0.5.5",
-        "websiteUrl": "https://tv.djwizard.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://tv.djwizard.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T11:02:07.680305Z",
-          "publishedAt": "2026-04-23T11:02:07.680305Z",
-          "updatedAt": "2026-04-23T11:02:07.680305Z",
-          "isLatest": false
         }
       }
     }
