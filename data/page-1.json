@@ -616,6 +616,31 @@
           "statusMessage": "Pilot integration in progress; will re-activate when /m/graffeo/mcp is wired up.",
           "publishedAt": "2026-05-07T15:29:26.296543Z",
           "updatedAt": "2026-05-07T16:29:51.153646Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenticshelf/graffeo",
+        "description": "Live MCP catalog for Graffeo Coffee Roasting - Simply the World's Finest Coffee since 1935.",
+        "title": "Graffeo Coffee Roasting",
+        "version": "1.0.2",
+        "websiteUrl": "https://www.graffeo.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.agenticshelf.ai/m/graffeo/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-14T20:40:06.442182Z",
+          "publishedAt": "2026-05-14T20:40:06.442182Z",
+          "updatedAt": "2026-05-14T20:40:06.442182Z",
           "isLatest": true
         }
       }
@@ -3749,38 +3774,6 @@
           "statusChangedAt": "2026-04-15T19:01:06.819529Z",
           "publishedAt": "2026-04-15T19:01:06.819529Z",
           "updatedAt": "2026-04-15T19:01:06.819529Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.datamerge/mcp",
-        "description": "B2B data enrichment for 375M+ companies: legal entities, corporate hierarchies, and contacts.",
-        "title": "DataMerge MCP",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.datamerge.ai",
-            "headers": [
-              {
-                "description": "Your DataMerge API key — get one free at https://app.datamerge.ai (20 credits on signup, no credit card required). Format: Bearer YOUR_API_KEY",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-27T11:50:11.005967Z",
-          "publishedAt": "2026-02-27T11:50:11.005967Z",
-          "updatedAt": "2026-02-27T11:50:11.005967Z",
           "isLatest": true
         }
       }
