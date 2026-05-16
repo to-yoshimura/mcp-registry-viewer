@@ -3485,31 +3485,6 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.constellationfinance/constellation-finance-mcp",
-        "description": "Financial data MCP via hosted streamable HTTP; OAuth for secure remote access.",
-        "title": "Constellation Finance MCP (dev)",
-        "version": "1.0.0",
-        "websiteUrl": "https://constellationfinance.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp-dev.constellationfinance.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-11T21:46:59.002863Z",
-          "publishedAt": "2026-05-11T21:46:59.002863Z",
-          "updatedAt": "2026-05-11T21:46:59.002863Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.contextstudios/mcp",
         "description": "AI agency API: 25 free tools for glossary, comparisons, blog, guides, and estimates",
         "version": "2.0.0",
@@ -3775,6 +3750,31 @@
           "publishedAt": "2026-04-15T19:01:06.819529Z",
           "updatedAt": "2026-04-15T19:01:06.819529Z",
           "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.dataforb2b/dataforb2b",
+        "description": "Search and enrich B2B people & companies — 70+ filters, live enrichment, emails, lookalike.",
+        "title": "DataForB2B",
+        "version": "1.0.0",
+        "websiteUrl": "https://dataforb2b.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.dataforb2b.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-14T19:44:28.758746Z",
+          "publishedAt": "2026-05-14T19:44:28.758746Z",
+          "updatedAt": "2026-05-14T19:44:28.758746Z",
+          "isLatest": false
         }
       }
     }
