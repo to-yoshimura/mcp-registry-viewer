@@ -2293,6 +2293,30 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.butlerbrain/mcp",
+        "description": "Persistent memory for AI assistants. Save once; recall from Claude, ChatGPT, or any MCP client.",
+        "version": "1.0.0",
+        "websiteUrl": "https://butlerbrain.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.butlerbrain.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-05-26T06:33:02.85583Z",
+          "publishedAt": "2026-05-26T06:33:02.85583Z",
+          "updatedAt": "2026-05-26T06:33:02.85583Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.buyersense/buyersense",
         "description": "MCP server for the BuyerSense API. Get buyer signals from any MCP client.",
         "version": "0.1.0",
@@ -3830,31 +3854,6 @@
           "statusChangedAt": "2026-05-01T04:04:47.87512Z",
           "publishedAt": "2026-05-01T04:04:47.87512Z",
           "updatedAt": "2026-05-01T04:04:47.87512Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.complyhat/compliance",
-        "description": "MCP for AI compliance documentation across SR 26-2, EU AI Act, NIST AI RMF, and ISO/IEC 42001.",
-        "title": "ComplyHat",
-        "version": "1.2.0",
-        "websiteUrl": "https://complyhat.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://complyhat.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-04T00:07:47.982959Z",
-          "publishedAt": "2026-05-04T00:07:47.982959Z",
-          "updatedAt": "2026-05-04T00:07:47.982959Z",
           "isLatest": false
         }
       }
