@@ -3058,103 +3058,144 @@
           "statusChangedAt": "2026-06-01T09:53:48.487239Z",
           "publishedAt": "2026-06-01T09:53:48.487239Z",
           "updatedAt": "2026-06-01T09:53:48.487239Z",
-          "isLatest": true
+          "isLatest": false
         }
       }
     },
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bringyour/bringyour",
-        "description": "No-data MCP handoff for local Claude Code to Codex harness moves. $49 lifetime.",
-        "title": "Bring Your AI",
-        "version": "1.1.0",
-        "websiteUrl": "https://bringyour.ai",
+        "name": "ai.bowmark/bowmark",
+        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+        "title": "Bowmark",
+        "repository": {
+          "url": "https://github.com/Metroxe/bowmark",
+          "source": "github",
+          "id": "1236247787",
+          "subfolder": "apps/api"
+        },
+        "version": "3.20.0",
+        "websiteUrl": "https://bowmark.ai",
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://bringyour.ai/mcp"
+            "url": "https://api.bowmark.ai/mcp?s=r"
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "statusChangedAt": "2026-04-24T08:15:43.116321Z",
-          "publishedAt": "2026-04-24T08:15:43.116321Z",
-          "updatedAt": "2026-04-24T08:15:43.116321Z",
-          "isLatest": true
+          "statusChangedAt": "2026-06-06T00:24:05.340165Z",
+          "publishedAt": "2026-06-06T00:24:05.340165Z",
+          "updatedAt": "2026-06-06T00:24:05.340165Z",
+          "isLatest": false
         }
       }
     },
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bunzee/bunzee",
-        "description": "Turn your app idea into IA, wireframes, PRD, style guides, and dev specs for coding agents.",
-        "title": "Bunzee",
-        "version": "1.0.0",
+        "name": "ai.bowmark/bowmark",
+        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+        "title": "Bowmark",
+        "repository": {
+          "url": "https://github.com/Metroxe/bowmark",
+          "source": "github",
+          "id": "1236247787",
+          "subfolder": "apps/api"
+        },
+        "version": "3.21.0",
+        "websiteUrl": "https://bowmark.ai",
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://bunzee.ai/mcp-server"
+            "url": "https://api.bowmark.ai/mcp?s=r"
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "statusChangedAt": "2026-06-05T01:24:59.568246Z",
-          "publishedAt": "2026-06-05T01:24:59.568246Z",
-          "updatedAt": "2026-06-05T01:24:59.568246Z",
-          "isLatest": true
+          "statusChangedAt": "2026-06-06T01:26:13.252261Z",
+          "publishedAt": "2026-06-06T01:26:13.252261Z",
+          "updatedAt": "2026-06-06T01:26:13.252261Z",
+          "isLatest": false
         }
       }
     },
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.butlerbrain/mcp",
-        "description": "Persistent memory for AI assistants. Save once; recall from Claude, ChatGPT, or any MCP client.",
-        "version": "1.0.0",
-        "websiteUrl": "https://butlerbrain.ai",
+        "name": "ai.bowmark/bowmark",
+        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+        "title": "Bowmark",
+        "repository": {
+          "url": "https://github.com/Metroxe/bowmark",
+          "source": "github",
+          "id": "1236247787",
+          "subfolder": "apps/api"
+        },
+        "version": "3.21.1",
+        "websiteUrl": "https://bowmark.ai",
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://api.butlerbrain.ai/mcp"
+            "url": "https://api.bowmark.ai/mcp?s=r"
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "statusChangedAt": "2026-05-26T06:33:02.85583Z",
-          "publishedAt": "2026-05-26T06:33:02.85583Z",
-          "updatedAt": "2026-05-26T06:33:02.85583Z",
-          "isLatest": true
+          "statusChangedAt": "2026-06-06T01:50:16.401204Z",
+          "publishedAt": "2026-06-06T01:50:16.401204Z",
+          "updatedAt": "2026-06-06T01:50:16.401204Z",
+          "isLatest": false
         }
       }
     },
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.buyersense/buyersense",
-        "description": "MCP server for the BuyerSense API. Get buyer signals from any MCP client.",
-        "version": "0.1.0",
+        "name": "ai.bowmark/bowmark",
+        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
+        "title": "Bowmark",
+        "repository": {
+          "url": "https://github.com/Metroxe/bowmark",
+          "source": "github",
+          "id": "1236247787",
+          "subfolder": "apps/api"
+        },
+        "version": "3.22.0",
+        "websiteUrl": "https://bowmark.ai",
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://mcp.buyersense.ai/mcp"
+            "url": "https://api.bowmark.ai/mcp?s=r",
+            "headers": [
+              {
+                "description": "Optional. A free API key raises your daily synthesis limit; omit it to use the anonymous tier. Mint a key from the dashboard at https://bowmark.ai.",
+                "value": "Bearer {api_key}",
+                "variables": {
+                  "api_key": {
+                    "description": "Your Bowmark API key (https://bowmark.ai dashboard). Leave blank for the free anonymous tier.",
+                    "isSecret": true
+                  }
+                },
+                "name": "Authorization"
+              }
+            ]
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "statusChangedAt": "2026-05-03T09:49:36.790849Z",
-          "publishedAt": "2026-05-03T09:49:36.790849Z",
-          "updatedAt": "2026-05-03T09:49:36.790849Z",
-          "isLatest": true
+          "statusChangedAt": "2026-06-06T03:57:43.063716Z",
+          "publishedAt": "2026-06-06T03:57:43.063716Z",
+          "updatedAt": "2026-06-06T03:57:43.063716Z",
+          "isLatest": false
         }
       }
     }
