@@ -1944,6 +1944,43 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bareun/bareun",
+        "description": "Korean NLP MCP server: morphological analysis, tokenization, spell & grammar checking (Bareun)",
+        "title": "Bareun — Korean NLP & Spell/Grammar Checking",
+        "repository": {
+          "url": "https://github.com/gih2yun/bareun-mcp",
+          "source": "github"
+        },
+        "version": "3.0.0",
+        "websiteUrl": "https://bareun.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bareun.ai/mcp",
+            "headers": [
+              {
+                "description": "Send 'Bearer <your Bareun API key>'. Alternatively send the key in an 'api-key' header. Get a key at https://bareun.ai.",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-09T06:04:45.980117Z",
+          "publishedAt": "2026-06-09T06:04:45.980117Z",
+          "updatedAt": "2026-06-09T06:04:45.980117Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.baselight/baselight",
         "description": "Query Baselight's public catalog of 70,000+ datasets — finance, demographics, sports, and more.",
         "version": "1.0.0",
@@ -3151,50 +3188,6 @@
           "statusChangedAt": "2026-06-06T01:50:16.401204Z",
           "publishedAt": "2026-06-06T01:50:16.401204Z",
           "updatedAt": "2026-06-06T01:50:16.401204Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.22.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r",
-            "headers": [
-              {
-                "description": "Optional. A free API key raises your daily synthesis limit; omit it to use the anonymous tier. Mint a key from the dashboard at https://bowmark.ai.",
-                "value": "Bearer {api_key}",
-                "variables": {
-                  "api_key": {
-                    "description": "Your Bowmark API key (https://bowmark.ai dashboard). Leave blank for the free anonymous tier.",
-                    "isSecret": true
-                  }
-                },
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-06T03:57:43.063716Z",
-          "publishedAt": "2026-06-06T03:57:43.063716Z",
-          "updatedAt": "2026-06-06T03:57:43.063716Z",
           "isLatest": false
         }
       }
