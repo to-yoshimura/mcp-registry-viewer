@@ -1422,6 +1422,43 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.auralogs/auralogs",
+        "description": "Read-only access to Auralogs production logs: search logs, inspect errors, review AI analyses.",
+        "title": "Auralogs",
+        "repository": {
+          "url": "https://github.com/auralogs-ai/auralogs-mcp",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "websiteUrl": "https://docs.auralogs.ai/read-api/overview/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.auralogs.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer aura_read_YOUR_KEY. Create a read-only project key in the Auralogs dashboard under Settings, API & MCP keys.",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-10T05:44:10.419193Z",
+          "publishedAt": "2026-06-10T05:44:10.419193Z",
+          "updatedAt": "2026-06-10T05:44:10.419193Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.auteng/docs",
         "description": "Publish markdown documents as public share links with mermaid diagram support. Built by AutEng.ai",
         "title": "AutEng MCP - Markdown Publishing & Document Share Links",
@@ -2236,6 +2273,30 @@
           "statusChangedAt": "2026-06-05T00:21:13.140206Z",
           "publishedAt": "2026-06-05T00:21:13.140206Z",
           "updatedAt": "2026-06-05T00:21:13.140206Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bluenexus/universal-mcp",
+        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
+        "title": "BlueNexus Universal MCP",
+        "version": "1.4.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bluenexus.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-10T00:49:47.884435Z",
+          "publishedAt": "2026-06-10T00:49:47.884435Z",
+          "updatedAt": "2026-06-10T00:49:47.884435Z",
           "isLatest": true
         }
       }
@@ -3126,68 +3187,6 @@
           "statusChangedAt": "2026-06-06T00:24:05.340165Z",
           "publishedAt": "2026-06-06T00:24:05.340165Z",
           "updatedAt": "2026-06-06T00:24:05.340165Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.21.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-06T01:26:13.252261Z",
-          "publishedAt": "2026-06-06T01:26:13.252261Z",
-          "updatedAt": "2026-06-06T01:26:13.252261Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.21.1",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-06T01:50:16.401204Z",
-          "publishedAt": "2026-06-06T01:50:16.401204Z",
-          "updatedAt": "2026-06-06T01:50:16.401204Z",
           "isLatest": false
         }
       }
