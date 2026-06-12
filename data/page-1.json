@@ -859,6 +859,33 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aient/mcp",
+        "description": "MCP-native AI SRE: ask what's broken in production, get a reviewed GitHub fix PR.",
+        "repository": {
+          "url": "https://github.com/haf/glimt",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://aient.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-11T10:40:20.47951Z",
+          "publishedAt": "2026-06-11T10:40:20.47951Z",
+          "updatedAt": "2026-06-11T10:40:20.47951Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
         "name": "ai.aliengiraffe/spotdb",
         "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
@@ -1157,6 +1184,40 @@
           "statusChangedAt": "2026-06-04T18:27:55.259037Z",
           "publishedAt": "2026-06-04T18:27:55.259037Z",
           "updatedAt": "2026-06-04T18:27:55.259037Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.20.0",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.20.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-11T16:05:02.654118Z",
+          "publishedAt": "2026-06-11T16:05:02.654118Z",
+          "updatedAt": "2026-06-11T16:05:02.654118Z",
           "isLatest": true
         }
       }
@@ -1249,6 +1310,29 @@
           "statusChangedAt": "2026-06-05T06:28:12.708168Z",
           "publishedAt": "2026-06-05T06:28:12.708168Z",
           "updatedAt": "2026-06-05T06:28:12.708168Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server-addon",
+        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
+        "title": "AnkiMCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
+          "source": "github"
+        },
+        "version": "0.19.0",
+        "websiteUrl": "https://ankimcp.ai"
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-11T16:13:47.185254Z",
+          "publishedAt": "2026-06-11T16:13:47.185254Z",
+          "updatedAt": "2026-06-11T16:13:47.185254Z",
           "isLatest": true
         }
       }
@@ -2377,6 +2461,86 @@
           "statusChangedAt": "2026-06-11T04:01:37.760989Z",
           "publishedAt": "2026-06-11T04:01:37.760989Z",
           "updatedAt": "2026-06-11T04:01:37.760989Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bolthub/registry",
+        "description": "Discover and call every paid API on the bolthub marketplace with automatic L402 Lightning payments.",
+        "title": "bolthub Marketplace",
+        "repository": {
+          "url": "https://github.com/signaltech-org/bolthub-sdk",
+          "source": "github",
+          "subfolder": "packages/mcp-registry"
+        },
+        "version": "0.1.6",
+        "websiteUrl": "https://docs.bolthub.ai/docs/sdks/mcp-registry",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@bolthub/mcp-registry",
+            "version": "0.1.6",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "LND REST API URL (recommended wallet; pair with LND_MACAROON). One wallet config is required.",
+                "placeholder": "https://your-lnd-node:8080",
+                "name": "LND_REST_HOST"
+              },
+              {
+                "description": "Hex-encoded macaroon for LND (use a pay-scoped macaroon in production). Required with LND_REST_HOST.",
+                "isSecret": true,
+                "name": "LND_MACAROON"
+              },
+              {
+                "description": "Nostr Wallet Connect string — easiest setup, works with CoinOS, Alby Hub, Zeus, and more. Alternative to LND.",
+                "isSecret": true,
+                "name": "NWC_URI"
+              },
+              {
+                "description": "LNbits instance URL (pair with LNBITS_ADMIN_KEY). Alternative wallet.",
+                "name": "LNBITS_URL"
+              },
+              {
+                "description": "Admin API key for LNbits. Required with LNBITS_URL.",
+                "isSecret": true,
+                "name": "LNBITS_ADMIN_KEY"
+              },
+              {
+                "description": "Phoenixd HTTP API URL (pair with PHOENIXD_PASSWORD). Alternative wallet.",
+                "name": "PHOENIXD_URL"
+              },
+              {
+                "description": "HTTP password for Phoenixd. Required with PHOENIXD_URL.",
+                "isSecret": true,
+                "name": "PHOENIXD_PASSWORD"
+              },
+              {
+                "description": "Maximum sats the server may spend per session (process lifetime). Unset = unlimited.",
+                "placeholder": "1000",
+                "name": "BUDGET_SATS"
+              },
+              {
+                "description": "Optional bolthub API token, used only by the deploy_node / node_status Node Launcher tools.",
+                "isSecret": true,
+                "name": "BOLTHUB_AUTH_TOKEN"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-12T04:34:33.335941Z",
+          "publishedAt": "2026-06-12T04:34:33.335941Z",
+          "updatedAt": "2026-06-12T04:34:33.335941Z",
           "isLatest": true
         }
       }
@@ -3112,130 +3276,6 @@
           "statusChangedAt": "2026-06-01T01:17:16.008636Z",
           "publishedAt": "2026-06-01T01:17:16.008636Z",
           "updatedAt": "2026-06-01T01:17:16.008636Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.17.3",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T05:12:00.741775Z",
-          "publishedAt": "2026-06-01T05:12:00.741775Z",
-          "updatedAt": "2026-06-01T05:12:00.741775Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.18.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T07:47:16.840262Z",
-          "publishedAt": "2026-06-01T07:47:16.840262Z",
-          "updatedAt": "2026-06-01T07:47:16.840262Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.18.1",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T09:29:08.749786Z",
-          "publishedAt": "2026-06-01T09:29:08.749786Z",
-          "updatedAt": "2026-06-01T09:29:08.749786Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.19.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T09:53:48.487239Z",
-          "publishedAt": "2026-06-01T09:53:48.487239Z",
-          "updatedAt": "2026-06-01T09:53:48.487239Z",
           "isLatest": false
         }
       }
