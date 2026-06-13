@@ -925,6 +925,120 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.alphacreek/alphacreek-mcp",
+        "description": "Access SEC filings efficiently, save time and tokens, and get cited answers.",
+        "title": "AlphaCreek MCP",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.alphacreek.ai/mcp-docs",
+        "icons": [
+          {
+            "src": "https://www.alphacreek.ai/assets/images/logo/logo400x400.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "400x400"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.alphacreek.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token: OAuth access token (Claude/ChatGPT) or AlphaCreek MCP API key from dashboard",
+                "isRequired": true,
+                "isSecret": true,
+                "placeholder": "Bearer <token-or-api-key>",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-12T11:23:38.376668Z",
+          "publishedAt": "2026-06-12T11:23:38.376668Z",
+          "updatedAt": "2026-06-12T11:23:38.376668Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.alphacreek/alphacreek-mcp",
+        "description": "Access SEC filings efficiently (10-K, 10-Q, etc), save time and tokens, and get cited answers.",
+        "title": "AlphaCreek SEC Filings MCP",
+        "version": "1.0.1",
+        "websiteUrl": "https://www.alphacreek.ai/mcp-docs",
+        "icons": [
+          {
+            "src": "https://www.alphacreek.ai/assets/images/logo/logo400x400.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "400x400"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.alphacreek.ai/mcp",
+            "headers": [
+              {
+                "description": "Bearer token: OAuth access token (Claude/ChatGPT) or AlphaCreek MCP API key from dashboard",
+                "isRequired": true,
+                "isSecret": true,
+                "placeholder": "Bearer <token-or-api-key>",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "categories": [
+              "Finance",
+              "Research",
+              "Data"
+            ],
+            "keywords": [
+              "SEC filings",
+              "EDGAR",
+              "10-K",
+              "10-Q",
+              "annual reports",
+              "quarterly reports",
+              "equity research",
+              "financial research",
+              "citations",
+              "AI agents",
+              "RAG"
+            ],
+            "useCases": [
+              "Analyze SEC filings with AI agents",
+              "Read exact 10-K and 10-Q sections",
+              "Generate cited answers from SEC documents",
+              "Navigate filing tables of contents"
+            ]
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-12T13:01:13.227147Z",
+          "publishedAt": "2026-06-12T13:01:13.227147Z",
+          "updatedAt": "2026-06-12T13:01:13.227147Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.alpic.mcp/alpic-mcp",
         "description": "Manage your projects, debug deployment, and check analytics for any MCP server you host with Alpic",
         "title": "Alpic",
@@ -1218,6 +1332,40 @@
           "statusChangedAt": "2026-06-11T16:05:02.654118Z",
           "publishedAt": "2026-06-11T16:05:02.654118Z",
           "updatedAt": "2026-06-11T16:05:02.654118Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.20.1",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.20.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-12T07:33:22.228957Z",
+          "publishedAt": "2026-06-12T07:33:22.228957Z",
+          "updatedAt": "2026-06-12T07:33:22.228957Z",
           "isLatest": true
         }
       }
@@ -3183,99 +3331,6 @@
           "statusChangedAt": "2026-05-31T06:36:52.112125Z",
           "publishedAt": "2026-05-31T06:36:52.112125Z",
           "updatedAt": "2026-05-31T06:36:52.112125Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.17.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-31T20:13:45.555533Z",
-          "publishedAt": "2026-05-31T20:13:45.555533Z",
-          "updatedAt": "2026-05-31T20:13:45.555533Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.17.1",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-31T23:11:08.676221Z",
-          "publishedAt": "2026-05-31T23:11:08.676221Z",
-          "updatedAt": "2026-05-31T23:11:08.676221Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.17.2",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T01:17:16.008636Z",
-          "publishedAt": "2026-06-01T01:17:16.008636Z",
-          "updatedAt": "2026-06-01T01:17:16.008636Z",
           "isLatest": false
         }
       }
