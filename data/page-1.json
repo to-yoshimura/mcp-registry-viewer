@@ -1480,6 +1480,40 @@
           "statusChangedAt": "2026-06-18T11:51:27.915305Z",
           "publishedAt": "2026-06-18T11:51:27.915305Z",
           "updatedAt": "2026-06-18T11:51:27.915305Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.22.0",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.22.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-28T06:39:23.187394Z",
+          "publishedAt": "2026-06-28T06:39:23.187394Z",
+          "updatedAt": "2026-06-28T06:39:23.187394Z",
           "isLatest": true
         }
       }
@@ -3269,37 +3303,6 @@
           "statusChangedAt": "2026-05-29T07:09:54.991669Z",
           "publishedAt": "2026-05-29T07:09:54.991669Z",
           "updatedAt": "2026-05-29T07:09:54.991669Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "3.12.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-29T07:35:45.237415Z",
-          "publishedAt": "2026-05-29T07:35:45.237415Z",
-          "updatedAt": "2026-05-29T07:35:45.237415Z",
           "isLatest": false
         }
       }
