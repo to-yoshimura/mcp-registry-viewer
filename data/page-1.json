@@ -1802,6 +1802,34 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.atdev/supershopping",
+        "description": "나만을 위한 AI 쇼핑 MCP — 상품을 자연어로 검색·비교·추천해 사용자의 효과적인 쇼핑을 돕습니다.",
+        "repository": {
+          "url": "https://github.com/alex-hoyeol-choi/headless-commerce",
+          "source": "github",
+          "id": "R_kgDOTEtAuw"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://supershopping-mcp.atdev.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-29T05:36:58.413006Z",
+          "publishedAt": "2026-06-29T05:36:58.413006Z",
+          "updatedAt": "2026-06-29T05:36:58.413006Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.augmentev/paseo",
         "description": "Confidential AI execution with a post-quantum receipt on every job — verifiable by anyone.",
         "version": "0.1.0",
@@ -2502,6 +2530,30 @@
           "publishedAt": "2026-06-02T16:24:51.181889Z",
           "updatedAt": "2026-06-02T16:24:51.181889Z",
           "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.bluenexus/universal-mcp",
+        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
+        "title": "BlueNexus Universal MCP",
+        "version": ".1.7.3",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.bluenexus.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-29T01:38:21.658859Z",
+          "publishedAt": "2026-06-29T01:38:21.658859Z",
+          "updatedAt": "2026-06-29T01:38:21.658859Z",
+          "isLatest": false
         }
       }
     },
@@ -3241,68 +3293,6 @@
           "statusChangedAt": "2026-05-27T00:24:01.604905Z",
           "publishedAt": "2026-05-27T00:24:01.604905Z",
           "updatedAt": "2026-05-27T00:24:01.604905Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "1.1.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-28T00:40:21.574726Z",
-          "publishedAt": "2026-05-28T00:40:21.574726Z",
-          "updatedAt": "2026-05-28T00:40:21.574726Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "1.2.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp?s=r"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-29T07:09:54.991669Z",
-          "publishedAt": "2026-05-29T07:09:54.991669Z",
-          "updatedAt": "2026-05-29T07:09:54.991669Z",
           "isLatest": false
         }
       }
