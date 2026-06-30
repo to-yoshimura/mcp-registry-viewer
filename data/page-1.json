@@ -2376,6 +2376,33 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.backengine/backengine-mcp",
+        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
+        "repository": {
+          "url": "https://github.com/BackEngine-ai/backengine-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.backengine.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-29T15:06:11.016488Z",
+          "publishedAt": "2026-06-29T15:06:11.016488Z",
+          "updatedAt": "2026-06-29T15:06:11.016488Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.bankee/inferventis-mcp",
         "description": "Loan & mortgage calculator, compound interest, ROI, crypto prices, FX conversion for AI agents.",
         "title": "Inferventis MCP Server",
@@ -3263,37 +3290,6 @@
           "publishedAt": "2026-04-14T03:40:09.037984Z",
           "updatedAt": "2026-04-14T03:40:09.037984Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bowmark/bowmark",
-        "description": "Pre-computed navigation recipes for public websites — skip explore-and-discover.",
-        "title": "Bowmark",
-        "repository": {
-          "url": "https://github.com/Metroxe/bowmark",
-          "source": "github",
-          "id": "1236247787",
-          "subfolder": "apps/api"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://bowmark.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bowmark.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-27T00:24:01.604905Z",
-          "publishedAt": "2026-05-27T00:24:01.604905Z",
-          "updatedAt": "2026-05-27T00:24:01.604905Z",
-          "isLatest": false
         }
       }
     }
