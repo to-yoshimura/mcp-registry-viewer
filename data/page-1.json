@@ -1514,6 +1514,40 @@
           "statusChangedAt": "2026-06-28T06:39:23.187394Z",
           "publishedAt": "2026-06-28T06:39:23.187394Z",
           "updatedAt": "2026-06-28T06:39:23.187394Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.22.1",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.22.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-01T06:24:55.517241Z",
+          "publishedAt": "2026-07-01T06:24:55.517241Z",
+          "updatedAt": "2026-07-01T06:24:55.517241Z",
           "isLatest": true
         }
       }
@@ -2376,6 +2410,33 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aviado/health",
+        "description": "Supplement research, biomarker effects, drug interactions, and brand quality data",
+        "repository": {
+          "url": "https://github.com/kipmcc/aviado-mcp",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://aviado.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-30T13:03:52.011241Z",
+          "publishedAt": "2026-06-30T13:03:52.011241Z",
+          "updatedAt": "2026-06-30T13:03:52.011241Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.backengine/backengine-mcp",
         "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
         "repository": {
@@ -2396,6 +2457,60 @@
           "statusChangedAt": "2026-06-29T15:06:11.016488Z",
           "publishedAt": "2026-06-29T15:06:11.016488Z",
           "updatedAt": "2026-06-29T15:06:11.016488Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.backengine/backengine-mcp",
+        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
+        "repository": {
+          "url": "https://github.com/BackEngine-ai/backengine-mcp",
+          "source": "github"
+        },
+        "version": "8.0.3",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.backengine.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-30T16:37:22.210586Z",
+          "publishedAt": "2026-06-30T16:37:22.210586Z",
+          "updatedAt": "2026-06-30T16:37:22.210586Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.backengine/backengine-mcp",
+        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
+        "repository": {
+          "url": "https://github.com/BackEngine-ai/backengine-mcp",
+          "source": "github"
+        },
+        "version": "8.0.4",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://backengine.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-30T16:42:26.803255Z",
+          "publishedAt": "2026-06-30T16:42:26.803255Z",
+          "updatedAt": "2026-06-30T16:42:26.803255Z",
           "isLatest": true
         }
       }
@@ -2556,6 +2671,33 @@
           "statusChangedAt": "2026-06-02T16:24:51.181889Z",
           "publishedAt": "2026-06-02T16:24:51.181889Z",
           "updatedAt": "2026-06-02T16:24:51.181889Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.blast-radius/blast-radius",
+        "description": "Blast Radius tools for AI strategy, diligence, and market updates.",
+        "repository": {
+          "url": "https://github.com/kipmcc/blast-radius-live",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://blast-radius.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-06-30T16:00:12.196014Z",
+          "publishedAt": "2026-06-30T16:00:12.196014Z",
+          "updatedAt": "2026-06-30T16:00:12.196014Z",
           "isLatest": true
         }
       }
@@ -3072,223 +3214,6 @@
           "statusChangedAt": "2026-05-19T13:30:34.760247Z",
           "publishedAt": "2026-05-19T13:30:34.760247Z",
           "updatedAt": "2026-05-19T13:30:34.760247Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.boolsai/signals",
-        "description": "Quant-research MCP — tradeable signals from public-company website stack changes. 7 tools.",
-        "title": "Boolsai Signals",
-        "repository": {
-          "url": "https://github.com/Boolsai-ai/mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://signals.boolsai.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-19T13:30:36.922608Z",
-          "publishedAt": "2026-05-19T13:30:36.922608Z",
-          "updatedAt": "2026-05-19T13:30:36.922608Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.borealhost/mcp",
-        "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
-        "title": "BorealHost",
-        "repository": {
-          "url": "https://github.com/alainsvrd/platform",
-          "source": "github",
-          "subfolder": "mcp"
-        },
-        "version": "0.1.1",
-        "websiteUrl": "https://borealhost.ai",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "borealhost-mcp",
-            "version": "0.1.1",
-            "runtimeHint": "uvx",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "BorealHost API key (format: bh_<48 hex chars>). Optional — you can also call register() or set_api_key() at runtime.",
-                "isSecret": true,
-                "name": "BOREALHOST_API_KEY"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://borealhost.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-12T19:00:06.450208Z",
-          "publishedAt": "2026-04-12T19:00:06.450208Z",
-          "updatedAt": "2026-04-12T19:00:06.450208Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.borealhost/mcp",
-        "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
-        "title": "BorealHost",
-        "repository": {
-          "url": "https://github.com/alainsvrd/borealhost-mcp",
-          "source": "github"
-        },
-        "version": "0.1.2",
-        "websiteUrl": "https://borealhost.ai",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "borealhost-mcp",
-            "version": "0.1.2",
-            "runtimeHint": "uvx",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "BorealHost API key (format: bh_<48 hex chars>). Optional — you can also call register() or set_api_key() at runtime.",
-                "isSecret": true,
-                "name": "BOREALHOST_API_KEY"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://borealhost.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-12T22:18:51.35419Z",
-          "publishedAt": "2026-04-12T22:18:51.35419Z",
-          "updatedAt": "2026-04-12T22:18:51.35419Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.borealhost/mcp",
-        "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
-        "title": "BorealHost",
-        "repository": {
-          "url": "https://github.com/alainsvrd/borealhost-mcp",
-          "source": "github"
-        },
-        "version": "0.1.3",
-        "websiteUrl": "https://borealhost.ai",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "borealhost-mcp",
-            "version": "0.1.3",
-            "runtimeHint": "uvx",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "BorealHost API key (format: bh_<48 hex chars>). Optional — you can also call register() or set_api_key() at runtime.",
-                "isSecret": true,
-                "name": "BOREALHOST_API_KEY"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://borealhost.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-13T01:16:56.635249Z",
-          "publishedAt": "2026-04-13T01:16:56.635249Z",
-          "updatedAt": "2026-04-13T01:16:56.635249Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.borealhost/mcp",
-        "description": "Agent-native web hosting — deploy sites, manage DNS, register domains, scale infrastructure",
-        "title": "BorealHost",
-        "repository": {
-          "url": "https://github.com/alainsvrd/borealhost-mcp",
-          "source": "github"
-        },
-        "version": "0.1.4",
-        "websiteUrl": "https://borealhost.ai",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "borealhost-mcp",
-            "version": "0.1.4",
-            "runtimeHint": "uvx",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "BorealHost API key (format: bh_<48 hex chars>). Optional — you can also call register() or set_api_key() at runtime.",
-                "isSecret": true,
-                "name": "BOREALHOST_API_KEY"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://borealhost.ai/mcp/"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-14T03:40:09.037984Z",
-          "publishedAt": "2026-04-14T03:40:09.037984Z",
-          "updatedAt": "2026-04-14T03:40:09.037984Z",
           "isLatest": true
         }
       }
