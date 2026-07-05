@@ -1598,6 +1598,40 @@
           "statusChangedAt": "2026-07-01T06:24:55.517241Z",
           "publishedAt": "2026-07-01T06:24:55.517241Z",
           "updatedAt": "2026-07-01T06:24:55.517241Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.22.2",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.22.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-04T17:34:42.675643Z",
+          "publishedAt": "2026-07-04T17:34:42.675643Z",
+          "updatedAt": "2026-07-04T17:34:42.675643Z",
           "isLatest": true
         }
       }
@@ -3129,30 +3163,6 @@
           "statusChangedAt": "2026-06-05T00:21:13.140206Z",
           "publishedAt": "2026-06-05T00:21:13.140206Z",
           "updatedAt": "2026-06-05T00:21:13.140206Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bluenexus/universal-mcp",
-        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
-        "title": "BlueNexus Universal MCP",
-        "version": "1.4.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bluenexus.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-10T00:49:47.884435Z",
-          "publishedAt": "2026-06-10T00:49:47.884435Z",
-          "updatedAt": "2026-06-10T00:49:47.884435Z",
           "isLatest": false
         }
       }
