@@ -1941,6 +1941,35 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.arpi/arpi-mcp",
+        "description": "AI-powered ECG analysis: submit ECG images and receive diagnosis reports from ARPI's ECG AI.",
+        "title": "ARPI MCP",
+        "repository": {
+          "url": "https://github.com/arpi-ai/arpi-mcp",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://arpi.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.arpi.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-08T04:42:03.74166Z",
+          "publishedAt": "2026-07-08T04:42:03.74166Z",
+          "updatedAt": "2026-07-08T04:42:03.74166Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
         "name": "ai.artidrop/artidrop",
         "description": "The publishing layer for AI agents. Turn HTML and Markdown into shareable URLs instantly via MCP.",
@@ -3176,30 +3205,6 @@
           "statusChangedAt": "2026-05-31T19:59:45.331003Z",
           "publishedAt": "2026-05-31T19:59:45.331003Z",
           "updatedAt": "2026-05-31T19:59:45.331003Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bluenexus/universal-mcp",
-        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
-        "title": "BlueNexus Universal MCP",
-        "version": "1.2.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bluenexus.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-01T04:42:48.166488Z",
-          "publishedAt": "2026-06-01T04:42:48.166488Z",
-          "updatedAt": "2026-06-01T04:42:48.166488Z",
           "isLatest": false
         }
       }
