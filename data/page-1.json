@@ -142,6 +142,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ag.hood/name-service",
+        "description": "Resolve .hood names on Robinhood Chain — forward/reverse, text records, availability & pricing.",
+        "title": "hood. — .hood name service",
+        "version": "0.1.0",
+        "websiteUrl": "https://www.hood.ag/docs",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://www.hood.ag/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-10T04:58:06.628668Z",
+          "publishedAt": "2026-07-10T04:58:06.628668Z",
+          "updatedAt": "2026-07-10T04:58:06.628668Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "agency.lona/trading",
         "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
         "repository": {
@@ -165,6 +190,60 @@
           "statusChangedAt": "2026-02-24T00:07:27.525636Z",
           "publishedAt": "2026-02-24T00:07:27.525636Z",
           "updatedAt": "2026-02-24T00:07:27.525636Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.1325/mcp",
+        "description": "Verified directory of 44,000+ Black-owned U.S. businesses. Search, maps, loyalty rewards.",
+        "title": "1325.AI",
+        "repository": {
+          "url": "https://github.com/1325ai/1325ai",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "websiteUrl": "https://1325.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "categories": [
+              "directory",
+              "commerce",
+              "loyalty",
+              "local-business"
+            ],
+            "contact": "support@1325.ai",
+            "keywords": [
+              "black-owned",
+              "black-business",
+              "buy-black",
+              "support-black-business",
+              "minority-owned",
+              "bipoc",
+              "small-business-saturday",
+              "juneteenth",
+              "black-history-month",
+              "directory",
+              "loyalty-rewards"
+            ],
+            "publisher": "1325.AI (Mansa Musa Marketplace)"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-10T05:01:17.106808Z",
+          "publishedAt": "2026-07-10T05:01:17.106808Z",
+          "updatedAt": "2026-07-10T05:01:17.106808Z",
           "isLatest": true
         }
       }
@@ -3167,62 +3246,6 @@
           "publishedAt": "2026-06-30T16:00:12.196014Z",
           "updatedAt": "2026-06-30T16:00:12.196014Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bluenexus/universal-mcp",
-        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
-        "title": "BlueNexus Universal MCP",
-        "version": ".1.7.3",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bluenexus.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-29T01:38:21.658859Z",
-          "publishedAt": "2026-06-29T01:38:21.658859Z",
-          "updatedAt": "2026-06-29T01:38:21.658859Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bluenexus/universal-mcp",
-        "description": "Connect your AI to all your data - 200+ sources, intelligently filtered, compliance-ready.",
-        "title": "BlueNexus Universal MCP",
-        "version": "0.13.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bluenexus.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token for authentication (e.g. 'Bearer <ACCESS_TOKEN>')",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-13T11:45:12.186696Z",
-          "publishedAt": "2026-04-13T11:45:12.186696Z",
-          "updatedAt": "2026-04-13T11:45:12.186696Z",
-          "isLatest": false
         }
       }
     }
