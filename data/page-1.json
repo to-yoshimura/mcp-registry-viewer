@@ -2828,6 +2828,33 @@
           "statusChangedAt": "2026-06-30T16:42:26.803255Z",
           "publishedAt": "2026-06-30T16:42:26.803255Z",
           "updatedAt": "2026-06-30T16:42:26.803255Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.backengine/backengine-mcp",
+        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
+        "repository": {
+          "url": "https://github.com/BackEngine-ai/backengine-mcp",
+          "source": "github"
+        },
+        "version": "8.1.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://backengine-prod.backengine.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-10T10:04:00.694928Z",
+          "publishedAt": "2026-07-10T10:04:00.694928Z",
+          "updatedAt": "2026-07-10T10:04:00.694928Z",
           "isLatest": true
         }
       }
@@ -3218,33 +3245,6 @@
           "statusChangedAt": "2026-06-02T16:24:51.181889Z",
           "publishedAt": "2026-06-02T16:24:51.181889Z",
           "updatedAt": "2026-06-02T16:24:51.181889Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.blast-radius/blast-radius",
-        "description": "Blast Radius tools for AI strategy, diligence, and market updates.",
-        "repository": {
-          "url": "https://github.com/kipmcc/blast-radius-live",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://blast-radius.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-30T16:00:12.196014Z",
-          "publishedAt": "2026-06-30T16:00:12.196014Z",
-          "updatedAt": "2026-06-30T16:00:12.196014Z",
           "isLatest": true
         }
       }
