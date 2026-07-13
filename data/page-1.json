@@ -2053,6 +2053,35 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.argushq/enforcement-database",
+        "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
+        "repository": {
+          "url": "https://github.com/andrewjgaber-commits/empire-distribution",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://argushq.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://argushq.ai/api/mcp"
+          }
+        ],
+        "_meta": {}
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-12T20:32:22.415073Z",
+          "publishedAt": "2026-07-12T20:32:22.415073Z",
+          "updatedAt": "2026-07-12T20:32:22.415073Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.arpi/arpi-mcp",
         "description": "AI-powered ECG analysis: submit ECG images and receive diagnosis reports from ARPI's ECG AI.",
         "title": "ARPI MCP",
@@ -2121,6 +2150,30 @@
           "statusChangedAt": "2026-04-17T04:01:26.724763Z",
           "publishedAt": "2026-04-17T04:01:26.724763Z",
           "updatedAt": "2026-04-17T04:01:26.724763Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.assetlog/assetlog",
+        "description": "Search and manage AssetLog listings: vehicles, real estate, jobs, CVs, favorites, AI prompts.",
+        "title": "AssetLog",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.assetlog.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-12T06:44:06.803244Z",
+          "publishedAt": "2026-07-12T06:44:06.803244Z",
+          "updatedAt": "2026-07-12T06:44:06.803244Z",
           "isLatest": true
         }
       }
@@ -3167,84 +3220,6 @@
           "statusChangedAt": "2026-07-03T13:00:32.732972Z",
           "publishedAt": "2026-07-03T13:00:32.732972Z",
           "updatedAt": "2026-07-03T13:00:32.732972Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.biel/biel-ai",
-        "description": "Query your product docs from AI tools. Source-cited answers from your indexed documentation.",
-        "title": "Biel.ai",
-        "repository": {
-          "url": "https://github.com/TechDocsStudio/biel-mcp",
-          "source": "github"
-        },
-        "version": "2.0.0",
-        "websiteUrl": "https://biel.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.biel.ai/v2/{project_slug}/mcp",
-            "variables": {
-              "project_slug": {
-                "description": "Your project's slug from the Biel.ai dashboard (app.biel.ai)",
-                "isRequired": true
-              }
-            }
-          },
-          {
-            "type": "sse",
-            "url": "https://mcp.biel.ai/sse?project_slug={project_slug}&domain={domain}",
-            "variables": {
-              "domain": {
-                "description": "Your documentation site URL, e.g. https://docs.example.com",
-                "isRequired": true
-              },
-              "project_slug": {
-                "description": "Your project's slug from the Biel.ai dashboard (app.biel.ai)",
-                "isRequired": true
-              }
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-05T15:36:24.193043Z",
-          "publishedAt": "2026-07-05T15:36:24.193043Z",
-          "updatedAt": "2026-07-05T15:36:24.193043Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.bittlebits/bittlebits",
-        "description": "GEO scores and content-rewrite suggestions for any web page, as MCP tools.",
-        "title": "BittleBits GEO Assistant",
-        "repository": {
-          "url": "https://github.com/bittlebitsai/bittlebits-plugin",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://bittlebits.ai/docs/mcp",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://bittlebits.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-02T16:24:51.181889Z",
-          "publishedAt": "2026-06-02T16:24:51.181889Z",
-          "updatedAt": "2026-06-02T16:24:51.181889Z",
           "isLatest": true
         }
       }
