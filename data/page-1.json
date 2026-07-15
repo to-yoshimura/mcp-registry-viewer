@@ -1016,6 +1016,601 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-agentops",
+        "description": "MCP server for the @agentutility agentops cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Agentops",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-agentops"
+        },
+        "version": "0.1.1",
+        "websiteUrl": "https://mcp.agentutility.ai/agentops/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-agentops",
+            "version": "0.1.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:14.904919Z",
+          "publishedAt": "2026-07-14T21:10:14.904919Z",
+          "updatedAt": "2026-07-14T21:10:14.904919Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-bestiary",
+        "description": "MCP server for the @agentutility bestiary cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Bestiary",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-bestiary"
+        },
+        "version": "0.1.3",
+        "websiteUrl": "https://mcp.agentutility.ai/bestiary/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-bestiary",
+            "version": "0.1.3",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:15.433564Z",
+          "publishedAt": "2026-07-14T21:10:15.433564Z",
+          "updatedAt": "2026-07-14T21:10:15.433564Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-browser-workflow",
+        "description": "MCP server for the @agentutility browser-workflow cluster — pay-per-call x402 tools, no API keys…",
+        "title": "AgentUtility Browser Workflow",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-browser-workflow"
+        },
+        "version": "0.1.1",
+        "websiteUrl": "https://mcp.agentutility.ai/browser-workflow/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-browser-workflow",
+            "version": "0.1.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:15.897391Z",
+          "publishedAt": "2026-07-14T21:10:15.897391Z",
+          "updatedAt": "2026-07-14T21:10:15.897391Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-compose",
+        "description": "MCP server for the @agentutility compose cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Compose",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-compose"
+        },
+        "version": "0.13.0",
+        "websiteUrl": "https://mcp.agentutility.ai/compose/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-compose",
+            "version": "0.13.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:16.321193Z",
+          "publishedAt": "2026-07-14T21:10:16.321193Z",
+          "updatedAt": "2026-07-14T21:10:16.321193Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-edge-finance",
+        "description": "MCP server for the @agentutility edge-finance cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Edge Finance",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-edge-finance"
+        },
+        "version": "0.18.8",
+        "websiteUrl": "https://mcp.agentutility.ai/edge-finance/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-edge-finance",
+            "version": "0.18.8",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:17.095531Z",
+          "publishedAt": "2026-07-14T21:10:17.095531Z",
+          "updatedAt": "2026-07-14T21:10:17.095531Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-edge-market",
+        "description": "MCP server for the @agentutility edge-market cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Edge Market",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-edge-market"
+        },
+        "version": "0.15.6",
+        "websiteUrl": "https://mcp.agentutility.ai/edge-market/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-edge-market",
+            "version": "0.15.6",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:17.497855Z",
+          "publishedAt": "2026-07-14T21:10:17.497855Z",
+          "updatedAt": "2026-07-14T21:10:17.497855Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-locale",
+        "description": "MCP server for the @agentutility locale cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Locale",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-locale"
+        },
+        "version": "0.8.7",
+        "websiteUrl": "https://mcp.agentutility.ai/locale/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-locale",
+            "version": "0.8.7",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:17.9033Z",
+          "publishedAt": "2026-07-14T21:10:17.9033Z",
+          "updatedAt": "2026-07-14T21:10:17.9033Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-matchpoint",
+        "description": "MCP server for the @agentutility matchpoint cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Matchpoint",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-matchpoint"
+        },
+        "version": "0.1.4",
+        "websiteUrl": "https://mcp.agentutility.ai/matchpoint/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-matchpoint",
+            "version": "0.1.4",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:18.280353Z",
+          "publishedAt": "2026-07-14T21:10:18.280353Z",
+          "updatedAt": "2026-07-14T21:10:18.280353Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-mediakit",
+        "description": "MCP server for the @agentutility mediakit cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Mediakit",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-mediakit"
+        },
+        "version": "0.11.9",
+        "websiteUrl": "https://mcp.agentutility.ai/mediakit/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-mediakit",
+            "version": "0.11.9",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:18.653557Z",
+          "publishedAt": "2026-07-14T21:10:18.653557Z",
+          "updatedAt": "2026-07-14T21:10:18.653557Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-model-router",
+        "description": "MCP server for the @agentutility model-router cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Model Router",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-model-router"
+        },
+        "version": "0.1.1",
+        "websiteUrl": "https://mcp.agentutility.ai/model-router/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-model-router",
+            "version": "0.1.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:19.082426Z",
+          "publishedAt": "2026-07-14T21:10:19.082426Z",
+          "updatedAt": "2026-07-14T21:10:19.082426Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-prooflayer",
+        "description": "MCP server for the @agentutility prooflayer cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Prooflayer",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-prooflayer"
+        },
+        "version": "0.2.4",
+        "websiteUrl": "https://mcp.agentutility.ai/prooflayer/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-prooflayer",
+            "version": "0.2.4",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:19.560994Z",
+          "publishedAt": "2026-07-14T21:10:19.560994Z",
+          "updatedAt": "2026-07-14T21:10:19.560994Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-retail",
+        "description": "MCP server for the @agentutility retail cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Retail",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-retail"
+        },
+        "version": "0.2.1",
+        "websiteUrl": "https://mcp.agentutility.ai/retail/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-retail",
+            "version": "0.2.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:19.946363Z",
+          "publishedAt": "2026-07-14T21:10:19.946363Z",
+          "updatedAt": "2026-07-14T21:10:19.946363Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-rollforge",
+        "description": "MCP server for the @agentutility rollforge cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Rollforge",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-rollforge"
+        },
+        "version": "0.1.5",
+        "websiteUrl": "https://mcp.agentutility.ai/rollforge/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-rollforge",
+            "version": "0.1.5",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:20.41779Z",
+          "publishedAt": "2026-07-14T21:10:20.41779Z",
+          "updatedAt": "2026-07-14T21:10:20.41779Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-statline",
+        "description": "MCP server for the @agentutility statline cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Statline",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-statline"
+        },
+        "version": "0.1.3",
+        "websiteUrl": "https://mcp.agentutility.ai/statline/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-statline",
+            "version": "0.1.3",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:20.828032Z",
+          "publishedAt": "2026-07-14T21:10:20.828032Z",
+          "updatedAt": "2026-07-14T21:10:20.828032Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-synthforge",
+        "description": "MCP server for the @agentutility synthforge cluster — pay-per-call x402 tools, no API keys, USDC…",
+        "title": "AgentUtility Synthforge",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-synthforge"
+        },
+        "version": "0.8.2",
+        "websiteUrl": "https://mcp.agentutility.ai/synthforge/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-synthforge",
+            "version": "0.8.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:21.289726Z",
+          "publishedAt": "2026-07-14T21:10:21.289726Z",
+          "updatedAt": "2026-07-14T21:10:21.289726Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-web-probe",
+        "description": "MCP server for the @agentutility web-probe cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Web Probe",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-web-probe"
+        },
+        "version": "0.32.1",
+        "websiteUrl": "https://mcp.agentutility.ai/web-probe/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-web-probe",
+            "version": "0.32.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:21.796993Z",
+          "publishedAt": "2026-07-14T21:10:21.796993Z",
+          "updatedAt": "2026-07-14T21:10:21.796993Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentutility/mcp-wordmint",
+        "description": "MCP server for the @agentutility wordmint cluster — pay-per-call x402 tools, no API keys, USDC on…",
+        "title": "AgentUtility Wordmint",
+        "repository": {
+          "url": "https://github.com/rooz21/x402",
+          "source": "github",
+          "subfolder": "packages/mcp-wordmint"
+        },
+        "version": "0.16.1",
+        "websiteUrl": "https://mcp.agentutility.ai/wordmint/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agentutility/mcp-wordmint",
+            "version": "0.16.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-14T21:10:22.302521Z",
+          "publishedAt": "2026-07-14T21:10:22.302521Z",
+          "updatedAt": "2026-07-14T21:10:22.302521Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.ai-portal/ai-portal",
         "description": "Live AI data for agents: model releases, regulations (EU AI Act), GenAI glossary, daily news.",
         "title": "AI-Portal — Enterprise GenAI Briefing",
@@ -2457,6 +3052,46 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.authoryze/authoryze",
+        "description": "Payment infrastructure for AI agents: spending rules, approval flows, single-use virtual cards.",
+        "title": "Authoryze",
+        "version": "1.0.0",
+        "icons": [
+          {
+            "src": "https://authoryze.ai/logos/icon-64.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "64x64"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://authoryze.ai/api/mcp",
+            "headers": [
+              {
+                "description": "Bearer token using your agent API key (format: Bearer <key>). Not needed when using OAuth — Claude Desktop, Claude.ai, and ChatGPT authenticate via OAuth automatically.",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-15T01:01:52.175208Z",
+          "publishedAt": "2026-07-15T01:01:52.175208Z",
+          "updatedAt": "2026-07-15T01:01:52.175208Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.autoblocks/contextlayer-mcp",
         "description": "Personal context management for AI assistants",
         "repository": {
@@ -2652,582 +3287,6 @@
           "publishedAt": "2026-05-11T23:17:51.160439Z",
           "updatedAt": "2026-05-11T23:17:51.160439Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.autonomad/travel",
-        "description": "AI travel agent — book flights, hotels, activities, and events worldwide via autonomad.ai.",
-        "repository": {
-          "url": "https://github.com/Autonomad1/autonomad1",
-          "source": "github",
-          "subfolder": "packages/mcp-hotel-tools"
-        },
-        "version": "1.4.0",
-        "websiteUrl": "https://autonomad.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "autonomad-travel",
-            "version": "1.4.0",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Autonomad API base URL. Defaults to production.",
-                "format": "string",
-                "default": "https://api.autonomad.ai",
-                "name": "AUTONOMAD_API_URL"
-              },
-              {
-                "description": "Set to 'true' to expose autonomous-agent tools (register_agent, DID-based booking). Default human mode is for Claude/ChatGPT users.",
-                "format": "string",
-                "default": "false",
-                "name": "AUTONOMAD_AGENT_MODE"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.autonomad.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-11T09:19:18.416611Z",
-          "publishedAt": "2026-05-11T09:19:18.416611Z",
-          "updatedAt": "2026-05-11T09:19:18.416611Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.autorfp/mcp",
-        "description": "Search AutoRFP.ai projects, requirements, content library, and tags for Q&A and analytics.",
-        "title": "AutoRFP.ai",
-        "repository": {
-          "url": "https://github.com/AutoRFP/mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://autorfp.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://{api_host}/mcp",
-            "variables": {
-              "api_host": {
-                "description": "AutoRFP.ai API host for your data-residency region.",
-                "isRequired": true,
-                "choices": [
-                  "api.autorfp.ai",
-                  "api.eu.autorfp.ai",
-                  "api.us.autorfp.ai"
-                ]
-              }
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-18T01:09:10.259215Z",
-          "publishedAt": "2026-05-18T01:09:10.259215Z",
-          "updatedAt": "2026-05-18T01:09:10.259215Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auxen/auxen",
-        "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-        "repository": {
-          "url": "https://github.com/Samp2Alex/auxen-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://auxen.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.auxen.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-11T04:31:42.219913Z",
-          "publishedAt": "2026-05-11T04:31:42.219913Z",
-          "updatedAt": "2026-05-11T04:31:42.219913Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auxen/auxen",
-        "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-        "repository": {
-          "url": "https://github.com/auxen-ai/auxen-mcp",
-          "source": "github"
-        },
-        "version": "1.0.1",
-        "websiteUrl": "https://auxen.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.auxen.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-13T13:33:55.16904Z",
-          "publishedAt": "2026-05-13T13:33:55.16904Z",
-          "updatedAt": "2026-05-13T13:33:55.16904Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auxen/auxen",
-        "description": "Provision private AI model endpoints on dedicated GPUs (Llama, Qwen, Mistral). Pay per minute.",
-        "title": "Auxen",
-        "repository": {
-          "url": "https://github.com/auxen-ai/auxen-mcp",
-          "source": "github"
-        },
-        "version": "1.0.2",
-        "websiteUrl": "https://auxen.ai",
-        "icons": [
-          {
-            "src": "https://auxen.ai/logo.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.auxen.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-18T23:32:19.610277Z",
-          "publishedAt": "2026-05-18T23:32:19.610277Z",
-          "updatedAt": "2026-05-18T23:32:19.610277Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aviado/health",
-        "description": "Supplement research, biomarker effects, drug interactions, and brand quality data",
-        "repository": {
-          "url": "https://github.com/kipmcc/aviado-mcp",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://aviado.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-30T13:03:52.011241Z",
-          "publishedAt": "2026-06-30T13:03:52.011241Z",
-          "updatedAt": "2026-06-30T13:03:52.011241Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.axonagentic/neuroautomata",
-        "description": "Protein analysis: ESM-2/ESMC embeddings, mutation scoring, landscape scans, ESMFold structure.",
-        "title": "Axon NeuroAutomata",
-        "version": "0.29.0",
-        "websiteUrl": "https://neuroautomata.axonagentic.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.neuroautomata.axonagentic.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-01T18:54:25.720204Z",
-          "publishedAt": "2026-07-01T18:54:25.720204Z",
-          "updatedAt": "2026-07-01T18:54:25.720204Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.backengine/backengine-mcp",
-        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
-        "repository": {
-          "url": "https://github.com/BackEngine-ai/backengine-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.backengine.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-29T15:06:11.016488Z",
-          "publishedAt": "2026-06-29T15:06:11.016488Z",
-          "updatedAt": "2026-06-29T15:06:11.016488Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.backengine/backengine-mcp",
-        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
-        "repository": {
-          "url": "https://github.com/BackEngine-ai/backengine-mcp",
-          "source": "github"
-        },
-        "version": "8.0.3",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.backengine.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-30T16:37:22.210586Z",
-          "publishedAt": "2026-06-30T16:37:22.210586Z",
-          "updatedAt": "2026-06-30T16:37:22.210586Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.backengine/backengine-mcp",
-        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
-        "repository": {
-          "url": "https://github.com/BackEngine-ai/backengine-mcp",
-          "source": "github"
-        },
-        "version": "8.0.4",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://backengine.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-30T16:42:26.803255Z",
-          "publishedAt": "2026-06-30T16:42:26.803255Z",
-          "updatedAt": "2026-06-30T16:42:26.803255Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.backengine/backengine-mcp",
-        "description": "Surface customer & prospect context from Slack, email, transcripts and tickets in any MCP client.",
-        "repository": {
-          "url": "https://github.com/BackEngine-ai/backengine-mcp",
-          "source": "github"
-        },
-        "version": "8.1.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://backengine-prod.backengine.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-10T10:04:00.694928Z",
-          "publishedAt": "2026-07-10T10:04:00.694928Z",
-          "updatedAt": "2026-07-10T10:04:00.694928Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bankee/inferventis-mcp",
-        "description": "Loan & mortgage calculator, compound interest, ROI, crypto prices, FX conversion for AI agents.",
-        "title": "Inferventis MCP Server",
-        "repository": {
-          "url": "https://github.com/Bankee-ai/inferventis",
-          "source": "github"
-        },
-        "version": "1.0.2",
-        "websiteUrl": "https://mcp-server-295985738387.europe-west1.run.app",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp-server-295985738387.europe-west1.run.app/mcp",
-            "headers": [
-              {
-                "description": "Inferventis API key — obtain at inferventis.ai",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "x-api-key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-28T09:24:20.898632Z",
-          "publishedAt": "2026-04-28T09:24:20.898632Z",
-          "updatedAt": "2026-04-28T09:24:20.898632Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.bareun/bareun",
-        "description": "Korean NLP MCP server: morphological analysis, tokenization, spell & grammar checking (Bareun)",
-        "title": "Bareun — Korean NLP & Spell/Grammar Checking",
-        "repository": {
-          "url": "https://github.com/gih2yun/bareun-mcp",
-          "source": "github"
-        },
-        "version": "3.0.0",
-        "websiteUrl": "https://bareun.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.bareun.ai/mcp",
-            "headers": [
-              {
-                "description": "Send 'Bearer <your Bareun API key>'. Alternatively send the key in an 'api-key' header. Get a key at https://bareun.ai.",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-09T06:04:45.980117Z",
-          "publishedAt": "2026-06-09T06:04:45.980117Z",
-          "updatedAt": "2026-06-09T06:04:45.980117Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.baselight/baselight",
-        "description": "Query Baselight's public catalog of 70,000+ datasets — finance, demographics, sports, and more.",
-        "version": "1.0.0",
-        "websiteUrl": "https://baselight.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.baselight.app/mcp",
-            "headers": [
-              {
-                "description": "Baselight API key. Generate one at https://baselight.app under account settings.",
-                "isRequired": true,
-                "format": "string",
-                "isSecret": true,
-                "name": "x-api-key"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-30T15:33:16.859356Z",
-          "publishedAt": "2026-04-30T15:33:16.859356Z",
-          "updatedAt": "2026-04-30T15:33:16.859356Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.basethread/basethread",
-        "description": "One shared context your team's AI tools read & write over MCP. No re-explaining. Free.",
-        "repository": {
-          "url": "https://github.com/navbuildz/basethread-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://basethread.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.basethread.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-08T17:57:42.454703Z",
-          "publishedAt": "2026-07-08T17:57:42.454703Z",
-          "updatedAt": "2026-07-08T17:57:42.454703Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.beatbandit/beatbandit",
-        "description": "AI story development, screenplay editing, review, media, and export tools for BeatBandit projects.",
-        "title": "BeatBandit MCP",
-        "version": "1.0.0",
-        "websiteUrl": "https://beatbandit.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://beatbandit.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-13T15:54:48.389416Z",
-          "publishedAt": "2026-07-13T15:54:48.389416Z",
-          "updatedAt": "2026-07-13T15:54:48.389416Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.benroberts/b4-index",
-        "description": "Independent build-vs-buy index: score software categories BUILD/BUY/BRIDGE/BEWARE.",
-        "title": "B4 Index",
-        "version": "3.3.0",
-        "websiteUrl": "https://benroberts.ai/directory",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://b4-index.vercel.app/mcp",
-            "headers": [
-              {
-                "description": "Optional. 'Bearer <b4_... key>' unlocks the Pro workflow tools (b4_audit, b4_compare, b4_recommend). The free tier (b4_browse, b4_score) needs no credentials.",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-03T23:52:40.30259Z",
-          "publishedAt": "2026-07-03T23:52:40.30259Z",
-          "updatedAt": "2026-07-03T23:52:40.30259Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.betterpost/server",
-        "description": "Finds timely sources across news, social, and the web and writes posts worth publishing.",
-        "title": "BetterPost",
-        "repository": {
-          "url": "https://github.com/betterpost/betterpost-plugin",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://betterpost.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://betterpost.ai/mcp",
-            "headers": [
-              {
-                "description": "BetterPost token (bp_live_… or bp_demo_…). Optional — the first call auto-issues a demo token, so hosts can connect without one.",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-06T13:22:52.539724Z",
-          "publishedAt": "2026-07-06T13:22:52.539724Z",
-          "updatedAt": "2026-07-06T13:22:52.539724Z",
-          "isLatest": false
         }
       }
     }
