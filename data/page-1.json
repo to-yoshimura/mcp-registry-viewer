@@ -616,6 +616,36 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aetherwealth/mcp",
+        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+        "title": "Aether Wealth",
+        "version": "0.2.0",
+        "websiteUrl": "https://aetherwealth.ai/mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@aetherwealth/mcp",
+            "version": "0.2.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-17T08:51:15.143192Z",
+          "publishedAt": "2026-07-17T08:51:15.143192Z",
+          "updatedAt": "2026-07-17T08:51:15.143192Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.agentberg/agentberg",
         "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
         "repository": {
@@ -1636,6 +1666,34 @@
           "statusChangedAt": "2026-07-14T21:10:22.302521Z",
           "publishedAt": "2026-07-14T21:10:22.302521Z",
           "updatedAt": "2026-07-14T21:10:22.302521Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ai-akari/one-minute-akari",
+        "description": "A free one-minute reset for people, delivered by AI, with no account or personal data.",
+        "title": "AIﾉアカリ☆ One-Minute Akari",
+        "repository": {
+          "url": "https://github.com/AInoAKARI/arigatou-kawaii-lp",
+          "source": "github"
+        },
+        "version": "1.0.3",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://ai-akari.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-18T04:01:27.700359Z",
+          "publishedAt": "2026-07-18T04:01:27.700359Z",
+          "updatedAt": "2026-07-18T04:01:27.700359Z",
           "isLatest": true
         }
       }
@@ -3180,91 +3238,6 @@
           "publishedAt": "2026-01-12T03:52:12.746584Z",
           "updatedAt": "2026-01-12T03:52:12.746584Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.autoblocks/ctxl-mcp",
-        "description": "Personal context management for AI assistants",
-        "repository": {
-          "url": "https://github.com/autoblocksai/ctxl",
-          "source": "github"
-        },
-        "version": "0.0.2",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "ctxl-mcp",
-            "version": "0.0.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-12T03:52:19.009876Z",
-          "publishedAt": "2026-01-12T03:52:19.009876Z",
-          "updatedAt": "2026-01-12T03:52:19.009876Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.autonomad/computeback",
-        "description": "Agent marketplace: earn $NOMD on B2B work, spend on compute/voice/memory capabilities.",
-        "repository": {
-          "url": "https://github.com/Autonomad1/computeback-mcp",
-          "source": "github"
-        },
-        "version": "1.1.2",
-        "websiteUrl": "https://computeback.com",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@autonomad1/computeback-mcp",
-            "version": "1.1.2",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Computeback API base URL. Defaults to production.",
-                "default": "https://www.computeback.com/api",
-                "name": "COMPUTEBACK_API_URL"
-              },
-              {
-                "description": "Base L2 RPC endpoint for on-chain reads (balance, settlement tx). Defaults to public mainnet endpoint.",
-                "default": "https://mainnet.base.org",
-                "name": "BASE_RPC_URL"
-              },
-              {
-                "description": "Optional. Decentralized identifier of the calling agent (e.g. did:nomd:agt_...). Required for CB Hire B2B tools (list_my_inbox, place_bid, dispatch_*, etc.). Get one from https://www.computeback.com/agents/start.",
-                "name": "AGENT_DID"
-              },
-              {
-                "description": "Optional. HMAC secret returned at agent registration time. Required together with AGENT_DID for CB Hire B2B tools.",
-                "isSecret": true,
-                "name": "AGENT_HMAC_SECRET"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-11T22:50:28.635248Z",
-          "publishedAt": "2026-05-11T22:50:28.635248Z",
-          "updatedAt": "2026-05-11T22:50:28.635248Z",
-          "isLatest": false
         }
       }
     }
