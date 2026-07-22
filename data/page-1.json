@@ -2506,6 +2506,74 @@
           "statusChangedAt": "2026-07-04T17:34:42.675643Z",
           "publishedAt": "2026-07-04T17:34:42.675643Z",
           "updatedAt": "2026-07-04T17:34:42.675643Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.22.3",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.22.3",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-21T07:09:31.830565Z",
+          "publishedAt": "2026-07-21T07:09:31.830565Z",
+          "updatedAt": "2026-07-21T07:09:31.830565Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ankimcp/anki-mcp-server",
+        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
+        "title": "Anki MCP Server",
+        "repository": {
+          "url": "https://github.com/ankimcp/anki-mcp-server",
+          "source": "github"
+        },
+        "version": "0.22.5",
+        "websiteUrl": "https://ankimcp.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@ankimcp/anki-mcp-server",
+            "version": "0.22.5",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-21T18:58:14.907015Z",
+          "publishedAt": "2026-07-21T18:58:14.907015Z",
+          "updatedAt": "2026-07-21T18:58:14.907015Z",
           "isLatest": true
         }
       }
@@ -3013,6 +3081,30 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.atlasverified/atlas-mcp",
+        "description": "AI-powered organic supply chain verification: certification, OFAC, FDA import checks.",
+        "version": "1.0.0",
+        "websiteUrl": "https://atlasverified.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.atlasverified.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-21T23:43:13.692003Z",
+          "publishedAt": "2026-07-21T23:43:13.692003Z",
+          "updatedAt": "2026-07-21T23:43:13.692003Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.augmentev/paseo",
         "description": "Confidential AI execution with a post-quantum receipt on every job — verifiable by anyone.",
         "version": "0.1.0",
@@ -3130,111 +3222,6 @@
           "publishedAt": "2026-02-06T16:52:00.816324Z",
           "updatedAt": "2026-02-06T16:52:00.816324Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auteng/mcp",
-        "description": "Publish markdown documents as public share links with mermaid diagrams. Built by AutEng.ai",
-        "title": "AutEng MCP - Markdown Publishing & Document Share Links",
-        "version": "1.0.1",
-        "websiteUrl": "https://auteng.ai",
-        "icons": [
-          {
-            "src": "https://auteng.ai/auteng-sqr.jpg",
-            "mimeType": "image/jpeg",
-            "sizes": [
-              "755x755"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://auteng.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-06T17:18:22.957864Z",
-          "publishedAt": "2026-02-06T17:18:22.957864Z",
-          "updatedAt": "2026-02-06T17:18:22.957864Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.authoryze/authoryze",
-        "description": "Payment infrastructure for AI agents: spending rules, approval flows, single-use virtual cards.",
-        "title": "Authoryze",
-        "version": "1.0.0",
-        "icons": [
-          {
-            "src": "https://authoryze.ai/logos/icon-64.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "64x64"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://authoryze.ai/api/mcp",
-            "headers": [
-              {
-                "description": "Bearer token using your agent API key (format: Bearer <key>). Not needed when using OAuth — Claude Desktop, Claude.ai, and ChatGPT authenticate via OAuth automatically.",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-15T01:01:52.175208Z",
-          "publishedAt": "2026-07-15T01:01:52.175208Z",
-          "updatedAt": "2026-07-15T01:01:52.175208Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.autoblocks/contextlayer-mcp",
-        "description": "Personal context management for AI assistants",
-        "repository": {
-          "url": "https://github.com/autoblocksai/ctxl",
-          "source": "github"
-        },
-        "version": "0.0.3",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@contextlayer/mcp",
-            "version": "0.0.3",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-01-12T03:52:52.134106Z",
-          "publishedAt": "2026-01-12T03:52:52.134106Z",
-          "updatedAt": "2026-01-12T03:52:52.134106Z",
-          "isLatest": true
         }
       }
     }
