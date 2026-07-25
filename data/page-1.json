@@ -667,6 +667,36 @@
           "statusChangedAt": "2026-07-17T08:51:15.143192Z",
           "publishedAt": "2026-07-17T08:51:15.143192Z",
           "updatedAt": "2026-07-17T08:51:15.143192Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aetherwealth/mcp",
+        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+        "title": "Aether Wealth",
+        "version": "0.2.2",
+        "websiteUrl": "https://aetherwealth.ai/mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@aetherwealth/mcp",
+            "version": "0.2.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-24T22:07:17.215889Z",
+          "publishedAt": "2026-07-24T22:07:17.215889Z",
+          "updatedAt": "2026-07-24T22:07:17.215889Z",
           "isLatest": true
         }
       }
@@ -791,6 +821,30 @@
           "statusChangedAt": "2026-04-06T18:34:53.583541Z",
           "publishedAt": "2026-04-06T18:34:53.583541Z",
           "updatedAt": "2026-04-06T18:34:53.583541Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenticfabricationnetwork/ufp",
+        "description": "Turn designs into shipped parts: quote 3D printing, CNC, and decals, then check out.",
+        "title": "Agent Fabrication Network (UFP)",
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agenticfabricationnetwork.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-24T06:26:25.029641Z",
+          "publishedAt": "2026-07-24T06:26:25.029641Z",
+          "updatedAt": "2026-07-24T06:26:25.029641Z",
           "isLatest": true
         }
       }
@@ -1694,6 +1748,35 @@
           "statusChangedAt": "2026-07-14T21:10:22.302521Z",
           "publishedAt": "2026-07-14T21:10:22.302521Z",
           "updatedAt": "2026-07-14T21:10:22.302521Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ai-akari/agent-trust-receipt",
+        "description": "Read-only Remote MCP for externally grounded AI agent trust receipts.",
+        "title": "AIﾉアカリ☆ Agent Trust Receipt",
+        "repository": {
+          "url": "https://github.com/AInoAKARI/AInoAKARI",
+          "source": "github"
+        },
+        "version": "1.1.0",
+        "websiteUrl": "https://ai-akari.ai/.well-known/agent-trust.json",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://ai-akari.ai/mcp-trust"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-24T19:48:47.852003Z",
+          "publishedAt": "2026-07-24T19:48:47.852003Z",
+          "updatedAt": "2026-07-24T19:48:47.852003Z",
           "isLatest": true
         }
       }
@@ -3123,105 +3206,6 @@
           "publishedAt": "2026-06-26T03:21:55.655559Z",
           "updatedAt": "2026-06-26T03:21:55.655559Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auralogs/auralogs",
-        "description": "Read-only access to Auralogs production logs: search logs, inspect errors, review AI analyses.",
-        "title": "Auralogs",
-        "repository": {
-          "url": "https://github.com/auralogs-ai/auralogs-mcp",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "websiteUrl": "https://docs.auralogs.ai/read-api/overview/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.auralogs.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer aura_read_YOUR_KEY. Create a read-only project key in the Auralogs dashboard under Settings, API & MCP keys.",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-10T05:44:10.419193Z",
-          "publishedAt": "2026-06-10T05:44:10.419193Z",
-          "updatedAt": "2026-06-10T05:44:10.419193Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auteng/docs",
-        "description": "Publish markdown documents as public share links with mermaid diagram support. Built by AutEng.ai",
-        "title": "AutEng MCP - Markdown Publishing & Document Share Links",
-        "version": "1.1.0",
-        "websiteUrl": "https://auteng.ai",
-        "icons": [
-          {
-            "src": "https://auteng.ai/auteng-sqr.jpg",
-            "mimeType": "image/jpeg",
-            "sizes": [
-              "755x755"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://auteng.ai/mcp/docs"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-06T20:56:39.150934Z",
-          "publishedAt": "2026-02-06T20:56:39.150934Z",
-          "updatedAt": "2026-02-06T20:56:39.150934Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.auteng/mcp",
-        "description": "Publish markdown as a publicly shareable AutEng document",
-        "title": "AutEng Document Publisher",
-        "repository": {
-          "url": "https://github.com/auteng/auteng",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://auteng.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-06T16:52:00.816324Z",
-          "publishedAt": "2026-02-06T16:52:00.816324Z",
-          "updatedAt": "2026-02-06T16:52:00.816324Z",
-          "isLatest": false
         }
       }
     }
