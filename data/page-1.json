@@ -195,6 +195,35 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.kesey/pretrip",
+        "description": "Screen regulated-health marketing copy against source-cited rulesets, all 50 states.",
+        "title": "Pre-Trip compliance scanner",
+        "version": "1.0.1",
+        "websiteUrl": "https://scan.kesey.agency/developers/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "pretrip-mcp",
+            "version": "1.0.1",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-26T18:03:21.463557Z",
+          "publishedAt": "2026-07-26T18:03:21.463557Z",
+          "updatedAt": "2026-07-26T18:03:21.463557Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "agency.lona/trading",
         "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
         "repository": {
@@ -3181,30 +3210,6 @@
           "statusChangedAt": "2026-07-21T23:43:13.692003Z",
           "publishedAt": "2026-07-21T23:43:13.692003Z",
           "updatedAt": "2026-07-21T23:43:13.692003Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.augmentev/paseo",
-        "description": "Confidential AI execution with a post-quantum receipt on every job — verifiable by anyone.",
-        "version": "0.1.0",
-        "websiteUrl": "https://augmentev.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.augmentev.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-26T03:21:55.655559Z",
-          "publishedAt": "2026-06-26T03:21:55.655559Z",
-          "updatedAt": "2026-06-26T03:21:55.655559Z",
           "isLatest": true
         }
       }
