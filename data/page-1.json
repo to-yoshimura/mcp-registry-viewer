@@ -750,6 +750,36 @@
           "statusChangedAt": "2026-07-24T22:07:17.215889Z",
           "publishedAt": "2026-07-24T22:07:17.215889Z",
           "updatedAt": "2026-07-24T22:07:17.215889Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aetherwealth/mcp",
+        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+        "title": "Aether Wealth",
+        "version": "0.2.7",
+        "websiteUrl": "https://aetherwealth.ai/mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@aetherwealth/mcp",
+            "version": "0.2.7",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-29T20:08:00.575379Z",
+          "publishedAt": "2026-07-29T20:08:00.575379Z",
+          "updatedAt": "2026-07-29T20:08:00.575379Z",
           "isLatest": true
         }
       }
@@ -874,6 +904,46 @@
           "statusChangedAt": "2026-04-06T18:34:53.583541Z",
           "publishedAt": "2026-04-06T18:34:53.583541Z",
           "updatedAt": "2026-04-06T18:34:53.583541Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenticaffiliate/affiliate-networks-mcp",
+        "description": "Affiliate network reporting in your AI client. Bring your own keys. Most adapters experimental.",
+        "title": "Affiliate Networks MCP",
+        "repository": {
+          "url": "https://github.com/bobberrisford/affiliatemcp",
+          "source": "github"
+        },
+        "version": "0.19.0",
+        "websiteUrl": "https://agenticaffiliate.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "affiliate-networks-mcp",
+            "version": "0.19.0",
+            "runtimeHint": "npx",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.agenticaffiliate.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-29T07:26:14.414867Z",
+          "publishedAt": "2026-07-29T07:26:14.414867Z",
+          "updatedAt": "2026-07-29T07:26:14.414867Z",
           "isLatest": true
         }
       }
@@ -3158,58 +3228,6 @@
           "statusChangedAt": "2026-04-17T04:01:26.724763Z",
           "publishedAt": "2026-04-17T04:01:26.724763Z",
           "updatedAt": "2026-04-17T04:01:26.724763Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.assetlog/assetlog",
-        "description": "Search and manage AssetLog listings: vehicles, real estate, jobs, CVs, favorites, AI prompts.",
-        "title": "AssetLog",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.assetlog.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-12T06:44:06.803244Z",
-          "publishedAt": "2026-07-12T06:44:06.803244Z",
-          "updatedAt": "2026-07-12T06:44:06.803244Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.atdev/supershopping",
-        "description": "나만을 위한 AI 쇼핑 MCP — 상품을 자연어로 검색·비교·추천해 사용자의 효과적인 쇼핑을 돕습니다.",
-        "repository": {
-          "url": "https://github.com/alex-hoyeol-choi/headless-commerce",
-          "source": "github",
-          "id": "R_kgDOTEtAuw"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://supershopping-mcp.atdev.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-29T05:36:58.413006Z",
-          "publishedAt": "2026-06-29T05:36:58.413006Z",
-          "updatedAt": "2026-06-29T05:36:58.413006Z",
           "isLatest": true
         }
       }
