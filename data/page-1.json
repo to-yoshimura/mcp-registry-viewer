@@ -780,6 +780,61 @@
           "statusChangedAt": "2026-07-29T20:08:00.575379Z",
           "publishedAt": "2026-07-29T20:08:00.575379Z",
           "updatedAt": "2026-07-29T20:08:00.575379Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aetherwealth/mcp",
+        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+        "title": "Aether Wealth",
+        "version": "0.2.9",
+        "websiteUrl": "https://aetherwealth.ai/mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@aetherwealth/mcp",
+            "version": "0.2.9",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-30T11:11:27.271103Z",
+          "publishedAt": "2026-07-30T11:11:27.271103Z",
+          "updatedAt": "2026-07-30T11:11:27.271103Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.afmr/discovery",
+        "description": "Read AFMR failure modes and discover scoped attestation and lift-evidence contracts.",
+        "title": "AFMR Discovery",
+        "version": "1.0.0",
+        "websiteUrl": "https://afmr.ai/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://afmr.ai/api/rpc"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-30T18:14:19.797129Z",
+          "publishedAt": "2026-07-30T18:14:19.797129Z",
+          "updatedAt": "2026-07-30T18:14:19.797129Z",
           "isLatest": true
         }
       }
@@ -2311,6 +2366,43 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.analyticslegends/sap-analytics",
+        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
+        "title": "Analytics Legends — SAP Analytics Intelligence",
+        "version": "1.0.0",
+        "websiteUrl": "https://analyticslegends.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://analyticslegends.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "endpoint_probe": "POST initialize on https://analyticslegends.ai/mcp -> HTTP 200, protocolVersion 2025-11-25",
+            "long_description": "AI agent for SAP analytics and AI consultants. Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), exposed read-only so an assistant can answer precisely and cite the exact record. TEN tools over the PUBLIC tranche: a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, with a full profile per firm; freelance day-rate bands by geography, stack and seniority, where sample_size comes back null when no real observation matches the exact cell and GBP/CHF observations are never folded into the euro band; a live contract radar of publicly promoted SAP analytics openings, each row carrying the original per-job permalink; 4,491 curated market news items, each with the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of 38 study editions (19 deep-research studies, each published in EN and FR) on market structure, day rates and recruiter economics. Counting rows gives 38, counting studies gives 19; the tool returns editions. Free, unauthenticated, read-only: every tool is annotated readOnlyHint and none writes. Retrieval with attribution is permitted, training is not; every response carries a citation_url pointing at the specific analyticslegends.ai page for the record served. DELIBERATELY NOT SERVED here, and this is a boundary rather than a gap: the SAP end-customer estate corpus, firm intelligence detail, study bodies and the opportunity-to-consultant matchers are paid tiers; people are never served at all — consultants are held as initials only and no tool returns a person's identity or contact details. SAP's own product documentation is not ours to restate: cite SAP.",
+            "monitoring": "Probed every 20 minutes by scripts/sentinelle/sensors/mcp-endpoint.mjs: handshake, a real tools/call with data, and latency. Health published at https://analyticslegends.ai/api/mcp-health.json",
+            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> HTTP 200 (v=MCPv1; k=ed25519)",
+            "repository_omitted_because": "The source repository is private; the schema calls repository optional and declaring an unreachable URL would be worse than omitting it.",
+            "tools_served": "10 (public tranche). The local stdio build has 20; the paid-tier tools are not exposed here by design.",
+            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
+            "verified_on": "2026-07-30"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-30T11:41:55.972984Z",
+          "publishedAt": "2026-07-30T11:41:55.972984Z",
+          "updatedAt": "2026-07-30T11:41:55.972984Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.ankimcp/anki-mcp-server",
         "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
         "title": "Anki MCP Server",
@@ -3153,81 +3245,6 @@
           "statusChangedAt": "2026-07-12T20:32:22.415073Z",
           "publishedAt": "2026-07-12T20:32:22.415073Z",
           "updatedAt": "2026-07-12T20:32:22.415073Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.arpi/arpi-mcp",
-        "description": "AI-powered ECG analysis: submit ECG images and receive diagnosis reports from ARPI's ECG AI.",
-        "title": "ARPI MCP",
-        "repository": {
-          "url": "https://github.com/arpi-ai/arpi-mcp",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://arpi.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.arpi.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-08T04:42:03.74166Z",
-          "publishedAt": "2026-07-08T04:42:03.74166Z",
-          "updatedAt": "2026-07-08T04:42:03.74166Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-        "name": "ai.artidrop/artidrop",
-        "description": "The publishing layer for AI agents. Turn HTML and Markdown into shareable URLs instantly via MCP.",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://artidrop.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-03T15:06:01.506001Z",
-          "publishedAt": "2026-04-03T15:06:01.506001Z",
-          "updatedAt": "2026-04-03T15:06:01.506001Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.artidrop/artidrop",
-        "description": "Publish HTML, Markdown, and multi-file sites as shareable URLs instantly via MCP.",
-        "version": "1.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://artidrop.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-17T04:01:26.724763Z",
-          "publishedAt": "2026-04-17T04:01:26.724763Z",
-          "updatedAt": "2026-04-17T04:01:26.724763Z",
           "isLatest": true
         }
       }
