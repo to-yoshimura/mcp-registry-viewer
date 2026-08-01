@@ -730,6 +730,36 @@
         "name": "ai.aetherwealth/mcp",
         "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
         "title": "Aether Wealth",
+        "version": "0.2.11",
+        "websiteUrl": "https://aetherwealth.ai/mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@aetherwealth/mcp",
+            "version": "0.2.11",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-07-31T14:44:04.124681Z",
+          "publishedAt": "2026-07-31T14:44:04.124681Z",
+          "updatedAt": "2026-07-31T14:44:04.124681Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aetherwealth/mcp",
+        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
+        "title": "Aether Wealth",
         "version": "0.2.2",
         "websiteUrl": "https://aetherwealth.ai/mcp",
         "packages": [
@@ -810,7 +840,7 @@
           "statusChangedAt": "2026-07-30T11:11:27.271103Z",
           "publishedAt": "2026-07-30T11:11:27.271103Z",
           "updatedAt": "2026-07-30T11:11:27.271103Z",
-          "isLatest": true
+          "isLatest": false
         }
       }
     },
@@ -3216,35 +3246,6 @@
           "statusChangedAt": "2026-05-19T16:59:50.65972Z",
           "publishedAt": "2026-05-19T16:59:50.65972Z",
           "updatedAt": "2026-05-19T16:59:50.65972Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.argushq/enforcement-database",
-        "description": "Search Argus HQ public FDA enforcement data: warning letters, recalls, approvals, 483s.",
-        "repository": {
-          "url": "https://github.com/andrewjgaber-commits/empire-distribution",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://argushq.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://argushq.ai/api/mcp"
-          }
-        ],
-        "_meta": {}
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-12T20:32:22.415073Z",
-          "publishedAt": "2026-07-12T20:32:22.415073Z",
-          "updatedAt": "2026-07-12T20:32:22.415073Z",
           "isLatest": true
         }
       }
