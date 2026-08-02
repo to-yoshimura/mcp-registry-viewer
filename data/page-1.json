@@ -1294,6 +1294,99 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentplaybooks/agentplaybooks",
+        "description": "Portable, vendor-neutral home for agent skills, MCP servers, personas, and memory.",
+        "title": "AgentPlaybooks",
+        "repository": {
+          "url": "https://github.com/matebenyovszky/agentplaybooks",
+          "source": "github"
+        },
+        "version": "0.2.0",
+        "websiteUrl": "https://agentplaybooks.ai",
+        "icons": [
+          {
+            "src": "https://agentplaybooks.ai/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agentplaybooks.ai/api/mcp/manage",
+            "headers": [
+              {
+                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-01T20:43:43.868547Z",
+          "publishedAt": "2026-08-01T20:43:43.868547Z",
+          "updatedAt": "2026-08-01T20:43:43.868547Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentplaybooks/agentplaybooks",
+        "description": "Manage portable AI agent playbooks, Agent Skills, MCP configurations, personas, and memory.",
+        "title": "AgentPlaybooks",
+        "repository": {
+          "url": "https://github.com/matebenyovszky/agentplaybooks",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://agentplaybooks.ai",
+        "icons": [
+          {
+            "src": "https://agentplaybooks.ai/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agentplaybooks.ai/api/mcp/manage",
+            "headers": [
+              {
+                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "deprecated",
+          "statusChangedAt": "2026-08-01T20:44:36.793656Z",
+          "statusMessage": "Published accidentally as 1.0.0; use 0.2.0 as the early release.",
+          "publishedAt": "2026-08-01T20:24:13.359787Z",
+          "updatedAt": "2026-08-01T20:44:36.793656Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
         "name": "ai.agentrapay/agentra",
         "description": "Identity oracle and trust layer for autonomous AI agents. Bidirectional KYA and trust scoring.",
@@ -3182,71 +3275,6 @@
           "publishedAt": "2026-02-09T15:16:30.60739Z",
           "updatedAt": "2026-02-09T15:16:30.60739Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.appdeploy/deploy-app",
-        "description": "AppDeploy turns app ideas described in AI chat into live full-stack web applications",
-        "title": "AppDeploy",
-        "version": "2.6.13",
-        "websiteUrl": "https://appdeploy.ai/",
-        "icons": [
-          {
-            "src": "https://appdeploy.ai/assets/favicon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          },
-          {
-            "src": "https://appdeploy.ai/assets/favicon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api-v2.appdeploy.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-13T12:28:46.556669Z",
-          "publishedAt": "2026-07-13T12:28:46.556669Z",
-          "updatedAt": "2026-07-13T12:28:46.556669Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.arclan/registry",
-        "description": "MCP server registry — validated by live handshake, scored on reliability, monitored continuously.",
-        "title": "Arclan MCP Registry",
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://arclan.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-19T16:59:50.65972Z",
-          "publishedAt": "2026-05-19T16:59:50.65972Z",
-          "updatedAt": "2026-05-19T16:59:50.65972Z",
-          "isLatest": true
         }
       }
     }
