@@ -2056,6 +2056,39 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.ai-advisors/mcp",
+        "description": "Read-only AI search visibility data: citations, AEO audits, and advisor insights from AI-Advisors.",
+        "title": "AI-Advisors",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.ai-advisors.ai/integrations/mcp-server",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.ai-advisors.ai/api/mcp",
+            "headers": [
+              {
+                "description": "Bearer <personal access token>. Generate the token (aia_...) in AI-Advisors under Settings > MCP Access; tokens are revocable and scoped to your workspace.",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-02T18:21:16.578234Z",
+          "publishedAt": "2026-08-02T18:21:16.578234Z",
+          "updatedAt": "2026-08-02T18:21:16.578234Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.ai-akari/agent-trust-receipt",
         "description": "Read-only Remote MCP for externally grounded AI agent trust receipts.",
         "title": "AIﾉアカリ☆ Agent Trust Receipt",
@@ -3251,30 +3284,6 @@
           "publishedAt": "2026-07-02T22:06:43.451983Z",
           "updatedAt": "2026-07-02T22:06:43.451983Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.appdeploy/deploy-app",
-        "description": "AppDeploy turns app ideas described in AI chat into live full-stack web applications",
-        "title": "AppDeploy",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api-v2.appdeploy.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-09T15:16:30.60739Z",
-          "publishedAt": "2026-02-09T15:16:30.60739Z",
-          "updatedAt": "2026-02-09T15:16:30.60739Z",
-          "isLatest": false
         }
       }
     }
