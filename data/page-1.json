@@ -1353,6 +1353,98 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+        "name": "ai.agentlookups/counterscript",
+        "description": "What pharmacies actually pay for prescriptions (CMS NADAC) plus fair-cash-price estimates.",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://rx.agentlookups.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-05T00:13:29.161664Z",
+          "publishedAt": "2026-08-05T00:13:29.161664Z",
+          "updatedAt": "2026-08-05T00:13:29.161664Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+        "name": "ai.agentlookups/groundtruth",
+        "description": "Federal environmental records + address due-diligence layers near any US location. Tools",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://env.agentlookups.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-05T00:12:30.451036Z",
+          "publishedAt": "2026-08-05T00:12:30.451036Z",
+          "updatedAt": "2026-08-05T00:12:30.451036Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+        "name": "ai.agentlookups/overassessed",
+        "description": "Maryland property-assessment fairness checks vs similar homes, with appeal windows and links.",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://overassessed.agentlookups.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-05T01:26:05.596901Z",
+          "publishedAt": "2026-08-05T01:26:05.596901Z",
+          "updatedAt": "2026-08-05T01:26:05.596901Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+        "name": "ai.agentlookups/plumbline",
+        "description": "Free public-record contractor license checks across 34 US jurisdictions (2.7M records). Tool",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://contractors.agentlookups.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-05T00:11:53.761275Z",
+          "publishedAt": "2026-08-05T00:11:53.761275Z",
+          "updatedAt": "2026-08-05T00:11:53.761275Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.agentplaybooks/agentplaybooks",
         "description": "Portable, vendor-neutral home for agent skills, MCP servers, personas, and memory.",
@@ -3134,123 +3226,6 @@
           "publishedAt": "2026-05-13T11:58:07.559701Z",
           "updatedAt": "2026-05-13T11:58:07.559701Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server-addon",
-        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-        "title": "AnkiMCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
-          "source": "github"
-        },
-        "version": "0.17.0",
-        "websiteUrl": "https://ankimcp.ai"
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-04T19:13:20.352585Z",
-          "publishedAt": "2026-06-04T19:13:20.352585Z",
-          "updatedAt": "2026-06-04T19:13:20.352585Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server-addon",
-        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-        "title": "AnkiMCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
-          "source": "github"
-        },
-        "version": "0.18.0",
-        "websiteUrl": "https://ankimcp.ai"
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-05T06:28:12.708168Z",
-          "publishedAt": "2026-06-05T06:28:12.708168Z",
-          "updatedAt": "2026-06-05T06:28:12.708168Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server-addon",
-        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-        "title": "AnkiMCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
-          "source": "github"
-        },
-        "version": "0.19.0",
-        "websiteUrl": "https://ankimcp.ai"
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-11T16:13:47.185254Z",
-          "publishedAt": "2026-06-11T16:13:47.185254Z",
-          "updatedAt": "2026-06-11T16:13:47.185254Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.anomalyarmor/armor-mcp",
-        "description": "Data observability tools for engineering teams: alerts, freshness, schema drift, lineage, quality.",
-        "title": "AnomalyArmor",
-        "repository": {
-          "url": "https://github.com/anomalyarmor/agents",
-          "source": "github",
-          "subfolder": "armor-mcp"
-        },
-        "version": "0.6.1",
-        "websiteUrl": "https://www.anomalyarmor.ai",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "armor-mcp",
-            "version": "0.6.1",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "AnomalyArmor API key (aa_live_*). Generate at https://app.anomalyarmor.ai/settings/api-keys.",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "ARMOR_API_KEY"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.anomalyarmor.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-18T00:51:37.350253Z",
-          "publishedAt": "2026-04-18T00:51:37.350253Z",
-          "updatedAt": "2026-04-18T00:51:37.350253Z",
-          "isLatest": true
         }
       }
     }
