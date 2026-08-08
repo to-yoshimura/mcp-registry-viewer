@@ -1112,6 +1112,30 @@
           "statusChangedAt": "2026-07-24T06:26:25.029641Z",
           "publishedAt": "2026-07-24T06:26:25.029641Z",
           "updatedAt": "2026-07-24T06:26:25.029641Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agenticfabricationnetwork/ufp",
+        "description": "Turn designs into shipped parts: quote 3D printing, CNC, and decals, then check out.",
+        "title": "Agentic Fabrication Network (AFN)",
+        "version": "0.1.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agenticfabricationnetwork.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-07T18:18:36.945995Z",
+          "publishedAt": "2026-08-07T18:18:36.945995Z",
+          "updatedAt": "2026-08-07T18:18:36.945995Z",
           "isLatest": true
         }
       }
@@ -2398,38 +2422,6 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aisecuritygateway/mcp-gateway",
-        "description": "Security & DLP proxy for MCP: tool-poisoning scans, PII redaction on tool args/results. Beta.",
-        "title": "AI Security Gateway — MCP Gateway",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.aisecuritygateway.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer <project API key> (oah_...). Request beta access at enterprise@aisecuritygateway.ai",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-08T23:23:14.982464Z",
-          "publishedAt": "2026-07-08T23:23:14.982464Z",
-          "updatedAt": "2026-07-08T23:23:14.982464Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.aivonic/mcp",
         "description": "Do business with Aivonic: pricing, products, check availability, book a demo, request a quote.",
         "version": "1.0.0",
@@ -2727,6 +2719,43 @@
           "statusChangedAt": "2026-07-30T11:41:55.972984Z",
           "publishedAt": "2026-07-30T11:41:55.972984Z",
           "updatedAt": "2026-07-30T11:41:55.972984Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.analyticslegends/sap-analytics",
+        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
+        "title": "Analytics Legends — SAP Analytics Intelligence",
+        "version": "1.0.1",
+        "websiteUrl": "https://analyticslegends.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://analyticslegends.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "endpoint_probe": "POST tools/list on https://analyticslegends.ai/mcp -> HTTP 200, 15 tools; POST server/discover under protocol 2026-07-28 -> HTTP 200 (dual-era). Conformance battery 2026-08-07: 431 assertions passed, 0 critical failures, against this URL.",
+            "long_description": "AI agent for SAP analytics and AI consultants. Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), exposed read-only so an assistant can answer precisely and cite the exact record. FIFTEEN tools: TEN over the PUBLIC tranche, no credential, plus FIVE that a subscriber API key opens (they are listed and refuse by name without one, rather than being hidden): a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, with a full profile per firm; freelance day-rate bands by geography, stack and seniority, where sample_size comes back null when no real observation matches the exact cell and GBP/CHF observations are never folded into the euro band; a live contract radar of publicly promoted SAP analytics openings, each row carrying the original per-job permalink; a curated market-news corpus served de-duplicated by upstream URL (3,543 distinct articles on 2026-07-31; the count is read at query time and returned as _meta.match_count, never quoted from here), each with the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of 38 study editions (19 deep-research studies, each published in EN and FR) on market structure, day rates and recruiter economics. Counting rows gives 38, counting studies gives 19; the tool returns editions. Free, unauthenticated, read-only: every tool is annotated readOnlyHint and none writes. Retrieval with attribution is permitted, training is not; every response carries a citation_url pointing at the specific analyticslegends.ai page for the record served. DELIBERATELY NOT SERVED without a key, and this is a boundary rather than a gap: the SAP end-customer estate corpus, firm intelligence detail and study bodies need a Consultant- or Legend-tier subscriber key; the opportunity-to-consultant matchers are not exposed at all; people are never served at any tier — consultants are held as initials only and no tool returns a person's identity or contact details. SAP's own product documentation is not ours to restate: cite SAP.",
+            "monitoring": "Probed by scripts/sentinelle/sensors/mcp-endpoint.mjs — handshake, a real tools/call with data, and latency. The 20-minute tick is a launchd job on the maintainer's workstation, so it runs only while that machine is awake; the cloud backstop (.github/workflows/sentinelle-probe.yml) runs twice a day. Health published at https://analyticslegends.ai/api/mcp-health.json with its own generated_at — read that stamp rather than assuming a cadence.",
+            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> HTTP 200 (v=MCPv1; k=ed25519)",
+            "repository_omitted_because": "The source repository is private; the schema calls repository optional and declaring an unreachable URL would be worse than omitting it.",
+            "tools_served": "15 on this endpoint: 10 public and unauthenticated, 5 gated by subscriber tier and refused by name without a key. The local stdio build has 20 and reads build artefacts that have no public home.",
+            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
+            "verified_on": "2026-08-07"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-07T06:21:53.010234Z",
+          "publishedAt": "2026-08-07T06:21:53.010234Z",
+          "updatedAt": "2026-08-07T06:21:53.010234Z",
           "isLatest": true
         }
       }
@@ -3204,29 +3233,6 @@
           "publishedAt": "2026-07-21T18:58:14.907015Z",
           "updatedAt": "2026-07-21T18:58:14.907015Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server-addon",
-        "description": "Anki addon that exposes your flashcard collection to AI assistants via a local MCP server.",
-        "title": "AnkiMCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server-addon",
-          "source": "github"
-        },
-        "version": "0.15.0",
-        "websiteUrl": "https://ankimcp.ai"
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-23T12:59:15.983084Z",
-          "publishedAt": "2026-04-23T12:59:15.983084Z",
-          "updatedAt": "2026-04-23T12:59:15.983084Z",
-          "isLatest": false
         }
       }
     }
