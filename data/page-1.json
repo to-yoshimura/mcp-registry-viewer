@@ -194,6 +194,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ad.inside/inside-ads",
+        "description": "Telegram ad exchange: estimate reach and cost with no account, then create and run campaigns.",
+        "title": "Inside Ads",
+        "version": "1.0.0",
+        "websiteUrl": "https://inside.ad",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.inside.ad/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-18T20:55:46.452926Z",
+          "publishedAt": "2026-08-18T20:55:46.452926Z",
+          "updatedAt": "2026-08-18T20:55:46.452926Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ag.hood/name-service",
         "description": "Resolve .hood names on Robinhood Chain — forward/reverse, text records, availability & pricing.",
         "title": "hood. — .hood name service",
@@ -3068,6 +3093,88 @@
           "statusChangedAt": "2026-08-11T23:02:10.427575Z",
           "publishedAt": "2026-08-11T23:02:10.427575Z",
           "updatedAt": "2026-08-11T23:02:10.427575Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.analyticslegends/sap-analytics",
+        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
+        "title": "Analytics Legends — SAP Analytics Intelligence",
+        "repository": {
+          "url": "https://github.com/analyticslegends/analytics-legends-mcp",
+          "source": "github"
+        },
+        "version": "1.0.5",
+        "websiteUrl": "https://analyticslegends.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://analyticslegends.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "endpoint_probe": "POST tools/list on https://analyticslegends.ai/mcp -> HTTP 200, 20 tools, protocol 2025-11-25, plus 3 resources and 4 prompts. Paid conformance 2026-08-18 on the deployed fingerprint: 686 assertions, 0 failed.",
+            "long_description": "Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), read-only, so an assistant can answer precisely and cite the exact record. TWENTY tools: FOURTEEN public and unauthenticated, plus SIX a subscriber key opens (listed, refusing by name, never hidden): a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, a profile per firm, and an aggregate count for an agent that needs a number, not a page of rows; a published day-rate aggregate by geography, stack and seniority — small, all secondary sources, sample_size null where no observation matches the cell, GBP/CHF never folded into euro rows; a live contract radar of publicly published SAP analytics openings, each with its own page — filter it by employment_type, because it is mostly PERMANENT roles and an unfiltered page answers a contracting question with salaried jobs; many rows carry a panel-inferred P25-P75 day-rate band for their seniority x product x region cell, served with its basis, sample and source so it is never quotable as the employer's own offer; what is gated there is a FIELD, not a row: the verified link to the original listing is the Consultant deliverable, every other fact and the page stay public; a curated market-news corpus de-duplicated by upstream URL, its size read at query time and returned as _meta.match_count, each item carrying the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of the deep-research studies on market structure, day rates and recruiter economics — each exists in EN and FR, so the tool returns EDITIONS and counting rows double-counts studies. Also public: the CV/profile platforms a consultant can sign up on, the Academy catalogue, and a traversal of the learning knowledge graph. Every tool is annotated readOnlyHint. The fourteen public tools need no credential; the six paid ones need an analyticslegends.ai subscription (Consultant or above) or the MCP Pass (€39.90/month, analyticslegends.ai/pricing) — three open at Consultant (the full concept card, a study body, an Academy module) and three at Legend (firm intelligence, and the SAP end-customer corpus with its per-customer profile). A key on a FREE account gets a small daily taste of the paid tranche (the number is in analytics-legends://tranche). Retrieval with attribution is permitted, training is not; every response carries a citation_url. DELIBERATELY NOT SERVED at any tier: the opportunity-to-consultant matchers, and people — consultants are held as initials only; no tool returns anyone's identity or contact details.",
+            "monitoring": "Handshake, a real tools/call with data, and latency. Two watchers: a 20-minute tick on the maintainer's workstation (only while awake), and a cloud backstop twice a day calling tools/list AND a data-returning tools/call (added 2026-08-18; before that it watched the website only). Health: https://analyticslegends.ai/api/mcp-health.json — read its generated_at, do not assume a cadence.",
+            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> 200 (v=MCPv1; k=ed25519)",
+            "repository_scope": "This repository is the server's PUBLIC FACE — manifest, descriptor, client config, docs. It carries no server code (the application repository is private: paid corpus, personal data). tools/list against the endpoint is the authority for the surface.",
+            "tools_served": "20 on this endpoint: 14 public and unauthenticated, 6 gated by tier and refused by name (3 at Consultant, 3 at Legend). The MCP Pass opens all six.",
+            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
+            "verified_on": "2026-08-18"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-18T19:24:58.849674Z",
+          "publishedAt": "2026-08-18T19:24:58.849674Z",
+          "updatedAt": "2026-08-18T19:24:58.849674Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.analyticslegends/sap-analytics",
+        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
+        "title": "Analytics Legends — SAP Analytics Intelligence",
+        "repository": {
+          "url": "https://github.com/analyticslegends/analytics-legends-mcp",
+          "source": "github"
+        },
+        "version": "1.0.6",
+        "websiteUrl": "https://analyticslegends.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://analyticslegends.ai/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "endpoint_probe": "POST tools/list on https://analyticslegends.ai/mcp -> 200, 20 tools, protocol 2025-11-25, 3 resources, 4 prompts. Paid conformance 2026-08-18 on the deployed fingerprint: 686 assertions, 0 failed.",
+            "long_description": "Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), read-only, so an assistant can answer precisely and cite the exact record. TWENTY tools: FOURTEEN public and unauthenticated, plus SIX a subscriber key opens (listed, refusing by name, never hidden): a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, a profile per firm, and an aggregate count for an agent that needs a number, not a page of rows; a published day-rate aggregate by geography, stack and seniority — small, all secondary sources, sample_size null where no observation matches the cell, GBP/CHF never folded into euro rows; a live contract radar of publicly published SAP analytics openings, each with its own page — filter it by employment_type, because it is mostly PERMANENT roles and an unfiltered page answers a contracting question with salaried jobs; many rows carry a panel-inferred P25-P75 day-rate band for their seniority x product x region cell, served with its basis, sample and source so it is never quotable as the employer's own offer; what is gated there is a FIELD, not a row: the verified link to the original listing is the Consultant deliverable, every other fact and the page stay public; a curated market-news corpus de-duplicated by upstream URL, its size read at query time and returned as _meta.match_count, each item carrying the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of the deep-research studies on market structure, day rates and recruiter economics — each exists in EN and FR, so the tool returns EDITIONS and counting rows double-counts studies. Also public: the CV/profile platforms a consultant can sign up on, the Academy catalogue, and a traversal of the learning knowledge graph. Every tool is annotated readOnlyHint. The fourteen public tools need no credential; the six paid ones need an analyticslegends.ai subscription (Consultant or above) or the MCP Pass (€39.90/month, analyticslegends.ai/pricing) — three open at Consultant (the full concept card, a study body, an Academy module) and three at Legend (firm intelligence, and the SAP end-customer corpus with its per-customer profile). A key on a FREE account gets a small daily taste of the paid tranche (the number is in analytics-legends://tranche). Retrieval with attribution is permitted, training is not; every response carries a citation_url. DELIBERATELY NOT SERVED at any tier: the opportunity-to-consultant matchers, and people — consultants are held as initials only; no tool returns anyone's identity or contact details.",
+            "monitoring": "Handshake, a real tools/call with data, and latency. Two watchers: a 20-minute tick on the maintainer's workstation (only while awake), and a cloud backstop twice a day calling tools/list AND a data-returning tools/call (added 2026-08-18; before that it watched the website only). Health: https://analyticslegends.ai/api/mcp-health.json — read its generated_at, do not assume a cadence.",
+            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> 200 (v=MCPv1; k=ed25519)",
+            "repository_scope": "This repository is the server's PUBLIC FACE — manifest, descriptor, client config, docs. It carries no server code (the application repository is private: paid corpus, personal data). tools/list against the endpoint is the authority for the surface.",
+            "tools_served": "20 on this endpoint: 14 public and unauthenticated, 6 gated by tier and refused by name (3 at Consultant, 3 at Legend). The MCP Pass opens all six.",
+            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
+            "verified_on": "2026-08-18"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-18T19:33:29.605357Z",
+          "publishedAt": "2026-08-18T19:33:29.605357Z",
+          "updatedAt": "2026-08-18T19:33:29.605357Z",
           "isLatest": true
         }
       }
@@ -3102,108 +3209,6 @@
           "statusChangedAt": "2026-04-23T19:01:04.63097Z",
           "publishedAt": "2026-04-23T19:01:04.63097Z",
           "updatedAt": "2026-04-23T19:01:04.63097Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server",
-        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
-        "title": "Anki MCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server",
-          "source": "github"
-        },
-        "version": "0.18.4-tunnel",
-        "websiteUrl": "https://ankimcp.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@ankimcp/anki-mcp-server",
-            "version": "0.18.4-tunnel",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-24T07:54:33.87158Z",
-          "publishedAt": "2026-04-24T07:54:33.87158Z",
-          "updatedAt": "2026-04-24T07:54:33.87158Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server",
-        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
-        "title": "Anki MCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server",
-          "source": "github"
-        },
-        "version": "0.18.5",
-        "websiteUrl": "https://ankimcp.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@ankimcp/anki-mcp-server",
-            "version": "0.18.5",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-24T08:37:54.056077Z",
-          "publishedAt": "2026-04-24T08:37:54.056077Z",
-          "updatedAt": "2026-04-24T08:37:54.056077Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ankimcp/anki-mcp-server",
-        "description": "MCP server for Anki flashcards: adaptive review, notes, media, and deck management via AnkiConnect.",
-        "title": "Anki MCP Server",
-        "repository": {
-          "url": "https://github.com/ankimcp/anki-mcp-server",
-          "source": "github"
-        },
-        "version": "0.19.0",
-        "websiteUrl": "https://ankimcp.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@ankimcp/anki-mcp-server",
-            "version": "0.19.0",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-04T11:53:33.311295Z",
-          "publishedAt": "2026-06-04T11:53:33.311295Z",
-          "updatedAt": "2026-06-04T11:53:33.311295Z",
           "isLatest": false
         }
       }
