@@ -1741,6 +1741,39 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentmesh/mesh",
+        "description": "Be an agent on the AgentMesh network: find agents, hire them, be hired, and read your mesh inbox.",
+        "title": "AgentMesh",
+        "version": "1.0.0",
+        "websiteUrl": "https://agentmesh.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.agentmesh.ai/v1/mcp",
+            "headers": [
+              {
+                "description": "Bearer <token>. Create the token at https://app.agentmesh.ai on the Keys page (Connect your assistant), then enter it as: Bearer amt_...",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-23T19:33:28.656602Z",
+          "publishedAt": "2026-08-23T19:33:28.656602Z",
+          "updatedAt": "2026-08-23T19:33:28.656602Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.agentplaybooks/agentplaybooks",
         "description": "Portable, vendor-neutral home for agent skills, MCP servers, personas, and memory.",
         "title": "AgentPlaybooks",
@@ -3150,47 +3183,6 @@
           "statusChangedAt": "2026-08-11T06:25:19.683745Z",
           "publishedAt": "2026-08-11T06:25:19.683745Z",
           "updatedAt": "2026-08-11T06:25:19.683745Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.analyticslegends/sap-analytics",
-        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
-        "title": "Analytics Legends — SAP Analytics Intelligence",
-        "repository": {
-          "url": "https://github.com/analyticslegends/analytics-legends-mcp",
-          "source": "github"
-        },
-        "version": "1.0.4",
-        "websiteUrl": "https://analyticslegends.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://analyticslegends.ai/mcp"
-          }
-        ],
-        "_meta": {
-          "io.modelcontextprotocol.registry/publisher-provided": {
-            "endpoint_probe": "POST tools/list on https://analyticslegends.ai/mcp -> HTTP 200, 16 tools, protocol 2025-11-25. Deep paid conformance 2026-08-12: 667 assertions, 0 failed, run after the deploy carrying this version; its mcp_source_sha (b35599fc2ff77f53) equals the deployed function fingerprint.",
-            "long_description": "AI agent for SAP analytics and AI consultants. Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), exposed read-only so an assistant can answer precisely and cite the exact record. SIXTEEN tools: ELEVEN public and unauthenticated, plus FIVE a subscriber key opens (listed and refusing by name, never hidden): a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, with a profile per firm, plus an aggregate count over it for an agent that needs a number rather than a page of rows; a published day-rate aggregate by geography, stack and seniority — small, all secondary sources, sample_size null where no observation matches the cell, and GBP/CHF never folded into the euro rows; a live contract radar of publicly published SAP analytics openings, the same 2,490 rows an anonymous visitor browses, each with its own page — filter it by employment_type, because it is mostly PERMANENT roles (2,172 of 2,381 on 2026-08-11) and an unfiltered page answers a contracting question with salaried jobs; 1,421 rows carry a panel-inferred P25-P75 day-rate band for their seniority x product x region cell, served with its basis, kind, sample and source so it is never quotable as the employer's own offer; what is gated there is a FIELD, not a row — the verified link to the original listing is the Consultant deliverable and reads members_only on 2,375, while every other fact, and the page, stay public; a curated market-news corpus de-duplicated by upstream URL, its size read at query time and returned as _meta.match_count rather than quoted from here, each item carrying the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of 38 study editions on market structure, day rates and recruiter economics — 19 deep-research studies, each in EN and FR, so the tool returns editions and counting rows gives 38 where counting studies gives 19. Read-only: every tool is annotated readOnlyHint. The eleven public tools need no credential; the five paid ones come with an analyticslegends.ai subscription (Consultant or above) or the MCP Pass (€39/month, analyticslegends.ai/pricing/). Retrieval with attribution is permitted, training is not; every response carries a citation_url for the record served. DELIBERATELY NOT SERVED at any tier: the opportunity-to-consultant matchers, and people — consultants are held as initials only and no tool returns anyone's identity or contact details. SAP's own documentation is not ours to restate: cite SAP.",
-            "monitoring": "Probed on handshake, a real tools/call with data, and latency. The 20-minute tick runs on the maintainer's workstation, so only while it is awake; a cloud backstop runs twice a day. Health at https://analyticslegends.ai/api/mcp-health.json — read its generated_at rather than assuming a cadence.",
-            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> HTTP 200 (v=MCPv1; k=ed25519)",
-            "repository_scope": "The repository is the server's PUBLIC FACE — manifest, this descriptor, client configuration and documentation. It carries no server code: the application repository stays private (paid corpus, personal data), and tools/list against the endpoint is the authority for the surface.",
-            "tools_served": "16 here: 11 public and unauthenticated, 5 gated by tier and refused by name without a key. The local stdio build has 20 and reads build artefacts with no public home.",
-            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
-            "verified_on": "2026-08-11"
-          }
-        }
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-11T23:02:10.427575Z",
-          "publishedAt": "2026-08-11T23:02:10.427575Z",
-          "updatedAt": "2026-08-11T23:02:10.427575Z",
           "isLatest": false
         }
       }
