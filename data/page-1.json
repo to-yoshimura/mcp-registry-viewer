@@ -899,6 +899,31 @@
           "statusChangedAt": "2026-08-22T20:48:28.258862Z",
           "publishedAt": "2026-08-22T20:48:28.258862Z",
           "updatedAt": "2026-08-22T20:48:28.258862Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.advisorsai/store-readiness",
+        "description": "Ten machine-readable signals on one public page: the top miss if any, and a receipt we re-verify.",
+        "title": "One-Page Readiness Check — 10 Signals, Arabic or English",
+        "version": "1.0.5",
+        "websiteUrl": "https://advisorsai.ai/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://advisorsai.ai/store-readiness-mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-24T10:04:58.096851Z",
+          "publishedAt": "2026-08-24T10:04:58.096851Z",
+          "updatedAt": "2026-08-24T10:04:58.096851Z",
           "isLatest": true
         }
       }
@@ -3142,47 +3167,6 @@
           "statusChangedAt": "2026-08-10T21:33:49.170717Z",
           "publishedAt": "2026-08-10T21:33:49.170717Z",
           "updatedAt": "2026-08-10T21:33:49.170717Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.analyticslegends/sap-analytics",
-        "description": "AI agent for SAP analytics: firms, day rates, contract radar, news, concepts, studies",
-        "title": "Analytics Legends — SAP Analytics Intelligence",
-        "repository": {
-          "url": "https://github.com/analyticslegends/analytics-legends-mcp",
-          "source": "github"
-        },
-        "version": "1.0.3",
-        "websiteUrl": "https://analyticslegends.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://analyticslegends.ai/mcp"
-          }
-        ],
-        "_meta": {
-          "io.modelcontextprotocol.registry/publisher-provided": {
-            "endpoint_probe": "POST tools/list -> HTTP 200, 16 tools; POST server/discover under protocol 2026-07-28 -> HTTP 200 (dual-era). Conformance 2026-08-11: 667 assertions, 0 failed, run AFTER the last deploy against the same source fingerprint the endpoint serves.",
-            "long_description": "AI agent for SAP analytics and AI consultants. Curated, source-backed intelligence on the SAP analytics services market (Datasphere, Business Data Cloud, SAP Analytics Cloud, BW/4HANA, Databricks), exposed read-only so an assistant can answer precisely and cite the exact record. SIXTEEN tools: ELEVEN public and unauthenticated, plus FIVE a subscriber key opens (listed and refusing by name, never hidden): a directory of SAP consulting, recruitment and vendor organisations searchable by country and kind, with a profile per firm, plus an aggregate count over it for an agent that needs a number rather than a page of rows; a published day-rate aggregate by geography, stack and seniority — small, all secondary sources, sample_size null where no observation matches the cell, and GBP/CHF never folded into the euro rows; a live contract radar of publicly published SAP analytics openings, the same 2,490 rows an anonymous visitor browses, each with its own page — filter it by employment_type, because it is mostly PERMANENT roles (2,172 of 2,381 on 2026-08-11) and an unfiltered page answers a contracting question with salaried jobs; 1,421 rows carry a panel-inferred P25-P75 day-rate band for their seniority x product x region cell, served with its basis, kind, sample and source so it is never quotable as the employer's own offer; what is gated there is a FIELD, not a row — the verified link to the original listing is the Consultant deliverable and reads members_only on 2,375, while every other fact, and the page, stay public; a curated market-news corpus de-duplicated by upstream URL, its size read at query time and returned as _meta.match_count rather than quoted from here, each item carrying the upstream publisher's URL alongside ours; a concept encyclopaedia of the stack's vocabulary; the SAP module lookup; and the metadata of 38 study editions on market structure, day rates and recruiter economics — 19 deep-research studies, each in EN and FR, so the tool returns editions and counting rows gives 38 where counting studies gives 19. Read-only: every tool is annotated readOnlyHint. The eleven public tools need no credential; the five paid ones come with an analyticslegends.ai subscription (Consultant or above) or the MCP Pass (€39/month, analyticslegends.ai/pricing/). Retrieval with attribution is permitted, training is not; every response carries a citation_url for the record served. DELIBERATELY NOT SERVED at any tier: the opportunity-to-consultant matchers, and people — consultants are held as initials only and no tool returns anyone's identity or contact details. SAP's own documentation is not ours to restate: cite SAP.",
-            "monitoring": "Probed on handshake, a real tools/call with data, and latency. The 20-minute tick runs on the maintainer's workstation, so only while it is awake; a cloud backstop runs twice a day. Health at https://analyticslegends.ai/api/mcp-health.json — read its generated_at rather than assuming a cadence.",
-            "namespace_proof": "https://analyticslegends.ai/.well-known/mcp-registry-auth -> HTTP 200 (v=MCPv1; k=ed25519)",
-            "repository_scope": "The repository is the server's public face — manifest, this descriptor, client config, docs. No server code: the application repository stays private.",
-            "tools_served": "16 here: 11 public and unauthenticated, 5 gated by tier and refused by name without a key. The local stdio build has 20 and reads build artefacts with no public home.",
-            "transport_path": "Cloudflare Worker on analyticslegends.ai/mcp* -> Supabase Edge Function -> Postgres",
-            "verified_on": "2026-08-11"
-          }
-        }
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-11T06:25:19.683745Z",
-          "publishedAt": "2026-08-11T06:25:19.683745Z",
-          "updatedAt": "2026-08-11T06:25:19.683745Z",
           "isLatest": false
         }
       }
