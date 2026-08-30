@@ -500,6 +500,57 @@
           "statusChangedAt": "2026-04-19T18:11:04.905549Z",
           "publishedAt": "2026-04-19T18:11:04.905549Z",
           "updatedAt": "2026-04-19T18:11:04.905549Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.abmeter/abmeter",
+        "description": "Run A/B experiments through your AI assistant. SDKs for Ruby, Python, JS, Node, React Native, Go.",
+        "title": "ABMeter",
+        "repository": {
+          "url": "https://github.com/abmeter/abmeter",
+          "source": "github"
+        },
+        "version": "0.2.0",
+        "websiteUrl": "https://abmeter.ai",
+        "icons": [
+          {
+            "src": "https://abmeter.ai/abmeter-icon-192.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "192x192"
+            ]
+          },
+          {
+            "src": "https://abmeter.ai/favicon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.abmeter.ai"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "connect": "https://abmeter.ai/lab/connect-mcp",
+            "docs": "https://abmeter.ai/lab/quick-start"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-08-30T00:28:05.727498Z",
+          "publishedAt": "2026-08-30T00:28:05.727498Z",
+          "updatedAt": "2026-08-30T00:28:05.727498Z",
           "isLatest": true
         }
       }
@@ -3025,31 +3076,6 @@
           "statusChangedAt": "2026-06-16T09:32:12.311101Z",
           "publishedAt": "2026-06-16T09:32:12.311101Z",
           "updatedAt": "2026-06-16T09:32:12.311101Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aislabs/gateway",
-        "description": "Daily CVE priorities (KEV+EPSS) + Agent Flight Recorder: dead-man alerts & resume for AI agents",
-        "title": "AIS Gateway — CVE prioritization + Agent Flight Recorder for AI agents",
-        "version": "0.3.0",
-        "websiteUrl": "https://aislabs.ai/gateway",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.aislabs.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-26T23:21:38.541211Z",
-          "publishedAt": "2026-08-26T23:21:38.541211Z",
-          "updatedAt": "2026-08-26T23:21:38.541211Z",
           "isLatest": true
         }
       }
