@@ -966,6 +966,57 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adtest/adtest-mcp",
+        "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
+        "repository": {
+          "url": "https://github.com/menaker/adtest-mcp",
+          "source": "github"
+        },
+        "version": "1.1.0",
+        "websiteUrl": "https://adtest.ai/",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "adtest-mcp",
+            "version": "1.1.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "AdTest.AI developer API key (app.adtest.ai → Developer → Generate key). Each successful analysis costs 1 credit.",
+                "isRequired": true,
+                "format": "string",
+                "isSecret": true,
+                "name": "ADTEST_API_KEY"
+              },
+              {
+                "description": "Optional API base URL override (default https://app.adtest.ai/adtest-api).",
+                "format": "string",
+                "name": "ADTEST_API_BASE"
+              },
+              {
+                "description": "Optional max wait for a job in milliseconds (default 900000 = 15 min).",
+                "format": "number",
+                "name": "ADTEST_POLL_TIMEOUT_MS"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-01T21:42:48.138341Z",
+          "publishedAt": "2026-09-01T21:42:48.138341Z",
+          "updatedAt": "2026-09-01T21:42:48.138341Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.advisorsai/service-navigator",
         "description": "Read-only service discovery, public-page checks, and request-link preparation.",
         "title": "Advisors AI Service Navigator",
@@ -2891,6 +2942,30 @@
     },
     {
       "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "ai.agentxray/mcp",
+        "description": "Amazon sellers: real per-unit profit from your own settlement data, plus drafts you approve.",
+        "version": "1.0.0",
+        "websiteUrl": "https://agentxray.ai/connect",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agentxray.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-01T10:54:13.681499Z",
+          "publishedAt": "2026-09-01T10:54:13.681499Z",
+          "updatedAt": "2026-09-01T10:54:13.681499Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.ai-advisors/mcp",
         "description": "Read-only AI search visibility data: citations, AEO audits, and advisor insights from AI-Advisors.",
@@ -3025,57 +3100,6 @@
           "statusChangedAt": "2026-07-13T15:07:28.114017Z",
           "publishedAt": "2026-07-13T15:07:28.114017Z",
           "updatedAt": "2026-07-13T15:07:28.114017Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aient/mcp",
-        "description": "MCP-native AI SRE: ask what's broken in production, get a reviewed GitHub fix PR.",
-        "repository": {
-          "url": "https://github.com/haf/glimt",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://aient.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-11T10:40:20.47951Z",
-          "publishedAt": "2026-06-11T10:40:20.47951Z",
-          "updatedAt": "2026-06-11T10:40:20.47951Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.airshelf/catalog",
-        "description": "Cross-vendor B2B catalog for AI agents: search, compare, find equivalents, request a quote.",
-        "title": "AirShelf Catalog",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.airshelf.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-16T09:32:12.311101Z",
-          "publishedAt": "2026-06-16T09:32:12.311101Z",
-          "updatedAt": "2026-06-16T09:32:12.311101Z",
           "isLatest": true
         }
       }
