@@ -2967,6 +2967,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aginera/preconstruction",
+        "description": "Turn construction drawings into takeoffs, measured routes, schedules and estimates.",
+        "title": "Aginera",
+        "version": "1.0.0",
+        "websiteUrl": "https://aginera.ai/agents",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.aginera.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-03T22:59:05.289477Z",
+          "publishedAt": "2026-09-03T22:59:05.289477Z",
+          "updatedAt": "2026-09-03T22:59:05.289477Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.ai-advisors/mcp",
         "description": "Read-only AI search visibility data: citations, AEO audits, and advisor insights from AI-Advisors.",
         "title": "AI-Advisors",
@@ -3076,31 +3101,6 @@
           "publishedAt": "2026-07-13T15:05:45.500333Z",
           "updatedAt": "2026-07-13T15:05:45.500333Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ai-portal/ai-portal",
-        "description": "Live AI data for agents: model releases, regulations (EU AI Act), GenAI glossary, daily news.",
-        "title": "AI-Portal Enterprise GenAI Briefing",
-        "version": "1.0.1",
-        "websiteUrl": "https://www.ai-portal.ai/developers",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://www.ai-portal.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-13T15:07:28.114017Z",
-          "publishedAt": "2026-07-13T15:07:28.114017Z",
-          "updatedAt": "2026-07-13T15:07:28.114017Z",
-          "isLatest": true
         }
       }
     }
