@@ -1034,6 +1034,31 @@
           "statusChangedAt": "2026-08-28T14:34:43.327043Z",
           "publishedAt": "2026-08-28T14:34:43.327043Z",
           "updatedAt": "2026-08-28T14:34:43.327043Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.advisorsai/service-navigator",
+        "description": "Describe a store's problem: get the matching service, its fixed price, and a request link.",
+        "title": "Advisors AI — Route a Store Need to a Service",
+        "version": "1.1.0",
+        "websiteUrl": "https://advisorsai.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://advisorsai.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-06T19:06:20.036379Z",
+          "publishedAt": "2026-09-06T19:06:20.036379Z",
+          "updatedAt": "2026-09-06T19:06:20.036379Z",
           "isLatest": true
         }
       }
@@ -3076,31 +3101,6 @@
           "publishedAt": "2026-07-18T04:01:27.700359Z",
           "updatedAt": "2026-07-18T04:01:27.700359Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.ai-portal/ai-portal",
-        "description": "Live AI data for agents: model releases, regulations (EU AI Act), GenAI glossary, daily news.",
-        "title": "AI-Portal — Enterprise GenAI Briefing",
-        "version": "1.0.0",
-        "websiteUrl": "https://www.ai-portal.ai/developers",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://www.ai-portal.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-13T15:05:45.500333Z",
-          "publishedAt": "2026-07-13T15:05:45.500333Z",
-          "updatedAt": "2026-07-13T15:05:45.500333Z",
-          "isLatest": false
         }
       }
     }
