@@ -111,6 +111,29 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ac.snag/snag",
+        "description": "Gives your coding agent the captured console, network, replay and screenshot evidence for a bug.",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.snag.ac/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-09T10:35:53.194664Z",
+          "publishedAt": "2026-09-09T10:35:53.194664Z",
+          "updatedAt": "2026-09-09T10:35:53.194664Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ac.tandem/docs-mcp",
         "description": "Remote MCP server for Tandem docs, install guides, SDKs, workflows, and agent setup help.",
         "repository": {
@@ -3069,31 +3092,6 @@
           "statusChangedAt": "2026-09-01T10:54:13.681499Z",
           "publishedAt": "2026-09-01T10:54:13.681499Z",
           "updatedAt": "2026-09-01T10:54:13.681499Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aginera/preconstruction",
-        "description": "Turn construction drawings into takeoffs, measured routes, schedules and estimates.",
-        "title": "Aginera",
-        "version": "1.0.0",
-        "websiteUrl": "https://aginera.ai/agents",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.aginera.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-03T22:59:05.289477Z",
-          "publishedAt": "2026-09-03T22:59:05.289477Z",
-          "updatedAt": "2026-09-03T22:59:05.289477Z",
           "isLatest": true
         }
       }
