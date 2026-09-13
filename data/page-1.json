@@ -500,6 +500,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.thebureauoflostcontext/bureau-public",
+        "description": "Bureau-operated public read-only MCP service for public Context Packets and Cases.",
+        "title": "Bureau public reader",
+        "version": "3.0.0",
+        "websiteUrl": "https://thebureauoflostcontext.agency",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://thebureauoflostcontext.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-13T05:48:39.780486Z",
+          "publishedAt": "2026-09-13T05:48:39.780486Z",
+          "updatedAt": "2026-09-13T05:48:39.780486Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.1325/mcp",
         "description": "Verified directory of 44,000+ Black-owned U.S. businesses. Search, maps, loyalty rewards.",
         "title": "1325.AI",
@@ -3068,30 +3093,6 @@
           "statusChangedAt": "2026-07-14T21:10:22.302521Z",
           "publishedAt": "2026-07-14T21:10:22.302521Z",
           "updatedAt": "2026-07-14T21:10:22.302521Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.agentxray/mcp",
-        "description": "Amazon sellers: real per-unit profit from your own settlement data, plus drafts you approve.",
-        "version": "1.0.0",
-        "websiteUrl": "https://agentxray.ai/connect",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agentxray.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-01T10:54:13.681499Z",
-          "publishedAt": "2026-09-01T10:54:13.681499Z",
-          "updatedAt": "2026-09-01T10:54:13.681499Z",
           "isLatest": true
         }
       }
