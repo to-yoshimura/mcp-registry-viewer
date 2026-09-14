@@ -792,6 +792,35 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adako/ads",
+        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI agents. Every write needs your approval.",
+        "title": "Adako — careful ad ops for AI agents",
+        "repository": {
+          "url": "https://github.com/ruslan2027/adako-mcp",
+          "source": "github"
+        },
+        "version": "0.2.0",
+        "websiteUrl": "https://adako.ai/docs",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adako.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-13T20:00:50.661243Z",
+          "publishedAt": "2026-09-13T20:00:50.661243Z",
+          "updatedAt": "2026-09-13T20:00:50.661243Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.adeu/adeu",
         "description": "Automated DOCX Redlining Engine",
         "repository": {
@@ -3058,41 +3087,6 @@
           "statusChangedAt": "2026-07-14T21:10:21.796993Z",
           "publishedAt": "2026-07-14T21:10:21.796993Z",
           "updatedAt": "2026-07-14T21:10:21.796993Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-wordmint",
-        "description": "MCP server for the @agentutility wordmint cluster — pay-per-call x402 tools, no API keys, USDC on…",
-        "title": "AgentUtility Wordmint",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-wordmint"
-        },
-        "version": "0.16.1",
-        "websiteUrl": "https://mcp.agentutility.ai/wordmint/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-wordmint",
-            "version": "0.16.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:22.302521Z",
-          "publishedAt": "2026-07-14T21:10:22.302521Z",
-          "updatedAt": "2026-07-14T21:10:22.302521Z",
           "isLatest": true
         }
       }
