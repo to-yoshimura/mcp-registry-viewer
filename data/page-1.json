@@ -572,6 +572,60 @@
           "statusChangedAt": "2026-07-10T05:01:17.106808Z",
           "publishedAt": "2026-07-10T05:01:17.106808Z",
           "updatedAt": "2026-07-10T05:01:17.106808Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.1325/mcp",
+        "description": "Verified directory of 47,000+ Black-owned U.S. businesses. Search, profiles, maps, rewards.",
+        "title": "1325.AI",
+        "repository": {
+          "url": "https://github.com/1325ai/1325ai",
+          "source": "github"
+        },
+        "version": "0.1.3",
+        "websiteUrl": "https://1325.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "categories": [
+              "directory",
+              "commerce",
+              "loyalty",
+              "local-business"
+            ],
+            "contact": "support@1325.ai",
+            "keywords": [
+              "black-owned",
+              "black-business",
+              "buy-black",
+              "support-black-business",
+              "minority-owned",
+              "bipoc",
+              "small-business-saturday",
+              "juneteenth",
+              "black-history-month",
+              "directory",
+              "loyalty-rewards"
+            ],
+            "publisher": "1325.AI (Mansa Musa Marketplace)"
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-16T01:24:05.807612Z",
+          "publishedAt": "2026-09-16T01:24:05.807612Z",
+          "updatedAt": "2026-09-16T01:24:05.807612Z",
           "isLatest": true
         }
       }
@@ -1672,6 +1726,47 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.aeviamodeler/aevia",
+        "description": "AI-powered life cycle assessment and modelling: connect to LCA databases, build and analyze systems",
+        "title": "Aevia",
+        "version": "1.0.0",
+        "websiteUrl": "https://aeviamodeler.ai/mcp?src=mcp-registry",
+        "icons": [
+          {
+            "src": "https://app.aeviamodeler.ai/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          },
+          {
+            "src": "https://app.aeviamodeler.ai/favicon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.aeviamodeler.ai/api/v1/connector/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-15T15:36:29.139616Z",
+          "publishedAt": "2026-09-15T15:36:29.139616Z",
+          "updatedAt": "2026-09-15T15:36:29.139616Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.afmr/discovery",
         "description": "Read AFMR failure modes and discover scoped attestation and lift-evidence contracts.",
         "title": "AFMR Discovery",
@@ -2469,6 +2564,52 @@
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.agentplaybooks/agentplaybooks",
+        "description": "Vendor-neutral home for portable agents: skills, MCP tools, memory, canvas, and secret proxy.",
+        "title": "AgentPlaybooks",
+        "repository": {
+          "url": "https://github.com/matebenyovszky/agentplaybooks",
+          "source": "github"
+        },
+        "version": "0.3.0",
+        "websiteUrl": "https://agentplaybooks.ai",
+        "icons": [
+          {
+            "src": "https://agentplaybooks.ai/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://agentplaybooks.ai/api/mcp/manage",
+            "headers": [
+              {
+                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-16T04:41:13.435866Z",
+          "publishedAt": "2026-09-16T04:41:13.435866Z",
+          "updatedAt": "2026-09-16T04:41:13.435866Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agentplaybooks/agentplaybooks",
         "description": "Manage portable AI agent playbooks, Agent Skills, MCP configurations, personas, and memory.",
         "title": "AgentPlaybooks",
         "repository": {
@@ -2976,111 +3117,6 @@
           "statusChangedAt": "2026-07-14T21:10:19.082426Z",
           "publishedAt": "2026-07-14T21:10:19.082426Z",
           "updatedAt": "2026-07-14T21:10:19.082426Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-prooflayer",
-        "description": "MCP server for the @agentutility prooflayer cluster — pay-per-call x402 tools, no API keys, USDC…",
-        "title": "AgentUtility Prooflayer",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-prooflayer"
-        },
-        "version": "0.2.4",
-        "websiteUrl": "https://mcp.agentutility.ai/prooflayer/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-prooflayer",
-            "version": "0.2.4",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:19.560994Z",
-          "publishedAt": "2026-07-14T21:10:19.560994Z",
-          "updatedAt": "2026-07-14T21:10:19.560994Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-retail",
-        "description": "MCP server for the @agentutility retail cluster — pay-per-call x402 tools, no API keys, USDC on…",
-        "title": "AgentUtility Retail",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-retail"
-        },
-        "version": "0.2.1",
-        "websiteUrl": "https://mcp.agentutility.ai/retail/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-retail",
-            "version": "0.2.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:19.946363Z",
-          "publishedAt": "2026-07-14T21:10:19.946363Z",
-          "updatedAt": "2026-07-14T21:10:19.946363Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-rollforge",
-        "description": "MCP server for the @agentutility rollforge cluster — pay-per-call x402 tools, no API keys, USDC on…",
-        "title": "AgentUtility Rollforge",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-rollforge"
-        },
-        "version": "0.1.5",
-        "websiteUrl": "https://mcp.agentutility.ai/rollforge/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-rollforge",
-            "version": "0.1.5",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:20.41779Z",
-          "publishedAt": "2026-07-14T21:10:20.41779Z",
-          "updatedAt": "2026-07-14T21:10:20.41779Z",
           "isLatest": true
         }
       }
