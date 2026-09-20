@@ -967,6 +967,35 @@
           "statusChangedAt": "2026-09-14T18:32:10.015915Z",
           "publishedAt": "2026-09-14T18:32:10.015915Z",
           "updatedAt": "2026-09-14T18:32:10.015915Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adako/ads",
+        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI assistants. Every change needs your approval.",
+        "title": "Adako: ad ops for AI assistants",
+        "repository": {
+          "url": "https://github.com/ruslan2027/adako-mcp",
+          "source": "github"
+        },
+        "version": "0.3.1",
+        "websiteUrl": "https://adako.ai/docs",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adako.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-19T18:18:12.505174Z",
+          "publishedAt": "2026-09-19T18:18:12.505174Z",
+          "updatedAt": "2026-09-19T18:18:12.505174Z",
           "isLatest": true
         }
       }
@@ -1241,6 +1270,31 @@
           "statusChangedAt": "2026-03-20T11:16:36.853329Z",
           "publishedAt": "2026-03-20T11:16:36.853329Z",
           "updatedAt": "2026-03-20T11:16:36.853329Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adsap/adsap",
+        "description": "Launch and manage Meta and Google Ads from your AI assistant. You approve every change first.",
+        "title": "Adsap",
+        "version": "0.73.0",
+        "websiteUrl": "https://adsap.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.adsap.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-19T12:13:27.871767Z",
+          "publishedAt": "2026-09-19T12:13:27.871767Z",
+          "updatedAt": "2026-09-19T12:13:27.871767Z",
           "isLatest": true
         }
       }
@@ -3047,76 +3101,6 @@
           "statusChangedAt": "2026-07-14T21:10:18.280353Z",
           "publishedAt": "2026-07-14T21:10:18.280353Z",
           "updatedAt": "2026-07-14T21:10:18.280353Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-mediakit",
-        "description": "MCP server for the @agentutility mediakit cluster — pay-per-call x402 tools, no API keys, USDC on…",
-        "title": "AgentUtility Mediakit",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-mediakit"
-        },
-        "version": "0.11.9",
-        "websiteUrl": "https://mcp.agentutility.ai/mediakit/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-mediakit",
-            "version": "0.11.9",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:18.653557Z",
-          "publishedAt": "2026-07-14T21:10:18.653557Z",
-          "updatedAt": "2026-07-14T21:10:18.653557Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentutility/mcp-model-router",
-        "description": "MCP server for the @agentutility model-router cluster — pay-per-call x402 tools, no API keys, USDC…",
-        "title": "AgentUtility Model Router",
-        "repository": {
-          "url": "https://github.com/rooz21/x402",
-          "source": "github",
-          "subfolder": "packages/mcp-model-router"
-        },
-        "version": "0.1.1",
-        "websiteUrl": "https://mcp.agentutility.ai/model-router/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agentutility/mcp-model-router",
-            "version": "0.1.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-14T21:10:19.082426Z",
-          "publishedAt": "2026-07-14T21:10:19.082426Z",
-          "updatedAt": "2026-07-14T21:10:19.082426Z",
           "isLatest": true
         }
       }
