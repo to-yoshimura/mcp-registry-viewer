@@ -386,6 +386,40 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.justidea/justidea-agency",
+        "description": "Services, published prices, site search and sales inquiries of JustIdea, a Polish e-commerce agency.",
+        "title": "JustIdea Agency",
+        "version": "1.0.0",
+        "websiteUrl": "https://justidea.agency/",
+        "icons": [
+          {
+            "src": "https://justidea.agency/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://justidea.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-27T23:11:35.114076Z",
+          "publishedAt": "2026-09-27T23:11:35.114076Z",
+          "updatedAt": "2026-09-27T23:11:35.114076Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "agency.kesey/pretrip",
         "description": "Screen regulated-health marketing copy against source-cited rulesets, all 50 states.",
         "title": "Pre-Trip compliance scanner",
@@ -2196,6 +2230,104 @@
           "statusChangedAt": "2026-09-27T03:12:13.05419Z",
           "publishedAt": "2026-09-27T03:12:13.05419Z",
           "updatedAt": "2026-09-27T03:12:13.05419Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agent-bev/bev-door",
+        "description": "Agentic B2B hub for beer, wine and spirits across Europe.",
+        "title": "agent-bev",
+        "repository": {
+          "url": "https://github.com/agent-bev/bev-door",
+          "source": "github"
+        },
+        "version": "0.2.3",
+        "websiteUrl": "https://agent-bev.ai",
+        "icons": [
+          {
+            "src": "https://agent-bev.ai/brand/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agent-bev/mcp-server",
+            "version": "0.2.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.bev-buyer.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-27T18:48:56.816461Z",
+          "publishedAt": "2026-09-27T18:48:56.816461Z",
+          "updatedAt": "2026-09-27T18:48:56.816461Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.agent-bev/bev-door",
+        "description": "The world's largest agentic B2B hub for beer, wine and spirits. Powered by CUVEE. Trade only.",
+        "title": "agent-bev",
+        "repository": {
+          "url": "https://github.com/agent-bev/bev-door",
+          "source": "github"
+        },
+        "version": "0.2.4",
+        "websiteUrl": "https://agent-bev.ai",
+        "icons": [
+          {
+            "src": "https://agent-bev.ai/brand/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@agent-bev/mcp-server",
+            "version": "0.2.2",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.bev-buyer.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-28T02:28:06.963429Z",
+          "publishedAt": "2026-09-28T02:28:06.963429Z",
+          "updatedAt": "2026-09-28T02:28:06.963429Z",
           "isLatest": true
         }
       }
@@ -2922,145 +3054,6 @@
           "statusChangedAt": "2026-08-23T19:33:28.656602Z",
           "publishedAt": "2026-08-23T19:33:28.656602Z",
           "updatedAt": "2026-08-23T19:33:28.656602Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentplaybooks/agentplaybooks",
-        "description": "Portable, vendor-neutral home for agent skills, MCP servers, personas, and memory.",
-        "title": "AgentPlaybooks",
-        "repository": {
-          "url": "https://github.com/matebenyovszky/agentplaybooks",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "websiteUrl": "https://agentplaybooks.ai",
-        "icons": [
-          {
-            "src": "https://agentplaybooks.ai/icon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agentplaybooks.ai/api/mcp/manage",
-            "headers": [
-              {
-                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-01T20:43:43.868547Z",
-          "publishedAt": "2026-08-01T20:43:43.868547Z",
-          "updatedAt": "2026-08-01T20:43:43.868547Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentplaybooks/agentplaybooks",
-        "description": "Vendor-neutral home for portable agents: skills, MCP tools, memory, canvas, and secret proxy.",
-        "title": "AgentPlaybooks",
-        "repository": {
-          "url": "https://github.com/matebenyovszky/agentplaybooks",
-          "source": "github"
-        },
-        "version": "0.3.0",
-        "websiteUrl": "https://agentplaybooks.ai",
-        "icons": [
-          {
-            "src": "https://agentplaybooks.ai/icon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agentplaybooks.ai/api/mcp/manage",
-            "headers": [
-              {
-                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-16T04:41:13.435866Z",
-          "publishedAt": "2026-09-16T04:41:13.435866Z",
-          "updatedAt": "2026-09-16T04:41:13.435866Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentplaybooks/agentplaybooks",
-        "description": "Manage portable AI agent playbooks, Agent Skills, MCP configurations, personas, and memory.",
-        "title": "AgentPlaybooks",
-        "repository": {
-          "url": "https://github.com/matebenyovszky/agentplaybooks",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://agentplaybooks.ai",
-        "icons": [
-          {
-            "src": "https://agentplaybooks.ai/icon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agentplaybooks.ai/api/mcp/manage",
-            "headers": [
-              {
-                "description": "Bearer AgentPlaybooks user API key (for example: Bearer apb_live_...)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "deprecated",
-          "statusChangedAt": "2026-08-01T20:44:36.793656Z",
-          "statusMessage": "Published accidentally as 1.0.0; use 0.2.0 as the early release.",
-          "publishedAt": "2026-08-01T20:24:13.359787Z",
-          "updatedAt": "2026-08-01T20:44:36.793656Z",
           "isLatest": true
         }
       }
