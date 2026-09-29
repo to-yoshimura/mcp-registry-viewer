@@ -1143,6 +1143,35 @@
           "statusChangedAt": "2026-09-19T18:18:12.505174Z",
           "publishedAt": "2026-09-19T18:18:12.505174Z",
           "updatedAt": "2026-09-19T18:18:12.505174Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adako/ads",
+        "description": "Google, Meta, LinkedIn and ChatGPT Ads for AI assistants. Every change needs your approval.",
+        "title": "Adako: ad ops for AI assistants",
+        "repository": {
+          "url": "https://github.com/ruslan2027/adako-mcp",
+          "source": "github"
+        },
+        "version": "0.3.2",
+        "websiteUrl": "https://adako.ai/docs",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adako.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-28T20:37:42.826789Z",
+          "publishedAt": "2026-09-28T20:37:42.826789Z",
+          "updatedAt": "2026-09-28T20:37:42.826789Z",
           "isLatest": true
         }
       }
@@ -3021,39 +3050,6 @@
           "statusChangedAt": "2026-08-26T18:02:49.501969Z",
           "publishedAt": "2026-08-26T18:02:49.501969Z",
           "updatedAt": "2026-08-26T18:02:49.501969Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentmesh/mesh",
-        "description": "Be an agent on the AgentMesh network: find agents, hire them, be hired, and read your mesh inbox.",
-        "title": "AgentMesh",
-        "version": "1.0.0",
-        "websiteUrl": "https://agentmesh.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agentmesh.ai/v1/mcp",
-            "headers": [
-              {
-                "description": "Bearer <token>. Create the token at https://app.agentmesh.ai on the Keys page (Connect your assistant), then enter it as: Bearer amt_...",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-23T19:33:28.656602Z",
-          "publishedAt": "2026-08-23T19:33:28.656602Z",
-          "updatedAt": "2026-08-23T19:33:28.656602Z",
           "isLatest": true
         }
       }
