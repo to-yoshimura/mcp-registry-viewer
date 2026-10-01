@@ -271,6 +271,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy/grocery-prices",
+        "description": "Compare Dubai grocery lists, observed prices, delivery rules and indicative online offers in AED.",
+        "title": "Dubai Grocery Prices",
+        "version": "1.0.0",
+        "websiteUrl": "https://prices.brainy.ae/developers.html",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://prices.brainy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-09-30T10:34:55.977998Z",
+          "publishedAt": "2026-09-30T10:34:55.977998Z",
+          "updatedAt": "2026-09-30T10:34:55.977998Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.datadubai/dubai-real-estate",
         "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
         "title": "Dubai Data — Dubai real estate statistics",
@@ -3069,29 +3094,6 @@
           "publishedAt": "2026-08-26T18:02:50.186676Z",
           "updatedAt": "2026-08-26T18:02:50.186676Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-        "name": "ai.agentlookups/groundtruth",
-        "description": "Federal environmental records + address due-diligence layers near any US location. Tools",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://env.agentlookups.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-05T00:12:30.451036Z",
-          "publishedAt": "2026-08-05T00:12:30.451036Z",
-          "updatedAt": "2026-08-05T00:12:30.451036Z",
-          "isLatest": false
         }
       }
     }
