@@ -289,6 +289,31 @@
           "statusChangedAt": "2026-09-30T10:34:55.977998Z",
           "publishedAt": "2026-09-30T10:34:55.977998Z",
           "updatedAt": "2026-09-30T10:34:55.977998Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy/grocery-prices",
+        "description": "Dubai cost of living: groceries, schools, fuel, rent, utilities, phone plans, electronics and visas",
+        "title": "Dubai Cost of Living Prices",
+        "version": "1.1.0",
+        "websiteUrl": "https://prices.brainy.ae/developers.html",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://prices.brainy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-02T04:58:59.331523Z",
+          "publishedAt": "2026-10-02T04:58:59.331523Z",
+          "updatedAt": "2026-10-02T04:58:59.331523Z",
           "isLatest": true
         }
       }
@@ -318,6 +343,31 @@
           "statusChangedAt": "2026-09-30T08:30:47.911063Z",
           "publishedAt": "2026-09-30T08:30:47.911063Z",
           "updatedAt": "2026-09-30T08:30:47.911063Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.grovisor/grotax",
+        "description": "UAE Corporate Tax: CT computation, SBR, penalties, free zone test, TP and health-check.",
+        "title": "groTAX by Grovisor",
+        "version": "1.2.0",
+        "websiteUrl": "https://grovisor.ae/tools",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.grovisor.ae/"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-02T03:01:23.583792Z",
+          "publishedAt": "2026-10-02T03:01:23.583792Z",
+          "updatedAt": "2026-10-02T03:01:23.583792Z",
           "isLatest": true
         }
       }
@@ -3044,56 +3094,6 @@
           "publishedAt": "2026-08-05T00:13:29.161664Z",
           "updatedAt": "2026-08-05T00:13:29.161664Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentlookups/counterscript",
-        "description": "Free US drug-price benchmarks from federal data (CMS NADAC): a benchmark, not a price anyone owes.",
-        "title": "CounterScript - Drug Price Benchmarks",
-        "version": "1.0.1",
-        "websiteUrl": "https://rx.agentlookups.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://rx.agentlookups.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-26T18:02:49.773179Z",
-          "publishedAt": "2026-08-26T18:02:49.773179Z",
-          "updatedAt": "2026-08-26T18:02:49.773179Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentlookups/greenlight",
-        "description": "US plug-in solar (balcony solar) law registry with a daily UL 3700 certification watch.",
-        "title": "GreenLight - Plug-in Solar Law Registry",
-        "version": "1.0.0",
-        "websiteUrl": "https://solar.agentlookups.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://solar.agentlookups.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-26T18:02:50.186676Z",
-          "publishedAt": "2026-08-26T18:02:50.186676Z",
-          "updatedAt": "2026-08-26T18:02:50.186676Z",
-          "isLatest": true
         }
       }
     }
