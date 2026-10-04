@@ -314,6 +314,31 @@
           "statusChangedAt": "2026-10-02T04:58:59.331523Z",
           "publishedAt": "2026-10-02T04:58:59.331523Z",
           "updatedAt": "2026-10-02T04:58:59.331523Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy/grocery-prices",
+        "description": "Source-backed UAE costs: groceries, schools, housing, transport, utilities, telecom and relocation",
+        "title": "Brainy Prices — UAE Cost of Living",
+        "version": "2.0.0",
+        "websiteUrl": "https://prices.brainy.ae/developers.html",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://prices.brainy.ae/mcp/v2"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-04T02:29:51.000704Z",
+          "publishedAt": "2026-10-04T02:29:51.000704Z",
+          "updatedAt": "2026-10-04T02:29:51.000704Z",
           "isLatest": true
         }
       }
@@ -442,6 +467,45 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "africa.ugc/ugc",
+        "description": "The Human Ad Network. Campaigns, clipping, and Clip Studio from chat.",
+        "title": "UGC, the Human Ad Network",
+        "version": "1.0.0",
+        "websiteUrl": "https://ugc.africa",
+        "icons": [
+          {
+            "src": "https://ugc.africa/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.ugc.africa/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "longDescription": "UGC is the Human Ad Network for brands and creators. Connect your UGC account to list and create campaigns, run clip campaigns, discover open creator slots, reserve and submit work, edit in Clip Studio, check wallets, and fund campaigns - all from chat. Tools only access data for the signed-in account. Always confirm before funding or other money-moving actions. UGC is a global product (not region-locked)."
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-03T16:28:09.054327Z",
+          "publishedAt": "2026-10-03T16:28:09.054327Z",
+          "updatedAt": "2026-10-03T16:28:09.054327Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ag.hood/name-service",
         "description": "Resolve .hood names on Robinhood Chain — forward/reverse, text records, availability & pricing.",
         "title": "hood. — .hood name service",
@@ -551,6 +615,40 @@
           "statusChangedAt": "2026-09-27T23:11:35.114076Z",
           "publishedAt": "2026-09-27T23:11:35.114076Z",
           "updatedAt": "2026-09-27T23:11:35.114076Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.justidea/justidea-agency",
+        "description": "Services, prices, inquiries and free analytics and AI visibility scans by JustIdea, a Polish agency.",
+        "title": "JustIdea Agency",
+        "version": "1.1.0",
+        "websiteUrl": "https://justidea.agency/",
+        "icons": [
+          {
+            "src": "https://justidea.agency/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://justidea.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-04T01:59:27.439267Z",
+          "publishedAt": "2026-10-04T01:59:27.439267Z",
+          "updatedAt": "2026-10-04T01:59:27.439267Z",
           "isLatest": true
         }
       }
@@ -911,6 +1009,52 @@
           "statusChangedAt": "2026-09-16T01:24:05.807612Z",
           "publishedAt": "2026-09-16T01:24:05.807612Z",
           "updatedAt": "2026-09-16T01:24:05.807612Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.2kw/mcp-server",
+        "description": "EU-hosted AI platform: OpenAI-compatible LLM gateway, document extraction, transcription, agents.",
+        "title": "2kw.ai",
+        "version": "6.3.0",
+        "websiteUrl": "https://2kw.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@2kw/ai-mcp-server",
+            "version": "6.3.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "API key for the 2kw.ai platform",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "AI_2KW_API_KEY"
+              },
+              {
+                "description": "Override the API base URL for self-hosted deployments",
+                "name": "AI_2KW_BASE_URL"
+              },
+              {
+                "description": "true opts agent runs into agent memory (X-Backbone-Memory: enabled)",
+                "name": "AI_2KW_MEMORY"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-03T09:22:27.183577Z",
+          "publishedAt": "2026-10-03T09:22:27.183577Z",
+          "updatedAt": "2026-10-03T09:22:27.183577Z",
           "isLatest": true
         }
       }
@@ -1515,6 +1659,89 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adrails/adrails",
+        "description": "Specialist AI agents for Meta Ads and Google Ads. Every change waits for your approval.",
+        "title": "Adrails",
+        "version": "1.0.0",
+        "websiteUrl": "https://adrails.ai/mcp",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adrails.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-03T17:44:39.042634Z",
+          "publishedAt": "2026-10-03T17:44:39.042634Z",
+          "updatedAt": "2026-10-03T17:44:39.042634Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adrails/adrails",
+        "description": "Specialist AI agents for Meta Ads and Google Ads. Every change waits for your approval.",
+        "title": "Adrails",
+        "repository": {
+          "url": "https://github.com/devthomy/adrails-mcp",
+          "source": "github"
+        },
+        "version": "1.0.1",
+        "websiteUrl": "https://adrails.ai/mcp",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adrails.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-03T19:41:49.956965Z",
+          "publishedAt": "2026-10-03T19:41:49.956965Z",
+          "updatedAt": "2026-10-03T19:41:49.956965Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adrails/adrails",
+        "description": "AI agents that build, test and monitor Meta Ads and Google Ads campaigns from your real data.",
+        "title": "Adrails",
+        "repository": {
+          "url": "https://github.com/devthomy/adrails-mcp",
+          "source": "github"
+        },
+        "version": "1.0.2",
+        "websiteUrl": "https://adrails.ai/mcp",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://adrails.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-04T06:58:31.135506Z",
+          "publishedAt": "2026-10-04T06:58:31.135506Z",
+          "updatedAt": "2026-10-04T06:58:31.135506Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.adramp/google-ads",
         "description": "Google Ads MCP server — manage campaigns, keywords, and metrics.",
         "repository": {
@@ -1609,6 +1836,31 @@
           "statusChangedAt": "2026-03-20T11:16:36.853329Z",
           "publishedAt": "2026-03-20T11:16:36.853329Z",
           "updatedAt": "2026-03-20T11:16:36.853329Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adrio/adrio",
+        "description": "Research competitor Meta ads, manage brand angles and audiences, and brief Spark to create ads.",
+        "title": "Adrio",
+        "version": "1.0.0",
+        "websiteUrl": "https://adrio.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.adrio.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-03T12:20:35.801463Z",
+          "publishedAt": "2026-10-03T12:20:35.801463Z",
+          "updatedAt": "2026-10-03T12:20:35.801463Z",
           "isLatest": true
         }
       }
@@ -2836,264 +3088,6 @@
           "publishedAt": "2026-08-07T18:18:36.945995Z",
           "updatedAt": "2026-08-07T18:18:36.945995Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/graffeo",
-        "description": "Live MCP catalog for Graffeo Coffee Roasting — North Beach SF specialty coffee since 1935.",
-        "title": "Graffeo Coffee Roasting",
-        "version": "1.0.0",
-        "websiteUrl": "https://www.graffeo.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/m/graffeo/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "deprecated",
-          "statusChangedAt": "2026-05-07T16:29:51.153646Z",
-          "statusMessage": "Pilot integration in progress; will re-activate when /m/graffeo/mcp is wired up.",
-          "publishedAt": "2026-05-06T16:11:54.5608Z",
-          "updatedAt": "2026-05-07T16:29:51.153646Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/graffeo",
-        "description": "Live MCP catalog for Graffeo Coffee Roasting - Simply the World's Finest Coffee since 1935.",
-        "title": "Graffeo Coffee Roasting",
-        "version": "1.0.1",
-        "websiteUrl": "https://www.graffeo.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/m/graffeo/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "deprecated",
-          "statusChangedAt": "2026-05-07T16:29:51.153646Z",
-          "statusMessage": "Pilot integration in progress; will re-activate when /m/graffeo/mcp is wired up.",
-          "publishedAt": "2026-05-07T15:29:26.296543Z",
-          "updatedAt": "2026-05-07T16:29:51.153646Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/graffeo",
-        "description": "Live MCP catalog for Graffeo Coffee Roasting - Simply the World's Finest Coffee since 1935.",
-        "title": "Graffeo Coffee Roasting",
-        "version": "1.0.2",
-        "websiteUrl": "https://www.graffeo.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/m/graffeo/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-14T20:40:06.442182Z",
-          "publishedAt": "2026-05-14T20:40:06.442182Z",
-          "updatedAt": "2026-05-14T20:40:06.442182Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/mcp",
-        "description": "Hosted MCP for e-commerce: live product catalog, stock, and pricing for AI agents.",
-        "title": "Agentic Shelf",
-        "repository": {
-          "url": "https://github.com/vboykoCTO/agentic-shelf",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://www.agenticshelf.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-06T16:24:16.952518Z",
-          "publishedAt": "2026-05-06T16:24:16.952518Z",
-          "updatedAt": "2026-05-06T16:24:16.952518Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/puroair",
-        "description": "Live MCP catalog for PuroAir HEPA-14 air purifiers - real-time stock, pricing, and details.",
-        "title": "PuroAir",
-        "version": "1.0.0",
-        "websiteUrl": "https://getpuroair.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/m/puroair/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-02T16:20:31.236902Z",
-          "publishedAt": "2026-07-02T16:20:31.236902Z",
-          "updatedAt": "2026-07-02T16:20:31.236902Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticshelf/puroair",
-        "description": "Breathe with Confidence. Live MCP catalog for PuroAir HEPA air purifiers - stock, pricing, details.",
-        "title": "PuroAir",
-        "version": "1.0.1",
-        "websiteUrl": "https://getpuroair.com",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agenticshelf.ai/m/puroair/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-02T16:47:32.556297Z",
-          "publishedAt": "2026-07-02T16:47:32.556297Z",
-          "updatedAt": "2026-07-02T16:47:32.556297Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticterminal/directory",
-        "description": "Verified merchants accepting agentic payments on Lightning/L402/BOLT12/USDT — search, verify, pay.",
-        "title": "Agentic Terminal Directory",
-        "repository": {
-          "url": "https://github.com/observer-protocol/at-directory",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://agenticterminal.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.agenticterminal.ai/mcp"
-          }
-        ],
-        "_meta": {
-          "io.modelcontextprotocol.registry/publisher-provided": {
-            "ai.agenticterminal": {
-              "anonymous_access": "Reads (search, get, verify) require no credential. Bring your own wallet/rails and transact directly with the merchant — the directory is never in the payment path.",
-              "categories": [
-                "agent-commerce",
-                "payments",
-                "bitcoin-lightning",
-                "stablecoin-usdt",
-                "directory"
-              ],
-              "credibility": [
-                "Counterparty-verified, not self-claimed: Bitrefill's Tier-2 status comes from a real autonomous-agent Lightning purchase, preimage-verified on the record. Proof a transaction settled, not a marketing checkbox.",
-                "Not a static list: verify_payment_endpoint live-probes a rail and is explicit when a rail is attestation-only rather than rubber-stamping it. The directory tells you what it actually knows."
-              ],
-              "example_calls": [
-                "search_merchants({ rail: \"lightning\", category: \"gift-cards\" })  ->  Bitrefill (Tier 2) ranked first",
-                "get_merchant({ id: \"bitrefill\" })  ->  rails, agent_endpoints, attestation",
-                "verify_payment_endpoint({ merchant_id: \"bitrefill\", rail: \"lightning\" })  ->  live status + evidence"
-              ],
-              "pitch": "An agent-callable directory of real merchants you can pay over Lightning, L402, BOLT12 or USDT — each carrying an Observer Protocol trust tier. Discover anonymously with no credential or signup, inspect a merchant's payment surface, and verify a rail is live before you send funds. Built for autonomous agents that bring their own wallet and rails.",
-              "tools": [
-                {
-                  "description": "Filter merchants by rail, chain, category, trust tier and accepts_usdc; returns ranked summaries plus your resolved auth state.",
-                  "name": "search_merchants"
-                },
-                {
-                  "description": "Full record for one merchant: every rail, payment endpoints, agent_endpoints (MCP/REST/API docs) and any OP attestation.",
-                  "name": "get_merchant"
-                },
-                {
-                  "description": "Live, rail-specific health check of a merchant's payment surface before you transact — and honest about probe-able vs attestation-only rails.",
-                  "name": "verify_payment_endpoint"
-                },
-                {
-                  "description": "Category taxonomy with live merchant counts.",
-                  "name": "list_categories"
-                },
-                {
-                  "description": "Supported rails and USDT chains with live merchant counts.",
-                  "name": "list_rails"
-                },
-                {
-                  "description": "Your resolved credential/auth state and rate-limit tier.",
-                  "name": "whoami"
-                }
-              ]
-            }
-          }
-        }
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-19T15:17:01.794422Z",
-          "publishedAt": "2026-05-19T15:17:01.794422Z",
-          "updatedAt": "2026-05-19T15:17:01.794422Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-        "name": "ai.agentlookups/counterscript",
-        "description": "What pharmacies actually pay for prescriptions (CMS NADAC) plus fair-cash-price estimates.",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://rx.agentlookups.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-05T00:13:29.161664Z",
-          "publishedAt": "2026-08-05T00:13:29.161664Z",
-          "updatedAt": "2026-08-05T00:13:29.161664Z",
-          "isLatest": false
         }
       }
     }
