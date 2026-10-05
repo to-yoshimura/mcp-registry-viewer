@@ -1016,6 +1016,40 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.1clickwebsite/mcp",
+        "description": "Build and edit WordPress websites for local service businesses and run Lead Gen demo-site batches.",
+        "title": "1ClickWebsite",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.1clickwebsite.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://www.1clickwebsite.ai/app-icon.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "256x256"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://www.1clickwebsite.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-05T09:31:32.655518Z",
+          "publishedAt": "2026-10-05T09:31:32.655518Z",
+          "updatedAt": "2026-10-05T09:31:32.655518Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.2kw/mcp-server",
         "description": "EU-hosted AI platform: OpenAI-compatible LLM gateway, document extraction, transcription, agents.",
         "title": "2kw.ai",
@@ -3064,30 +3098,6 @@
           "publishedAt": "2026-07-24T06:26:25.029641Z",
           "updatedAt": "2026-07-24T06:26:25.029641Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticfabricationnetwork/ufp",
-        "description": "Turn designs into shipped parts: quote 3D printing, CNC, and decals, then check out.",
-        "title": "Agentic Fabrication Network (AFN)",
-        "version": "0.1.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agenticfabricationnetwork.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-07T18:18:36.945995Z",
-          "publishedAt": "2026-08-07T18:18:36.945995Z",
-          "updatedAt": "2026-08-07T18:18:36.945995Z",
-          "isLatest": true
         }
       }
     }
