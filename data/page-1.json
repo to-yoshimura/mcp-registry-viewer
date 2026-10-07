@@ -425,6 +425,88 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.plantguide/dubai-gardening",
+        "description": "What to plant in Dubai each month, plant care in the heat, garden styles and Garden Care prices.",
+        "title": "Plant Guide: Dubai gardening research",
+        "version": "1.0.0",
+        "websiteUrl": "https://plantguide.ae/agents",
+        "icons": [
+          {
+            "src": "https://plantguide.ae/brand/plantguide-mark.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          },
+          {
+            "src": "https://plantguide.ae/icons/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://plantguide.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-07T06:55:35.364125Z",
+          "publishedAt": "2026-10-07T06:55:35.364125Z",
+          "updatedAt": "2026-10-07T06:55:35.364125Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.plantguide/dubai-gardening",
+        "description": "What to plant in Dubai, indoor plants, plant care in the heat, garden styles and Garden Care prices.",
+        "title": "Plant Guide: Dubai gardening research",
+        "version": "1.1.0",
+        "websiteUrl": "https://plantguide.ae/agents",
+        "icons": [
+          {
+            "src": "https://plantguide.ae/brand/plantguide-mark.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          },
+          {
+            "src": "https://plantguide.ae/icons/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://plantguide.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-07T08:44:40.122336Z",
+          "publishedAt": "2026-10-07T08:44:40.122336Z",
+          "updatedAt": "2026-10-07T08:44:40.122336Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.projectory/mcp",
         "description": "Find UAE off-plan developments and registered residential sales.",
         "title": "Projectory",
@@ -1711,6 +1793,40 @@
           "statusChangedAt": "2026-08-08T18:01:15.320148Z",
           "publishedAt": "2026-08-08T18:01:15.320148Z",
           "updatedAt": "2026-08-08T18:01:15.320148Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adplane/google-ads",
+        "description": "Google, Meta and Microsoft Ads in Claude or ChatGPT: reports and changes. New items start paused.",
+        "title": "adplane",
+        "version": "1.30.0",
+        "websiteUrl": "https://adplane.ai",
+        "icons": [
+          {
+            "src": "https://adplane.ai/adplane-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.adplane.ai"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-07T02:05:07.341918Z",
+          "publishedAt": "2026-10-07T02:05:07.341918Z",
+          "updatedAt": "2026-10-07T02:05:07.341918Z",
           "isLatest": true
         }
       }
@@ -2999,105 +3115,6 @@
           "statusChangedAt": "2026-08-25T05:32:02.617195Z",
           "publishedAt": "2026-08-25T05:32:02.617195Z",
           "updatedAt": "2026-08-25T05:32:02.617195Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentic-news/mcp",
-        "description": "AI-powered news intelligence — 21 tools for personalized monitoring, briefings, and semantic search",
-        "title": "Agentic News",
-        "repository": {
-          "url": "https://github.com/u00dxk2/agentic-news",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://agentic-news.ai/mcp",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agentic-news.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-06T18:34:53.583541Z",
-          "publishedAt": "2026-04-06T18:34:53.583541Z",
-          "updatedAt": "2026-04-06T18:34:53.583541Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticaffiliate/affiliate-networks-mcp",
-        "description": "Affiliate network reporting in your AI client. Bring your own keys. Most adapters experimental.",
-        "title": "Affiliate Networks MCP",
-        "repository": {
-          "url": "https://github.com/bobberrisford/affiliatemcp",
-          "source": "github"
-        },
-        "version": "0.19.0",
-        "websiteUrl": "https://agenticaffiliate.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "affiliate-networks-mcp",
-            "version": "0.19.0",
-            "runtimeHint": "npx",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.agenticaffiliate.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-29T07:26:14.414867Z",
-          "publishedAt": "2026-07-29T07:26:14.414867Z",
-          "updatedAt": "2026-07-29T07:26:14.414867Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenticbooks/books",
-        "description": "Startup books from live bank and billing feeds: P&L, balances, approvals, period close.",
-        "title": "AgenticBooks",
-        "repository": {
-          "url": "https://github.com/AgenticBooks/agenticbooks",
-          "source": "github",
-          "subfolder": "apps/mcp-server"
-        },
-        "version": "0.1.0",
-        "websiteUrl": "https://www.agenticbooks.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.agenticbooks.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-20T15:34:07.095403Z",
-          "publishedAt": "2026-09-20T15:34:07.095403Z",
-          "updatedAt": "2026-09-20T15:34:07.095403Z",
           "isLatest": true
         }
       }
