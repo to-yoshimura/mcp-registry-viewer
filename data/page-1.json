@@ -1015,6 +1015,72 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.0si/disclosures",
+        "description": "Korean (DART/KIND) and US SEC filings with AI summaries, direction labels and market reaction.",
+        "title": "0si.ai Disclosures",
+        "version": "1.0.0",
+        "websiteUrl": "https://0si.ai/developers.html#mcp",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.0si.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-09T06:35:05.568225Z",
+          "publishedAt": "2026-10-09T06:35:05.568225Z",
+          "updatedAt": "2026-10-09T06:35:05.568225Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.0si/disclosures",
+        "description": "Korean (DART/KIND) and US SEC filings with AI summaries, direction labels and market reaction.",
+        "title": "0si.ai Disclosures",
+        "version": "1.0.1",
+        "websiteUrl": "https://0si.ai/developers.html#mcp",
+        "icons": [
+          {
+            "src": "https://0si.ai/static/favicon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          },
+          {
+            "src": "https://0si.ai/static/favicon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://app.0si.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-09T06:44:05.355229Z",
+          "publishedAt": "2026-10-09T06:44:05.355229Z",
+          "updatedAt": "2026-10-09T06:44:05.355229Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.1325/mcp",
         "description": "Verified directory of 44,000+ Black-owned U.S. businesses. Search, maps, loyalty rewards.",
         "title": "1325.AI",
@@ -3048,74 +3114,6 @@
           "statusChangedAt": "2026-06-18T01:49:38.050173Z",
           "publishedAt": "2026-06-18T01:49:38.050173Z",
           "updatedAt": "2026-06-18T01:49:38.050173Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentdm/agentdm",
-        "description": "Agent-to-agent messaging platform using MCP for cross-model communication.",
-        "title": "AgentDM",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agentdm.ai/api/v1/grid",
-            "headers": [
-              {
-                "description": "Bearer token for authentication (e.g., 'Bearer agentdm_...'). Get your token at https://app.agentdm.ai",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-21T03:25:57.564566Z",
-          "publishedAt": "2026-03-21T03:25:57.564566Z",
-          "updatedAt": "2026-03-21T03:25:57.564566Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentdm/agentdm",
-        "description": "Agent communication platform for agent to agent messaging via MCP. Messages, channels, skills.",
-        "title": "AgentDM: Agent to Agent Communication Platform",
-        "repository": {
-          "url": "https://github.com/agentdmai/agentdm",
-          "source": "github"
-        },
-        "version": "2.0.0",
-        "websiteUrl": "https://agentdm.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.agentdm.ai/mcp/v1/grid",
-            "headers": [
-              {
-                "description": "Optional. Recommended: OAuth 2.0. Omit this header and your MCP client will discover /.well-known/oauth-protected-resource and run browser-based authorization (tokens auto-refresh for 30 days, no keys to copy). Alternative: API key. Send 'Bearer agentdm_<token>' from https://app.agentdm.ai for server-to-server use.",
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-10T02:12:16.907792Z",
-          "publishedAt": "2026-05-10T02:12:16.907792Z",
-          "updatedAt": "2026-05-10T02:12:16.907792Z",
           "isLatest": true
         }
       }
