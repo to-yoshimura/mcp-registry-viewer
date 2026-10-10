@@ -574,6 +574,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "aero.events/events",
+        "description": "Find aviation events: airshows, fly-ins, workshops and club meets. Public and read-only.",
+        "title": "Events.Aero",
+        "version": "1.0.0",
+        "websiteUrl": "https://events.aero",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://events.aero/mcp/events"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-09T21:06:19.122059Z",
+          "publishedAt": "2026-10-09T21:06:19.122059Z",
+          "updatedAt": "2026-10-09T21:06:19.122059Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "africa.ugc/ugc",
         "description": "The Human Ad Network. Campaigns, clipping, and Clip Studio from chat.",
         "title": "UGC, the Human Ad Network",
@@ -756,6 +781,40 @@
           "statusChangedAt": "2026-10-04T01:59:27.439267Z",
           "publishedAt": "2026-10-04T01:59:27.439267Z",
           "updatedAt": "2026-10-04T01:59:27.439267Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.justidea/justidea-agency",
+        "description": "Services, prices, inquiries and free analytics, AI and Google visibility scans by JustIdea, Poland.",
+        "title": "JustIdea Agency",
+        "version": "1.2.0",
+        "websiteUrl": "https://justidea.agency/",
+        "icons": [
+          {
+            "src": "https://justidea.agency/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://justidea.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-10T00:31:54.538632Z",
+          "publishedAt": "2026-10-10T00:31:54.538632Z",
+          "updatedAt": "2026-10-10T00:31:54.538632Z",
           "isLatest": true
         }
       }
@@ -1893,6 +1952,40 @@
           "statusChangedAt": "2026-10-07T02:05:07.341918Z",
           "publishedAt": "2026-10-07T02:05:07.341918Z",
           "updatedAt": "2026-10-07T02:05:07.341918Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.adplane/google-ads",
+        "description": "Google, Meta, Microsoft and TikTok Ads in Claude or ChatGPT: reports and changes, created paused.",
+        "title": "adplane",
+        "version": "1.31.0",
+        "websiteUrl": "https://adplane.ai",
+        "icons": [
+          {
+            "src": "https://adplane.ai/adplane-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.adplane.ai"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-09T18:22:28.787277Z",
+          "publishedAt": "2026-10-09T18:22:28.787277Z",
+          "updatedAt": "2026-10-09T18:22:28.787277Z",
           "isLatest": true
         }
       }
@@ -2990,131 +3083,6 @@
           "publishedAt": "2026-09-27T18:48:56.816461Z",
           "updatedAt": "2026-09-27T18:48:56.816461Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "The world's largest agentic B2B hub for beer, wine and spirits. Powered by CUVEE. Trade only.",
-        "title": "agent-bev",
-        "repository": {
-          "url": "https://github.com/agent-bev/bev-door",
-          "source": "github"
-        },
-        "version": "0.2.4",
-        "websiteUrl": "https://agent-bev.ai",
-        "icons": [
-          {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agent-bev/mcp-server",
-            "version": "0.2.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-28T02:28:06.963429Z",
-          "publishedAt": "2026-09-28T02:28:06.963429Z",
-          "updatedAt": "2026-09-28T02:28:06.963429Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "The world's largest agentic B2B hub for beer, wine and spirits. Powered by CUVEE. Trade only.",
-        "title": "agent-bev",
-        "repository": {
-          "url": "https://github.com/agent-bev/bev-door",
-          "source": "github"
-        },
-        "version": "0.2.5",
-        "websiteUrl": "https://agent-bev.ai",
-        "icons": [
-          {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agent-bev/mcp-server",
-            "version": "0.2.5",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-30T02:38:24.149981Z",
-          "publishedAt": "2026-09-30T02:38:24.149981Z",
-          "updatedAt": "2026-09-30T02:38:24.149981Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agentberg/agentberg",
-        "description": "Agent-to-agent trading intelligence exchange. Publish findings, vote on quality, earn reputation.",
-        "repository": {
-          "url": "https://github.com/Agentberg/agentberg",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agentberg.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-06-18T01:49:38.050173Z",
-          "publishedAt": "2026-06-18T01:49:38.050173Z",
-          "updatedAt": "2026-06-18T01:49:38.050173Z",
-          "isLatest": true
         }
       }
     }
