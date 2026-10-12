@@ -375,6 +375,107 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.easyvoice/tts",
+        "description": "Hosted text-to-speech MCP server: 66 voices in 9 languages, long-form narration, podcasts.",
+        "title": "EasyVoice text to speech",
+        "version": "1.0.0",
+        "websiteUrl": "https://easyvoice.ae/tts-mcp-server",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://easyvoice.ae/api/mcp",
+            "headers": [
+              {
+                "description": "Bearer <your EasyVoice API key> (free key at https://easyvoice.ae/account/keys)",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-11T18:47:52.634428Z",
+          "publishedAt": "2026-10-11T18:47:52.634428Z",
+          "updatedAt": "2026-10-11T18:47:52.634428Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.genosys/genosys",
+        "description": "Shop GENOSYS Korean skincare in the UAE from chat: find products, AED prices, order and pay.",
+        "title": "GENOSYS UAE",
+        "version": "1.1.0",
+        "websiteUrl": "https://genosys.ae/ai",
+        "icons": [
+          {
+            "src": "https://genosys.ae/icon-512x512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://genosys.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-12T08:52:12.154288Z",
+          "publishedAt": "2026-10-12T08:52:12.154288Z",
+          "updatedAt": "2026-10-12T08:52:12.154288Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.genosys/genosys",
+        "description": "Shop GENOSYS Korean skincare in the UAE from chat: find products, AED prices, order and pay.",
+        "title": "GENOSYS UAE",
+        "version": "1.2.0",
+        "websiteUrl": "https://genosys.ae/ai",
+        "icons": [
+          {
+            "src": "https://genosys.ae/icon-512x512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://genosys.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-12T09:33:58.36606Z",
+          "publishedAt": "2026-10-12T09:33:58.36606Z",
+          "updatedAt": "2026-10-12T09:33:58.36606Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.grovisor/grotax",
         "description": "UAE Corporate Tax: CT computation, SBR, penalties, free zone test, TP and health-check.",
         "title": "groTAX by Grovisor",
@@ -2946,142 +3047,6 @@
           "statusChangedAt": "2026-09-27T02:35:14.72457Z",
           "publishedAt": "2026-09-27T02:35:14.72457Z",
           "updatedAt": "2026-09-27T02:35:14.72457Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "Agentic B2B hub for beer, wine and spirits across Europe.",
-        "title": "agent-bev",
-        "repository": {
-          "url": "https://github.com/agent-bev/bev-door",
-          "source": "github"
-        },
-        "version": "0.2.1",
-        "websiteUrl": "https://agent-bev.ai",
-        "icons": [
-          {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-27T02:41:16.447624Z",
-          "publishedAt": "2026-09-27T02:41:16.447624Z",
-          "updatedAt": "2026-09-27T02:41:16.447624Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "Agentic B2B hub for beer, wine and spirits across Europe.",
-        "title": "agent-bev",
-        "repository": {
-          "url": "https://github.com/agent-bev/bev-door",
-          "source": "github"
-        },
-        "version": "0.2.2",
-        "websiteUrl": "https://agent-bev.ai",
-        "icons": [
-          {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agent-bev/mcp-server",
-            "version": "0.2.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-27T03:12:13.05419Z",
-          "publishedAt": "2026-09-27T03:12:13.05419Z",
-          "updatedAt": "2026-09-27T03:12:13.05419Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "Agentic B2B hub for beer, wine and spirits across Europe.",
-        "title": "agent-bev",
-        "repository": {
-          "url": "https://github.com/agent-bev/bev-door",
-          "source": "github"
-        },
-        "version": "0.2.3",
-        "websiteUrl": "https://agent-bev.ai",
-        "icons": [
-          {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@agent-bev/mcp-server",
-            "version": "0.2.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-27T18:48:56.816461Z",
-          "publishedAt": "2026-09-27T18:48:56.816461Z",
-          "updatedAt": "2026-09-27T18:48:56.816461Z",
           "isLatest": false
         }
       }
