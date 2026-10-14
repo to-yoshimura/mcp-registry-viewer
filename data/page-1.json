@@ -3020,34 +3020,34 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agent-bev/bev-door",
-        "description": "Agentic B2B hub for beer, wine and spirits across Europe.",
-        "title": "agent-bev",
-        "version": "0.2.0",
-        "websiteUrl": "https://agent-bev.ai",
+        "name": "ai.agenlify/catalog",
+        "description": "Find AI tools by task, with pricing context, setup steps, limitations and official sources.",
+        "title": "Agenlify AI Agent Directory",
+        "version": "1.0.0",
+        "websiteUrl": "https://agenlify.ai/developers/mcp/",
         "icons": [
           {
-            "src": "https://agent-bev.ai/brand/icon-512.png",
-            "mimeType": "image/png",
+            "src": "https://agenlify.ai/favicon.svg",
+            "mimeType": "image/svg+xml",
             "sizes": [
-              "512x512"
+              "any"
             ]
           }
         ],
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://mcp.bev-buyer.ai/mcp"
+            "url": "https://agenlify.ai/mcp"
           }
         ]
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
           "status": "active",
-          "statusChangedAt": "2026-09-27T02:35:14.72457Z",
-          "publishedAt": "2026-09-27T02:35:14.72457Z",
-          "updatedAt": "2026-09-27T02:35:14.72457Z",
-          "isLatest": false
+          "statusChangedAt": "2026-10-13T16:09:56.551448Z",
+          "publishedAt": "2026-10-13T16:09:56.551448Z",
+          "updatedAt": "2026-10-13T16:09:56.551448Z",
+          "isLatest": true
         }
       }
     }
