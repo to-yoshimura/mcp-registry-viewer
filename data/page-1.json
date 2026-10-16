@@ -217,6 +217,42 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "academy.apexai/apex-ai-academy",
+        "description": "Lessons, news and pricing from Apex AI Academy, an AI academy run by agents. Free lessons, no key.",
+        "title": "Apex AI Academy",
+        "repository": {
+          "url": "https://github.com/ApexAI-Academy/sample-agents",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://apexai.academy/developers/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://apexai.academy/mcp",
+            "headers": [
+              {
+                "description": "Optional: Bearer <personal apex_ key> for Premium tools. Public tools need no key.",
+                "isSecret": true,
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-16T03:32:46.025467Z",
+          "publishedAt": "2026-10-16T03:32:46.025467Z",
+          "updatedAt": "2026-10-16T03:32:46.025467Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ad.getle/leads",
         "description": "Find B2B leads with verified work emails, find and verify emails, and run cold email outreach.",
         "title": "Getlead",
@@ -668,6 +704,39 @@
           "statusChangedAt": "2026-08-25T11:16:56.879334Z",
           "publishedAt": "2026-08-25T11:16:56.879334Z",
           "updatedAt": "2026-08-25T11:16:56.879334Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.waggle/fenlight",
+        "description": "Google search results, forum threads, local and shopping data, keyword ideas, AI answer tracking.",
+        "title": "Fenlight",
+        "version": "0.3.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://fenlight.waggle.ae/mcp",
+            "headers": [
+              {
+                "description": "Your Vera API key as a Bearer token. Create a key, with 3,000 free credits, at vera.waggle.ae.",
+                "isRequired": true,
+                "isSecret": true,
+                "placeholder": "Bearer vera_live_...",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-16T04:35:48.176825Z",
+          "publishedAt": "2026-10-16T04:35:48.176825Z",
+          "updatedAt": "2026-10-16T04:35:48.176825Z",
           "isLatest": true
         }
       }
@@ -2985,69 +3054,6 @@
           "publishedAt": "2026-07-30T18:14:19.797129Z",
           "updatedAt": "2026-07-30T18:14:19.797129Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.afmr/discovery",
-        "description": "Read AFMR failure modes and discover scoped attestation and lift-evidence contracts.",
-        "title": "AFMR Discovery",
-        "version": "1.0.1",
-        "websiteUrl": "https://afmr.ai/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://afmr.ai/mcp"
-          },
-          {
-            "type": "streamable-http",
-            "url": "https://afmr.ai/api/rpc"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-22T16:29:05.632026Z",
-          "publishedAt": "2026-08-22T16:29:05.632026Z",
-          "updatedAt": "2026-08-22T16:29:05.632026Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.agenlify/catalog",
-        "description": "Find AI tools by task, with pricing context, setup steps, limitations and official sources.",
-        "title": "Agenlify AI Agent Directory",
-        "version": "1.0.0",
-        "websiteUrl": "https://agenlify.ai/developers/mcp/",
-        "icons": [
-          {
-            "src": "https://agenlify.ai/favicon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://agenlify.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-13T16:09:56.551448Z",
-          "publishedAt": "2026-10-13T16:09:56.551448Z",
-          "updatedAt": "2026-10-13T16:09:56.551448Z",
-          "isLatest": true
         }
       }
     }
