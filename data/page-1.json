@@ -816,6 +816,39 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.waggle/vera",
+        "description": "Scrape, search and extract the public web. 3,000 free credits at https://vera.waggle.ae/signup",
+        "title": "Vera",
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://vera.waggle.ae/v1/mcp",
+            "headers": [
+              {
+                "description": "Your Vera API key as a Bearer token. Create a key, with 3,000 free credits, at https://vera.waggle.ae/signup.",
+                "isRequired": true,
+                "isSecret": true,
+                "placeholder": "Bearer vera_live_...",
+                "name": "Authorization"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-20T08:03:33.116792Z",
+          "publishedAt": "2026-10-20T08:03:33.116792Z",
+          "updatedAt": "2026-10-20T08:03:33.116792Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "aero.events/events",
         "description": "Find aviation events: airshows, fly-ins, workshops and club meets. Public and read-only.",
         "title": "Events.Aero",
@@ -1563,6 +1596,52 @@
           "statusChangedAt": "2026-10-03T09:22:27.183577Z",
           "publishedAt": "2026-10-03T09:22:27.183577Z",
           "updatedAt": "2026-10-03T09:22:27.183577Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.2kw/mcp-server",
+        "description": "EU-hosted AI platform: OpenAI-compatible LLM gateway, document extraction, transcription, agents.",
+        "title": "2kw.ai",
+        "version": "7.3.2",
+        "websiteUrl": "https://2kw.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@2kw/ai-mcp-server",
+            "version": "7.3.2",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "API key for the 2kw.ai platform",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "AI_2KW_API_KEY"
+              },
+              {
+                "description": "Override the API base URL for self-hosted deployments",
+                "name": "AI_2KW_BASE_URL"
+              },
+              {
+                "description": "true opts agent runs into agent memory (X-Backbone-Memory: enabled)",
+                "name": "AI_2KW_MEMORY"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-19T09:23:26.329508Z",
+          "publishedAt": "2026-10-19T09:23:26.329508Z",
+          "updatedAt": "2026-10-19T09:23:26.329508Z",
           "isLatest": true
         }
       }
@@ -1740,6 +1819,53 @@
           "statusChangedAt": "2026-08-30T00:28:05.727498Z",
           "publishedAt": "2026-08-30T00:28:05.727498Z",
           "updatedAt": "2026-08-30T00:28:05.727498Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.achromat/mcp-server",
+        "description": "Recall and calibrate agent tool calls against verified policy lessons from Achromat MOM.",
+        "title": "Achromat MOM",
+        "repository": {
+          "url": "https://github.com/achromat-ai/achromat-mcp-server",
+          "source": "github"
+        },
+        "version": "0.1.1",
+        "websiteUrl": "https://mom.achromat.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@achromat-ai/mcp-server",
+            "version": "0.1.1",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Path of the agent's Ed25519 private key (unencrypted PKCS#8 PEM). Created on first use if the file does not exist.",
+                "format": "filepath",
+                "default": "~/.achromat/achromat_agent_key.pem",
+                "name": "ACHROMAT_AGENT_KEY_FILE"
+              },
+              {
+                "description": "Service origin. Must be https (plain http is accepted only for localhost).",
+                "default": "https://mom.achromat.ai",
+                "name": "ACHROMAT_BASE_URL"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-19T16:40:53.960211Z",
+          "publishedAt": "2026-10-19T16:40:53.960211Z",
+          "updatedAt": "2026-10-19T16:40:53.960211Z",
           "isLatest": true
         }
       }
@@ -2966,107 +3092,6 @@
           "publishedAt": "2026-07-24T22:07:17.215889Z",
           "updatedAt": "2026-07-24T22:07:17.215889Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aetherwealth/mcp",
-        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
-        "title": "Aether Wealth",
-        "version": "0.2.7",
-        "websiteUrl": "https://aetherwealth.ai/mcp",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@aetherwealth/mcp",
-            "version": "0.2.7",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-29T20:08:00.575379Z",
-          "publishedAt": "2026-07-29T20:08:00.575379Z",
-          "updatedAt": "2026-07-29T20:08:00.575379Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aetherwealth/mcp",
-        "description": "Aether Wealth MCP for AI assistants: trades, alerts, market data, macro calendar & indicators.",
-        "title": "Aether Wealth",
-        "version": "0.2.9",
-        "websiteUrl": "https://aetherwealth.ai/mcp",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@aetherwealth/mcp",
-            "version": "0.2.9",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-30T11:11:27.271103Z",
-          "publishedAt": "2026-07-30T11:11:27.271103Z",
-          "updatedAt": "2026-07-30T11:11:27.271103Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aeviamodeler/aevia",
-        "description": "AI-powered life cycle assessment and modelling: connect to LCA databases, build and analyze systems",
-        "title": "Aevia",
-        "version": "1.0.0",
-        "websiteUrl": "https://aeviamodeler.ai/mcp?src=mcp-registry",
-        "icons": [
-          {
-            "src": "https://app.aeviamodeler.ai/icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          },
-          {
-            "src": "https://app.aeviamodeler.ai/favicon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://app.aeviamodeler.ai/api/v1/connector/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-15T15:36:29.139616Z",
-          "publishedAt": "2026-09-15T15:36:29.139616Z",
-          "updatedAt": "2026-09-15T15:36:29.139616Z",
-          "isLatest": true
         }
       }
     }
