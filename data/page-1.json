@@ -431,6 +431,40 @@
           "statusChangedAt": "2026-10-22T22:20:40.178549Z",
           "publishedAt": "2026-10-22T22:20:40.178549Z",
           "updatedAt": "2026-10-22T22:20:40.178549Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.beachclubs/mcp",
+        "description": "Search UAE beach clubs, day pass prices, amenities, opening hours and events across all 7 emirates.",
+        "title": "BeachClubs.ae",
+        "version": "0.3.0",
+        "websiteUrl": "https://www.beachclubs.ae/mcp-server",
+        "icons": [
+          {
+            "src": "https://www.beachclubs.ae/apple-touch-icon.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "180x180"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://www.beachclubs.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-23T16:09:50.932635Z",
+          "publishedAt": "2026-10-23T16:09:50.932635Z",
+          "updatedAt": "2026-10-23T16:09:50.932635Z",
           "isLatest": true
         }
       }
@@ -3096,38 +3130,6 @@
           "statusChangedAt": "2026-08-28T13:28:25.814078Z",
           "publishedAt": "2026-08-28T13:28:25.814078Z",
           "updatedAt": "2026-08-28T13:28:25.814078Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adweave/meta-ads-mcp",
-        "description": "Meta Ads MCP server with 47 tools for campaigns, creatives, audiences, and insights.",
-        "title": "AdWeave — Meta Ads MCP Server",
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.adweave.ai/meta-ads-mcp",
-            "headers": [
-              {
-                "description": "Bearer token using your AdWeave API key (aw_ prefix)",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-10T16:46:57.731179Z",
-          "publishedAt": "2026-04-10T16:46:57.731179Z",
-          "updatedAt": "2026-04-10T16:46:57.731179Z",
           "isLatest": true
         }
       }
