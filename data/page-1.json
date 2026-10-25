@@ -1475,6 +1475,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.zoll/ausfuhr",
+        "description": "Regeln und Suchen zur Ausfuhr aus der EU: Kumulierung, Präferenznachweis, Incoterms, Warennummer",
+        "title": "zoll.agency",
+        "version": "1.0.0",
+        "websiteUrl": "https://zoll.agency/werkzeuge",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://zoll.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-24T14:11:05.083261Z",
+          "publishedAt": "2026-10-24T14:11:05.083261Z",
+          "updatedAt": "2026-10-24T14:11:05.083261Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.0si/disclosures",
         "description": "Korean (DART/KIND) and US SEC filings with AI summaries, direction labels and market reaction.",
         "title": "0si.ai Disclosures",
@@ -3106,31 +3131,6 @@
           "publishedAt": "2026-08-24T10:04:58.096851Z",
           "updatedAt": "2026-08-24T10:04:58.096851Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.advisorsai/store-readiness",
-        "description": "Ten machine-readable signals on one public page: the top miss if any, and a receipt we re-verify.",
-        "title": "One-Page Readiness Check — 10 Signals, Arabic or English",
-        "version": "1.0.6",
-        "websiteUrl": "https://advisorsai.ai/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://advisorsai.ai/store-readiness-mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-28T13:28:25.814078Z",
-          "publishedAt": "2026-08-28T13:28:25.814078Z",
-          "updatedAt": "2026-08-28T13:28:25.814078Z",
-          "isLatest": true
         }
       }
     }
