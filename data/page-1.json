@@ -1847,6 +1847,52 @@
           "statusChangedAt": "2026-10-19T09:23:26.329508Z",
           "publishedAt": "2026-10-19T09:23:26.329508Z",
           "updatedAt": "2026-10-19T09:23:26.329508Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.2kw/mcp-server",
+        "description": "EU-hosted AI platform: OpenAI-compatible LLM gateway, document extraction, transcription, agents.",
+        "title": "2kw.ai",
+        "version": "8.0.3",
+        "websiteUrl": "https://2kw.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@2kw/ai-mcp-server",
+            "version": "8.0.3",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "API key for the 2kw.ai platform",
+                "isRequired": true,
+                "isSecret": true,
+                "name": "AI_2KW_API_KEY"
+              },
+              {
+                "description": "Override the API base URL for self-hosted deployments",
+                "name": "AI_2KW_BASE_URL"
+              },
+              {
+                "description": "true opts agent runs into agent memory (X-Backbone-Memory: enabled)",
+                "name": "AI_2KW_MEMORY"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-10-25T22:46:43.86716Z",
+          "publishedAt": "2026-10-25T22:46:43.86716Z",
+          "updatedAt": "2026-10-25T22:46:43.86716Z",
           "isLatest": true
         }
       }
@@ -3105,31 +3151,6 @@
           "statusChangedAt": "2026-08-22T20:48:28.258862Z",
           "publishedAt": "2026-08-22T20:48:28.258862Z",
           "updatedAt": "2026-08-22T20:48:28.258862Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.advisorsai/store-readiness",
-        "description": "Ten machine-readable signals on one public page: the top miss if any, and a receipt we re-verify.",
-        "title": "One-Page Readiness Check — 10 Signals, Arabic or English",
-        "version": "1.0.5",
-        "websiteUrl": "https://advisorsai.ai/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://advisorsai.ai/store-readiness-mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-24T10:04:58.096851Z",
-          "publishedAt": "2026-08-24T10:04:58.096851Z",
-          "updatedAt": "2026-08-24T10:04:58.096851Z",
           "isLatest": false
         }
       }
