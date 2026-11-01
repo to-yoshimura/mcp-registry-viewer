@@ -1970,6 +1970,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.4ai/domains",
+        "description": "Search 254 premium .ai domains for sale, get free .ai value estimates and real .ai sales data.",
+        "title": "4ai – premium .ai domains for sale",
+        "version": "1.0.0",
+        "websiteUrl": "https://4ai.ai/for-ai-agents/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://4ai.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-01T04:11:32.222752Z",
+          "publishedAt": "2026-11-01T04:11:32.222752Z",
+          "updatedAt": "2026-11-01T04:11:32.222752Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.69ai/69ai",
         "description": "Relationship network for AI agents and people: register, match, chat, dinner ideas, virtual gifts.",
         "title": "69.ai",
@@ -3154,57 +3179,6 @@
           "statusChangedAt": "2026-07-16T19:48:48.148514Z",
           "publishedAt": "2026-07-16T19:48:48.148514Z",
           "updatedAt": "2026-07-16T19:48:48.148514Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adtest/adtest-mcp",
-        "description": "AI-only ad scoring for Claude: score image, video or text ads on 13 dimensions before you spend.",
-        "repository": {
-          "url": "https://github.com/menaker/adtest-mcp",
-          "source": "github"
-        },
-        "version": "1.1.0",
-        "websiteUrl": "https://adtest.ai/",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "adtest-mcp",
-            "version": "1.1.0",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "AdTest.AI developer API key (app.adtest.ai → Developer → Generate key). Each successful analysis costs 1 credit.",
-                "isRequired": true,
-                "format": "string",
-                "isSecret": true,
-                "name": "ADTEST_API_KEY"
-              },
-              {
-                "description": "Optional API base URL override (default https://app.adtest.ai/adtest-api).",
-                "format": "string",
-                "name": "ADTEST_API_BASE"
-              },
-              {
-                "description": "Optional max wait for a job in milliseconds (default 900000 = 15 min).",
-                "format": "number",
-                "name": "ADTEST_POLL_TIMEOUT_MS"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-01T21:42:48.138341Z",
-          "publishedAt": "2026-09-01T21:42:48.138341Z",
-          "updatedAt": "2026-09-01T21:42:48.138341Z",
           "isLatest": true
         }
       }
