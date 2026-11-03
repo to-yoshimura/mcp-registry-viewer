@@ -874,6 +874,40 @@
           "statusChangedAt": "2026-09-29T20:37:54.5633Z",
           "publishedAt": "2026-09-29T20:37:54.5633Z",
           "updatedAt": "2026-09-29T20:37:54.5633Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.projectory/mcp",
+        "description": "Find UAE off-plan developments, registered residential sales and research reports.",
+        "title": "Projectory",
+        "version": "0.7.0",
+        "websiteUrl": "https://projectory.ae/mcp/",
+        "icons": [
+          {
+            "src": "https://projectory.ae/apple-touch-icon.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "180x180"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.projectory.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-02T16:40:13.966873Z",
+          "publishedAt": "2026-11-02T16:40:13.966873Z",
+          "updatedAt": "2026-11-02T16:40:13.966873Z",
           "isLatest": true
         }
       }
@@ -2020,6 +2054,82 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
+        "description": "Schedule and publish to X, Bluesky, Mastodon, Discord, Telegram; marked live only after read-back.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.5.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-02T22:35:19.122094Z",
+          "publishedAt": "2026-11-02T22:35:19.122094Z",
+          "updatedAt": "2026-11-02T22:35:19.122094Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
+        "description": "Schedule and publish to X, Bluesky, Mastodon, Discord, Telegram; marked live only after read-back.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.6.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-03T05:54:59.392687Z",
+          "publishedAt": "2026-11-03T05:54:59.392687Z",
+          "updatedAt": "2026-11-03T05:54:59.392687Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.aard/aard",
         "description": "Official statistics from 170+ publishers, resolved from natural language with provenance.",
         "title": "Aard",
@@ -3098,88 +3208,6 @@
           "publishedAt": "2026-10-03T12:20:35.801463Z",
           "updatedAt": "2026-10-03T12:20:35.801463Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adrio/adrio",
-        "description": "Create Meta (Facebook and Instagram) ad creatives with AI and research competitor ads.",
-        "title": "Adrio",
-        "version": "1.0.1",
-        "websiteUrl": "https://adrio.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.adrio.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-07T11:30:13.521047Z",
-          "publishedAt": "2026-10-07T11:30:13.521047Z",
-          "updatedAt": "2026-10-07T11:30:13.521047Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adsap/adsap",
-        "description": "Launch and manage Meta and Google Ads from your AI assistant. You approve every change first.",
-        "title": "Adsap",
-        "version": "0.73.0",
-        "websiteUrl": "https://adsap.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.adsap.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-19T12:13:27.871767Z",
-          "publishedAt": "2026-09-19T12:13:27.871767Z",
-          "updatedAt": "2026-09-19T12:13:27.871767Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.adside/adside",
-        "description": "AI agents that manage paid ads on Meta, LinkedIn, and Google Ads from any MCP client.",
-        "version": "1.0.0",
-        "websiteUrl": "https://www.adside.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.adside.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer sk_live_... API key from your Adside account",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-07-16T19:48:48.148514Z",
-          "publishedAt": "2026-07-16T19:48:48.148514Z",
-          "updatedAt": "2026-07-16T19:48:48.148514Z",
-          "isLatest": true
         }
       }
     }
