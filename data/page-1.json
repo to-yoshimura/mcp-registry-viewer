@@ -1197,6 +1197,34 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "africa.lomi/mcp",
+        "description": "lomi. payments. https://mcp.lomi.africa/mcp and guest https://mcp.lomi.africa/mcp/guest",
+        "title": "lomi.",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.lomi.africa/mcp"
+          },
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.lomi.africa/mcp/guest"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-04T11:43:02.854662Z",
+          "publishedAt": "2026-11-04T11:43:02.854662Z",
+          "updatedAt": "2026-11-04T11:43:02.854662Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "africa.ugc/ugc",
         "description": "The Human Ad Network. Campaigns, clipping, and Clip Studio from chat.",
         "title": "UGC, the Human Ad Network",
@@ -2676,6 +2704,63 @@
           "statusChangedAt": "2026-10-30T12:56:21.426569Z",
           "publishedAt": "2026-10-30T12:56:21.426569Z",
           "updatedAt": "2026-10-30T12:56:21.426569Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.achromat/mcp-server",
+        "description": "Recall and calibrate policy-compliant tool-call arguments before execution. Does not run the tool.",
+        "title": "Achromat Machine Operational Memory",
+        "repository": {
+          "url": "https://github.com/achromat-ai/achromat-mcp-server",
+          "source": "github"
+        },
+        "version": "0.1.5",
+        "websiteUrl": "https://achromat.ai",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@achromat-ai/mcp-server",
+            "version": "0.1.4",
+            "transport": {
+              "type": "stdio"
+            },
+            "environmentVariables": [
+              {
+                "description": "Path of the agent's Ed25519 private key (unencrypted PKCS#8 PEM). Created on first use if the file does not exist.",
+                "format": "filepath",
+                "default": "~/.achromat/achromat_agent_key.pem",
+                "name": "ACHROMAT_AGENT_KEY_FILE"
+              },
+              {
+                "description": "Service origin. Must be https (plain http is accepted only for localhost).",
+                "default": "https://achromat.ai",
+                "name": "ACHROMAT_BASE_URL"
+              },
+              {
+                "description": "Optional attribution tag (1 to 32 characters from a-z, 0-9, _ and -) sent as ?ref= on the registration calls only. An invalid tag is ignored.",
+                "name": "ACHROMAT_REF"
+              }
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://achromat.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-04T18:53:24.128704Z",
+          "publishedAt": "2026-11-04T18:53:24.128704Z",
+          "updatedAt": "2026-11-04T18:53:24.128704Z",
           "isLatest": true
         }
       }
@@ -3210,68 +3295,11 @@
       },
       "_meta": {
         "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-03T17:44:39.042634Z",
+          "status": "deprecated",
+          "statusChangedAt": "2026-11-05T09:57:29.656102Z",
+          "statusMessage": "Superseded by 1.0.4: AI agent that runs Meta Ads and Google Ads for Shopify stores.",
           "publishedAt": "2026-10-03T17:44:39.042634Z",
-          "updatedAt": "2026-10-03T17:44:39.042634Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adrails/adrails",
-        "description": "Specialist AI agents for Meta Ads and Google Ads. Every change waits for your approval.",
-        "title": "Adrails",
-        "repository": {
-          "url": "https://github.com/devthomy/adrails-mcp",
-          "source": "github"
-        },
-        "version": "1.0.1",
-        "websiteUrl": "https://adrails.ai/mcp",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adrails.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-03T19:41:49.956965Z",
-          "publishedAt": "2026-10-03T19:41:49.956965Z",
-          "updatedAt": "2026-10-03T19:41:49.956965Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adrails/adrails",
-        "description": "AI agents that build, test and monitor Meta Ads and Google Ads campaigns from your real data.",
-        "title": "Adrails",
-        "repository": {
-          "url": "https://github.com/devthomy/adrails-mcp",
-          "source": "github"
-        },
-        "version": "1.0.2",
-        "websiteUrl": "https://adrails.ai/mcp",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adrails.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-04T06:58:31.135506Z",
-          "publishedAt": "2026-10-04T06:58:31.135506Z",
-          "updatedAt": "2026-10-04T06:58:31.135506Z",
+          "updatedAt": "2026-11-05T09:57:29.656102Z",
           "isLatest": false
         }
       }
