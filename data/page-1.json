@@ -1448,6 +1448,37 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.granek.signal/signal",
+        "description": "B2B sales intelligence: companies with a fresh buying trigger, dossiers, decision makers, sources.",
+        "title": "Granek Signal",
+        "version": "1.0.0",
+        "websiteUrl": "https://signal.granek.agency",
+        "icons": [
+          {
+            "src": "https://signal.granek.agency/static/favicon.svg",
+            "mimeType": "image/svg+xml"
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://signal.granek.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-08T00:06:11.297041Z",
+          "publishedAt": "2026-11-08T00:06:11.297041Z",
+          "updatedAt": "2026-11-08T00:06:11.297041Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "agency.justidea/justidea-agency",
         "description": "Services, published prices, site search and sales inquiries of JustIdea, a Polish e-commerce agency.",
         "title": "JustIdea Agency",
@@ -3288,33 +3319,6 @@
           "publishedAt": "2026-08-08T16:09:27.163464Z",
           "updatedAt": "2026-08-08T16:09:27.163464Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adoraads/beauty",
-        "description": "AI-native beauty ads, sponsored product discovery, and brand recommendations.",
-        "repository": {
-          "url": "https://github.com/DIGIBIZ360-COM/adoraads",
-          "source": "github"
-        },
-        "version": "1.0.1",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.adoraads.ai/beauty"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-08T17:50:25.566057Z",
-          "publishedAt": "2026-08-08T17:50:25.566057Z",
-          "updatedAt": "2026-08-08T17:50:25.566057Z",
-          "isLatest": true
         }
       }
     }
