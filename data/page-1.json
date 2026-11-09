@@ -384,6 +384,65 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "academy.serviceengineer/se-ai",
+        "description": "Medical equipment troubleshooting and spare parts lookup for biomedical and service engineers.",
+        "title": "Service Engineer AI",
+        "version": "1.0.0",
+        "websiteUrl": "https://serviceengineer.academy/ai/connect/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.serviceengineer.academy/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-08T15:07:48.536047Z",
+          "publishedAt": "2026-11-08T15:07:48.536047Z",
+          "updatedAt": "2026-11-08T15:07:48.536047Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "academy.serviceengineer/se-ai",
+        "description": "Medical equipment troubleshooting and spare parts lookup for biomedical and service engineers.",
+        "title": "Service Engineer AI",
+        "version": "1.0.1",
+        "websiteUrl": "https://serviceengineer.academy/ai/connect/",
+        "icons": [
+          {
+            "src": "https://serviceengineer.academy/img/se-ai-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.serviceengineer.academy/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-08T16:20:02.865317Z",
+          "publishedAt": "2026-11-08T16:20:02.865317Z",
+          "updatedAt": "2026-11-08T16:20:02.865317Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ad.apogee/apogee",
         "description": "Bulk-launch and manage ads across many Meta, TikTok and Snapchat ad accounts for agencies.",
         "title": "Apogee: Bulk Ad Launcher for Meta, TikTok & Snapchat",
@@ -2538,6 +2597,44 @@
           "statusChangedAt": "2026-11-06T01:02:47.427032Z",
           "publishedAt": "2026-11-06T01:02:47.427032Z",
           "updatedAt": "2026-11-06T01:02:47.427032Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
+        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.8.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-08T23:11:22.761511Z",
+          "publishedAt": "2026-11-08T23:11:22.761511Z",
+          "updatedAt": "2026-11-08T23:11:22.761511Z",
           "isLatest": true
         }
       }
@@ -3235,89 +3332,6 @@
           "statusChangedAt": "2026-05-05T14:01:01.659721Z",
           "publishedAt": "2026-05-05T14:01:01.659721Z",
           "updatedAt": "2026-05-05T14:01:01.659721Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adeu/adeu",
-        "description": "Automated DOCX Redlining Engine",
-        "repository": {
-          "url": "https://github.com/dealfluence/adeu",
-          "source": "github"
-        },
-        "version": "1.7.1",
-        "packages": [
-          {
-            "registryType": "npm",
-            "identifier": "@adeu/mcp-server",
-            "version": "1.7.1",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-16T13:54:48.18266Z",
-          "publishedAt": "2026-05-16T13:54:48.18266Z",
-          "updatedAt": "2026-05-16T13:54:48.18266Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adkix/adkix",
-        "description": "Turn a website into a short 9:16 video ad: script, cast, voice, shots, music. Asks before spending.",
-        "title": "adkix",
-        "version": "1.0.0",
-        "websiteUrl": "https://adkix.ai/developers",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adkix.ai/api/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-21T10:30:19.62174Z",
-          "publishedAt": "2026-10-21T10:30:19.62174Z",
-          "updatedAt": "2026-10-21T10:30:19.62174Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adoraads/beauty",
-        "description": "AI-native beauty ads, sponsored product discovery, and brand recommendations.",
-        "repository": {
-          "url": "https://github.com/DIGIBIZ360-COM/adoraads",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.adoraads.ai/beauty"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-08T16:09:27.163464Z",
-          "publishedAt": "2026-08-08T16:09:27.163464Z",
-          "updatedAt": "2026-08-08T16:09:27.163464Z",
           "isLatest": false
         }
       }
