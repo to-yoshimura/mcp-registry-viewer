@@ -660,6 +660,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.alexeysound/alexey-sound",
+        "description": "Find and book a location sound recordist / production sound mixer in Dubai and the UAE.",
+        "title": "Alexey Sound — sound recordist, Dubai",
+        "version": "1.0.0",
+        "websiteUrl": "https://alexeysound.ae",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://alexeysound.ae/agent.php"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-10T08:53:20.037278Z",
+          "publishedAt": "2026-11-10T08:53:20.037278Z",
+          "updatedAt": "2026-11-10T08:53:20.037278Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.beachclubs/mcp",
         "description": "Search UAE beach clubs, day pass prices, amenities, opening hours and events across all 7 emirates.",
         "title": "BeachClubs.ae",
@@ -865,6 +890,54 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.employerofrecord/moha",
+        "description": "Hire in the UAE without a local company: guide, quotes and accounts via an Employer of Record.",
+        "title": "Moha: hire in the UAE",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://employerofrecord.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-10T01:38:50.217032Z",
+          "publishedAt": "2026-11-10T01:38:50.217032Z",
+          "updatedAt": "2026-11-10T01:38:50.217032Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.employerofrecord/moha-account",
+        "description": "Act in your Moha workspace (OAuth): team, hires, approvals, time off, expenses, payroll.",
+        "title": "Moha: your account",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://employerofrecord.ae/mcp/account"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-10T01:38:50.424244Z",
+          "publishedAt": "2026-11-10T01:38:50.424244Z",
+          "updatedAt": "2026-11-10T01:38:50.424244Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.genosys/genosys",
         "description": "Shop GENOSYS Korean skincare in the UAE from chat: find products, AED prices, order and pay.",
         "title": "GENOSYS UAE",
@@ -976,6 +1049,31 @@
           "statusChangedAt": "2026-10-06T01:10:14.813856Z",
           "publishedAt": "2026-10-06T01:10:14.813856Z",
           "updatedAt": "2026-10-06T01:10:14.813856Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.mrk/dubai-property",
+        "description": "Dubai real estate data: 2,400+ projects, developers, communities, purchase costs and Golden Visa.",
+        "title": "MRK Dubai Property",
+        "version": "1.0.0",
+        "websiteUrl": "https://mrk.ae",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mrk.ae/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-09T17:22:02.31281Z",
+          "publishedAt": "2026-11-09T17:22:02.31281Z",
+          "updatedAt": "2026-11-09T17:22:02.31281Z",
           "isLatest": true
         }
       }
@@ -3214,124 +3312,6 @@
           "statusChangedAt": "2026-09-14T15:30:00.571436Z",
           "publishedAt": "2026-09-14T15:30:00.571436Z",
           "updatedAt": "2026-09-14T15:30:00.571436Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adako/ads",
-        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI assistants. Every change needs your approval.",
-        "title": "Adako: ad ops for AI assistants",
-        "repository": {
-          "url": "https://github.com/ruslan2027/adako-mcp",
-          "source": "github"
-        },
-        "version": "0.3.0",
-        "websiteUrl": "https://adako.ai/docs",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adako.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-14T18:32:10.015915Z",
-          "publishedAt": "2026-09-14T18:32:10.015915Z",
-          "updatedAt": "2026-09-14T18:32:10.015915Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adako/ads",
-        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI assistants. Every change needs your approval.",
-        "title": "Adako: ad ops for AI assistants",
-        "repository": {
-          "url": "https://github.com/ruslan2027/adako-mcp",
-          "source": "github"
-        },
-        "version": "0.3.1",
-        "websiteUrl": "https://adako.ai/docs",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adako.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-19T18:18:12.505174Z",
-          "publishedAt": "2026-09-19T18:18:12.505174Z",
-          "updatedAt": "2026-09-19T18:18:12.505174Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adako/ads",
-        "description": "Google, Meta, LinkedIn and ChatGPT Ads for AI assistants. Every change needs your approval.",
-        "title": "Adako: ad ops for AI assistants",
-        "repository": {
-          "url": "https://github.com/ruslan2027/adako-mcp",
-          "source": "github"
-        },
-        "version": "0.3.2",
-        "websiteUrl": "https://adako.ai/docs",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adako.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-28T20:37:42.826789Z",
-          "publishedAt": "2026-09-28T20:37:42.826789Z",
-          "updatedAt": "2026-09-28T20:37:42.826789Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adeu/adeu",
-        "description": "Automated DOCX Redlining Engine",
-        "repository": {
-          "url": "https://github.com/dealfluence/adeu",
-          "source": "github"
-        },
-        "version": "1.5.2",
-        "packages": [
-          {
-            "registryType": "pypi",
-            "identifier": "adeu",
-            "version": "1.5.2",
-            "transport": {
-              "type": "stdio"
-            }
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-05-05T14:01:01.659721Z",
-          "publishedAt": "2026-05-05T14:01:01.659721Z",
-          "updatedAt": "2026-05-05T14:01:01.659721Z",
           "isLatest": false
         }
       }
