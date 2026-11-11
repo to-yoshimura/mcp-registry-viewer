@@ -2740,6 +2740,64 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a2uicatalog/catalog",
+        "description": "500+ typed UI atoms an agent composes into real rendered interfaces. Free, no API key.",
+        "title": "A2UI Atomic Catalog",
+        "repository": {
+          "url": "https://github.com/a2uicatalog/a2ui",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://a2uicatalog.ai/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a2uicatalog.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-10T20:58:08.350187Z",
+          "publishedAt": "2026-11-10T20:58:08.350187Z",
+          "updatedAt": "2026-11-10T20:58:08.350187Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a2uicatalog/docs",
+        "description": "Search the A2UI Atomic Catalog's own docs: auth, versioning, pricing, API surface.",
+        "title": "A2UI Atomic Catalog docs",
+        "repository": {
+          "url": "https://github.com/a2uicatalog/a2ui",
+          "source": "github"
+        },
+        "version": "1.0.0",
+        "websiteUrl": "https://a2uicatalog.ai/docs/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a2uicatalog.ai/mcp-docs"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-10T20:58:08.76538Z",
+          "publishedAt": "2026-11-10T20:58:08.76538Z",
+          "updatedAt": "2026-11-10T20:58:08.76538Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.aard/aard",
         "description": "Official statistics from 170+ publishers, resolved from natural language with provenance.",
         "title": "Aard",
@@ -3255,64 +3313,6 @@
           "publishedAt": "2026-02-28T13:09:52.236521Z",
           "updatedAt": "2026-02-28T13:09:52.236521Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adako/ads",
-        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI agents. Every write needs your approval.",
-        "title": "Adako — careful ad ops for AI agents",
-        "repository": {
-          "url": "https://github.com/ruslan2027/adako-mcp",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "websiteUrl": "https://adako.ai/docs",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adako.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-13T20:00:50.661243Z",
-          "publishedAt": "2026-09-13T20:00:50.661243Z",
-          "updatedAt": "2026-09-13T20:00:50.661243Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adako/ads",
-        "description": "Google, Meta, ChatGPT, TikTok and LinkedIn Ads for AI assistants. Every change needs your approval.",
-        "title": "Adako: ad ops for AI assistants",
-        "repository": {
-          "url": "https://github.com/ruslan2027/adako-mcp",
-          "source": "github"
-        },
-        "version": "0.2.1",
-        "websiteUrl": "https://adako.ai/docs",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://adako.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-14T15:30:00.571436Z",
-          "publishedAt": "2026-09-14T15:30:00.571436Z",
-          "updatedAt": "2026-09-14T15:30:00.571436Z",
-          "isLatest": false
         }
       }
     }
