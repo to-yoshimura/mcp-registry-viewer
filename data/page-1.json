@@ -2733,6 +2733,44 @@
           "statusChangedAt": "2026-11-08T23:11:22.761511Z",
           "publishedAt": "2026-11-08T23:11:22.761511Z",
           "updatedAt": "2026-11-08T23:11:22.761511Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
+        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.9.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-11T21:27:26.152368Z",
+          "publishedAt": "2026-11-11T21:27:26.152368Z",
+          "updatedAt": "2026-11-11T21:27:26.152368Z",
           "isLatest": true
         }
       }
@@ -3274,45 +3312,6 @@
           "publishedAt": "2026-02-28T12:39:22.82128Z",
           "updatedAt": "2026-02-28T12:39:22.82128Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adadvisor/mcp-server",
-        "description": "Query Meta Ads performance data — accounts, campaigns, ad sets, ads, metrics & settings.",
-        "title": "AdAdvisor MCP Server",
-        "version": "1.0.1",
-        "websiteUrl": "https://www.adadvisor.ai/docs/user-guide/getting-started-with-mcp?utm_source=mcp-registry",
-        "icons": [
-          {
-            "src": "https://app.adadvisor.ai/adadvisor-logo.png",
-            "mimeType": "image/png"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.adadvisor.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token (adv_sk_...). Get key: https://www.adadvisor.ai/docs/user-guide/getting-started-with-mcp?utm_source=mcp-registry",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-28T13:09:52.236521Z",
-          "publishedAt": "2026-02-28T13:09:52.236521Z",
-          "updatedAt": "2026-02-28T13:09:52.236521Z",
-          "isLatest": true
         }
       }
     }
