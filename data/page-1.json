@@ -938,6 +938,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.framerfy/store-builder",
+        "description": "Build a Shopify-backed Framer store: sync products, theme, cart, checkout, publish and verify.",
+        "title": "Framerfy",
+        "version": "1.0.0",
+        "websiteUrl": "https://docs.framerfy.ae/ai-builder",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.framerfy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-12T12:19:25.872161Z",
+          "publishedAt": "2026-11-12T12:19:25.872161Z",
+          "updatedAt": "2026-11-12T12:19:25.872161Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.genosys/genosys",
         "description": "Shop GENOSYS Korean skincare in the UAE from chat: find products, AED prices, order and pay.",
         "title": "GENOSYS UAE",
@@ -3273,45 +3298,6 @@
           "publishedAt": "2026-08-14T04:14:24.243152Z",
           "updatedAt": "2026-08-14T04:14:24.243152Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.adadvisor/mcp-server",
-        "description": "Query Meta Ads performance data — accounts, campaigns, ad sets, ads, metrics & settings.",
-        "title": "AdAdvisor MCP Server",
-        "version": "1.0.0",
-        "websiteUrl": "https://www.adadvisor.ai?utm_source=mcp-registry",
-        "icons": [
-          {
-            "src": "https://app.adadvisor.ai/adadvisor-logo.png",
-            "mimeType": "image/png"
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.adadvisor.ai/mcp",
-            "headers": [
-              {
-                "description": "Bearer token (adv_sk_...). Get key: https://www.adadvisor.ai/docs/user-guide/managing-api-keys?utm_source=mcp-registry",
-                "isRequired": true,
-                "isSecret": true,
-                "name": "Authorization"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-02-28T12:39:22.82128Z",
-          "publishedAt": "2026-02-28T12:39:22.82128Z",
-          "updatedAt": "2026-02-28T12:39:22.82128Z",
-          "isLatest": false
         }
       }
     }
