@@ -1441,6 +1441,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "africa.startuplist/mcp",
+        "description": "Research African startups, investors and funding rounds, with source links on every record.",
+        "title": "StartupList Africa",
+        "version": "1.0.0",
+        "websiteUrl": "https://docs.startuplist.africa/#description/mcp-quickstart",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.startuplist.africa"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-14T06:19:45.171442Z",
+          "publishedAt": "2026-11-14T06:19:45.171442Z",
+          "updatedAt": "2026-11-14T06:19:45.171442Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "africa.ugc/ugc",
         "description": "The Human Ad Network. Campaigns, clipping, and Clip Studio from chat.",
         "title": "UGC, the Human Ad Network",
@@ -3273,30 +3298,6 @@
           "statusChangedAt": "2026-11-04T18:53:24.128704Z",
           "publishedAt": "2026-11-04T18:53:24.128704Z",
           "updatedAt": "2026-11-04T18:53:24.128704Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-        "name": "ai.actwise/ideation",
-        "description": "Actwise Ideation helps founders benchmark startup and product ideas before they build.",
-        "version": "1.0.0",
-        "websiteUrl": "https://actwise.ai/home/ideation",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://actwise.ai/ideation/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-14T04:14:24.243152Z",
-          "publishedAt": "2026-08-14T04:14:24.243152Z",
-          "updatedAt": "2026-08-14T04:14:24.243152Z",
           "isLatest": true
         }
       }
