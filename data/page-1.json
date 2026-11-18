@@ -778,6 +778,72 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy.tipline/gta6",
+        "description": "Unofficial GTA 6 guide: sourced facts on characters, places, vehicles and release times.",
+        "title": "Tipline: unofficial GTA 6 guide",
+        "version": "1.0.0",
+        "websiteUrl": "https://tipline.brainy.ae/developers/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://tipline.brainy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-18T07:05:15.12688Z",
+          "publishedAt": "2026-11-18T07:05:15.12688Z",
+          "updatedAt": "2026-11-18T07:05:15.12688Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy.tipline/gta6",
+        "description": "Unofficial GTA 6 guide: sourced facts on characters, places, vehicles and release times.",
+        "title": "Tipline: unofficial GTA 6 guide",
+        "version": "1.0.1",
+        "websiteUrl": "https://tipline.brainy.ae/developers/",
+        "icons": [
+          {
+            "src": "https://tipline.brainy.ae/static/icons/icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          },
+          {
+            "src": "https://tipline.brainy.ae/static/icons/icon-192.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "192x192"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://tipline.brainy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-18T08:38:22.385581Z",
+          "publishedAt": "2026-11-18T08:38:22.385581Z",
+          "updatedAt": "2026-11-18T08:38:22.385581Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.brainy/grocery-prices",
         "description": "Compare Dubai grocery lists, observed prices, delivery rules and indicative online offers in AED.",
         "title": "Dubai Grocery Prices",
@@ -1616,6 +1682,31 @@
           "statusChangedAt": "2026-07-10T04:58:06.628668Z",
           "publishedAt": "2026-07-10T04:58:06.628668Z",
           "updatedAt": "2026-07-10T04:58:06.628668Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.almostimpossible/site",
+        "description": "Read-only access to the Almost Impossible agency website: case studies, team, news and pages.",
+        "title": "Almost Impossible",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.almostimpossible.agency/developers",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://www.almostimpossible.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-17T21:04:09.09325Z",
+          "publishedAt": "2026-11-17T21:04:09.09325Z",
+          "updatedAt": "2026-11-17T21:04:09.09325Z",
           "isLatest": true
         }
       }
@@ -3073,157 +3164,6 @@
           "statusChangedAt": "2026-04-19T18:11:04.905549Z",
           "publishedAt": "2026-04-19T18:11:04.905549Z",
           "updatedAt": "2026-04-19T18:11:04.905549Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.abmeter/abmeter",
-        "description": "Run A/B experiments through your AI assistant. SDKs for Ruby, Python, JS, Node, React Native, Go.",
-        "title": "ABMeter",
-        "repository": {
-          "url": "https://github.com/abmeter/abmeter",
-          "source": "github"
-        },
-        "version": "0.2.0",
-        "websiteUrl": "https://abmeter.ai",
-        "icons": [
-          {
-            "src": "https://abmeter.ai/abmeter-icon-192.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "192x192"
-            ]
-          },
-          {
-            "src": "https://abmeter.ai/favicon.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.abmeter.ai"
-          }
-        ],
-        "_meta": {
-          "io.modelcontextprotocol.registry/publisher-provided": {
-            "connect": "https://abmeter.ai/lab/connect-mcp",
-            "docs": "https://abmeter.ai/lab/quick-start"
-          }
-        }
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-08-30T00:28:05.727498Z",
-          "publishedAt": "2026-08-30T00:28:05.727498Z",
-          "updatedAt": "2026-08-30T00:28:05.727498Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.achromat/mcp-server",
-        "description": "Recall and calibrate agent tool calls against verified policy lessons from Achromat MOM.",
-        "title": "Achromat MOM",
-        "repository": {
-          "url": "https://github.com/achromat-ai/achromat-mcp-server",
-          "source": "github"
-        },
-        "version": "0.1.1",
-        "websiteUrl": "https://mom.achromat.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@achromat-ai/mcp-server",
-            "version": "0.1.1",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Path of the agent's Ed25519 private key (unencrypted PKCS#8 PEM). Created on first use if the file does not exist.",
-                "format": "filepath",
-                "default": "~/.achromat/achromat_agent_key.pem",
-                "name": "ACHROMAT_AGENT_KEY_FILE"
-              },
-              {
-                "description": "Service origin. Must be https (plain http is accepted only for localhost).",
-                "default": "https://mom.achromat.ai",
-                "name": "ACHROMAT_BASE_URL"
-              }
-            ]
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-19T16:40:53.960211Z",
-          "publishedAt": "2026-10-19T16:40:53.960211Z",
-          "updatedAt": "2026-10-19T16:40:53.960211Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.achromat/mcp-server",
-        "description": "Recall and calibrate agent tool calls against verified policy lessons from Achromat MOM.",
-        "title": "Achromat MOM",
-        "repository": {
-          "url": "https://github.com/achromat-ai/achromat-mcp-server",
-          "source": "github"
-        },
-        "version": "0.1.2",
-        "websiteUrl": "https://mom.achromat.ai",
-        "packages": [
-          {
-            "registryType": "npm",
-            "registryBaseUrl": "https://registry.npmjs.org",
-            "identifier": "@achromat-ai/mcp-server",
-            "version": "0.1.1",
-            "transport": {
-              "type": "stdio"
-            },
-            "environmentVariables": [
-              {
-                "description": "Path of the agent's Ed25519 private key (unencrypted PKCS#8 PEM). Created on first use if the file does not exist.",
-                "format": "filepath",
-                "default": "~/.achromat/achromat_agent_key.pem",
-                "name": "ACHROMAT_AGENT_KEY_FILE"
-              },
-              {
-                "description": "Service origin. Must be https (plain http is accepted only for localhost).",
-                "default": "https://mom.achromat.ai",
-                "name": "ACHROMAT_BASE_URL"
-              }
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mom.achromat.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-10-22T07:33:49.526593Z",
-          "publishedAt": "2026-10-22T07:33:49.526593Z",
-          "updatedAt": "2026-10-22T07:33:49.526593Z",
           "isLatest": false
         }
       }
