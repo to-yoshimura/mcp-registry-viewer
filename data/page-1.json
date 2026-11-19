@@ -2483,6 +2483,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.13f/mcp",
+        "description": "Public-filing data: 13F fund holdings, insider and Congress stock trades, lobbying, contracts.",
+        "title": "13F.ai",
+        "version": "1.0.0",
+        "websiteUrl": "https://13f.ai/connect",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://13f.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-18T18:21:35.102141Z",
+          "publishedAt": "2026-11-18T18:21:35.102141Z",
+          "updatedAt": "2026-11-18T18:21:35.102141Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.1clickwebsite/mcp",
         "description": "Build and edit WordPress websites for local service businesses and run Lead Gen demo-site batches.",
         "title": "1ClickWebsite",
@@ -3130,41 +3155,6 @@
           "publishedAt": "2026-03-10T11:09:59.15927Z",
           "updatedAt": "2026-03-10T11:09:59.15927Z",
           "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.abmeter/abmeter",
-        "description": "Feature flagging and A/B testing platform with AI-first experimentation workflows.",
-        "title": "ABMeter",
-        "repository": {
-          "url": "https://github.com/abmeter/abmeter",
-          "source": "github"
-        },
-        "version": "0.1.0",
-        "websiteUrl": "https://abmeter.ai",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.abmeter.ai"
-          }
-        ],
-        "_meta": {
-          "io.modelcontextprotocol.registry/publisher-provided": {
-            "connect": "https://abmeter.ai/lab/connect-mcp",
-            "docs": "https://abmeter.ai/docs"
-          }
-        }
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-04-19T18:11:04.905549Z",
-          "publishedAt": "2026-04-19T18:11:04.905549Z",
-          "updatedAt": "2026-04-19T18:11:04.905549Z",
-          "isLatest": false
         }
       }
     }
