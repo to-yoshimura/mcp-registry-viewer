@@ -1572,6 +1572,74 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "africa.divisi/divisi",
+        "description": "Farm advice for Africa: what to plant, when, what ails a crop, and prices for your place.",
+        "title": "Divisi",
+        "version": "1.0.0",
+        "websiteUrl": "https://divisi.africa/connect-ai/",
+        "icons": [
+          {
+            "src": "https://divisi.africa/static/assets/images/favicon/android-chrome-512x512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://divisi.africa/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-20T07:24:35.052745Z",
+          "publishedAt": "2026-11-20T07:24:35.052745Z",
+          "updatedAt": "2026-11-20T07:24:35.052745Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "africa.divisi/divisi",
+        "description": "Farm advice for Africa: what to plant, when, what ails a crop, and prices for your place.",
+        "title": "Divisi",
+        "version": "26.11.20",
+        "websiteUrl": "https://divisi.africa/connect-ai/",
+        "icons": [
+          {
+            "src": "https://divisi.africa/static/assets/images/favicon/android-chrome-512x512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://divisi.africa/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-20T09:56:45.604722Z",
+          "publishedAt": "2026-11-20T09:56:45.604722Z",
+          "updatedAt": "2026-11-20T09:56:45.604722Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "africa.lomi/mcp",
         "description": "lomi. payments. https://mcp.lomi.africa/mcp and guest https://mcp.lomi.africa/mcp/guest",
         "title": "lomi.",
@@ -2810,6 +2878,44 @@
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.a1lane/a1lane",
+        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.10.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-20T02:50:01.247824Z",
+          "publishedAt": "2026-11-20T02:50:01.247824Z",
+          "updatedAt": "2026-11-20T02:50:01.247824Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
         "description": "Schedule and publish to X, Bluesky, Mastodon, Discord, Telegram; marked live only after read-back.",
         "title": "A1 Lane",
         "repository": {
@@ -3030,7 +3136,7 @@
           "statusChangedAt": "2026-11-11T21:27:26.152368Z",
           "publishedAt": "2026-11-11T21:27:26.152368Z",
           "updatedAt": "2026-11-11T21:27:26.152368Z",
-          "isLatest": true
+          "isLatest": false
         }
       }
     },
@@ -3059,101 +3165,6 @@
           "statusChangedAt": "2026-11-10T20:58:08.350187Z",
           "publishedAt": "2026-11-10T20:58:08.350187Z",
           "updatedAt": "2026-11-10T20:58:08.350187Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a2uicatalog/docs",
-        "description": "Search the A2UI Atomic Catalog's own docs: auth, versioning, pricing, API surface.",
-        "title": "A2UI Atomic Catalog docs",
-        "repository": {
-          "url": "https://github.com/a2uicatalog/a2ui",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://a2uicatalog.ai/docs/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a2uicatalog.ai/mcp-docs"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-10T20:58:08.76538Z",
-          "publishedAt": "2026-11-10T20:58:08.76538Z",
-          "updatedAt": "2026-11-10T20:58:08.76538Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aard/aard",
-        "description": "Official statistics from 170+ publishers, resolved from natural language with provenance.",
-        "title": "Aard",
-        "version": "0.1.0",
-        "websiteUrl": "https://aard.ai/mcp",
-        "icons": [
-          {
-            "src": "https://aard.ai/aard_logo.svg",
-            "mimeType": "image/svg+xml",
-            "sizes": [
-              "any"
-            ]
-          },
-          {
-            "src": "https://aard.ai/aard_logo.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "2000x2000"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://api.aard.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-09-15T02:38:30.780577Z",
-          "publishedAt": "2026-09-15T02:38:30.780577Z",
-          "updatedAt": "2026-09-15T02:38:30.780577Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.aarna/atars-mcp",
-        "description": "Crypto market signals, technical indicators, and sentiment analysis for AI agents.",
-        "title": "aTars MCP",
-        "version": "0.1.0",
-        "websiteUrl": "https://mcp.aarna.ai/mcp",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://mcp.aarna.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-03-10T11:09:59.15927Z",
-          "publishedAt": "2026-03-10T11:09:59.15927Z",
-          "updatedAt": "2026-03-10T11:09:59.15927Z",
           "isLatest": true
         }
       }
