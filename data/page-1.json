@@ -384,6 +384,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "academy.mycontent/google-ads",
+        "description": "Google Ads reporting and reviewable change plans using your own Google authorization.",
+        "title": "MyContent Google Ads",
+        "version": "0.1.0",
+        "websiteUrl": "https://googleads-mcp.mycontent.academy/review",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://googleads-mcp.mycontent.academy/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-21T18:01:37.133183Z",
+          "publishedAt": "2026-11-21T18:01:37.133183Z",
+          "updatedAt": "2026-11-21T18:01:37.133183Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "academy.serviceengineer/se-ai",
         "description": "Medical equipment troubleshooting and spare parts lookup for biomedical and service engineers.",
         "title": "Service Engineer AI",
@@ -3131,35 +3156,6 @@
           "statusChangedAt": "2026-11-10T20:58:08.350187Z",
           "publishedAt": "2026-11-10T20:58:08.350187Z",
           "updatedAt": "2026-11-10T20:58:08.350187Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a2uicatalog/docs",
-        "description": "Search the A2UI Atomic Catalog's own docs: auth, versioning, pricing, API surface.",
-        "title": "A2UI Atomic Catalog docs",
-        "repository": {
-          "url": "https://github.com/a2uicatalog/a2ui",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://a2uicatalog.ai/docs/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a2uicatalog.ai/mcp-docs"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-10T20:58:08.76538Z",
-          "publishedAt": "2026-11-10T20:58:08.76538Z",
-          "updatedAt": "2026-11-10T20:58:08.76538Z",
           "isLatest": true
         }
       }
