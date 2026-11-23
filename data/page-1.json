@@ -384,6 +384,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "academy.jasonlau/classes",
+        "description": "Vibe coding classes for teens in Hong Kong: class info, AI tool age limits, guides, enquiries.",
+        "title": "Jason Lau Academy",
+        "version": "1.0.0",
+        "websiteUrl": "https://jasonlau.academy/ai-assistants/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://jasonlau.academy/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-22T12:33:51.820377Z",
+          "publishedAt": "2026-11-22T12:33:51.820377Z",
+          "updatedAt": "2026-11-22T12:33:51.820377Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "academy.mycontent/google-ads",
         "description": "Google Ads reporting and reviewable change plans using your own Google authorization.",
         "title": "MyContent Google Ads",
@@ -862,6 +887,38 @@
           "statusChangedAt": "2026-11-18T08:38:22.385581Z",
           "publishedAt": "2026-11-18T08:38:22.385581Z",
           "updatedAt": "2026-11-18T08:38:22.385581Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy/brainy-48",
+        "description": "Automation catalogue and free 48-hour diagnosis for the UAE and Spain.",
+        "version": "0.1.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://48.brainy.ae/mcp"
+          }
+        ],
+        "_meta": {
+          "io.modelcontextprotocol.registry/publisher-provided": {
+            "tools": [
+              "list_automations",
+              "estimate_diagnosis",
+              "request_free_diagnosis"
+            ]
+          }
+        }
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-23T06:46:39.373535Z",
+          "publishedAt": "2026-11-23T06:46:39.373535Z",
+          "updatedAt": "2026-11-23T06:46:39.373535Z",
           "isLatest": true
         }
       }
@@ -1565,6 +1622,47 @@
           "statusChangedAt": "2026-10-21T08:17:47.171381Z",
           "publishedAt": "2026-10-21T08:17:47.171381Z",
           "updatedAt": "2026-10-21T08:17:47.171381Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "aero.avioverse/library",
+        "description": "EASA regulations with AMC and GM, and EASA definitions, read-only, each with its page to cite",
+        "title": "Avioverse EASA library",
+        "version": "1.0.0",
+        "websiteUrl": "https://avioverse.aero/regulations",
+        "icons": [
+          {
+            "src": "https://avioverse.aero/icon.svg",
+            "mimeType": "image/svg+xml",
+            "sizes": [
+              "any"
+            ]
+          },
+          {
+            "src": "https://avioverse.aero/apple-icon.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "180x180"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://avioverse.aero/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-22T16:11:46.424862Z",
+          "publishedAt": "2026-11-22T16:11:46.424862Z",
+          "updatedAt": "2026-11-22T16:11:46.424862Z",
           "isLatest": true
         }
       }
@@ -3052,111 +3150,6 @@
           "publishedAt": "2026-11-06T01:02:47.427032Z",
           "updatedAt": "2026-11-06T01:02:47.427032Z",
           "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.8.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-08T23:11:22.761511Z",
-          "publishedAt": "2026-11-08T23:11:22.761511Z",
-          "updatedAt": "2026-11-08T23:11:22.761511Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.9.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-11T21:27:26.152368Z",
-          "publishedAt": "2026-11-11T21:27:26.152368Z",
-          "updatedAt": "2026-11-11T21:27:26.152368Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a2uicatalog/catalog",
-        "description": "500+ typed UI atoms an agent composes into real rendered interfaces. Free, no API key.",
-        "title": "A2UI Atomic Catalog",
-        "repository": {
-          "url": "https://github.com/a2uicatalog/a2ui",
-          "source": "github"
-        },
-        "version": "1.0.0",
-        "websiteUrl": "https://a2uicatalog.ai/",
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a2uicatalog.ai/mcp"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-10T20:58:08.350187Z",
-          "publishedAt": "2026-11-10T20:58:08.350187Z",
-          "updatedAt": "2026-11-10T20:58:08.350187Z",
-          "isLatest": true
         }
       }
     }
