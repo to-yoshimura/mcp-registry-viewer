@@ -828,6 +828,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.brainy.tax/uae-tax-rules",
+        "description": "Read-only UAE Corporate Tax, VAT and e-invoicing calculators with official legal citations.",
+        "title": "Brainy Tax — UAE Tax Rules & Deadlines",
+        "version": "0.1.0",
+        "websiteUrl": "https://tax.brainy.ae",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://tax.brainy.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-25T09:14:55.694788Z",
+          "publishedAt": "2026-11-25T09:14:55.694788Z",
+          "updatedAt": "2026-11-25T09:14:55.694788Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ae.brainy.tipline/gta6",
         "description": "Unofficial GTA 6 guide: sourced facts on characters, places, vehicles and release times.",
         "title": "Tipline: unofficial GTA 6 guide",
@@ -2305,6 +2330,37 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.shipmate/shipready-mcp",
+        "description": "Local scan of Next.js, Supabase and Stripe repos for missing RLS, leaked secrets, unsigned webhooks",
+        "repository": {
+          "url": "https://github.com/Shipmate-agency/shipready-mcp",
+          "source": "github"
+        },
+        "version": "0.1.0",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "shipready-mcp",
+            "version": "0.1.0",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-25T01:18:51.023419Z",
+          "publishedAt": "2026-11-25T01:18:51.023419Z",
+          "updatedAt": "2026-11-25T01:18:51.023419Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "agency.thebureauoflostcontext/bureau-public",
         "description": "Bureau-operated public read-only MCP service for public Context Packets and Cases.",
         "title": "Bureau public reader",
@@ -3032,6 +3088,44 @@
           "statusChangedAt": "2026-11-24T07:21:26.525732Z",
           "publishedAt": "2026-11-24T07:21:26.525732Z",
           "updatedAt": "2026-11-24T07:21:26.525732Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.a1lane/a1lane",
+        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
+        "title": "A1 Lane",
+        "repository": {
+          "url": "https://github.com/a1lane/a1lane-mcp",
+          "source": "github"
+        },
+        "version": "1.13.0",
+        "websiteUrl": "https://a1lane.ai/docs/mcp",
+        "icons": [
+          {
+            "src": "https://a1lane.ai/brand/directory-icon-512.png",
+            "mimeType": "image/png",
+            "sizes": [
+              "512x512"
+            ]
+          }
+        ],
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://a1lane.ai/mcp/v1"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-24T20:45:33.179043Z",
+          "publishedAt": "2026-11-24T20:45:33.179043Z",
+          "updatedAt": "2026-11-24T20:45:33.179043Z",
           "isLatest": true
         }
       }
@@ -3070,120 +3164,6 @@
           "statusChangedAt": "2026-11-02T22:35:19.122094Z",
           "publishedAt": "2026-11-02T22:35:19.122094Z",
           "updatedAt": "2026-11-02T22:35:19.122094Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Schedule and publish to X, Bluesky, Mastodon, Discord, Telegram; marked live only after read-back.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.6.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-03T05:54:59.392687Z",
-          "publishedAt": "2026-11-03T05:54:59.392687Z",
-          "updatedAt": "2026-11-03T05:54:59.392687Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Drafts, approvals, scheduling and per-post read-back receipts from A1 Lane's own publishing queue.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.6.1",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-04T05:45:00.20893Z",
-          "publishedAt": "2026-11-04T05:45:00.20893Z",
-          "updatedAt": "2026-11-04T05:45:00.20893Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Draft, schedule and publish social posts and videos, with a read-back receipt for every post.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.7.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-06T01:02:47.427032Z",
-          "publishedAt": "2026-11-06T01:02:47.427032Z",
-          "updatedAt": "2026-11-06T01:02:47.427032Z",
           "isLatest": false
         }
       }
