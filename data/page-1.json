@@ -3,6 +3,31 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ac.compare/air-conditioners",
+        "description": "US air conditioners, heat pumps and space heaters in stock, with dated store prices and room sizing.",
+        "title": "compare.ac: US air conditioner, heat pump and space heater prices",
+        "version": "1.0.0",
+        "websiteUrl": "https://compare.ac/ai-assistants",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://compare.ac/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-26T09:35:04.346359Z",
+          "publishedAt": "2026-11-26T09:35:04.346359Z",
+          "updatedAt": "2026-11-26T09:35:04.346359Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ac.inference.sh/mcp",
         "description": "Run 150+ AI apps — image, video, audio, LLMs, 3D and more. Browse, execute, stream results.",
         "title": "inference.sh",
@@ -1081,6 +1106,35 @@
           "statusChangedAt": "2026-09-30T08:30:47.911063Z",
           "publishedAt": "2026-09-30T08:30:47.911063Z",
           "updatedAt": "2026-09-30T08:30:47.911063Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ae.datadubai/dubai-real-estate",
+        "description": "Dubai property prices, AED/sqft, sales, rents, yields and projects from DLD registered transactions.",
+        "title": "Data Dubai — Dubai real estate statistics",
+        "repository": {
+          "url": "https://github.com/datadubai/dubai-real-estate-dld",
+          "source": "github"
+        },
+        "version": "1.1.1",
+        "websiteUrl": "https://datadubai.ae/mcp/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.datadubai.ae/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-26T08:41:38.568168Z",
+          "publishedAt": "2026-11-26T08:41:38.568168Z",
+          "updatedAt": "2026-11-26T08:41:38.568168Z",
           "isLatest": true
         }
       }
@@ -2239,6 +2293,30 @@
           "statusChangedAt": "2026-02-24T00:07:27.525636Z",
           "publishedAt": "2026-02-24T00:07:27.525636Z",
           "updatedAt": "2026-02-24T00:07:27.525636Z",
+          "isLatest": false
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "agency.lona/trading",
+        "description": "Backtest, optimize and walk-forward test trading strategies from AI agents on 80,000+ symbols",
+        "version": "2.4.0",
+        "websiteUrl": "https://www.lona.agency",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.lona.agency/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "statusChangedAt": "2026-11-25T15:42:54.702245Z",
+          "publishedAt": "2026-11-25T15:42:54.702245Z",
+          "updatedAt": "2026-11-25T15:42:54.702245Z",
           "isLatest": true
         }
       }
@@ -3050,120 +3128,6 @@
           "statusChangedAt": "2026-11-20T02:50:01.247824Z",
           "publishedAt": "2026-11-20T02:50:01.247824Z",
           "updatedAt": "2026-11-20T02:50:01.247824Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.12.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-24T07:21:26.525732Z",
-          "publishedAt": "2026-11-24T07:21:26.525732Z",
-          "updatedAt": "2026-11-24T07:21:26.525732Z",
-          "isLatest": false
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Draft, schedule and publish social posts and videos; delivery receipts, read-back where available.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.13.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-24T20:45:33.179043Z",
-          "publishedAt": "2026-11-24T20:45:33.179043Z",
-          "updatedAt": "2026-11-24T20:45:33.179043Z",
-          "isLatest": true
-        }
-      }
-    },
-    {
-      "server": {
-        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "ai.a1lane/a1lane",
-        "description": "Schedule and publish to X, Bluesky, Mastodon, Discord, Telegram; marked live only after read-back.",
-        "title": "A1 Lane",
-        "repository": {
-          "url": "https://github.com/a1lane/a1lane-mcp",
-          "source": "github"
-        },
-        "version": "1.5.0",
-        "websiteUrl": "https://a1lane.ai/docs/mcp",
-        "icons": [
-          {
-            "src": "https://a1lane.ai/brand/directory-icon-512.png",
-            "mimeType": "image/png",
-            "sizes": [
-              "512x512"
-            ]
-          }
-        ],
-        "remotes": [
-          {
-            "type": "streamable-http",
-            "url": "https://a1lane.ai/mcp/v1"
-          }
-        ]
-      },
-      "_meta": {
-        "io.modelcontextprotocol.registry/official": {
-          "status": "active",
-          "statusChangedAt": "2026-11-02T22:35:19.122094Z",
-          "publishedAt": "2026-11-02T22:35:19.122094Z",
-          "updatedAt": "2026-11-02T22:35:19.122094Z",
           "isLatest": false
         }
       }
